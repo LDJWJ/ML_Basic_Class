@@ -10,3 +10,14 @@
  * 머신러닝 알고리즘 knn [html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_01_01_knn_code.html) [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_01_01_knn_code.pdf)
  * 머신러닝 알고리즘 회귀(선형회귀) [html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_01_02_linear_code_v10.html) [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_01_02_linear_code_v10.pdf)
  * 머신러닝 알고리즘 회귀(Ridge, Lasso) [html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_01_03_ridge_lasso.html) [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_01_03_ridge_lasso.pdf)
+ 
+ 
+ ### 수업 관련 링크
+ * 캐글 코리아 1차 대회 
+ * 타이타닉 생존자를 예측하라[Link](https://www.kaggle.com/c/2019-1st-ml-month-with-kakr)
+ 
+ * 캐글 코리아 2차 대회 
+ * 집 가격 예측[Link](https://www.kaggle.com/c/2019-2nd-ml-month-with-kakr)
+  
+ * 캐글 코리아 4차 대회 
+ * 성인 인구 조사 소득 예측 대회 [Link](https://www.kaggle.com/t/604c205697e042de83c58025a90e632a)

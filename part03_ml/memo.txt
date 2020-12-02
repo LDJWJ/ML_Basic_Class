@@ -1,0 +1,15 @@
+kaggle 4th 대회 참여 링크
+https://www.kaggle.com/t/604c205697e042de83c58025a90e632a
+
+
+ 데이터 셋
+### womenentrepreneurship.csv
+https://www.kaggle.com/babyoda/women-entrepreneurship-and-labor-force
+   
+### KRvideos.csv  : 유튜브 랭커 
+
+### bestsellers with categories.csv
+https://www.kaggle.com/sootersaalu/amazon-top-50-bestselling-books-2009-2019
+
+### 
+https://www.kaggle.com/dasmehdixtr/drone-dataset-uav

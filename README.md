@@ -19,8 +19,14 @@
    * 이진분류 [html]  [html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_01_04_binary_classification.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_01_04_binary_classification.pdf)
    * 멀티클래스 분류 [html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_01_05_multiclass_classification_v10.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_01_05_multiclass_classification_v10.pdf)
  * 머신러닝 - 의사결정트리[html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_03_01_decisiontree_local_ref.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_03_01_decisiontree_local_ref.pdf)
-  
 
+### [실습] pima 데이터 실습
+ * 머신러닝 - 타이타닉 시작하기[html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_03_02_decisionTree_diabetes_colab.html) [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_03_02_decisionTree_diabetes_colab.pdf)
+
+### 캐글 데이터 타이타닉 실습
+ * 머신러닝 - 타이타닉 시작하기[html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_03_02A_titanic_firstsub.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_03_02A_titanic_firstsub.pdf)
+ * 머신러닝 - 타이타닉 데이터 탐색 및 모델 선택[html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_03_02B_titanic.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_03_02B_titanic.pdf)
+ * 머신러닝 - 타이타닉 모델 업그레이드[html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_03_02C_titanic.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_03_02C_titanic.pdf)
  
  ### 수업 관련 링크
  * 캐글 코리아 1차 대회 

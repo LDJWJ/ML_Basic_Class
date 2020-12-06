@@ -8,6 +8,7 @@
  * 머신러닝 알고리즘 [기본1 pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/part03_ch01_01_ml/ch01_01_ML입문_v11_201201.pdf) [기본2 pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/part03_ch01_01_ml/ch01_ML기본_v10_201201.pdf)
  * 머신러닝 알고리즘 knn_회귀 [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/part03_ch02_01_knn_linear_ppt/ch02_knn_회귀_v113_2012.pdf)
  * 머신러닝 알고리즘 의사결정트리 [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/part03_ch02_02_decisiontree/ch02_03_01_decisiontree_v10_2010.pdf)
+ * 머신러닝 알고리즘 앙상블 [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/part03_ch02_03_ensemble/ch02_Ensemble_202012_v10.pdf)
  
 #### SourceCode
  * 첫번째 머신러닝 모델 만들어보기  [html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch01_01_ML_start_v10.html) [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch01_01_ML_start_v10.pdf)
@@ -19,6 +20,10 @@
    * 이진분류 [html]  [html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_01_04_binary_classification.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_01_04_binary_classification.pdf)
    * 멀티클래스 분류 [html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_01_05_multiclass_classification_v10.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_01_05_multiclass_classification_v10.pdf)
  * 머신러닝 - 의사결정트리[html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_03_01_decisiontree_local_ref.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_03_01_decisiontree_local_ref.pdf)
+
+ * 머신러닝 - 앙상블_랜덤포레스트(1)[html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_03_03_Randomforest(1).html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_03_03_Randomforest(1).pdf)
+ * 머신러닝 - 앙상블_랜덤포레스트(2)[html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_03_04_Randomforest(2).html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_03_04_Randomforest(2).pdf)
+ * 머신러닝 - 앙상블_그래디언트부스팅결정트리[html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_03_05_gradient_boosting_class_v11.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_03_05_gradient_boosting_class_v11.pdf)
 
 ### [실습] pima 데이터 실습
  * 머신러닝 - 타이타닉 시작하기[html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_03_02_decisionTree_diabetes_colab.html) [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_03_02_decisionTree_diabetes_colab.pdf)

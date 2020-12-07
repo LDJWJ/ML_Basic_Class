@@ -24,7 +24,9 @@
  * 머신러닝 - 앙상블_랜덤포레스트(1)[html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_03_03_Randomforest(1).html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_03_03_Randomforest(1).pdf)
  * 머신러닝 - 앙상블_랜덤포레스트(2)[html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_03_04_Randomforest(2).html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_03_04_Randomforest(2).pdf)
  * 머신러닝 - 앙상블_그래디언트부스팅결정트리[html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_03_05_gradient_boosting_class_v11.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_03_05_gradient_boosting_class_v11.pdf)
-
+  * 머신러닝 - 데이터 전처리[html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch03_01_01_데이터전처리.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch03_01_01_데이터전처리.pdf)
+  * 머신러닝 - 원핫인코딩[html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch04_01_01_FE_OneHotEncoding_01.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch04_01_01_FE_OneHotEncoding_01.pdf)
+  
 ### [실습] pima 데이터 실습
  * 머신러닝 - 타이타닉 시작하기[html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_03_02_decisionTree_diabetes_colab.html) [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_03_02_decisionTree_diabetes_colab.pdf)
 
@@ -32,6 +34,8 @@
  * 머신러닝 - 타이타닉 시작하기[html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_03_02A_titanic_firstsub.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_03_02A_titanic_firstsub.pdf)
  * 머신러닝 - 타이타닉 데이터 탐색 및 모델 선택[html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_03_02B_titanic.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_03_02B_titanic.pdf)
  * 머신러닝 - 타이타닉 모델 업그레이드[html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_03_02C_titanic.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_03_02C_titanic.pdf)
+ * 머신러닝 - Bike Sharing Demand(1)[html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_04_04_Bike_B_01_v10.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_04_04_Bike_B_01_v10.pdf)
+ * 머신러닝 - Bike Sharing Demand(2)[html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_04_04_Bike_B_02_v10.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_04_04_Bike_B_02_v10.pdf)
  
  ### 수업 관련 링크
  * 캐글 코리아 1차 대회 

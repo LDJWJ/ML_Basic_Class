@@ -26,13 +26,13 @@
  * 머신러닝 - 앙상블_그래디언트부스팅결정트리[html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_03_05_gradient_boosting_class_v11.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_03_05_gradient_boosting_class_v11.pdf)
   * 머신러닝 - 데이터 전처리[html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch03_01_01_데이터전처리.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch03_01_01_데이터전처리.pdf)
   * 머신러닝 - 원핫인코딩
-    * [html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch04_01_01_FE_OneHotEncoding_01.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch04_01_01_FE_OneHotEncoding_01.pdf)
-    * [html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch04_01_02_FE_OneHotEncoding_02.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch04_01_02_FE_OneHotEncoding_02.pdf)
-    * [html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch04_01_02_FE_OneHotEncoding_03.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch04_01_02_FE_OneHotEncoding_03.pdf)
+    * 이론 및 실습(1) [html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch04_01_01_FE_OneHotEncoding_01.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch04_01_01_FE_OneHotEncoding_01.pdf)
+    * 이론 및 실습(2) [html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch04_01_02_FE_OneHotEncoding_02.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch04_01_02_FE_OneHotEncoding_02.pdf)
+    * 이론 및 실습(3) [html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch04_01_02_FE_OneHotEncoding_03.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch04_01_02_FE_OneHotEncoding_03.pdf)
 
   * 머신러닝 - 구간분할, 일변량 비선형 변환
-    * [html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch04_05_01_FE_binned_202010.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch04_05_01_FE_binned_202010.pdf)
-    * [html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch04_06_01_FE_log_202010.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch04_06_01_FE_log_202010.pdf)
+    * 구간분할 [html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch04_05_01_FE_binned_202010.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch04_05_01_FE_binned_202010.pdf)
+    * 비선형 변환(log 등)[html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch04_06_01_FE_log_202010.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch04_06_01_FE_log_202010.pdf)
 
     
 ### [실습] pima 데이터 실습

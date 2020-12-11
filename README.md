@@ -34,6 +34,11 @@
     * 구간분할 [html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch04_05_01_FE_binned_202010.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch04_05_01_FE_binned_202010.pdf)
     * 비선형 변환(log 등)[html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch04_06_01_FE_log_202010.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch04_06_01_FE_log_202010.pdf)
 
+    * PCA 차원 축소[html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch03_04_01_차원축소(1)_PCA.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch03_04_01_차원축소_PCA.pdf)
+    * PCA 얼굴 예제 실습[html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch03_04_02_차원축소(2)_PCA_얼굴예제.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch03_04_02_차원축소_PCA_얼굴예제.pdf)
+    * PCA 차원 축소-tsne[html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch03_04_03_차원축소(3)_tsne.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch03_04_03_차원축소_tsne.pdf)
+    * 군집(Clustering)[html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch03_05_01_군집(clustering)(1)_Kmeans.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch03_05_01_군집_Clustering.pdf)
+    * 병합 군집(Clustering)[html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch03_05_01_병합군집.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch03_05_01_병합군집_Clustering.pdf)
     
 ### [실습] pima 데이터 실습
  * 머신러닝 - 타이타닉 시작하기[html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_03_02_decisionTree_diabetes_colab.html) [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_03_02_decisionTree_diabetes_colab.pdf)

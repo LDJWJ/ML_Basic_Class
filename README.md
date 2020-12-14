@@ -10,7 +10,9 @@
  * 머신러닝 알고리즘 의사결정트리 [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/part03_ch02_02_decisiontree/ch02_03_01_decisiontree_v10_2010.pdf)
  * 머신러닝 알고리즘 앙상블 [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/part03_ch02_03_ensemble/ch02_Ensemble_202012_v10.pdf)
  
-#### SourceCode
+
+### SourceCode
+### 지도학습
  * 첫번째 머신러닝 모델 만들어보기  [html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch01_01_ML_start_v10.html) [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch01_01_ML_start_v10.pdf)
  * 머신러닝 알고리즘 knn [html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_01_01_knn_code.html) [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_01_01_knn_code.pdf)
  * 머신러닝 알고리즘 회귀(선형회귀) [html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_01_02_linear_code_v10.html) [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_01_02_linear_code_v10.pdf)
@@ -24,6 +26,8 @@
  * 머신러닝 - 앙상블_랜덤포레스트(1)[html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_03_03_Randomforest(1).html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_03_03_Randomforest(1).pdf)
  * 머신러닝 - 앙상블_랜덤포레스트(2)[html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_03_04_Randomforest(2).html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_03_04_Randomforest(2).pdf)
  * 머신러닝 - 앙상블_그래디언트부스팅결정트리[html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_03_05_gradient_boosting_class_v11.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_03_05_gradient_boosting_class_v11.pdf)
+ 
+### 데이터 전처리
   * 머신러닝 - 데이터 전처리[html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch03_01_01_데이터전처리.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch03_01_01_데이터전처리.pdf)
   * 머신러닝 - 원핫인코딩
     * 이론 및 실습(1) [html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch04_01_01_FE_OneHotEncoding_01.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch04_01_01_FE_OneHotEncoding_01.pdf)
@@ -33,13 +37,26 @@
   * 머신러닝 - 구간분할, 일변량 비선형 변환
     * 구간분할 [html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch04_05_01_FE_binned_202010.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch04_05_01_FE_binned_202010.pdf)
     * 비선형 변환(log 등)[html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch04_06_01_FE_log_202010.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch04_06_01_FE_log_202010.pdf)
+    * 특성자동 선택(1) [html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch04_07_01_FeatureEngineering_특성자동선택.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch04_07_01_FeatureEngineering_특성자동선택.pdf)
+    * 특성자동 선택(2) [html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch04_07_02_FeatureEngineering_특성자동선택_회귀.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch04_07_02_FeatureEngineering_특성자동선택_회귀.pdf)
 
-    * PCA 차원 축소[html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch03_04_01_차원축소(1)_PCA.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch03_04_01_차원축소_PCA.pdf)
-    * PCA 얼굴 예제 실습[html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch03_04_02_차원축소(2)_PCA_얼굴예제.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch03_04_02_차원축소_PCA_얼굴예제.pdf)
-    * PCA 차원 축소-tsne[html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch03_04_03_차원축소(3)_tsne.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch03_04_03_차원축소_tsne.pdf)
-    * 군집(Clustering)[html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch03_05_01_군집(clustering)(1)_Kmeans.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch03_05_01_군집_Clustering.pdf)
-    * 병합 군집(Clustering)[html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch03_05_01_병합군집.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch03_05_01_병합군집_Clustering.pdf)
-    
+### 비지도학습
+  * PCA 차원 축소[html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch03_04_01_차원축소(1)_PCA.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch03_04_01_차원축소_PCA.pdf)
+  * PCA 얼굴 예제 실습[html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch03_04_02_차원축소(2)_PCA_얼굴예제.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch03_04_02_차원축소_PCA_얼굴예제.pdf)
+  * PCA 차원 축소-tsne[html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch03_04_03_차원축소(3)_tsne.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch03_04_03_차원축소_tsne.pdf)
+  * 군집(Clustering)[html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch03_05_01_군집(clustering)(1)_Kmeans.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch03_05_01_군집_Clustering.pdf)
+  * 병합 군집(Clustering)[html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch03_05_01_병합군집.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch03_05_01_병합군집_Clustering.pdf)
+   
+  * DBSCAN(Clustering)[html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch03_05_02_DBSCAN.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch03_05_02_DBSCAN.pdf)
+  * 얼굴 데이터 셋 분석 [html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch03_05_03_비지도학습_얼굴데이터셋분석.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch03_05_03_비지도학습_얼굴데이터셋분석.pdf)
+  * 군집 알고리즘 평가[html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch03_05_04_군집알고리즘평가.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch03_05_04_군집알고리즘평가.pdf)
+
+### 평가
+  * 교차 검증 [html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch05_01_01_crossValidation.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch05_01_01_crossValidation.pdf)
+  * Grid Search(1) [html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch05_02_01_성능개선_GridSearch1.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch05_02_01_성능개선_GridSearch1.pdf)
+  * Grid Search(2) [html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch05_02_02_성능개선_GridSearch2.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch05_02_02_성능개선_GridSearch2.pdf)
+
+
 ### [실습] pima 데이터 실습
  * 머신러닝 - 타이타닉 시작하기[html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_03_02_decisionTree_diabetes_colab.html) [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_03_02_decisionTree_diabetes_colab.pdf)
 

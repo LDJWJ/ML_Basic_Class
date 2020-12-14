@@ -41,18 +41,18 @@
     * 특성자동 선택(2) [html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch04_07_02_FeatureEngineering_특성자동선택_회귀.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch04_07_02_FeatureEngineering_특성자동선택_회귀.pdf)
 
 ### 비지도학습
-    * PCA 차원 축소[html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch03_04_01_차원축소(1)_PCA.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch03_04_01_차원축소_PCA.pdf)
-    * PCA 얼굴 예제 실습[html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch03_04_02_차원축소(2)_PCA_얼굴예제.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch03_04_02_차원축소_PCA_얼굴예제.pdf)
-    * PCA 차원 축소-tsne[html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch03_04_03_차원축소(3)_tsne.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch03_04_03_차원축소_tsne.pdf)
-    * 군집(Clustering)[html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch03_05_01_군집(clustering)(1)_Kmeans.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch03_05_01_군집_Clustering.pdf)
-    * 병합 군집(Clustering)[html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch03_05_01_병합군집.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch03_05_01_병합군집_Clustering.pdf)
+  * PCA 차원 축소[html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch03_04_01_차원축소(1)_PCA.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch03_04_01_차원축소_PCA.pdf)
+  * PCA 얼굴 예제 실습[html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch03_04_02_차원축소(2)_PCA_얼굴예제.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch03_04_02_차원축소_PCA_얼굴예제.pdf)
+  * PCA 차원 축소-tsne[html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch03_04_03_차원축소(3)_tsne.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch03_04_03_차원축소_tsne.pdf)
+  * 군집(Clustering)[html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch03_05_01_군집(clustering)(1)_Kmeans.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch03_05_01_군집_Clustering.pdf)
+  * 병합 군집(Clustering)[html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch03_05_01_병합군집.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch03_05_01_병합군집_Clustering.pdf)
    
-    * DBSCAN(Clustering)[html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch03_05_02_DBSCAN.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch03_05_02_DBSCAN.pdf)
+  * DBSCAN(Clustering)[html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch03_05_02_DBSCAN.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch03_05_02_DBSCAN.pdf)
 
 ### 평가
-    * 교차 검증 [html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch05_01_01_crossValidation.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch05_01_01_crossValidation.pdf)
-    * Grid Search(1) [html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch05_02_01_성능개선_GridSearch1.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch05_02_01_성능개선_GridSearch1.pdf)
-    * Grid Search(2) [html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch05_02_02_성능개선_GridSearch2.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch05_02_02_성능개선_GridSearch2.pdf)
+  * 교차 검증 [html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch05_01_01_crossValidation.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch05_01_01_crossValidation.pdf)
+  * Grid Search(1) [html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch05_02_01_성능개선_GridSearch1.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch05_02_01_성능개선_GridSearch1.pdf)
+  * Grid Search(2) [html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch05_02_02_성능개선_GridSearch2.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch05_02_02_성능개선_GridSearch2.pdf)
 
 
 ### [실습] pima 데이터 실습

@@ -9,7 +9,7 @@
  * 머신러닝 알고리즘 knn_회귀 [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/part03_ch02_01_knn_linear_ppt/ch02_knn_회귀_v113_2012.pdf)
  * 머신러닝 알고리즘 의사결정트리 [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/part03_ch02_02_decisiontree/ch02_03_01_decisiontree_v10_2010.pdf)
  * 머신러닝 알고리즘 앙상블 [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/part03_ch02_03_ensemble/ch02_Ensemble_202012_v10.pdf)
- 
+ * 평가지표 [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/part03_ch05_validation/ch05_평가지표_v03_202012.pdf)
 
 ### SourceCode
 ### 지도학습
@@ -55,8 +55,10 @@
   * 교차 검증 [html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch05_01_01_crossValidation.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch05_01_01_crossValidation.pdf)
   * Grid Search(1) [html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch05_02_01_성능개선_GridSearch1.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch05_02_01_성능개선_GridSearch1.pdf)
   * Grid Search(2) [html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch05_02_02_성능개선_GridSearch2.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch05_02_02_성능개선_GridSearch2.pdf)
-
-
+  * 모델 평가 (1) [html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch05_03_01_model_validation(1).html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch05_03_01_model_validation(1).pdf)
+  * 모델 평가 (2) [html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch05_03_02_model_validation(2)-ROCAUC.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch05_03_02_model_validation(2)-ROCAUC.pdf)
+  * 모델 평가 (3) [html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch05_03_03_model_validation(3).html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch05_03_03_model_validation(3).pdf)
+  
 ### [실습] pima 데이터 실습
  * 머신러닝 - 타이타닉 시작하기[html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_03_02_decisionTree_diabetes_colab.html) [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_03_02_decisionTree_diabetes_colab.pdf)
 

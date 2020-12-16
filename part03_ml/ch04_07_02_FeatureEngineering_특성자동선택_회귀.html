@@ -14286,7 +14286,7 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">warnings</span>
@@ -14302,10 +14302,11 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.feature_selection</span> <span class="kn">import</span> <span class="n">SelectPercentile</span><span class="p">,</span> <span class="n">f_classif</span>
+<span class="kn">from</span> <span class="nn">sklearn.feature_selection</span> <span class="kn">import</span> <span class="n">f_regression</span>
 <span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">load_boston</span>
@@ -14319,24 +14320,10 @@ a.anchor-link {
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">boston</span> <span class="o">=</span> <span class="n">load_boston</span><span class="p">()</span>
@@ -14359,7 +14346,7 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[23]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[25]:</div>
 
 
 
@@ -14587,7 +14574,7 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[28]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">ex_X</span> <span class="o">=</span> <span class="n">PolynomialFeatures</span><span class="p">(</span><span class="n">degree</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">include_bias</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">nor_X</span><span class="p">)</span>
@@ -14623,10 +14610,10 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">ex_X</span>  <span class="c1"># 입력</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">ex_X</span>          <span class="c1"># 입력</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">boston</span><span class="o">.</span><span class="n">target</span> <span class="c1"># 출력</span>
 
 <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> 
@@ -14634,7 +14621,7 @@ a.anchor-link {
                                                     <span class="n">test_size</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
 
 <span class="c1"># 50%를 뽑는 것을 학습</span>
-<span class="n">select</span> <span class="o">=</span> <span class="n">SelectPercentile</span><span class="p">(</span><span class="n">score_func</span><span class="o">=</span><span class="n">f_classif</span><span class="p">,</span> <span class="n">percentile</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">select</span> <span class="o">=</span> <span class="n">SelectPercentile</span><span class="p">(</span><span class="n">score_func</span><span class="o">=</span><span class="n">f_regression</span><span class="p">,</span> <span class="n">percentile</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
 <span class="n">select</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
 </pre></div>
 
@@ -14651,14 +14638,14 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[29]:</div>
 
 
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
 <pre>SelectPercentile(percentile=50,
-                 score_func=&lt;function f_classif at 0x00000221D9179730&gt;)</pre>
+                 score_func=&lt;function f_regression at 0x000002817DD2E3A0&gt;)</pre>
 </div>
 
 </div>
@@ -14670,14 +14657,14 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## 학습 세트에 적용</span>
-<span class="n">X_train_selected</span> <span class="o">=</span> <span class="n">select</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+<span class="n">X_tr_selected</span> <span class="o">=</span> <span class="n">select</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span> <span class="s2">&quot;X_train.shape:&quot;</span><span class="p">,</span> <span class="n">X_train</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span> <span class="s2">&quot;X_train_selected.shape&quot;</span><span class="p">,</span> <span class="n">X_train_selected</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span> <span class="s2">&quot;X_train_selected.shape&quot;</span><span class="p">,</span> <span class="n">X_tr_selected</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14697,8 +14684,8 @@ a.anchor-link {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>X_train.shape: (253, 53)
-X_train_selected.shape (253, 26)
+<pre>X_train.shape: (253, 104)
+X_train_selected.shape (253, 52)
 </pre>
 </div>
 </div>
@@ -14711,14 +14698,14 @@ X_train_selected.shape (253, 26)
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>결과를 통해 우리는 특징 개수가 70개에서 35개로 줄어든 것을 확인할 수 있음.</li>
+<li>결과를 통해 우리는 특징 개수가 104개에서 52개로 줄어든 것을 확인할 수 있음.</li>
 </ul>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[31]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -14732,7 +14719,7 @@ X_train_selected.shape (253, 26)
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[32]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### 어떤 특성이 선택되었는지 확인</span>
@@ -14758,11 +14745,15 @@ X_train_selected.shape (253, 26)
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[ True  True  True False  True  True  True  True  True  True  True  True
-  True  True False False  True False  True  True False  True False  True
- False False False False False False False False False False False  True
-  True False False  True False  True  True False False False False False
-  True  True False False  True]
+<pre>[ True  True  True False  True  True False False False  True  True False
+  True False False  True False  True False  True  True False  True  True
+ False  True False False False  True  True  True False False False False
+  True False  True False  True False  True False  True  True  True False
+  True False False False False False False False False False False  True
+ False  True False  True  True  True False  True  True False  True False
+ False False  True  True  True False  True  True  True False  True False
+ False False False False False  True  True  True False  True  True  True
+ False  True  True False  True False  True  True]
 </pre>
 </div>
 </div>
@@ -14770,13 +14761,13 @@ X_train_selected.shape (253, 26)
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[32]:</div>
 
 
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;matplotlib.image.AxesImage at 0x221dbe7ce80&gt;</pre>
+<pre>&lt;matplotlib.image.AxesImage at 0x281031037c0&gt;</pre>
 </div>
 
 </div>
@@ -14790,7 +14781,7 @@ X_train_selected.shape (253, 26)
 
 
 <div class="jp-RenderedImage jp-OutputArea-output ">
-<img src="data:image/png;base64,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
+<img src="data:image/png;base64,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
 "
 >
 </div>
@@ -14804,17 +14795,12 @@ X_train_selected.shape (253, 26)
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="30&#44060;&#51032;-&#50896;&#48376;-&#53945;&#49457;&#47564;-&#45224;&#44256;,-&#45208;&#47672;&#51648;-&#53945;&#49457;&#46308;&#51008;-&#44144;&#51032;-&#51228;&#44144;&#46120;.">30&#44060;&#51032; &#50896;&#48376; &#53945;&#49457;&#47564; &#45224;&#44256;, &#45208;&#47672;&#51648; &#53945;&#49457;&#46308;&#51008; &#44144;&#51032; &#51228;&#44144;&#46120;.<a class="anchor-link" href="#30&#44060;&#51032;-&#50896;&#48376;-&#53945;&#49457;&#47564;-&#45224;&#44256;,-&#45208;&#47672;&#51648;-&#53945;&#49457;&#46308;&#51008;-&#44144;&#51032;-&#51228;&#44144;&#46120;.">&#182;</a></h3>
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="&#51204;&#52404;-&#53945;&#49457;&#51012;-&#49324;&#50857;&#54620;-&#51216;&#49688;,-&#49440;&#53469;&#46108;-&#53945;&#49457;&#51012;-&#49324;&#50857;&#54620;-&#51216;&#49688;">&#51204;&#52404; &#53945;&#49457;&#51012; &#49324;&#50857;&#54620; &#51216;&#49688;, &#49440;&#53469;&#46108; &#53945;&#49457;&#51012; &#49324;&#50857;&#54620; &#51216;&#49688;<a class="anchor-link" href="#&#51204;&#52404;-&#53945;&#49457;&#51012;-&#49324;&#50857;&#54620;-&#51216;&#49688;,-&#49440;&#53469;&#46108;-&#53945;&#49457;&#51012;-&#49324;&#50857;&#54620;-&#51216;&#49688;">&#182;</a></h3>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[33]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
@@ -14826,7 +14812,7 @@ X_train_selected.shape (253, 26)
 <span class="n">lr</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;전체 특성 사용 : </span><span class="si">{:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">lr</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)))</span>
 
-<span class="n">lr</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train_selected</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="n">lr</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_tr_selected</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;선택된 일부 특성 사용 : </span><span class="si">{:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">lr</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test_selected</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)))</span>
 </pre></div>
 
@@ -14847,54 +14833,8 @@ X_train_selected.shape (253, 26)
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>전체 특성 사용 : 0.579
-선택된 일부 특성 사용 : 0.630
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LogisticRegression</span>
-
-<span class="c1"># 테스트 데이터 변환 </span>
-<span class="n">X_test_selected</span> <span class="o">=</span> <span class="n">select</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
-
-<span class="n">lr</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">()</span>
-<span class="n">lr</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;전체 특성 사용 : </span><span class="si">{:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">lr</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)))</span>
-
-<span class="n">lr</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train_selected</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;선택된 일부 특성 사용 : </span><span class="si">{:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">lr</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test_selected</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)))</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>전체 특성 사용 : 0.916
-선택된 일부 특성 사용 : 0.958
+<pre>전체 특성 사용 : 0.664
+선택된 일부 특성 사용 : 0.758
 </pre>
 </div>
 </div>
@@ -14918,12 +14858,25 @@ X_train_selected.shape (253, 26)
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[34]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.feature_selection</span> <span class="kn">import</span> <span class="n">SelectFromModel</span>
-<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestClassifier</span>
-<span class="n">select</span> <span class="o">=</span> <span class="n">SelectFromModel</span><span class="p">(</span><span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> 
+<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestRegressor</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[35]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">select</span> <span class="o">=</span> <span class="n">SelectFromModel</span><span class="p">(</span><span class="n">RandomForestRegressor</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> 
                                                <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">),</span>
                                                <span class="n">threshold</span><span class="o">=</span><span class="s2">&quot;median&quot;</span><span class="p">)</span>
 </pre></div>
@@ -14946,7 +14899,7 @@ X_train_selected.shape (253, 26)
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[36]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">select</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
@@ -14972,8 +14925,8 @@ X_train_selected.shape (253, 26)
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>X_train.shape : (284, 70)
-X_train_l1.shape : (284, 35)
+<pre>X_train.shape : (253, 104)
+X_train_l1.shape : (253, 52)
 </pre>
 </div>
 </div>
@@ -14985,7 +14938,7 @@ X_train_l1.shape : (284, 35)
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[37]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### 어떤 특성이 선택되었는지 확인</span>
@@ -15012,12 +14965,15 @@ X_train_l1.shape : (284, 35)
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[ True  True  True  True  True  True  True  True  True  True  True False
-  True  True False  True  True  True False  True  True  True  True  True
-  True  True  True  True  True  True False False False False False False
- False False False False False  True False False False  True False False
- False False False False  True False  True False False False False False
-  True False False  True  True False False False  True False]
+<pre>[False False False False False  True False False False False False  True
+  True False  True  True False  True  True  True False False  True  True
+ False  True False  True False False False False False False False False
+ False False False False  True False  True  True  True False  True  True
+  True False False False False False False False False False False False
+ False False  True False  True  True False  True  True  True  True  True
+  True  True  True  True False  True  True  True  True  True  True False
+  True  True  True  True  True False False  True  True  True False  True
+  True  True False  True  True False  True  True]
 </pre>
 </div>
 </div>
@@ -15025,7 +14981,7 @@ X_train_l1.shape : (284, 35)
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[20]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[37]:</div>
 
 
 
@@ -15045,7 +15001,7 @@ X_train_l1.shape : (284, 35)
 
 
 <div class="jp-RenderedImage jp-OutputArea-output ">
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA6oAAAA6CAYAAAC58qTAAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAADh0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uMy4xLjAsIGh0dHA6Ly9tYXRwbG90bGliLm9yZy+17YcXAAAKJ0lEQVR4nO3deYwkZRnH8e+PXTbguYB4sQgaF5EYAUGDQQ3itSoREiUBJfEA8Q+NkmgUNEFQUYy30WgQvPFAPNgYoxyKGokLu4pyeSBBXTl2FVYUFYR9/KNqYZydYZjtnu6aru8nmXTV2+9UvdVPd3U//b71dqoKSZIkSZK6YrtxN0CSJEmSpKlMVCVJkiRJnWKiKkmSJEnqFBNVSZIkSVKnmKhKkiRJkjrFRFWSJEmS1CmLKlFNsirJb5Ncm+TEcbdHCyvJZ5NsSHLllLKdk1yQ5Pft7U7jbKMWRpLdk/woyTVJrkryprbc+PdAkh2SXJrkV238T23LH5tkTRv/rydZNu62amEkWZLkl0m+264b+55Icn2SK5JcnmRtW+a5vyeSLE9ybpLftJ8Bnm78+2vRJKpJlgCfBF4I7AMcnWSf8bZKC+zzwKppZScCF1XVSuCidl2T5y7gzVX1ROAg4PXt693498MdwKFVtS+wH7AqyUHA+4GPtPG/FTh2jG3UwnoTcM2UdWPfL8+uqv2q6sB23XN/f3wM+H5V7Q3sS3MeMP49tWgSVeBpwLVVdV1V3Ql8DTh8zG3SAqqqnwC3TCs+HPhCu/wF4IiRNkojUVU3VtUv2uV/0LxR7Ybx74Vq/LNd3b79K+BQ4Ny23PhPqCQrgBcDZ7brwdj3nef+HkjyEOBZwFkAVXVnVW3C+PfWYkpUdwP+PGV9fVumfnlEVd0ITTIDPHzM7dECS7InsD+wBuPfG+3Qz8uBDcAFwB+ATVV1V1vF94DJ9VHgrcDmdn0XjH2fFHB+knVJjm/LPPf3w+OAjcDn2qH/ZyZ5IMa/txZTopoZymrkrZA0MkkeBHwTOKGqbht3ezQ6VXV3Ve0HrKAZUfPEmaqNtlVaaEkOAzZU1bqpxTNUNfaT6+CqegrNpV6vT/KscTdII7MUeArwqaraH7gdh/n22mJKVNcDu09ZXwHcMKa2aHxuTvIogPZ2w5jbowWSZHuaJPXsqvpWW2z8e6Yd9nUxzbXKy5Msbe/yPWAyHQy8JMn1NJf4HErTw2rse6KqbmhvNwDfpvmiynN/P6wH1lfVmnb9XJrE1fj31GJKVC8DVrYz/y0DjgJWj7lNGr3VwCvb5VcC542xLVog7TVpZwHXVNWHp9xl/Hsgya5JlrfLOwLPpblO+UfAy9pqxn8CVdVJVbWiqvakeZ//YVW9AmPfC0kemOTBW5aB5wNX4rm/F6rqJuDPSZ7QFj0HuBrj31upWjyjZ5K8iOab1SXAZ6vqtDE3SQsoyVeBQ4CHATcD7wS+A5wDPAb4E3BkVU2fcEmLXJJnAD8FruDe69TeTnOdqvGfcEmeTDNhxhKaL1TPqap3JXkcTS/bzsAvgWOq6o7xtVQLKckhwFuq6jBj3w9tnL/dri4FvlJVpyXZBc/9vZBkP5qJ1JYB1wGvpn0fwPj3zqJKVCVJkiRJk28xDf2VJEmSJPWAiaokSZIkqVNMVCVJkiRJnWKiKkmSJEnqFBNVSZIkSVKnDJSoJtk5yQVJft/e7nQfdR+S5C9JPjHIPtttHT/oNrQ4Gft+M/79Zez7zfj3m/HvL2Pfb4P2qJ4IXFRVK4GL2vXZvBv48YD728InbX8Z+34z/v1l7PvN+Peb8e8vY99jgyaqh9P8KDvt7REzVUpyAPAI4PwB9ydJkiRJmnCpqm3/5+TvwKXAnsD1wFOravm0OvsDFwM3AQ8ArqqqVfdj29veMPXOAQccMO//Wbdu3QK0ZGvzbduo2rUtJulY1E2zPcc2btzIrrvuOuLWqCtmi/+2nGO25f1iFCbpWIZtWK//UT3GxnJ+uvx4jeJzTFdjP8LXy1+rasYX+JyJapILgUfOcNc7gK8Dp1TV6UlObJd3mPb/pwI7VNXbkpwAnAbsVlWbZtjX8dzbxd/NqKmTtuULlyQL0JKtzbdto2rXtpikY1E3DfLlqfpnW84xXX2OTdKxdNWoHmNjOT9dfrxG8Tmmq7Ef4etlXVUdOON9A/ao3knTi/qrJPsCl1XVsml1zgaeCWwGHgTsBJxZVa+bY9vdjJo6yUR1NCbpWNRNXX3DVjd1+QPufE3SsXSViWo3dfnxMlGdn2EnqoNeo7oZeGGSVcCFwNK2Z/UeVfUKYCWwpt1fAacPuF9JkiRJ0oSaM1FNcmGSK2f4Oxy4A3gesBr4HXAbcHSSI5OcOWUzx7Z17wDWMkuimuT4JGuTrB3wuCRJkiRJi9TSuSpU1XNnuy/JTcBHgIfSzOr7AOBG4PFVddyUqicAe9BMqPQv4HlJUtP6h6vqDOCMdtvd7AeXJEmSJC2oQYf+rgaOBvYCvgV8HNgHeNKWCkmWAbsDH6iqPYBvAMuAXaZvzB5VSZIkSdKgkyntQvPzNI8BfgIcCXwa2Bu4tKqOS3IM8CXgauC/wI40P2fz6Kr6231s2x5V3W9OpjQak3Qs6qauTiqhburyJCzzNUnH0lVOptRNXX68nExpfjo1mVKbaJ4FbAJW0CStewO3bxn6W1VfBs4HjgPeQ9P7uhm4ZZB9S5IkSZIm05zXqN4P19EM430psA64FfjBtDqraRLVg4H/AJdMvz4VtvodVUmSJElSDw009BcgyWuBDwI3A0uAu2mS10uBtVW1OskOwLU0Ey79Bzimqs6bY7vd7AdXJzn0dzQm6VjUTV0dAqVu6vKQwfmapGPpKof+dlOXHy+H/s7PsIf+DqNH9e9AgBcAf6FJSG+pqpOn1DkCWE4z0dJn2nqSJEmSJG1l0Fl/AQq4hGa47zXAGuBvSd6V5CVJtgM+BfybZsbfA4EPzbQhZ/2VJEmSJA2jR3U9zRDivQCSnARQVe9r1x9KMxz4dppe1aXAyiQHVtX/JaTTfkd1I/DHWfb5MOCvQ2i7Fp8ZY9/lIaZdbtt8deBYfO1PuPt4jhn7fhta/DtwHhuaSTqWOYzt9T+qx7hHsZyvRfe5b748FvaYdXtDuEZ1KfA74Dk0Q3ovA15eVVfNUv9i4C3Tk9R57nPtbGOZNdmMfb8Z//4y9v1m/PvN+PeXse+3gYf+VtVdwBu4d+jvOVV11Zahv4NuX5IkSZLUL8MY+ktVfQ/43rSyk2epe8gw9ilJkiRJmkzDmExpHM4YdwM0Nsa+34x/fxn7fjP+/Wb8+8vY99jA16hKkiRJkjRMQxn6K0mS7pXkFOAg4K62aCnw83Z5q/KqOmXK/74KeA1w25RN3gj8bKbyqnrtcFsvSdL4mahKkrQwjqqqTQBJlgMnzFE+1Rur6vItK0k+Oke5JEkTZbFeoypJkiRJmlAmqpIkSZKkTjFRlSRJkiR1iomqJEmSJKlTTFQlSZIkSZ1ioipJkiRJ6hR/nkaSpOHbAHwxyeZ2fTvg++3ybOVb3Aq8N8mdU8p+fR/lkiRNnFTVuNsgSZIkSdI9HPorSZIkSeoUE1VJkiRJUqeYqEqSJEmSOsVEVZIkSZLUKSaqkiRJkqRO+R/Nn8D9Kk3PIwAAAABJRU5ErkJggg==
+<img src="data:image/png;base64,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
 "
 >
 </div>
@@ -15059,13 +15015,13 @@ X_train_l1.shape : (284, 35)
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[38]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 테스트 데이터 변환 </span>
 <span class="n">X_test_l1</span> <span class="o">=</span> <span class="n">select</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
 
-<span class="n">lr</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">()</span>
+<span class="n">lr</span> <span class="o">=</span> <span class="n">RandomForestRegressor</span><span class="p">()</span>
 <span class="n">lr</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;전체 특성 사용 : </span><span class="si">{:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">lr</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)))</span>
 
@@ -15089,7 +15045,7 @@ X_train_l1.shape : (284, 35)
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>전체 특성 사용 : 0.916
+<pre>전체 특성 사용 : 0.797
 </pre>
 </div>
 </div>
@@ -15124,11 +15080,11 @@ X_train_l1.shape : (284, 35)
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[39]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.feature_selection</span> <span class="kn">import</span> <span class="n">RFE</span>
-<span class="n">select</span> <span class="o">=</span> <span class="n">RFE</span><span class="p">(</span><span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">),</span>
+<span class="n">select</span> <span class="o">=</span> <span class="n">RFE</span><span class="p">(</span><span class="n">RandomForestRegressor</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">),</span>
             <span class="n">n_features_to_select</span><span class="o">=</span><span class="mi">40</span><span class="p">)</span>
 
 <span class="n">select</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
@@ -15152,7 +15108,7 @@ X_train_l1.shape : (284, 35)
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[22]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[39]:</div>
 
 
 
@@ -15172,7 +15128,7 @@ X_train_l1.shape : (284, 35)
 
 
 <div class="jp-RenderedImage jp-OutputArea-output ">
-<img src="data:image/png;base64,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
+<img src="data:image/png;base64,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
 "
 >
 </div>
@@ -15196,13 +15152,13 @@ X_train_l1.shape : (284, 35)
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[40]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_train_rfe</span> <span class="o">=</span> <span class="n">select</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_tr_rfe</span> <span class="o">=</span> <span class="n">select</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
 <span class="n">X_test_rfe</span> <span class="o">=</span> <span class="n">select</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
 
-<span class="n">score</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train_rfe</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test_rfe</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+<span class="n">score</span> <span class="o">=</span> <span class="n">RandomForestRegressor</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_tr_rfe</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test_rfe</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;테스트 점수 : </span><span class="si">{:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">score</span><span class="p">))</span>
 </pre></div>
 
@@ -15223,7 +15179,7 @@ X_train_l1.shape : (284, 35)
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>테스트 점수 : 0.937
+<pre>테스트 점수 : 0.798
 </pre>
 </div>
 </div>
@@ -15235,7 +15191,7 @@ X_train_l1.shape : (284, 35)
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[41]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### RFE에서 사용된 모델로 예측</span>
@@ -15259,7 +15215,7 @@ X_train_l1.shape : (284, 35)
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>테스트 점수 : 0.933
+<pre>테스트 점수 : 0.793
 </pre>
 </div>
 </div>

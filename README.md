@@ -68,6 +68,11 @@
  * 머신러닝 - 타이타닉 모델 업그레이드[html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_03_02C_titanic.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_03_02C_titanic.pdf)
  * 머신러닝 - Bike Sharing Demand(1)[html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_04_04_Bike_B_01_v10.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_04_04_Bike_B_01_v10.pdf)
  * 머신러닝 - Bike Sharing Demand(2)[html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_04_04_Bike_B_02_v10.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_04_04_Bike_B_02_v10.pdf)
+ * 머신러닝 - Bike Sharing Demand(3)[html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/Bike_Kaggle04_v12_modelUp.html)
+ 
+ * 머신러닝 - 성인 인구조사 소득 예측 대회(1) [html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/part03_pro_kaggle/kaggle_start_01.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/part03_pro_kaggle/KaggleKorea4th_01.pdf)
+ * 머신러닝 - 성인 인구조사 소득 예측 대회(2) [html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/part03_pro_kaggle/kaggle_start_02.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/part03_pro_kaggle/KaggleKorea4th_02.pdf)
+ * 머신러닝 - 성인 인구조사 소득 예측 대회(3) [html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/part03_pro_kaggle/kaggle_start_03.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/part03_pro_kaggle/KaggleKorea4th_03.pdf)
  
  ### 수업 관련 링크
  * 캐글 코리아 1차 대회 

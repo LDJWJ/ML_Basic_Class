@@ -1,7 +1,7 @@
 # 인공지능 기본 1기
  
 ##  데이터 알아가기 첫걸음
- * 웹 페이지 주소 : https://ldjwj.github.io/myrepo3_202011_12/
+ * 웹 페이지 주소 : https://ldjwj.github.io/MachineLearning_Class
 
 ### 머신러닝 기본 및 실습
 #### PDF

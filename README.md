@@ -56,8 +56,9 @@
   * Grid Search(1) [html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch05_02_01_성능개선_GridSearch1.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch05_02_01_성능개선_GridSearch1.pdf)
   * Grid Search(2) [html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch05_02_02_성능개선_GridSearch2.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch05_02_02_성능개선_GridSearch2.pdf)
   * 모델 평가 (1) [html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch05_03_01_model_validation(1).html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch05_03_01_model_validation(1).pdf)
-  * 모델 평가 (2) [html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch05_03_02_model_validation(2)-ROCAUC.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch05_03_02_model_validation(2)-ROCAUC.pdf)
-  * 모델 평가 (3) [html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch05_03_03_model_validation(3).html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch05_03_03_model_validation(3).pdf)
+  * 모델 평가 (2) [html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch05_03_02_model_validation(2)_threshold.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch05_03_02_model_validation(2)_threshold.pdf)
+  * 모델 평가 (3) [html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch05_03_03_model_validation(3)-ROCAUC.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch05_03_03_model_validation(3)-ROCAUC.pdf)
+  * 모델 평가 (4) [html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch05_03_04_model_validation(4).html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch05_03_04_model_validation(4).pdf)
   
 ### [실습] pima 데이터 실습
  * 머신러닝 - 타이타닉 시작하기[html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_03_02_decisionTree_diabetes_colab.html) [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/ch02_03_02_decisionTree_diabetes_colab.pdf)
@@ -75,6 +76,9 @@
  * 머신러닝 - 성인 인구조사 소득 예측 대회(2) [html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/part03_pro_kaggle/kaggle_start_02_labelen.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/part03_pro_kaggle/kaggle_start_02_labelen.pdf)
  * 머신러닝 - 성인 인구조사 소득 예측 대회(3) [html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/part03_pro_kaggle/kaggle_start_03_onehot.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/part03_pro_kaggle/kaggle_start_03_onehot.pdf)
  
+ * 머신러닝 - 매출의 미래 예측 (1) [html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/part03_pro_kaggle/predict-future-sales-eda_01.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/part03_pro_kaggle/predict-future-sales-eda_01.pdf)
+ * 머신러닝 - 매출의 미래 예측 (2) [html](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/part03_pro_kaggle/predict_future_sales-kaggle_02.html)  [pdf](https://ldjwj.github.io/myrepo3_202011_12/part03_ml/part03_pro_kaggle/predict_future_sales-kaggle_02.pdf)
+ 
  ### 수업 관련 링크
  * 캐글 코리아 1차 대회 
     * 타이타닉 생존자를 예측하라[Link](https://www.kaggle.com/c/2019-1st-ml-month-with-kakr)
@@ -84,7 +88,10 @@
   
  * 캐글 코리아 4차 대회 
     * 성인 인구 조사 소득 예측 대회 [Link](https://www.kaggle.com/t/604c205697e042de83c58025a90e632a)
-    
+ 
+  * Predict Future Sales
+    * Predict Future Sales [Link](https://www.kaggle.com/c/competitive-data-science-predict-future-sales)
+    * 러시아 최대 소프트웨어 회사인 1C Company에서 제공하는 일상적인 영업 데이터.
     
  * 내용은 파이썬 라이브러리를 활용한 머신러닝을 참고하여 작성했습니다.
  * 내용의 배포 및 사용은 저작권자에게 문의해 주세요.

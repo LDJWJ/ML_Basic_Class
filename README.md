@@ -5,8 +5,8 @@
 
 ### 머신러닝 기본 및 실습
 #### PDF
- * 머신러닝 알고리즘 [기본1 pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch01_01_ml/ch01_01_ML입문_v11_201201.pdf) [기본2 pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch01_01_ml/ch01_ML기본_v10_201201.pdf)
- * 머신러닝 알고리즘 knn_회귀 [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch02_01_knn_linear_ppt/ch02_knn_회귀_v113_2012.pdf)
+ * 머신러닝 알고리즘 [기본1 pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch01_01_ml/ch01_01_ML입문_v12_202107.pdf) [기본2 pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch01_01_ml/ch01_ML기본_v11_202107.pdf)
+ * 머신러닝 알고리즘 knn_회귀 [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch02_01_knn_linear_ppt/ch02_knn_회귀_v114_202107.pdf)
  * 머신러닝 알고리즘 의사결정트리 [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch02_02_decisiontree/ch02_03_01_decisiontree_v10_2010.pdf)
  * 머신러닝 알고리즘 앙상블 [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch02_03_ensemble/ch02_Ensemble_202012_v10.pdf)
  * 평가지표 [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch05_validation/ch05_평가지표_v03_202012.pdf)

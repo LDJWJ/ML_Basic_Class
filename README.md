@@ -21,7 +21,7 @@
  * 머신러닝 알고리즘 분류용 선형모델(Logistic, SVM) 
    * 이진분류 [html]  [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_04_binary_classification.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_04_binary_classification.pdf)
    * 멀티클래스 분류 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_05_multiclass_classification_v10.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_05_multiclass_classification_v10.pdf)
- * 머신러닝 - 의사결정트리[html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_01_decisiontree_local_ref.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_01_decisiontree_local_ref.pdf)
+ * 머신러닝 - 의사결정트리[html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_01_decisionTree_colab.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_01_decisiontree_local_ref.pdf)
 
  * 머신러닝 - 앙상블_랜덤포레스트(1)[html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_03_Randomforest(1).html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_03_Randomforest(1).pdf)
  * 머신러닝 - 앙상블_랜덤포레스트(2)[html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_04_Randomforest(2).html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_04_Randomforest(2).pdf)

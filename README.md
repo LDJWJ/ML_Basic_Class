@@ -26,6 +26,10 @@
  * 머신러닝 - 앙상블_랜덤포레스트(1)-tips [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_03_RandomForest_01.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_03_RandomForest_01.pdf)
  * 머신러닝 - 앙상블_랜덤포레스트(2)-cancer [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_03_RandomForest_02.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_03_RandomForest_02.pdf)
  * 머신러닝 - 앙상블_랜덤포레스트(3)-house [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_03_RandomForest_03.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_03_RandomForest_03.pdf)
+ * 머신러닝 - 의사결정트리, 랜덤포레스트-시각화
+ [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_04_dtreeviz_modelVis.html)  
+ [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_04_dtreeviz_modelVis.pdf)
+ 
  * 머신러닝 - 앙상블_그래디언트부스팅결정트리[html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_05_gradient_boosting_class_v11.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_05_gradient_boosting_class_v11.pdf)
  
 ### 데이터 전처리

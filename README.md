@@ -57,7 +57,8 @@
   * 군집 알고리즘 평가 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_05_04_군집알고리즘평가.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_05_04_군집알고리즘평가.pdf)
 
 ### 평가
-  * 교차 검증 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_01_01_crossValidation.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_01_01_crossValidation.pdf)
+  * 교차 검증1 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_01_01_CrossValidation_v01.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_01_01_CrossValidation_v01.pdf)
+  * 교차 검증2 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_01_02_CrossValidation_v02.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_01_02_CrossValidation_v02.pdf)
   * Grid Search(1) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_02_01_성능개선_GridSearch1.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_02_01_성능개선_GridSearch1.pdf)
   * Grid Search(2) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_02_02_성능개선_GridSearch2.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_02_02_성능개선_GridSearch2.pdf)
   * 모델 평가 (1) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_03_01_model_validation(1).html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_03_01_model_validation(1).pdf)
@@ -82,7 +83,11 @@
  * 머신러닝 - 성인 인구조사 소득 예측 대회(3) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/kaggle_start_03_onehot.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/kaggle_start_03_onehot.pdf)
  
  * 머신러닝 - 매출의 미래 예측 (1) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/predict-future-sales-eda_01.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/predict-future-sales-eda_01.pdf)
+ 
  * 머신러닝 - 매출의 미래 예측 (2) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/predict_future_sales-kaggle_02.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/predict_future_sales-kaggle_02.pdf)
+ 
+ * Dacon - 주차 수요 예측 [github](https://github.com/LDJWJ/parking_demand_competion)
+
  
  ### 수업 관련 링크
  * 캐글 코리아 1차 대회 

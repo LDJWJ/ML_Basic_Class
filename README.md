@@ -85,8 +85,9 @@
  
  * 머신러닝 - 매출의 미래 예측 (2) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/predict_future_sales-kaggle_02.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/predict_future_sales-kaggle_02.pdf)
  
- * Dacon - 주차 수요 예측 Baseline [github](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/dacon_07_feature_engineering_01.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/dacon_07_feature_engineering_01.pdf)
-
+ * Dacon - 주차 수요 예측 Baseline 
+[html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/dacon_07_feature_engineering_01.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/dacon_07_feature_engineering_01.pdf)
+[github] (https://github.com/LDJWJ/parking_demand_competion)
  
  ### 수업 관련 링크
  * 캐글 코리아 1차 대회 

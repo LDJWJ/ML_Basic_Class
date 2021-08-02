@@ -9,6 +9,7 @@
  * 머신러닝 알고리즘 knn_회귀 [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch02_01_knn_linear_ppt/ch02_knn_회귀_v114_202107.pdf)
  * 머신러닝 알고리즘 의사결정트리 [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch02_02_decisiontree/ch02_03_01_decisiontree_v10_2010.pdf)
  * 머신러닝 알고리즘 앙상블 [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch02_03_ensemble/ch02_Ensemble_202012_v10.pdf)
+ * 데이터 전처리 및 피처엔지니어링 [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch03_01_datapre/ch03_04_DataProcessing_202012_v11.pdf)
  * 평가지표 [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch05_validation/ch05_평가지표_v03_202012.pdf)
 
 ### SourceCode

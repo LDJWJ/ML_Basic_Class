@@ -14259,7 +14259,10 @@ a.anchor-link {
 
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="&#51076;&#44228;&#44050;&#50640;-&#46384;&#47480;-&#54217;&#44032;&#51648;&#54364;-&#54869;&#51064;">&#51076;&#44228;&#44050;&#50640; &#46384;&#47480; &#54217;&#44032;&#51648;&#54364; &#54869;&#51064;<a class="anchor-link" href="#&#51076;&#44228;&#44050;&#50640;-&#46384;&#47480;-&#54217;&#44032;&#51648;&#54364;-&#54869;&#51064;">&#182;</a></h3>
+<h3 id="&#47784;&#45944;-&#44160;&#51613;">&#47784;&#45944; &#44160;&#51613;<a class="anchor-link" href="#&#47784;&#45944;-&#44160;&#51613;">&#182;</a></h3><ul>
+<li>임계값에 따른 평가지표 확인</li>
+</ul>
+
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
@@ -14289,7 +14292,22 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="n">action</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
@@ -14297,6 +14315,7 @@ a.anchor-link {
 <span class="kn">import</span> <span class="nn">mglearn</span>
 <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">classification_report</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
 
      </div>
@@ -14307,7 +14326,7 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">mglearn.datasets</span> <span class="kn">import</span> <span class="n">make_blobs</span> 
@@ -14343,27 +14362,23 @@ a.anchor-link {
 </div>
 </div>
 
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>C:\Users\toto\anaconda3\lib\site-packages\sklearn\utils\deprecation.py:86: FutureWarning: Function make_blobs is deprecated; Please import make_blobs directly from scikit-learn
-  warnings.warn(msg, category=FutureWarning)
-</pre>
-</div>
 </div>
 
 </div>
 
 </div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="&#45936;&#51060;&#53552;-&#49884;&#44033;&#54868;">&#45936;&#51060;&#53552; &#49884;&#44033;&#54868;<a class="anchor-link" href="#&#45936;&#51060;&#53552;-&#49884;&#44033;&#54868;">&#182;</a></h3><ul>
+<li>400개의 음성 클래스</li>
+<li>50개의 양성 클래스</li>
+</ul>
 
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span> <span class="n">X</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span> 
@@ -14384,13 +14399,13 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[3]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[17]:</div>
 
 
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;matplotlib.collections.PathCollection at 0x1717e7af3d0&gt;</pre>
+<pre>&lt;matplotlib.collections.PathCollection at 0x1e93aec00d0&gt;</pre>
 </div>
 
 </div>
@@ -14423,7 +14438,7 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">mglearn</span><span class="o">.</span><span class="n">plots</span><span class="o">.</span><span class="n">plot_decision_threshold</span><span class="p">()</span>
@@ -14464,19 +14479,32 @@ a.anchor-link {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
 <li>중앙 웟부분에 있는 검은 원은 decision_function이 정확히 0일 때의 임계점을 나타낸다.</li>
-<li>원안의 포인트는 양성 클래스로 분류, 바깥쪽 포인트는 음성 클래스로 분류</li>
+<li>원안의 포인트는 <strong>양성 클래스</strong>로 분류, 바깥쪽 포인트는 <strong>음성 클래스</strong>로 분류</li>
 </ul>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="&#47784;&#45944;-&#49440;&#53469;-&#48143;-&#54617;&#49845;-&#54980;,-&#50696;&#52769;">&#47784;&#45944; &#49440;&#53469; &#48143; &#54617;&#49845; &#54980;, &#50696;&#52769;<a class="anchor-link" href="#&#47784;&#45944;-&#49440;&#53469;-&#48143;-&#54617;&#49845;-&#54980;,-&#50696;&#52769;">&#182;</a></h3>
+<h3 id="&#51116;&#54788;&#50984;(recall)-&#51312;&#51221;&#54644;&#48372;&#44592;">&#51116;&#54788;&#50984;(recall) &#51312;&#51221;&#54644;&#48372;&#44592;<a class="anchor-link" href="#&#51116;&#54788;&#50984;(recall)-&#51312;&#51221;&#54644;&#48372;&#44592;">&#182;</a></h3><ul>
+<li>svc.predict()함수로 예측 시. 재현율을 조정하기 어려운 조건.</li>
+<li>decision_function()함수로 예측하여 임계값이 조정이 가능.</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="&#47784;&#45944;(SVC)-&#50696;&#52769;-&#54980;,-&#54217;&#44032;-&#51648;&#54364;-&#54869;&#51064;">&#47784;&#45944;(SVC) &#50696;&#52769; &#54980;, &#54217;&#44032; &#51648;&#54364; &#54869;&#51064;<a class="anchor-link" href="#&#47784;&#45944;(SVC)-&#50696;&#52769;-&#54980;,-&#54217;&#44032;-&#51648;&#54364;-&#54869;&#51064;">&#182;</a></h3><ul>
+<li>모델 : SVC</li>
+<li>정밀도, 민감도, f1-score 확인</li>
+</ul>
+
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">svc</span> <span class="o">=</span> <span class="n">SVC</span><span class="p">(</span><span class="n">gamma</span><span class="o">=.</span><span class="mi">05</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>   
@@ -14522,7 +14550,7 @@ weighted avg       0.92      0.88      0.89       113
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>클래스 1에 대해 상당한 작은 정밀도를 얻었음. 재현율은 절반</li>
+<li>클래스 1에 대해 상당한 작은 정밀도(0.35)를 얻었음. 재현율은 절반(0.67)</li>
 <li>클래스 0의 샘플이 매우 많으므로 분류기는 소수인 클래스 (양성)1보다 클래스 (음성)0에 초점.</li>
 </ul>
 
@@ -14530,25 +14558,58 @@ weighted avg       0.92      0.88      0.89       113
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="&#51076;&#44228;&#44050;&#51012;-0&#50640;&#49436;--0.8&#47196;-&#45230;&#52628;&#44592;">&#51076;&#44228;&#44050;&#51012; 0&#50640;&#49436; -0.8&#47196; &#45230;&#52628;&#44592;<a class="anchor-link" href="#&#51076;&#44228;&#44050;&#51012;-0&#50640;&#49436;--0.8&#47196;-&#45230;&#52628;&#44592;">&#182;</a></h3>
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>1의 개수가 늘어난다.</li>
+<h3 id="&#47784;&#45944;&#51032;-&#51076;&#44228;&#44050;&#51012;-&#54876;&#50857;&#54616;&#50668;-0,1-&#44060;&#49688;-&#51312;&#51221;">&#47784;&#45944;&#51032; &#51076;&#44228;&#44050;&#51012; &#54876;&#50857;&#54616;&#50668; 0,1 &#44060;&#49688; &#51312;&#51221;<a class="anchor-link" href="#&#47784;&#45944;&#51032;-&#51076;&#44228;&#44050;&#51012;-&#54876;&#50857;&#54616;&#50668;-0,1-&#44060;&#49688;-&#51312;&#51221;">&#182;</a></h3><ul>
+<li>임계값을 0에서 -0.8로 낮추기</li>
+<li>임계값을 0에서 -0.8로 조정시 양성 클래스(1)의 개수가 늘어난다.</li>
 </ul>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 0으로 분류</span>
-<span class="n">decision_0</span> <span class="o">=</span> <span class="n">svc</span><span class="o">.</span><span class="n">decision_function</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>   <span class="o">&gt;</span> <span class="mi">0</span>
-<span class="n">decision_m08</span> <span class="o">=</span> <span class="n">svc</span><span class="o">.</span><span class="n">decision_function</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span> <span class="o">&gt;</span> <span class="o">-.</span><span class="mi">8</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pred</span> <span class="o">=</span> <span class="n">svc</span><span class="o">.</span><span class="n">decision_function</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">pred</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">pred</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[22]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>(-1.4709040285242516, 1.2505999085811395)</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">decision_0</span> <span class="o">=</span> <span class="n">svc</span><span class="o">.</span><span class="n">decision_function</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>   <span class="o">&gt;</span> <span class="mi">0</span>     <span class="c1"># 임계값을 0으로 </span>
+<span class="n">decision_m08</span> <span class="o">=</span> <span class="n">svc</span><span class="o">.</span><span class="n">decision_function</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span> <span class="o">&gt;</span> <span class="o">-.</span><span class="mi">8</span>   <span class="c1"># 임계값을 -0.8로</span>
 
 <span class="c1"># TP - 잘 맞추는 것을 늘린다.</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;임계값 0 일때    : 1(양성) 개수 :&quot;</span><span class="p">,</span> <span class="n">decision_0</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="p">)</span> 
@@ -14586,14 +14647,14 @@ weighted avg       0.92      0.88      0.89       113
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>0의 개수가 줄어든다.</li>
+<li>임계값을 변경하여 역으로 1의 개수가 늘고 0의 개수가 줄어든다.</li>
 </ul>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;임계값 0 일때    : 0(음성) 개수 :&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">decision_0</span><span class="p">)</span> <span class="o">-</span> <span class="n">decision_0</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span> 
@@ -14630,10 +14691,11 @@ weighted avg       0.92      0.88      0.89       113
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[31]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">y_pred_lower_threshold</span> <span class="o">=</span> <span class="n">svc</span><span class="o">.</span><span class="n">decision_function</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span> <span class="o">&gt;</span> <span class="o">-.</span><span class="mi">8</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">y_pred_0</span> <span class="o">=</span> <span class="n">svc</span><span class="o">.</span><span class="n">decision_function</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>   <span class="o">&gt;</span> <span class="mi">0</span> 
+<span class="n">y_pred_08</span> <span class="o">=</span> <span class="n">svc</span><span class="o">.</span><span class="n">decision_function</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span> <span class="o">&gt;</span> <span class="o">-.</span><span class="mi">8</span>
 </pre></div>
 
      </div>
@@ -14644,10 +14706,54 @@ weighted avg       0.92      0.88      0.89       113
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[32]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred_lower_threshold</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 임계값 0</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred_0</span><span class="p">))</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>              precision    recall  f1-score   support
+
+           0       0.97      0.89      0.93       104
+           1       0.35      0.67      0.46         9
+
+    accuracy                           0.88       113
+   macro avg       0.66      0.78      0.70       113
+weighted avg       0.92      0.88      0.89       113
+
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[33]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred_08</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -14688,21 +14794,27 @@ weighted avg       0.95      0.83      0.87       113
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="&#51076;&#44228;&#44050;&#51012;-&#45230;&#52628;&#45716;-&#44163;&#51008;">&#51076;&#44228;&#44050;&#51012; &#45230;&#52628;&#45716; &#44163;&#51008;<a class="anchor-link" href="#&#51076;&#44228;&#44050;&#51012;-&#45230;&#52628;&#45716;-&#44163;&#51008;">&#182;</a></h3><ul>
-<li>정밀도(precision) 0.35에서 0.32로 낮아지고</li>
-<li>재현율(recall)-sensitivity(민감도)는 0.67에서 1로 올라감.</li>
-<li>결론적으로 1(양성)의 수가 늘어나기 때문에 TP(진짜 양성)의 개수가 늘어난다.</li>
+<li>정밀도(precision) <strong>0.35에서 0.32로 낮아지고</strong></li>
+<li>재현율(recall)-sensitivity(민감도)는 <strong>0.67에서 1로 올라감.</strong></li>
+<li>결론적으로 <strong>1(양성)의 수가 늘어나기 때문에 TP(진짜 양성)의 개수가 늘어난다.</strong></li>
 </ul>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="&#51221;&#48128;&#46020;&#50752;-&#51116;&#54788;&#50984;">&#51221;&#48128;&#46020;&#50752; &#51116;&#54788;&#50984;<a class="anchor-link" href="#&#51221;&#48128;&#46020;&#50752;-&#51116;&#54788;&#50984;">&#182;</a></h4><ul>
-<li><p>정밀도(precision)</p>
-<ul>
-<li>TP/(TP + NP) : 예측 양성 것중에 얼마나 잘 맞추었을까?</li>
+<h3 id="Review">Review<a class="anchor-link" href="#Review">&#182;</a></h3><ul>
+<li>정밀도(precision) <ul>
+<li>TP/(TP + NP) : <strong>예측 양성 전체 중</strong>에 정확하게 잘 맞추었을까?</li>
 </ul>
 </li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
 <li><p>재현율(recall) :</p>
 <ul>
 <li><p>TP/(TP + FN) : 실제 양성 데이터의 얼마나 잘 맞추었을까?</p>
@@ -14717,9 +14829,20 @@ weighted avg       0.95      0.83      0.87       113
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>F1-score
+\begin{equation}
+\text{F} = 2 * \frac{\text{정밀도*재현율}}{  \text{정밀도 + 재현율 }  }
+\end{equation}</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="&#49892;&#49845;">&#49892;&#49845;<a class="anchor-link" href="#&#49892;&#49845;">&#182;</a></h3><ul>
-<li>임계값을 0보다 큰 값으로 조정해 보고 recall를 확인해 보기</li>
-<li>임계값을 0으로 하고 recall과 기타 평가지표를 확인해 보기</li>
+<li>임계값을 0보다 큰 값으로 조정해 보고 재현율(recall)를 확인해 보기</li>
+<li>임계값을 0으로 하고 재현율(recall)과 기타 평가지표를 확인해 보기</li>
 </ul>
 
 </div>
@@ -14734,6 +14857,11 @@ weighted avg       0.95      0.83      0.87       113
 </li>
 </ul>
 
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p style="text-align: right; font-size:1px;color:#B0BEC5"> 교육용으로 작성된 것으로 배포 및 복제시에 사전 허가가 필요합니다.<br> Copyright 2021 LIM Co. all rights reserved.</p>
 </div>
 </div>
 </body>

@@ -14266,8 +14266,8 @@ a.anchor-link {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="&#54617;&#49845;-&#45236;&#50857;">&#54617;&#49845; &#45236;&#50857;<a class="anchor-link" href="#&#54617;&#49845;-&#45236;&#50857;">&#182;</a></h3><ul>
 <li>정밀도 재현율을 구하는 함수를 알아본다.</li>
-<li>Tprate, Fprate를 구하는 함수를 알아본다.</li>
-<li>정밀도, 재현율 그래프를 확인해 본다.</li>
+<li>재현율(recall, Tprate), Fprate를 구하는 함수를 알아본다.</li>
+<li>정밀도(precision), 재현율 그래프를 확인해 본다.</li>
 <li>Tprate, Fprate의 그래프를 확인해 본다.(ROC 커브)</li>
 <li>ROC커브를 구하고 AUC에 대해 이해해본다.</li>
 </ul>
@@ -14276,20 +14276,41 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="&#54620;&#44544;-&#49324;&#51204;-&#49444;&#51221;">&#54620;&#44544; &#49324;&#51204; &#49444;&#51221;<a class="anchor-link" href="#&#54620;&#44544;-&#49324;&#51204;-&#49444;&#51221;">&#182;</a></h3>
+<h3 id="&#54620;&#44544;-&#49444;&#51221;">&#54620;&#44544; &#49444;&#51221;<a class="anchor-link" href="#&#54620;&#44544;-&#49444;&#51221;">&#182;</a></h3>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">font_manager</span><span class="p">,</span> <span class="n">rc</span>
+<span class="kn">import</span> <span class="nn">platform</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="n">action</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### 한글</span>
-<span class="kn">import</span> <span class="nn">matplotlib</span>
-<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">font_manager</span><span class="p">,</span> <span class="n">rc</span>
-<span class="n">font_loc</span> <span class="o">=</span> <span class="s2">&quot;C:/Windows/Fonts/malgunbd.ttf&quot;</span>
-<span class="n">font_name</span> <span class="o">=</span> <span class="n">font_manager</span><span class="o">.</span><span class="n">FontProperties</span><span class="p">(</span><span class="n">fname</span><span class="o">=</span><span class="n">font_loc</span><span class="p">)</span><span class="o">.</span><span class="n">get_name</span><span class="p">()</span>
-<span class="n">matplotlib</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;font&#39;</span><span class="p">,</span> <span class="n">family</span><span class="o">=</span><span class="n">font_name</span><span class="p">)</span>
+<span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;C:/Windows/Fonts/malgun.ttf&quot;</span>
+<span class="k">if</span> <span class="n">platform</span><span class="o">.</span><span class="n">system</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;Windows&quot;</span><span class="p">:</span>
+    <span class="n">font_name</span> <span class="o">=</span> <span class="n">font_manager</span><span class="o">.</span><span class="n">FontProperties</span><span class="p">(</span><span class="n">fname</span><span class="o">=</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">get_name</span><span class="p">()</span>
+    <span class="n">rc</span><span class="p">(</span><span class="s1">&#39;font&#39;</span><span class="p">,</span> <span class="n">family</span><span class="o">=</span><span class="n">font_name</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">platform</span><span class="o">.</span><span class="n">system</span><span class="p">()</span><span class="o">==</span><span class="s2">&quot;Darwin&quot;</span><span class="p">:</span>
+    <span class="n">rc</span><span class="p">(</span><span class="s1">&#39;font&#39;</span><span class="p">,</span> <span class="n">family</span><span class="o">=</span><span class="s1">&#39;AppleGothic&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Unknown System&quot;</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14305,13 +14326,15 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.svm</span> <span class="kn">import</span> <span class="n">SVC</span>
+<span class="kn">from</span> <span class="nn">sklearn.tree</span> <span class="kn">import</span> <span class="n">DecisionTreeClassifier</span>
 <span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">classification_report</span>
 </pre></div>
 
      </div>
@@ -14330,7 +14353,7 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">mglearn.datasets</span> <span class="kn">import</span> <span class="n">make_blobs</span> 
@@ -14363,19 +14386,6 @@ a.anchor-link {
 </div>
 </div>
 
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>C:\Users\toto\anaconda3\lib\site-packages\sklearn\utils\deprecation.py:86: FutureWarning: Function make_blobs is deprecated; Please import make_blobs directly from scikit-learn
-  warnings.warn(msg, category=FutureWarning)
-</pre>
-</div>
-</div>
-
 </div>
 
 </div>
@@ -14383,12 +14393,12 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> 
-                                                    <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 <span class="n">svc</span> <span class="o">=</span> <span class="n">SVC</span><span class="p">(</span><span class="n">gamma</span><span class="o">=.</span><span class="mi">05</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>   
+<span class="n">tree</span> <span class="o">=</span> <span class="n">DecisionTreeClassifier</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>  
 </pre></div>
 
      </div>
@@ -14399,12 +14409,11 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pred</span> <span class="o">=</span> <span class="n">svc</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
-<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">classification_report</span>
-
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># SVC 모델</span>
+<span class="n">pred</span> <span class="o">=</span> <span class="n">svc</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">pred</span><span class="p">))</span>
 </pre></div>
 
@@ -14442,21 +14451,80 @@ weighted avg       0.92      0.88      0.89       113
 
 </div>
 
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 의사결정 트리 모델</span>
+<span class="n">pred</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">pred</span><span class="p">))</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>              precision    recall  f1-score   support
+
+           0       0.98      0.88      0.93       104
+           1       0.37      0.78      0.50         9
+
+    accuracy                           0.88       113
+   macro avg       0.67      0.83      0.71       113
+weighted avg       0.93      0.88      0.90       113
+
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="&#51221;&#48128;&#46020;-&#51116;&#54788;&#50984;-&#44257;&#49440;-&#54869;&#51064;">&#51221;&#48128;&#46020; &#51116;&#54788;&#50984; &#44257;&#49440; &#54869;&#51064;<a class="anchor-link" href="#&#51221;&#48128;&#46020;-&#51116;&#54788;&#50984;-&#44257;&#49440;-&#54869;&#51064;">&#182;</a></h3>
+<h3 id="&#51221;&#48128;&#46020;-&#51116;&#54788;&#50984;-&#44257;&#49440;-&#54869;&#51064;">&#51221;&#48128;&#46020;-&#51116;&#54788;&#50984; &#44257;&#49440; &#54869;&#51064;<a class="anchor-link" href="#&#51221;&#48128;&#46020;-&#51116;&#54788;&#50984;-&#44257;&#49440;-&#54869;&#51064;">&#182;</a></h3>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>새로운 모델을 만들 때, 운영을 위해 90% 재현율을 유지하는 것등의 필요조건을 지정할 때가 있다.<ul>
+<li>이를 운영 포인트를 지정한다고 말하고, 운영 포인트를 고정하면 비즈니스 목표 설정이나 고객내 다른 그룹의 성능을 보장하는데 도움이 된다.</li>
+</ul>
+</li>
+<li>이런 경우에 과제를 잘 이해하기 위해 모든 임계값을 조사하거나, 정밀도나 재현율의 모든 장단점을 살펴본다.<ul>
+<li>이를 위해 정밀도-재현율 곡선을 사용</li>
+</ul>
+</li>
+</ul>
+
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">precision_recall_curve</span>
 
-<span class="n">precision</span><span class="p">,</span> <span class="n">recall</span><span class="p">,</span> <span class="n">thresholds</span> <span class="o">=</span> <span class="n">precision_recall_curve</span><span class="p">(</span>
-                            <span class="n">y_test</span><span class="p">,</span> <span class="n">svc</span><span class="o">.</span><span class="n">decision_function</span><span class="p">(</span><span class="n">X_test</span><span class="p">))</span>
+<span class="n">precision</span><span class="p">,</span> <span class="n">recall</span><span class="p">,</span> <span class="n">thresholds</span> <span class="o">=</span> <span class="n">precision_recall_curve</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">svc</span><span class="o">.</span><span class="n">decision_function</span><span class="p">(</span><span class="n">X_test</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -14467,7 +14535,7 @@ weighted avg       0.92      0.88      0.89       113
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 부드러운 곡선을 위해 데이터 포인트 수를 늘립니다</span>
@@ -14503,19 +14571,6 @@ weighted avg       0.92      0.88      0.89       113
 </div>
 </div>
 
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>C:\Users\toto\anaconda3\lib\site-packages\sklearn\utils\deprecation.py:86: FutureWarning: Function make_blobs is deprecated; Please import make_blobs directly from scikit-learn
-  warnings.warn(msg, category=FutureWarning)
-</pre>
-</div>
-</div>
-
 </div>
 
 </div>
@@ -14523,12 +14578,13 @@ weighted avg       0.92      0.88      0.89       113
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span> <span class="n">X</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span> 
             <span class="n">c</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> 
-            <span class="n">cmap</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">autumn</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span> <span class="n">edgecolors</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>  <span class="c1"># plt.cm.Blues, RdYlGn, BrBG, Greens, RdGy, YlOrRd, autumn</span>
+            <span class="n">cmap</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">autumn</span><span class="p">,</span>  <span class="c1"># plt.cm.Blues, RdYlGn, BrBG, Greens, RdGy, YlOrRd, autumn</span>
+            <span class="n">s</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span> <span class="n">edgecolors</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>  
 </pre></div>
 
      </div>
@@ -14544,30 +14600,15 @@ weighted avg       0.92      0.88      0.89       113
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[9]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[26]:</div>
 
 
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;matplotlib.collections.PathCollection at 0x258ec631460&gt;</pre>
+<pre>&lt;matplotlib.collections.PathCollection at 0x23f9f897190&gt;</pre>
 </div>
 
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>C:\Users\toto\anaconda3\lib\site-packages\matplotlib\backends\backend_agg.py:238: RuntimeWarning: Glyph 8722 missing from current font.
-  font.set_text(s, 0.0, flags=flags)
-C:\Users\toto\anaconda3\lib\site-packages\matplotlib\backends\backend_agg.py:201: RuntimeWarning: Glyph 8722 missing from current font.
-  font.set_text(s, 0, flags=flags)
-</pre>
-</div>
 </div>
 
 <div class="jp-OutputArea-child">
@@ -14593,7 +14634,7 @@ C:\Users\toto\anaconda3\lib\site-packages\matplotlib\backends\backend_agg.py:201
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">svc</span> <span class="o">=</span> <span class="n">SVC</span><span class="p">(</span><span class="n">gamma</span><span class="o">=.</span><span class="mi">05</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
@@ -14632,21 +14673,22 @@ C:\Users\toto\anaconda3\lib\site-packages\matplotlib\backends\backend_agg.py:201
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[35]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">precision</span><span class="p">,</span> <span class="n">recall</span><span class="p">,</span> <span class="n">thresholds</span> <span class="o">=</span> <span class="n">precision_recall_curve</span><span class="p">(</span>
-                                             <span class="n">y_test</span><span class="p">,</span> <span class="n">pred</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">precision</span><span class="p">,</span> <span class="n">recall</span><span class="p">,</span> <span class="n">thresholds</span> <span class="o">=</span> <span class="n">precision_recall_curve</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">pred</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;임계값 : &quot;</span><span class="p">,</span> <span class="n">thresholds</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span>  <span class="n">thresholds</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
 
 <span class="c1"># 0에 가까운 임계값을 찾습니다</span>
-<span class="n">close_zero</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">thresholds</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">close_zero</span><span class="p">)</span>
+<span class="n">close_zero</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">thresholds</span><span class="p">))</span>  <span class="c1"># thresholds의 절대값이 가장 작은 것(위치)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">close_zero</span><span class="p">)</span>  
 
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">precision</span><span class="p">[</span><span class="n">close_zero</span><span class="p">],</span> 
          <span class="n">recall</span><span class="p">[</span><span class="n">close_zero</span><span class="p">],</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> 
          <span class="n">markersize</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
          <span class="n">label</span><span class="o">=</span><span class="s2">&quot;임계값 0&quot;</span><span class="p">,</span> 
-         <span class="n">fillstyle</span><span class="o">=</span><span class="s2">&quot;none&quot;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">mew</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+         <span class="n">fillstyle</span><span class="o">=</span><span class="s2">&quot;none&quot;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">precision</span><span class="p">,</span> <span class="n">recall</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;정밀도-재현율 곡선&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;정밀도&quot;</span><span class="p">)</span>
@@ -14671,7 +14713,8 @@ C:\Users\toto\anaconda3\lib\site-packages\matplotlib\backends\backend_agg.py:201
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>964
+<pre>임계값 :  -1.4264466917666971 1.467573203281382
+964
 </pre>
 </div>
 </div>
@@ -14679,13 +14722,13 @@ C:\Users\toto\anaconda3\lib\site-packages\matplotlib\backends\backend_agg.py:201
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[11]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[35]:</div>
 
 
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;matplotlib.legend.Legend at 0x258ed957130&gt;</pre>
+<pre>&lt;matplotlib.legend.Legend at 0x23fa002bd60&gt;</pre>
 </div>
 
 </div>
@@ -14699,7 +14742,7 @@ C:\Users\toto\anaconda3\lib\site-packages\matplotlib\backends\backend_agg.py:201
 
 
 <div class="jp-RenderedImage jp-OutputArea-output ">
-<img src="data:image/png;base64,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
+<img src="data:image/png;base64,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
 "
 >
 </div>
@@ -14710,25 +14753,6 @@ C:\Users\toto\anaconda3\lib\site-packages\matplotlib\backends\backend_agg.py:201
 
 </div>
 
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>재현율(recall, sensitivity-민감도, Tprate) <ul>
-<li>실제 양성 데이터를 양성으로 잘 예측</li>
-<li>TP/(TP + FN)</li>
-</ul>
-</li>
-<li>==========================================</li>
-<li>FPRate <ul>
-<li>실제 음성(0) 데이터를 음성으로 잘 예측</li>
-<li>1-특이도( TN/(FP + TN) )</li>
-<li>FP/(FP + TN)</li>
-</ul>
-</li>
-</ul>
-
-</div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
@@ -14744,7 +14768,10 @@ C:\Users\toto\anaconda3\lib\site-packages\matplotlib\backends\backend_agg.py:201
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="&#51116;&#54788;&#50984;(recall,-&#48124;&#44048;&#46020;,-TPR)">&#51116;&#54788;&#50984;(recall, &#48124;&#44048;&#46020;, TPR)<a class="anchor-link" href="#&#51116;&#54788;&#50984;(recall,-&#48124;&#44048;&#46020;,-TPR)">&#182;</a></h3>
+<h3 id="&#51116;&#54788;&#50984;(recall,-&#48124;&#44048;&#46020;,-TPR)">&#51116;&#54788;&#50984;(recall, &#48124;&#44048;&#46020;, TPR)<a class="anchor-link" href="#&#51116;&#54788;&#50984;(recall,-&#48124;&#44048;&#46020;,-TPR)">&#182;</a></h3><ul>
+<li>실제 양성 데이터를 양성으로 잘 예측</li>
+</ul>
+
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
@@ -14756,12 +14783,65 @@ C:\Users\toto\anaconda3\lib\site-packages\matplotlib\backends\backend_agg.py:201
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="&#44032;&#51676;-&#50577;&#49457;-&#48708;&#50984;(Fprate)">&#44032;&#51676; &#50577;&#49457; &#48708;&#50984;(Fprate)<a class="anchor-link" href="#&#44032;&#51676;-&#50577;&#49457;-&#48708;&#50984;(Fprate)">&#182;</a></h3><ul>
+<li>1 - 특이도</li>
+<li>실제 음성 데이터 중에 음성(0) 데이터를 잘못 예측한 비율</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+\begin{equation}
+\text{가짜 양성 비율(Fprate)} = \frac{\text{틀린 예측(FP)}}{  \text{실제 값이 음성인것 전체(FP + TN)  }  }
+\end{equation}
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="&#47004;&#45924;-&#54252;&#47112;&#49828;&#53944;&#47484;-&#51060;&#50857;&#54620;-&#51221;&#48128;&#46020;-&#51116;&#54788;&#50984;&#51032;-&#52964;&#48652;">&#47004;&#45924; &#54252;&#47112;&#49828;&#53944;&#47484; &#51060;&#50857;&#54620; &#51221;&#48128;&#46020;-&#51116;&#54788;&#50984;&#51032; &#52964;&#48652;<a class="anchor-link" href="#&#47004;&#45924;-&#54252;&#47112;&#49828;&#53944;&#47484;-&#51060;&#50857;&#54620;-&#51221;&#48128;&#46020;-&#51116;&#54788;&#50984;&#51032;-&#52964;&#48652;">&#182;</a></h3>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[40]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_train</span><span class="o">.</span><span class="n">shape</span>  <span class="c1"># 현재 feature 개수</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[40]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>(3375, 2)</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[41]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestClassifier</span>
@@ -14785,7 +14865,7 @@ C:\Users\toto\anaconda3\lib\site-packages\matplotlib\backends\backend_agg.py:201
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[41]:</div>
 
 
 
@@ -14803,14 +14883,10 @@ C:\Users\toto\anaconda3\lib\site-packages\matplotlib\backends\backend_agg.py:201
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[42]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># RandomForestClassifier는 decision_function 대신 predict_proba를 제공합니다.</span>
-<span class="n">precision_rf</span><span class="p">,</span> <span class="n">recall_rf</span><span class="p">,</span> <span class="n">thresholds_rf</span> <span class="o">=</span> <span class="n">precision_recall_curve</span><span class="p">(</span>
-                                         <span class="n">y_test</span><span class="p">,</span> <span class="n">pred</span><span class="p">)</span>
-
-<span class="c1"># SVC모델 그래프</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># SVC모델 그래프</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">precision</span><span class="p">,</span> <span class="n">recall</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;svc&quot;</span><span class="p">)</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">precision</span><span class="p">[</span><span class="n">close_zero</span><span class="p">],</span> 
@@ -14821,13 +14897,16 @@ C:\Users\toto\anaconda3\lib\site-packages\matplotlib\backends\backend_agg.py:201
          <span class="n">c</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> 
          <span class="n">mew</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 
+<span class="c1"># RandomForestClassifier는 decision_function 대신 predict_proba를 제공합니다.</span>
+<span class="n">precision_rf</span><span class="p">,</span> <span class="n">recall_rf</span><span class="p">,</span> <span class="n">thresholds_rf</span> <span class="o">=</span> <span class="n">precision_recall_curve</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">pred</span><span class="p">)</span>
+
 <span class="c1"># 랜덤포레스트 그래프</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">precision_rf</span><span class="p">,</span> <span class="n">recall_rf</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;rf&quot;</span><span class="p">)</span>
 
-<span class="n">close_default_rf</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmin</span><span class="p">(</span>  <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">thresholds_rf</span> <span class="o">-</span> <span class="mf">0.5</span><span class="p">)</span>  <span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">close_default_rf</span><span class="p">)</span>
+<span class="n">close_zero_rf</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmin</span><span class="p">(</span>  <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">thresholds_rf</span> <span class="o">-</span> <span class="mf">0.5</span><span class="p">)</span>  <span class="p">)</span>   <span class="c1"># 임계값이 0.5 위치</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">close_zero_rf</span><span class="p">)</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">precision_rf</span><span class="p">[</span><span class="n">close_default_rf</span><span class="p">],</span> <span class="n">recall_rf</span><span class="p">[</span><span class="n">close_default_rf</span><span class="p">],</span> <span class="s1">&#39;^&#39;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">precision_rf</span><span class="p">[</span><span class="n">close_zero_rf</span><span class="p">],</span> <span class="n">recall_rf</span><span class="p">[</span><span class="n">close_zero_rf</span><span class="p">],</span> <span class="s1">&#39;^&#39;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span>
          <span class="n">markersize</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;rf: 임계값 0.5&quot;</span><span class="p">,</span> <span class="n">fillstyle</span><span class="o">=</span><span class="s2">&quot;none&quot;</span><span class="p">,</span> <span class="n">mew</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;정밀도&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;재현율&quot;</span><span class="p">)</span>
@@ -14859,13 +14938,13 @@ C:\Users\toto\anaconda3\lib\site-packages\matplotlib\backends\backend_agg.py:201
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[13]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[42]:</div>
 
 
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;matplotlib.legend.Legend at 0x258eda6d8b0&gt;</pre>
+<pre>&lt;matplotlib.legend.Legend at 0x23fa0269820&gt;</pre>
 </div>
 
 </div>
@@ -14894,15 +14973,25 @@ C:\Users\toto\anaconda3\lib\site-packages\matplotlib\backends\backend_agg.py:201
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>극단적인 부분, 재현율이 매우 높거나, 정밀도가 매우 높을 때는 랜덤포레스트가 더 낫다.</li>
-<li>정밀도 0.7부분에서는 SVC가 좋음</li>
+<li>정밀도 재현율 곡선이 오른쪽 위로 갈수록 더 나은 분류기를 나타낸다.</li>
+<li>재현율이 매우 높거나, 정밀도가 매우 높을 때는 랜덤포레스트가 더 낫다.</li>
+<li>정밀도 0.7부분에서는 SVM이 좋음</li>
+<li>f1-score 점수만으로 모델의 성능을 평가한다면 이런 세세한 부분을 놓칠 수 있음.<ul>
+<li>f1-score는 정밀도-재현율 곡선의 <strong>한 지점인 기본 임계값에 대한 점수</strong>이기 때문에</li>
+</ul>
+</li>
 </ul>
 
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="(&#49892;&#49845;)-&#51032;&#49324;&#44208;&#51221;&#53944;&#47532;-&#47784;&#45944;-&#52628;&#44032;&#54644;-&#48372;&#44592;">(&#49892;&#49845;) &#51032;&#49324;&#44208;&#51221;&#53944;&#47532; &#47784;&#45944; &#52628;&#44032;&#54644; &#48372;&#44592;<a class="anchor-link" href="#(&#49892;&#49845;)-&#51032;&#49324;&#44208;&#51221;&#53944;&#47532;-&#47784;&#45944;-&#52628;&#44032;&#54644;-&#48372;&#44592;">&#182;</a></h3>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[43]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">f1_score</span>
@@ -14941,10 +15030,19 @@ svc의 f1_score: 0.656
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="&#47784;&#45944;&#51012;-&#48708;&#44368;&#54616;&#44592;-&#50948;&#54620;-&#48169;&#48277;-&#51473;&#51032;-&#54616;&#45208;&#47196;-&#51221;&#48128;&#46020;-&#51116;&#54788;&#50984;-&#44257;&#49440;&#51032;-&#50500;&#47019;&#48512;&#48516;-&#47732;&#51201;&#51012;-&#51060;&#50857;">&#47784;&#45944;&#51012; &#48708;&#44368;&#54616;&#44592; &#50948;&#54620; &#48169;&#48277; &#51473;&#51032; &#54616;&#45208;&#47196; &#51221;&#48128;&#46020;-&#51116;&#54788;&#50984; &#44257;&#49440;&#51032; &#50500;&#47019;&#48512;&#48516; &#47732;&#51201;&#51012; &#51060;&#50857;<a class="anchor-link" href="#&#47784;&#45944;&#51012;-&#48708;&#44368;&#54616;&#44592;-&#50948;&#54620;-&#48169;&#48277;-&#51473;&#51032;-&#54616;&#45208;&#47196;-&#51221;&#48128;&#46020;-&#51116;&#54788;&#50984;-&#44257;&#49440;&#51032;-&#50500;&#47019;&#48512;&#48516;-&#47732;&#51201;&#51012;-&#51060;&#50857;">&#182;</a></h3><ul>
+<li>이 면적을 평균 정밀도(average precision)이라 한다.</li>
+<li>함수로 average_precision_score함수로 <strong>평균 정밀도 계산</strong>이 가능하다.</li>
+</ul>
+
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[44]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">average_precision_score</span>
@@ -14990,11 +15088,20 @@ svc의 평균 정밀도: 0.666
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>평균 정밀도는 두 모델의 성능이 비슷하다. 위의 f1_score의 결과와는 조금 다르다.</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="ROC-&#44257;&#49440;">ROC &#44257;&#49440;<a class="anchor-link" href="#ROC-&#44257;&#49440;">&#182;</a></h3><ul>
 <li><strong>ROC 곡선은 여러 임계값에서 분류기의 특성을 분석하는데 널리 사용되는 도구.</strong></li>
 <li>ROC 곡선은 분류기의 모든 임계값을 고려</li>
 <li>앞의 그래프의 x는 정밀도, y가 재현율(TPR)이었다면 <ul>
 <li>ROC곡선은 x는 (False Positive rate), y를 재현율(True Positive rate)로 한것.</li>
+<li>진짜 양성 비율(TPR), 거짓 양성 비율(FPR)</li>
 </ul>
 </li>
 </ul>
@@ -15004,7 +15111,7 @@ svc의 평균 정밀도: 0.666
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h5 id="ROC-&#50752;-AUC">ROC &#50752; AUC<a class="anchor-link" href="#ROC-&#50752;-AUC">&#182;</a></h5><ul>
-<li>y축은 Tprate(재현율, 민감도), x축은 Fprate라고 한다.</li>
+<li>x축은 Fprate, y축은 Tprate(재현율, 민감도)로 한다.</li>
 <li>FPrate는 1-특이도와 같다</li>
 <li>FPrate는 실제 음성인 데이터 중에 양성으로 예측하여 틀린 것의 비율</li>
 </ul>
@@ -15015,7 +15122,7 @@ svc의 평균 정밀도: 0.666
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[45]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">roc_curve</span>
@@ -15035,7 +15142,7 @@ svc의 평균 정밀도: 0.666
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[46]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">fpr</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">tpr</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">thresholds</span>
@@ -15054,7 +15161,7 @@ svc의 평균 정밀도: 0.666
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[17]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[46]:</div>
 
 
 
@@ -15098,7 +15205,7 @@ svc의 평균 정밀도: 0.666
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[47]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">fpr</span><span class="p">,</span> <span class="n">tpr</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;ROC 곡선&quot;</span><span class="p">)</span>
@@ -15125,13 +15232,13 @@ svc의 평균 정밀도: 0.666
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[18]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[47]:</div>
 
 
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;matplotlib.legend.Legend at 0x258edab9160&gt;</pre>
+<pre>&lt;matplotlib.legend.Legend at 0x23fa033d2b0&gt;</pre>
 </div>
 
 </div>
@@ -15159,7 +15266,7 @@ svc의 평균 정밀도: 0.666
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[49]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">roc_curve</span>
@@ -15172,8 +15279,9 @@ svc의 평균 정밀도: 0.666
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;TPR (재현율)&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">fpr</span><span class="p">[</span><span class="n">close_zero</span><span class="p">],</span> <span class="n">tpr</span><span class="p">[</span><span class="n">close_zero</span><span class="p">],</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
          <span class="n">label</span><span class="o">=</span><span class="s2">&quot;SVC 임계값 0&quot;</span><span class="p">,</span> <span class="n">fillstyle</span><span class="o">=</span><span class="s2">&quot;none&quot;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">mew</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">close_default_rf</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">thresholds_rf</span> <span class="o">-</span> <span class="mf">0.5</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">fpr_rf</span><span class="p">[</span><span class="n">close_default_rf</span><span class="p">],</span> <span class="n">tpr</span><span class="p">[</span><span class="n">close_default_rf</span><span class="p">],</span> <span class="s1">&#39;^&#39;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+
+<span class="n">close_05_rf</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">thresholds_rf</span> <span class="o">-</span> <span class="mf">0.5</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">fpr_rf</span><span class="p">[</span><span class="n">close_05_rf</span><span class="p">],</span> <span class="n">tpr</span><span class="p">[</span><span class="n">close_05_rf</span><span class="p">],</span> <span class="s1">&#39;^&#39;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
          <span class="n">label</span><span class="o">=</span><span class="s2">&quot;RF 임계값 0.5&quot;</span><span class="p">,</span> <span class="n">fillstyle</span><span class="o">=</span><span class="s2">&quot;none&quot;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">mew</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
@@ -15192,13 +15300,13 @@ svc의 평균 정밀도: 0.666
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[19]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[49]:</div>
 
 
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;matplotlib.legend.Legend at 0x258edab9130&gt;</pre>
+<pre>&lt;matplotlib.legend.Legend at 0x23f98dce040&gt;</pre>
 </div>
 
 </div>
@@ -15226,12 +15334,13 @@ svc의 평균 정밀도: 0.666
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[50]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">roc_auc_score</span>
 <span class="n">rf_auc</span> <span class="o">=</span> <span class="n">roc_auc_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">rf</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X_test</span><span class="p">)[:,</span> <span class="mi">1</span><span class="p">])</span>
 <span class="n">svc_auc</span> <span class="o">=</span> <span class="n">roc_auc_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">svc</span><span class="o">.</span><span class="n">decision_function</span><span class="p">(</span><span class="n">X_test</span><span class="p">))</span>
+
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;랜덤 포레스트의 AUC: </span><span class="si">{:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">rf_auc</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;SVC의 AUC: </span><span class="si">{:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">svc_auc</span><span class="p">))</span>
 </pre></div>
@@ -15270,6 +15379,11 @@ SVC의 AUC: 0.916
 <li>plt.cm.___ : <a href="https://chrisalbon.com/python/basics/set_the_color_of_a_matplotlib/">https://chrisalbon.com/python/basics/set_the_color_of_a_matplotlib/</a></li>
 </ul>
 
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p style="text-align: right; font-size:1px;color:#B0BEC5"> 교육용으로 작성된 것으로 배포 및 복제시에 사전 허가가 필요합니다.<br> Copyright 2021 LIM Co. all rights reserved.</p>
 </div>
 </div>
 </body>

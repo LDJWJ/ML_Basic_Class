@@ -14259,7 +14259,7 @@ a.anchor-link {
 
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="&#54217;&#44032;-&#51648;&#54364;-&#48143;-&#52769;&#51221;">&#54217;&#44032; &#51648;&#54364; &#48143; &#52769;&#51221;<a class="anchor-link" href="#&#54217;&#44032;-&#51648;&#54364;-&#48143;-&#52769;&#51221;">&#182;</a></h3><h4 id="1.1.1-&#52572;&#51333;-&#47785;&#54364;&#47484;-&#44592;&#50613;&#54616;&#46972;">1.1.1 &#52572;&#51333; &#47785;&#54364;&#47484; &#44592;&#50613;&#54616;&#46972;<a class="anchor-link" href="#1.1.1-&#52572;&#51333;-&#47785;&#54364;&#47484;-&#44592;&#50613;&#54616;&#46972;">&#182;</a></h4><h4 id="1.1.2-&#51060;&#51652;-&#48516;&#47448;&#51032;-&#54217;&#44032;&#51648;&#54364;">1.1.2 &#51060;&#51652; &#48516;&#47448;&#51032; &#54217;&#44032;&#51648;&#54364;<a class="anchor-link" href="#1.1.2-&#51060;&#51652;-&#48516;&#47448;&#51032;-&#54217;&#44032;&#51648;&#54364;">&#182;</a></h4><h3 id="1.1.3-&#45796;&#51473;-&#48516;&#47448;&#51032;-&#54217;&#44032;&#51648;&#54364;">1.1.3 &#45796;&#51473; &#48516;&#47448;&#51032; &#54217;&#44032;&#51648;&#54364;<a class="anchor-link" href="#1.1.3-&#45796;&#51473;-&#48516;&#47448;&#51032;-&#54217;&#44032;&#51648;&#54364;">&#182;</a></h3>
+<h3 id="&#45796;&#51473;-&#48516;&#47448;&#51032;-&#54217;&#44032;&#51648;&#54364;">&#45796;&#51473; &#48516;&#47448;&#51032; &#54217;&#44032;&#51648;&#54364;<a class="anchor-link" href="#&#45796;&#51473;-&#48516;&#47448;&#51032;-&#54217;&#44032;&#51648;&#54364;">&#182;</a></h3><h5 id="1.1.1-&#51060;&#51652;-&#48516;&#47448;&#51032;-&#54217;&#44032;&#51648;&#54364;">1.1.1 &#51060;&#51652; &#48516;&#47448;&#51032; &#54217;&#44032;&#51648;&#54364;<a class="anchor-link" href="#1.1.1-&#51060;&#51652;-&#48516;&#47448;&#51032;-&#54217;&#44032;&#51648;&#54364;">&#182;</a></h5><h5 id="1.1.2-&#51076;&#44228;&#44050;&#44284;-&#54217;&#44032;&#51648;&#54364;">1.1.2 &#51076;&#44228;&#44050;&#44284; &#54217;&#44032;&#51648;&#54364;<a class="anchor-link" href="#1.1.2-&#51076;&#44228;&#44050;&#44284;-&#54217;&#44032;&#51648;&#54364;">&#182;</a></h5><h5 id="1.1.3-&#54217;&#44032;&#51648;&#54364;---ROC-&#52964;&#48652;,-AUC">1.1.3 &#54217;&#44032;&#51648;&#54364; - ROC &#52964;&#48652;, AUC<a class="anchor-link" href="#1.1.3-&#54217;&#44032;&#51648;&#54364;---ROC-&#52964;&#48652;,-AUC">&#182;</a></h5><h3 id="1.1.4-&#45796;&#51473;-&#48516;&#47448;&#51032;-&#54217;&#44032;&#51648;&#54364;">1.1.4 &#45796;&#51473; &#48516;&#47448;&#51032; &#54217;&#44032;&#51648;&#54364;<a class="anchor-link" href="#1.1.4-&#45796;&#51473;-&#48516;&#47448;&#51032;-&#54217;&#44032;&#51648;&#54364;">&#182;</a></h3>
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
@@ -14280,12 +14280,33 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### 한글</span>
-<span class="kn">import</span> <span class="nn">matplotlib</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib</span>
 <span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">font_manager</span><span class="p">,</span> <span class="n">rc</span>
-<span class="n">font_loc</span> <span class="o">=</span> <span class="s2">&quot;C:/Windows/Fonts/malgunbd.ttf&quot;</span>
-<span class="n">font_name</span> <span class="o">=</span> <span class="n">font_manager</span><span class="o">.</span><span class="n">FontProperties</span><span class="p">(</span><span class="n">fname</span><span class="o">=</span><span class="n">font_loc</span><span class="p">)</span><span class="o">.</span><span class="n">get_name</span><span class="p">()</span>
-<span class="n">matplotlib</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;font&#39;</span><span class="p">,</span> <span class="n">family</span><span class="o">=</span><span class="n">font_name</span><span class="p">)</span>
+<span class="kn">import</span> <span class="nn">platform</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="n">action</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### 한글</span>
+<span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;C:/Windows/Fonts/malgun.ttf&quot;</span>
+<span class="k">if</span> <span class="n">platform</span><span class="o">.</span><span class="n">system</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;Windows&quot;</span><span class="p">:</span>
+    <span class="n">font_name</span> <span class="o">=</span> <span class="n">font_manager</span><span class="o">.</span><span class="n">FontProperties</span><span class="p">(</span><span class="n">fname</span><span class="o">=</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">get_name</span><span class="p">()</span>
+    <span class="n">rc</span><span class="p">(</span><span class="s1">&#39;font&#39;</span><span class="p">,</span> <span class="n">family</span><span class="o">=</span><span class="n">font_name</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">platform</span><span class="o">.</span><span class="n">system</span><span class="p">()</span><span class="o">==</span><span class="s2">&quot;Darwin&quot;</span><span class="p">:</span>
+    <span class="n">rc</span><span class="p">(</span><span class="s1">&#39;font&#39;</span><span class="p">,</span> <span class="n">family</span><span class="o">=</span><span class="s1">&#39;AppleGothic&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Unknown System&quot;</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14298,13 +14319,15 @@ a.anchor-link {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="01-&#49324;&#51204;-&#51456;&#48708;">01 &#49324;&#51204; &#51456;&#48708;<a class="anchor-link" href="#01-&#49324;&#51204;-&#51456;&#48708;">&#182;</a></h3><ul>
 <li>데이터 셋 : 손글씨 데이터 셋</li>
+<li>입력은 이미지의 픽셀 정보</li>
+<li>출력은 target의 결과 : 0~9</li>
 </ul>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
@@ -14322,7 +14345,7 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">digits</span> <span class="o">=</span> <span class="n">load_digits</span><span class="p">()</span>
@@ -14336,11 +14359,13 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">digits</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> 
-                                                    <span class="n">digits</span><span class="o">.</span><span class="n">target</span><span class="p">,</span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">digits</span><span class="o">.</span><span class="n">data</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">digits</span><span class="o">.</span><span class="n">target</span>
+
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span>
                                                     <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 </pre></div>
 
@@ -14352,20 +14377,22 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="02-&#47784;&#45944;-&#47564;&#46308;&#44592;">02 &#47784;&#45944; &#47564;&#46308;&#44592;<a class="anchor-link" href="#02-&#47784;&#45944;-&#47564;&#46308;&#44592;">&#182;</a></h3>
+<h3 id="02-&#47784;&#45944;-&#47564;&#46308;&#44592;---&#47196;&#51648;&#49828;&#54001;-&#54924;&#44480;">02 &#47784;&#45944; &#47564;&#46308;&#44592; - &#47196;&#51648;&#49828;&#54001; &#54924;&#44480;<a class="anchor-link" href="#02-&#47784;&#45944;-&#47564;&#46308;&#44592;---&#47196;&#51648;&#49828;&#54001;-&#54924;&#44480;">&#182;</a></h3>
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li><p>solver : 'newton-cg', 'lbfgs', 'liblinear', 'sag', 'saga' , default=’lbfgs’</p>
+<li><p>Parameter - solver</p>
 <ul>
+<li>'newton-cg', 'lbfgs', 'liblinear', 'sag', 'saga' , default=’lbfgs’</li>
 <li>liblinear : 작은 데이터셋의 경우 좋은 선택</li>
 <li>'sag', 'saga' :  큰 데이터셋의 경우 더 빠름.</li>
 </ul>
 </li>
-<li><p>multi_class : 'auto', 'ovr', 'multinomial', default = 'auto'</p>
+<li><p>Parameter - multi_class</p>
 <ul>
+<li>'auto', 'ovr', 'multinomial', default = 'auto'</li>
 <li>'ovr' : 각 레이블에 이항 문제가 적합, 다항의 경우 전체 확률 분포에 걸쳐 다항 손실이 최소화</li>
 <li>'auto' : solver='liblinear' 때는 'ovr' 선택됨. 그렇지않으면 multinomial을 선택</li>
 <li>0.22버전에서 기본값이 0.22에서 'ovr'에서 'auto'로 변경</li>
@@ -14377,10 +14404,11 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lr</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">(</span><span class="n">solver</span><span class="o">=</span><span class="s1">&#39;liblinear&#39;</span><span class="p">,</span> <span class="n">multi_class</span><span class="o">=</span><span class="s1">&#39;ovr&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lr</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">(</span><span class="n">solver</span><span class="o">=</span><span class="s1">&#39;liblinear&#39;</span><span class="p">,</span> 
+                        <span class="n">multi_class</span><span class="o">=</span><span class="s1">&#39;ovr&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
 <span class="n">pred</span> <span class="o">=</span> <span class="n">lr</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;정확도 : </span><span class="si">{:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">pred</span><span class="p">)))</span>
@@ -14432,12 +14460,12 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="&#44536;&#47000;&#54532;&#47196;-&#54364;&#49884;">&#44536;&#47000;&#54532;&#47196; &#54364;&#49884;<a class="anchor-link" href="#&#44536;&#47000;&#54532;&#47196;-&#54364;&#49884;">&#182;</a></h3>
+<h3 id="&#50724;&#52264;-&#54665;&#47148;-&#44536;&#47000;&#54532;&#47196;-&#54364;&#49884;">&#50724;&#52264; &#54665;&#47148; &#44536;&#47000;&#54532;&#47196; &#54364;&#49884;<a class="anchor-link" href="#&#50724;&#52264;-&#54665;&#47148;-&#44536;&#47000;&#54532;&#47196;-&#54364;&#49884;">&#182;</a></h3>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">mglearn</span>
@@ -14452,7 +14480,7 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">scores_image</span> <span class="o">=</span> <span class="n">mglearn</span><span class="o">.</span><span class="n">tools</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span>
@@ -14506,12 +14534,15 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="classification_report&#54632;&#49688;&#47484;-&#49324;&#50857;&#54620;-&#51221;&#48128;&#46020;,-&#51116;&#54788;&#50984;,-f1-score&#51216;&#49688;-&#54869;&#51064;">classification_report&#54632;&#49688;&#47484; &#49324;&#50857;&#54620; &#51221;&#48128;&#46020;, &#51116;&#54788;&#50984;, f1-score&#51216;&#49688; &#54869;&#51064;<a class="anchor-link" href="#classification_report&#54632;&#49688;&#47484;-&#49324;&#50857;&#54620;-&#51221;&#48128;&#46020;,-&#51116;&#54788;&#50984;,-f1-score&#51216;&#49688;-&#54869;&#51064;">&#182;</a></h3>
+<h3 id="&#51221;&#48128;&#46020;,-&#51116;&#54788;&#50984;,-f1-score&#54869;&#51064;">&#51221;&#48128;&#46020;, &#51116;&#54788;&#50984;, f1-score&#54869;&#51064;<a class="anchor-link" href="#&#51221;&#48128;&#46020;,-&#51116;&#54788;&#50984;,-f1-score&#54869;&#51064;">&#182;</a></h3><ul>
+<li>classification_report함수를 사용한 정밀도, 재현율, f1-score점수 확인</li>
+</ul>
+
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">classification_report</span>
@@ -14525,7 +14556,7 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">pred</span><span class="p">))</span>
@@ -14580,6 +14611,7 @@ weighted avg       0.95      0.95      0.95       450
 <li>0에는 오차가 없으므로 정밀도와 재현율은 모두 1로 완벽</li>
 <li>클래스 7은 다른 클래스가 7로 잘못 분류한 것이 없어서 정밀도가 1이다. 45개 중에 45개 맞혔음.</li>
 <li>클래스 6은 거짓 음성(FN)이 없어서 재현율이 1이다.</li>
+<li>이 모델은 1,3,8을 분류하는데 어려움을 겪고 있다.</li>
 </ul>
 
 </div>
@@ -14596,7 +14628,7 @@ weighted avg       0.95      0.95      0.95       450
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">f1_score</span>
@@ -14610,11 +14642,13 @@ weighted avg       0.95      0.95      0.95       450
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;micro 평균 f1점수 : </span><span class="si">{:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">f1_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">pred</span><span class="p">,</span> <span class="n">average</span><span class="o">=</span><span class="s1">&#39;micro&#39;</span><span class="p">)))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;macro 평균 f1점수 : </span><span class="si">{:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">f1_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">pred</span><span class="p">,</span> <span class="n">average</span><span class="o">=</span><span class="s1">&#39;macro&#39;</span><span class="p">)))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;micro 평균 f1점수 : </span><span class="si">{:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">f1_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> 
+                                               <span class="n">pred</span><span class="p">,</span> <span class="n">average</span><span class="o">=</span><span class="s1">&#39;micro&#39;</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;macro 평균 f1점수 : </span><span class="si">{:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">f1_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> 
+                                               <span class="n">pred</span><span class="p">,</span> <span class="n">average</span><span class="o">=</span><span class="s1">&#39;macro&#39;</span><span class="p">)))</span>
 </pre></div>
 
      </div>
@@ -14644,6 +14678,20 @@ macro 평균 f1점수 : 0.954
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>각 샘플을 똑같이 간주한다면 "micro"평균 f1-score점수를 권장</li>
+<li>각 클래스를 동일한 비중을 고려한다면 "macro" 평균 f1-score점수 권장</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p style="text-align: right; font-size:1px;color:#B0BEC5"> 교육용으로 작성된 것으로 배포 및 복제시에 사전 허가가 필요합니다.<br> Copyright 2021 LIM Co. all rights reserved.</p>
+</div>
 </div>
 </body>
 

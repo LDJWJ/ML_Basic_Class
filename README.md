@@ -11,7 +11,8 @@
  * 머신러닝 알고리즘 앙상블 [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch02_03_ensemble/ch02_Ensemble_202012_v10.pdf)
  * 데이터 전처리 및 피처엔지니어링 [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch03_01_datapre/ch03_04_DataProcessing_202012_v11.pdf)
  * 평가지표 [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch05_validation/ch05_평가지표_v04_202108.pdf)
-
+ * 평가지표 [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch06_upgrade/ch06_upgrade_v01_202108.pdf)
+ 
 ### SourceCode
 ### 지도학습
  * 첫번째 머신러닝 모델 만들어보기  [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch01_01_ML_start_v10.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch01_01_ML_start_v10.pdf)

@@ -5,8 +5,8 @@
 
 ### 머신러닝 기본 및 실습
 #### PDF
- * 머신러닝 알고리즘 [기본1 pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch01_01_ml/ch01_01_ML입문_v12_202107.pdf) [기본2 pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch01_01_ml/ch01_ML기본_v11_202107.pdf)
- * 머신러닝 알고리즘 knn_회귀 [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch02_01_knn_linear_ppt/ch02_knn_회귀_v114_202107.pdf)
+ * 머신러닝 알고리즘 [기본1 pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch01_01_ml/ch01_01_ML입문_v12_202111.pdf) [기본2 pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch01_01_ml/ch01_ML기본_v11_202111.pdf)
+ * 머신러닝 알고리즘 knn_회귀 [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch02_01_knn_linear_ppt/ch02_knn_회귀_v114_202111.pdf)
  * 머신러닝 알고리즘 로지스틱 회귀[pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch02_01_knn_linear_ppt/ch02_logistic_v01_202108.pdf)
  * 머신러닝 알고리즘 의사결정트리 [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch02_02_decisiontree/ch02_03_01_decisiontree_v10_2010.pdf)
  * 머신러닝 알고리즘 앙상블 [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch02_03_ensemble/ch02_Ensemble_202012_v10.pdf)
@@ -18,7 +18,7 @@
  
 ### SourceCode
 ### 지도학습
- * 첫번째 머신러닝 모델 만들어보기  [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch01_01_ML_start_v10.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch01_01_ML_start_v10.pdf)
+ * 첫번째 머신러닝 모델 만들어보기  [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch01_01_ML_start_v11.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch01_01_ML_start_v11.pdf)
  * 머신러닝 알고리즘 knn [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_01_knn_code.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_01_knn_code.pdf)
  * 머신러닝 알고리즘 회귀(선형회귀) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_02_linear_code_v10.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_02_linear_code_v10.pdf)
  * 머신러닝 알고리즘 회귀(Ridge, Lasso) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_03_ridge_lasso.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_03_ridge_lasso.pdf)

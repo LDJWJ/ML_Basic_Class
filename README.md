@@ -19,15 +19,16 @@
 ### SourceCode
 ### 지도학습
  * 첫번째 머신러닝 모델 만들어보기  [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch01_01_ML_start_v11.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch01_01_ML_start_v11.pdf)
- * 머신러닝 알고리즘 knn [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_01_knn_code.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_01_knn_code.pdf)
+ * 머신러닝 알고리즘 knn [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_01_knn_code.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_01_knn_code.pdf) knn_pratice [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_01_knn_code_pratice.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_01_knn_code_pratice.pdf)
  * 머신러닝 알고리즘 회귀(선형회귀) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_02_linear_code_v10.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_02_linear_code_v10.pdf)
  * 머신러닝 알고리즘 회귀(Ridge, Lasso) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_03_ridge_lasso.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_03_ridge_lasso.pdf)
  
  * 머신러닝 알고리즘 분류용 선형모델(Logistic, SVM) 
    * 이진분류 [html]  [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_04_binary_classification.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_04_binary_classification.pdf)
    * 멀티클래스 분류 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_05_multiclass_classification_v10.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_05_multiclass_classification_v10.pdf)
- * 머신러닝 - 의사결정트리[html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_01_decisionTree_colab.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_01_decisiontree_local_ref.pdf)
-
+ * 머신러닝 - 의사결정트리 01 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_01_decisionTree_colab.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_01_decisiontree_local_ref.pdf)
+ * 머신러닝 - 의사결정트리 02 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_02_decisiontree_local.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_02_decisiontree_local.pdf)
+ 
  * 머신러닝 - 앙상블_랜덤포레스트(1)-tips [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_03_RandomForest_01.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_03_RandomForest_01.pdf)
  * 머신러닝 - 앙상블_랜덤포레스트(2)-cancer [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_03_RandomForest_02.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_03_RandomForest_02.pdf)
  * 머신러닝 - 앙상블_랜덤포레스트(3)-house [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_03_RandomForest_03.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_03_RandomForest_03.pdf)

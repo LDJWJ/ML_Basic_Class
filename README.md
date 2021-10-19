@@ -72,6 +72,10 @@
   * 모델 평가 (3) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_03_03_model_validation(3)-ROCAUC.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_03_03_model_validation(3)-ROCAUC.pdf)
   * 모델 평가 (4) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_03_04_model_validation(4).html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_03_04_model_validation(4).pdf)
   
+### 기타 프로젝트
+ * sqllite와 pandas 01 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_01_ml_db.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_01_ml_db.pdf)
+ * sqllite와 pandas 02 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_01_ml_db.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_01_ml_db.pdf)
+ 
 ### [실습] pima 데이터 실습
  * 머신러닝 - 타이타닉 시작하기[html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_02_decisionTree_diabetes_colab.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_02_decisionTree_diabetes_colab.pdf)
 

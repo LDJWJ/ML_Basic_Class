@@ -83,11 +83,20 @@
  * 머신러닝 - 타이타닉 시작하기[html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_02A_titanic_firstsub.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_02A_titanic_firstsub.pdf)
  * 머신러닝 - 타이타닉 데이터 탐색 및 모델 선택[html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_02B_titanic.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_02B_titanic.pdf)
  * 머신러닝 - 타이타닉 모델 업그레이드[html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_02C_titanic.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_02C_titanic.pdf)
- * 머신러닝 - Bike Sharing Demand(1)[html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_04_04_Bike_B_01_v10.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_04_04_Bike_B_01_v10.pdf)
- * 머신러닝 - Bike Sharing Demand(2)[html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_04_04_Bike_B_02_v10.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_04_04_Bike_B_02_v10.pdf)
- * 머신러닝 - Bike Sharing Demand(3)[html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/Bike_Kaggle04_v12_modelUp.html)
-[pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_3_Bike_Kaggle04_v12_modelUp.pdf)
  
+ * 머신러닝 - Bike Sharing Demand(1) - EDA [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/01_06_Bike_EDA_02_2107.html)
+[pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/01_06_Bike_EDA_02_2107.pdf)
+ * 머신러닝 - Bike Sharing Demand(1) - EDA code [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/01_06_Bike_EDA_03_2107.html)
+[pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/01_06_Bike_EDA_03_2107.pdf)
+
+ * 머신러닝 - Bike Sharing  Demand(1) - Start [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_Bike01_FirstModel_v10.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_04_04_Bike_B_01_v10.pdf)
+ * 머신러닝 - Bike Sharing Demand(2) - Ridig, Lasso [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_Bike02_Ridge_Lasso_v10.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_Bike02_Ridge_Lasso_v10.pdf)
+ * 머신러닝 - Bike Sharing Demand(3) - 여러가지 모델 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_Bike03_MultiModel_v10.html)
+[pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_Bike03_MultiModel_v10.pdf)
+ * 머신러닝 - Bike Sharing Demand(4) - 모델 평가 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_Bike04_ModelValidation_v10.html)
+[pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_Bike04_ModelValidation_v10.pdf)
+
+
  * 머신러닝 - 성인 인구조사 소득 예측 대회(1) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/kaggle_start_01.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/kaggle_start_01.pdf)
  * 머신러닝 - 성인 인구조사 소득 예측 대회(2) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/kaggle_start_02_labelen.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/kaggle_start_02_labelen.pdf)
  * 머신러닝 - 성인 인구조사 소득 예측 대회(3) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/kaggle_start_03_onehot.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/kaggle_start_03_onehot.pdf)

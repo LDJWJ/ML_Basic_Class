@@ -79,6 +79,12 @@
 ### [실습] pima 데이터 실습
  * 머신러닝 - 타이타닉 시작하기[html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_02_decisionTree_diabetes_colab.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_02_decisionTree_diabetes_colab.pdf)
 
+### [캐글 실습] Santander Customer Satisfaction 
+ * 고객 데이터 분석 - 만족, 불만족 [캐글 Link](https://www.kaggle.com/c/santander-customer-satisfaction)
+  - 기본 모델 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_01_santander_roc_auc.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_01_santander_roc_auc.pdf)
+  
+  - 모델 개선 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_02_santander_lightgbm.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_02_santander_lightgbm.pdf)
+
 ### 캐글 데이터 타이타닉 실습
  * 머신러닝 - 타이타닉 시작하기[html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_02A_titanic_firstsub.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_02A_titanic_firstsub.pdf)
  * 머신러닝 - 타이타닉 데이터 탐색 및 모델 선택[html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_02B_titanic.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_02B_titanic.pdf)

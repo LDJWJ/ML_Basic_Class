@@ -72,7 +72,14 @@
   * 모델 평가 (2) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_03_02_model_validation(2)_threshold.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_03_02_model_validation(2)_threshold.pdf)
   * 모델 평가 (3) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_03_03_model_validation(3)-ROCAUC.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_03_03_model_validation(3)-ROCAUC.pdf)
   * 모델 평가 (4) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_03_04_model_validation(4).html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_03_04_model_validation(4).pdf)
-  
+ 
+
+### 추천 시스템 알아보기(기타)
+ * 기본 개요 01 [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch07_추천시스템_v01_202110.pdf)
+ * 기본 실습 01 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch07_start_basic.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch07_start_basic.pdf)
+ * 기본 실습 02 - 아이템 기반 협업 필터링 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch07_item_based01.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch07_item_based01.pdf)
+ * 기본 실습 03 - 아이템 기반 협업 필터링 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch07_item_based_02.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch07_item_based_02.pdf)
+
 ### 기타 프로젝트
  * sqllite와 pandas 01 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_01_ml_db.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_01_ml_db.pdf)
  * sqllite와 pandas 02 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_02_ml_db.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_02_ml_db.pdf)

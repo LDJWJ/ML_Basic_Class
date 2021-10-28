@@ -77,7 +77,7 @@
 ### 추천 시스템 알아보기(기타)
  * 기본 개요 01 [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch07_추천시스템_v01_202110.pdf)
  * 기본 실습 01 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch07_start_basic.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch07_start_basic.pdf)
- * 기본 실습 02 - 아이템 기반 협업 필터링 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch07_item_based01.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch07_item_based01.pdf)
+ * 기본 실습 02 - 아이템 기반 협업 필터링 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch07_item_based_01.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch07_item_based_01.pdf)
  * 기본 실습 03 - 아이템 기반 협업 필터링 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch07_item_based_02.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch07_item_based_02.pdf)
 
 ### 기타 프로젝트

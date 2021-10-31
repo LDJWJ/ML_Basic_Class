@@ -13,6 +13,7 @@
  [pdf 02](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch02_03_ensemble/ch02_Ensemble_202110_gbt_add_v10.pdf)
  * 데이터 전처리 및 피처엔지니어링 [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch03_01_datapre/ch03_04_DataProcessing_202012_v11.pdf)
  * 평가지표 [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch05_validation/ch05_평가지표_v04_202108.pdf)
+ * 비지도학습 [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch03_02_pca/ch03_pca_v01_202110.pdf)
  * 머신러닝 더 알아보기 [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch06_upgrade/ch06_upgrade_v01_202108.pdf)
  
 
@@ -53,9 +54,9 @@
     * 특성자동 선택(2) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_07_02_FeatureEngineering_특성자동선택_회귀.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_07_02_FeatureEngineering_특성자동선택_회귀.pdf)
 
 ### 비지도학습
-  * PCA 차원 축소[html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_04_01_차원축소(1)_PCA.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_04_01_차원축소_PCA.pdf)
-  * PCA 얼굴 예제 실습[html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_04_02_차원축소(2)_PCA_얼굴예제.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_04_02_차원축소_PCA_얼굴예제.pdf)
-  * PCA 차원 축소-tsne[html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_04_03_차원축소(3)_tsne.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_04_03_차원축소_tsne.pdf)
+  * PCA 차원 축소[html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_04_01_차원축소(1)_PCA.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_04_01_차원축소(1)_PCA.pdf)
+  * PCA 얼굴 예제 실습[html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_04_02_차원축소(2)_PCA_얼굴예제.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_04_02_차원축소(2)_PCA_얼굴예제.pdf)
+  * PCA 차원 축소-tsne[html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_04_03_차원축소(3)_tsne.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_04_03_차원축소(3)_tsne.pdf)
   * 군집(Clustering)[html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_05_01_군집(clustering)(1)_Kmeans.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_05_01_군집_Clustering.pdf)
   * 병합 군집(Clustering)[html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_05_01_병합군집.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_05_01_병합군집_Clustering.pdf)
    

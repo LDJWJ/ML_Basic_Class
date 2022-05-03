@@ -1,4 +1,4 @@
-# 인공지능 기본 1기
+# 인공지능 머신러닝 기본
  
 ##  데이터 알아가기 첫걸음
  * 웹 페이지 주소 : https://ldjwj.github.io/ML_Basic_Class

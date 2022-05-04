@@ -19,10 +19,10 @@
 
 ### SourceCode
 ### 지도학습
- * 첫번째 머신러닝 모델 만들어보기  [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch01_01_ML_start_v11.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch01_01_ML_start_v11.pdf)
+ * 첫번째 머신러닝 모델 만들어보기  [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch01_01_ML_start_v12_2205.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch01_01_ML_start_v12_2205.pdf)
  * 머신러닝 알고리즘 
-    * knn [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_01_knn_code.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_01_knn_code.pdf) 
-    * knn_pratice [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_01_knn_code_pratice.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_01_knn_code_pratice.pdf)
+    * knn [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_01A_knn_code.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_01A_knn_code.pdf) 
+    * knn_pratice [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_01B_knn_code_pratice_2205.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_01B_knn_code_pratice_2205.pdf)
  * 머신러닝 알고리즘 회귀(선형회귀) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_02_linear_code_v10.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_02_linear_code_v10.pdf)
  * 머신러닝 알고리즘 회귀(Ridge, Lasso) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_03_ridge_lasso.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_03_ridge_lasso.pdf)
  

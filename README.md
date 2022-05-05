@@ -87,7 +87,7 @@
  * sqllite와 pandas 02 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_02_ml_db.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_02_ml_db.pdf)
  
 ### [실습] pima 데이터 실습
- * 머신러닝 - 타이타닉 시작하기[html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_02_decisionTree_diabetes_colab.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_02_decisionTree_diabetes_colab.pdf)
+ * 머신러닝
 
 ### [실습] 위스콘신 암 데이터 실습
  * 위스콘신 암 이진 분류 - 앙상블(보팅,배깅) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_03A_cancer_basic_model.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_03A_cancer_basic_model.pdf)

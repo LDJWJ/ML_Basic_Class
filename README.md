@@ -85,7 +85,11 @@
 ### 기타 프로젝트
  * sqllite와 pandas 01 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_01_ml_db.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_01_ml_db.pdf)
  * sqllite와 pandas 02 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_02_ml_db.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_02_ml_db.pdf)
- 
+
+### [실습] 항구 근처 기뢰 확인(sonar.all-data) 실습
+ * 데이터 불러오기 및 시각화 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_04_sonar_analysis01.html)
+ * 기본 머신러닝 모델 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_04_sonar_analysis02.html)
+
 ### [실습] pima 데이터 실습
  * 머신러닝
 

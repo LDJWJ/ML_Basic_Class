@@ -19,6 +19,14 @@
  
 
 ### SourceCode
+
+### 기본 라이브러리 실습 - IRIS 데이터 셋
+ * Pandas 01 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_2_LIB_01_Pandas_Basic01_IRIS.html), [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_2_LIB_01_Pandas_Basic01_IRIS.pdf)
+ * Pandas 02 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_2_LIB_01_Pandas_Basic02_IRIS.html), [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_2_LIB_01_Pandas_Basic02_IRIS.pdf)
+ * Pandas 03 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_2_LIB_01_Pandas_Basic03_IRIS.html), [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_2_LIB_01_Pandas_Basic03_IRIS.pdf)
+ * Matplotlib [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_2_LIB_02_Matplotlib_Basic01_IRIS.html), [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_2_LIB_02_Matplotlib_Basic01_IRIS.pdf)
+ * Scikit-learn [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_2_LIB_03_sklearn_Basic01_IRIS.html), [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_2_LIB_03_sklearn_Basic01_IRIS.pdf)
+
 ### 지도학습
  * 첫번째 머신러닝 모델 만들어보기  [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch01_01_ML_start_v12_2205.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch01_01_ML_start_v12_2205.pdf)
  * 머신러닝 알고리즘 

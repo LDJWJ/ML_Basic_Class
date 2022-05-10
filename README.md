@@ -19,7 +19,6 @@
  
 
 ### SourceCode
-
 ### 기본 라이브러리 실습 - IRIS 데이터 셋
  * Pandas 01 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_2_LIB_01_Pandas_Basic01_IRIS.html), [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_2_LIB_01_Pandas_Basic01_IRIS.pdf)
  * Pandas 02 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_2_LIB_01_Pandas_Basic02_IRIS.html), [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_2_LIB_01_Pandas_Basic02_IRIS.pdf)
@@ -30,7 +29,7 @@
 ### 지도학습
  * 첫번째 머신러닝 모델 만들어보기  [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch01_01_ML_start_v12_2205.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch01_01_ML_start_v12_2205.pdf)
  * 머신러닝 알고리즘 
-    * knn [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_01A_knn_code_2205.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_01A_knn_code_2205.pdf) 
+    * knn [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_01A_knn_code_v11_2205.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_01A_knn_code_v11_2205.pdf) 
     * knn_pratice [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_01B_knn_code_pratice_2205.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_01B_knn_code_pratice_2205.pdf)
  * 머신러닝 알고리즘 회귀(선형회귀) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_02_linear_code_v10_2205.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_02_linear_code_v10_2205.pdf)
  * 머신러닝 알고리즘 회귀(Ridge, Lasso) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_03_ridge_lasso.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_03_ridge_lasso.pdf)
@@ -83,7 +82,6 @@
   * 모델 평가 (3) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_03_03_model_validation(3)-ROCAUC.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_03_03_model_validation(3)-ROCAUC.pdf)
   * 모델 평가 (4) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_03_04_model_validation(4).html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_03_04_model_validation(4).pdf)
  
-
 ### 추천 시스템 알아보기(기타)
  * 기본 개요 01 [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch07_추천시스템_v01_202110.pdf)
  * 기본 실습 01 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch07_start_basic.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch07_start_basic.pdf)

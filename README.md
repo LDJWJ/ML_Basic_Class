@@ -31,7 +31,9 @@
  * 머신러닝 알고리즘 
     * knn [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_01A_knn_code_v11_2205.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_01A_knn_code_v11_2205.pdf) 
     * knn_pratice [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_01B_knn_code_pratice_2205.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_01B_knn_code_pratice_2205.pdf)
- * 머신러닝 알고리즘 회귀(선형회귀) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_02_linear_code_v10_2205.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_02_linear_code_v10_2205.pdf)
+ * 머신러닝 - 선형회귀) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_02_linear_code_v10_2205.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_02_linear_code_v10_2205.pdf)
+ * 머신러닝 - 회귀(평가지표) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_02B_linear_boston_evaluation_v11.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_02B_linear_boston_evaluation_v11.pdf)
+
  * 머신러닝 알고리즘 회귀(Ridge, Lasso) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_03_ridge_lasso.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_03_ridge_lasso.pdf)
  
  * 머신러닝 알고리즘 분류용 선형모델(Logistic, SVM) 
@@ -40,9 +42,7 @@
  * 머신러닝 - 의사결정트리 01 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_01_decisionTree_colab.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_01_decisionTree_colab.pdf)
  * 머신러닝 - 의사결정트리 02 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_02_decisionTree_diabetes_colab.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_02_decisionTree_diabetes_colab.pdf)
  * 머신러닝 - 의사결정트리 02 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_02_decisiontree_local.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_02_decisiontree_local.pdf)
-
  * 머신러닝 - 타이타닉 데이터셋 모델 구축 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_02B_titanic_modelmain_analysis.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_02B_titanic_modelmain_analysis.pdf)
- 
  * 머신러닝 - 앙상블_랜덤포레스트(1)-tips [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_03_RandomForest_01.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_03_RandomForest_01.pdf)
  * 머신러닝 - 앙상블_랜덤포레스트(2)-cancer [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_03_RandomForest_02.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_03_RandomForest_02.pdf)
  * 머신러닝 - 앙상블_랜덤포레스트(3)-house [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_03_RandomForest_03.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_03_RandomForest_03.pdf)

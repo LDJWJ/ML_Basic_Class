@@ -123,10 +123,10 @@
  * 머신러닝 - Bike Sharing Demand(1) - EDA code [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/01_06_Bike_EDA_03_2107.html)
 [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/01_06_Bike_EDA_03_2107.pdf)
 
- * 머신러닝 - Bike Sharing  Demand(1) - Start [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_Bike01_FirstModel_v10.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_04_04_Bike_B_01_v10.pdf)
- * 머신러닝 - Bike Sharing Demand(2) - Ridig, Lasso [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_Bike02_Ridge_Lasso_v10.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_Bike02_Ridge_Lasso_v10.pdf)
- * 머신러닝 - Bike Sharing Demand(3) - 여러가지 모델 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_Bike03_MultiModel_v10.html)
-[pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_Bike03_MultiModel_v10.pdf)
+ * 머신러닝 - Bike Sharing  Demand(1) - Start [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_Bike01_FirstModel_v10_2205.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_Bike01_FirstModel_v10_2205.pdf)
+ * 머신러닝 - Bike Sharing Demand(2) - Ridig, Lasso [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_Bike02_Ridge_Lasso_v10_2205.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_Bike02_Ridge_Lasso_v10_2205.pdf)
+ * 머신러닝 - Bike Sharing Demand(3) - 여러가지 모델 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_Bike03_MultiModel_v12.html)
+[pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_Bike03_MultiModel_v12.pdf)
  * 머신러닝 - Bike Sharing Demand(4) - 모델 평가 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_Bike04_ModelValidation_v10.html)
 [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_Bike04_ModelValidation_v10.pdf)
 

@@ -9,10 +9,10 @@
 
 
 <style type="text/css">
-    pre { line-height: 125%; }
-td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
-span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
-td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+    pre { line-height: 125%; margin: 0; }
+td.linenos pre { color: #000000; background-color: #f0f0f0; padding-left: 5px; padding-right: 5px; }
+span.linenos { color: #000000; background-color: #f0f0f0; padding-left: 5px; padding-right: 5px; }
+td.linenos pre.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
 span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
 .highlight .hll { background-color: var(--jp-cell-editor-active-background) }
 .highlight { background: var(--jp-cell-editor-background); color: var(--jp-mirror-editor-variable-color) }
@@ -14273,6 +14273,15 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="&#47785;&#52264;">&#47785;&#52264;<a class="anchor-link" href="#&#47785;&#52264;">&#182;</a></h3><ul>
+<li>1-1 데이터 준비하기</li>
+<li>1-2 모델 만들기 및 제출</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
 <li>URL : <a href="https://www.kaggle.com/">https://www.kaggle.com/</a></li>
 <li>Competitions 선택하면 다양한 대회 확인 가능.</li>
@@ -14287,7 +14296,8 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">Image</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 이미지 표시용</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">Image</span>
 </pre></div>
 
      </div>
@@ -14312,7 +14322,7 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;img/kaggle/kaggle01.png&#39;</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;../img/kaggle/kaggle01.png&#39;</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -14359,7 +14369,7 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;img/kaggle/kaggle02.png&#39;</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;../img/kaggle/kaggle02.png&#39;</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -14406,7 +14416,7 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;img/kaggle/kaggle03.png&#39;</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;../img/kaggle/kaggle03.png&#39;</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -14455,15 +14465,15 @@ a.anchor-link {
 </tr>
 <tr>
 <td>season</td>
-<td style="text-align:left">1 = spring, 2 = summer, 3 = fall, 4 = winter</td>
+<td style="text-align:left">1 = spring(봄), 2 = summer(여름), 3 = fall(가을), 4 = winter(겨울)</td>
 </tr>
 <tr>
 <td>holiday</td>
-<td style="text-align:left">whether the day is considered a holiday</td>
+<td style="text-align:left">whether the day is considered a holiday(휴일인지 아닌지)</td>
 </tr>
 <tr>
 <td>workingday</td>
-<td style="text-align:left">whether the day is neither a weekend nor holiday</td>
+<td style="text-align:left">whether the day is neither a weekend nor holiday(주말도 휴일도 아닌 날인지)</td>
 </tr>
 <tr>
 <td>weather</td>
@@ -14521,7 +14531,7 @@ a.anchor-link {
 <h3 id="1-1-&#45936;&#51060;&#53552;-&#51456;&#48708;&#54616;&#44592;">1-1 &#45936;&#51060;&#53552; &#51456;&#48708;&#54616;&#44592;<a class="anchor-link" href="#1-1-&#45936;&#51060;&#53552;-&#51456;&#48708;&#54616;&#44592;">&#182;</a></h3><ul>
 <li>train 은 학습을 위한 데이터 셋</li>
 <li>test 은 예측을 위한 데이터 셋</li>
-<li>../data/bike : 상위폴더의 (data/bike 폴더 경로), 내 컴퓨터의 데이터 경로 지정.</li>
+<li>../bike/train.csv : 상위폴더의 (bike 폴더 경로), 내 컴퓨터의 데이터 경로 지정.</li>
 <li>parse_dates = [컬럼명] : 해당 컬럼을 시간형 자료로 불러옴.</li>
 </ul>
 
@@ -14532,8 +14542,8 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">train</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;bike/train.csv&quot;</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;datetime&#39;</span><span class="p">])</span>
-<span class="n">test</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;bike/test.csv&quot;</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;datetime&#39;</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">train</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;../bike/train.csv&quot;</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;datetime&#39;</span><span class="p">])</span>
+<span class="n">test</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;../bike/test.csv&quot;</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;datetime&#39;</span><span class="p">])</span>
 </pre></div>
 
      </div>
@@ -14541,6 +14551,11 @@ a.anchor-link {
 </div>
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="&#45936;&#51060;&#53552;-&#53456;&#49353;&#54616;&#44592;">&#45936;&#51060;&#53552; &#53456;&#49353;&#54616;&#44592;<a class="anchor-link" href="#&#45936;&#51060;&#53552;-&#53456;&#49353;&#54616;&#44592;">&#182;</a></h3>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
@@ -14833,6 +14848,11 @@ memory usage: 1020.7 KB
 </ul>
 
 </div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="&#50696;&#52769;&#44050;&#51060;-count(&#47116;&#53448;-&#45824;&#49688;)-&#51060;&#44592;&#50640;-&#51648;&#46020;&#54617;&#49845;-&#54924;&#44480;&#50640;-&#54644;&#45817;&#46108;&#45796;.">&#50696;&#52769;&#44050;&#51060; count(&#47116;&#53448; &#45824;&#49688;) &#51060;&#44592;&#50640; &#51648;&#46020;&#54617;&#49845;-&#54924;&#44480;&#50640; &#54644;&#45817;&#46108;&#45796;.<a class="anchor-link" href="#&#50696;&#52769;&#44050;&#51060;-count(&#47116;&#53448;-&#45824;&#49688;)-&#51060;&#44592;&#50640;-&#51648;&#46020;&#54617;&#49845;-&#54924;&#44480;&#50640;-&#54644;&#45817;&#46108;&#45796;.">&#182;</a></h3>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
@@ -14853,9 +14873,9 @@ memory usage: 1020.7 KB
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
-<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
-<span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>   <span class="c1"># 예측(새로운 데이터로)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>   <span class="c1"># 모델 선택</span>
+<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>  <span class="c1"># 모델 학습</span>
+<span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>        <span class="c1"># 예측(새로운 데이터로)</span>
 </pre></div>
 
      </div>
@@ -14915,7 +14935,7 @@ memory usage: 1020.7 KB
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>[8.19865874 0.90720808]
-4.248132645803707
+4.248132645803736
 </pre>
 </div>
 </div>
@@ -14942,15 +14962,15 @@ memory usage: 1020.7 KB
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="&#54617;&#49845;&#46108;-&#47784;&#45944;&#47196;-&#50696;&#52769;-&#54980;,-&#51060;&#44050;&#51004;&#47196;-&#51228;&#52636;&#54616;&#44592;">&#54617;&#49845;&#46108; &#47784;&#45944;&#47196; &#50696;&#52769; &#54980;, &#51060;&#44050;&#51004;&#47196; &#51228;&#52636;&#54616;&#44592;<a class="anchor-link" href="#&#54617;&#49845;&#46108;-&#47784;&#45944;&#47196;-&#50696;&#52769;-&#54980;,-&#51060;&#44050;&#51004;&#47196;-&#51228;&#52636;&#54616;&#44592;">&#182;</a></h3>
+<h3 id="&#54617;&#49845;&#46108;-&#47784;&#45944;&#47196;-&#50696;&#52769;-&#54980;,-&#51228;&#52636;&#54616;&#44592;">&#54617;&#49845;&#46108; &#47784;&#45944;&#47196; &#50696;&#52769; &#54980;, &#51228;&#52636;&#54616;&#44592;<a class="anchor-link" href="#&#54617;&#49845;&#46108;-&#47784;&#45944;&#47196;-&#50696;&#52769;-&#54980;,-&#51228;&#52636;&#54616;&#44592;">&#182;</a></h3>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sub</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;bike/sampleSubmission.csv&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sub</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;../bike/sampleSubmission.csv&quot;</span><span class="p">)</span>
 <span class="n">sub</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
@@ -14967,7 +14987,7 @@ memory usage: 1020.7 KB
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[18]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[16]:</div>
 
 
 
@@ -15034,7 +15054,7 @@ memory usage: 1020.7 KB
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pred</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>   <span class="c1"># 예측</span>
@@ -15055,7 +15075,7 @@ memory usage: 1020.7 KB
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[19]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[17]:</div>
 
 
 
@@ -15153,15 +15173,15 @@ memory usage: 1020.7 KB
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="&#52376;&#51020;-&#47564;&#45716;-&#51228;&#52636;&#50857;-csv-&#54028;&#51068;">&#52376;&#51020; &#47564;&#45716; &#51228;&#52636;&#50857; csv &#54028;&#51068;<a class="anchor-link" href="#&#52376;&#51020;-&#47564;&#45716;-&#51228;&#52636;&#50857;-csv-&#54028;&#51068;">&#182;</a></h3><ul>
-<li>index=False : csv 파일 행번오 없애기</li>
+<h3 id="&#52376;&#51020;-&#51228;&#52636;&#50857;-csv-&#54028;&#51068;">&#52376;&#51020; &#51228;&#52636;&#50857; csv &#54028;&#51068;<a class="anchor-link" href="#&#52376;&#51020;-&#51228;&#52636;&#50857;-csv-&#54028;&#51068;">&#182;</a></h3><ul>
+<li>index=False : csv 파일 행번호 없애기</li>
 </ul>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 처음 만는 제출용 csv 파일, 행번호를 없애기</span>
@@ -15191,10 +15211,10 @@ memory usage: 1020.7 KB
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;img/kaggle/bike01.png&#39;</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;../img/kaggle/bike01.png&#39;</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -15234,7 +15254,7 @@ memory usage: 1020.7 KB
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## 업로드가 완료된 후, 아래 버튼 선택</span>
-<span class="n">display</span><span class="p">(</span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;img/kaggle/bike01.png&#39;</span><span class="p">))</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;../img/kaggle/bike01.png&#39;</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -15267,6 +15287,14 @@ memory usage: 1020.7 KB
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="History">History<a class="anchor-link" href="#History">&#182;</a></h3><ul>
+<li>최종 업데이트 : 2022/05</li>
+</ul>
+
+</div>
 </div>
 </body>
 

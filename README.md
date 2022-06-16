@@ -41,7 +41,7 @@
    * 멀티클래스 분류 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_05_multiclass_classification_v10.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_05_multiclass_classification_v10.pdf)
  * 머신러닝 - 의사결정트리 01 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_01_decisionTree_colab.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_01_decisionTree_colab.pdf)
  * 머신러닝 - 의사결정트리 02 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_02_decisionTree_diabetes_colab.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_02_decisionTree_diabetes_colab.pdf)
- * 머신러닝 - 의사결정트리 02 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_02_decisiontree_local.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_02_decisiontree_local.pdf)
+ * 머신러닝 - 의사결정트리 03 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_02_decisiontree_local.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_02_decisiontree_local.pdf)
  * 머신러닝 - 타이타닉 데이터셋 모델 구축 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_02B_titanic_modelmain_analysis.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_02B_titanic_modelmain_analysis.pdf)
  * 머신러닝 - 앙상블_랜덤포레스트(1)-tips [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_03_RandomForest_01_tips.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_03_RandomForest_01_tips.pdf)
  * 머신러닝 - 앙상블_랜덤포레스트(2)-cancer [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_03_RandomForest_02_cancer.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_03_RandomForest_02_cancer.pdf)

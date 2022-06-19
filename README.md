@@ -80,11 +80,11 @@
   * 교차 검증2 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_01_02_CrossValidation_v02.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_01_02_CrossValidation_v02.pdf)
   * Grid Search(1) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_02_01_성능개선_GridSearch1.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_02_01_성능개선_GridSearch1.pdf)
   * Grid Search(2) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_02_02_성능개선_GridSearch2.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_02_02_성능개선_GridSearch2.pdf)
-  * 모델 평가 (1) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_03_01_model_validation(1).html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_03_01_model_validation(1).pdf)
-  * 모델 평가 (2) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_03_02_model_validation(2)_threshold.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_03_02_model_validation(2)_threshold.pdf)
-  * 모델 평가 (3) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_03_03_model_validation(3)-ROCAUC.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_03_03_model_validation(3)-ROCAUC.pdf)
-  * 모델 평가 (4) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_03_04_model_validation(4).html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_03_04_model_validation(4).pdf)
- 
+  * 모델 평가 (1) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_03_01_model_validation(1)_2207.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_03_01_model_validation(1)_2207.pdf)
+  * 모델 평가 (2) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_03_02_validation(2)_threshold_2207.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_03_02_validation(2)_threshold_2207.pdf)
+  * 모델 평가 (3) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_03_03_validation(3)-ROCAUC_2207.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_03_03_validation(3)-ROCAUC_2207.pdf)
+  * 모델 평가 (4) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_03_04_validation(4)_2207.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_03_04_validation(4)_2207.pdf)
+  
 ### 추천 시스템 알아보기(기타)
  * 기본 개요 01 [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch07_추천시스템_v01_202110.pdf)
  * 기본 실습 01 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch07_start_basic.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch07_start_basic.pdf)

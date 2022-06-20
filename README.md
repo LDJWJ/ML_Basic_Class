@@ -126,9 +126,9 @@
  * 머신러닝 - Bike Sharing Demand(3) - 여러가지 모델 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_Bike03_MultiModel_v12.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_Bike03_MultiModel_v12.pdf)
  * 머신러닝 - Bike Sharing Demand(4) - 모델 평가 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_Bike04_ModelValidation_v10.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_Bike04_ModelValidation_v10.pdf)
 
- * 머신러닝 - 성인 인구조사 소득 예측 대회(1) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/kaggle_start_01.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/kaggle_start_01.pdf)
- * 머신러닝 - 성인 인구조사 소득 예측 대회(2) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/kaggle_start_02_labelen.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/kaggle_start_02_labelen.pdf)
- * 머신러닝 - 성인 인구조사 소득 예측 대회(3) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/kaggle_start_03_onehot.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/kaggle_start_03_onehot.pdf)
+ * 머신러닝 - 성인 인구조사 소득 예측 대회(1) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/kaggle_contest_4th_01_2206.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/kaggle_contest_4th_01_2206.pdf)
+ * 머신러닝 - 성인 인구조사 소득 예측 대회(2) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/kaggle_contest_4th_02_2206.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/kaggle_contest_4th_02_2206.pdf)
+ * 머신러닝 - 성인 인구조사 소득 예측 대회(3) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/kaggle_contest_4th_03_2206.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/kaggle_contest_4th_03_2206.pdf)
  
  * 머신러닝 - 매출의 미래 예측 (1) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/predict-future-sales-eda_01.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/predict-future-sales-eda_01.pdf)
  

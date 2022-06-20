@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>kaggle_start_01</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>kaggle_contest_4th_01</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
@@ -14259,7 +14259,33 @@ a.anchor-link {
 
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="&#52880;&#44544;-&#53076;&#47532;&#50500;-4&#52264;-&#45824;&#54924;">&#52880;&#44544; &#53076;&#47532;&#50500; 4&#52264; &#45824;&#54924;<a class="anchor-link" href="#&#52880;&#44544;-&#53076;&#47532;&#50500;-4&#52264;-&#45824;&#54924;">&#182;</a></h3>
+<h3 id="&#52880;&#44544;-&#53076;&#47532;&#50500;-4&#52264;-&#45824;&#54924;">&#52880;&#44544; &#53076;&#47532;&#50500; 4&#52264; &#45824;&#54924;<a class="anchor-link" href="#&#52880;&#44544;-&#53076;&#47532;&#50500;-4&#52264;-&#45824;&#54924;">&#182;</a></h3><ul>
+<li>성인 인구조사 소득 예측 대회</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="&#54617;&#49845;-&#45236;&#50857;">&#54617;&#49845; &#45236;&#50857;<a class="anchor-link" href="#&#54617;&#49845;-&#45236;&#50857;">&#182;</a></h3><ul>
+<li>대회를 통해 데이터 처리 및 분석을 이해한다.</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 style='color:DodgerBlue'><a id='99'> 목차 </a></h3><p><a href="#1"> 01. 라이브러리 임포트 및 데이터 준비  </a><br>
+<a href="#2"> 02. 데이터 전처리  </a><br>
+<a href="#3"> 03. Baseline 모델 만들기  </a></p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><a id='1'></a></p>
+<h3 style='color:DodgerBlue'> 01. 라이브러리 임포트 및 데이터 준비 </h3><p><a href="#99"> 목차로 이동하기 </a><br></p>
+
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
@@ -14333,7 +14359,7 @@ capital_gain : 양도 소득
 capital_loss : 양도 손실
 hours_per_week : 주당 근무 시간
 native_country : 국적
-income : 수익 (예측해야 하는 값, target variable)</code></pre>
+income : 연소득 (예측해야 하는 값, target variable) - 50K - $50,000</code></pre>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -14799,6 +14825,13 @@ memory usage: 763.2+ KB
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><a id='2'></a></p>
+<h3 style='color:DodgerBlue'> 02. 데이터 전처리 </h3><p><a href="#99"> 목차로 이동하기 </a><br></p>
+
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
@@ -15259,6 +15292,13 @@ memory usage: 763.2+ KB
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><a id='3'></a></p>
+<h3 style='color:DodgerBlue'> 03. Baseline 모델 만들기 </h3><p><a href="#99"> 목차로 이동하기 </a><br></p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="&#47196;&#51648;&#49828;&#54001;-&#47784;&#45944;">&#47196;&#51648;&#49828;&#54001; &#47784;&#45944;<a class="anchor-link" href="#&#47196;&#51648;&#49828;&#54001;-&#47784;&#45944;">&#182;</a></h3>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
@@ -15385,20 +15425,6 @@ memory usage: 763.2+ KB
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="0.78545">0.78545<a class="anchor-link" href="#0.78545">&#182;</a></h3>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
 </div>
 </body>
 

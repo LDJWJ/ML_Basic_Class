@@ -68,11 +68,11 @@
   * PCA 차원 축소[html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_04_01_차원축소(1)_PCA_2205.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_04_01_차원축소(1)_PCA_2205.pdf)
   * PCA 얼굴 예제 실습[html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_04_02_차원축소(2)_PCA_얼굴예제.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_04_02_차원축소(2)_PCA_얼굴예제.pdf)
   * PCA 차원 축소-tsne[html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_04_03_차원축소(3)_tsne.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_04_03_차원축소(3)_tsne.pdf)
-  * 군집(Clustering)[html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_05_01_군집(clustering)(1)_Kmeans_2205.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_05_01_군집(clustering)(1)_Kmeans_2205.pdf)
+  * 군집(Clustering)[html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_05_01_군집(clustering)(1)_Kmeans_2207.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_05_01_군집(clustering)(1)_Kmeans_2207.pdf)
   * 병합 군집(Clustering)[html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_05_01_병합군집.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_05_01_병합군집_Clustering.pdf)
    
-  * DBSCAN(Clustering) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_05_02_DBSCAN.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_05_02_DBSCAN.pdf)
-  * 얼굴 데이터 셋 분석 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_05_03_비지도학습_얼굴데이터셋분석.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_05_03_비지도학습_얼굴데이터셋분석.pdf)
+  * DBSCAN(Clustering) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_05_02_DBSCAN_2207.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_05_02_DBSCAN_2207.pdf)
+  * 얼굴 데이터 셋 분석 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_05_03_unsup_face_analysis_colab_2207.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_05_03_unsup_face_analysis_colab_2207.pdf)
   * 군집 알고리즘 평가 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_05_04_군집알고리즘평가.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_05_04_군집알고리즘평가.pdf)
 
 ### 평가

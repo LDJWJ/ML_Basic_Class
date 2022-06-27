@@ -91,6 +91,10 @@
  * 기본 실습 02 - 아이템 기반 협업 필터링 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch07_item_based_01.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch07_item_based_01.pdf)
  * 기본 실습 03 - 아이템 기반 협업 필터링 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch07_item_based_02.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch07_item_based_02.pdf)
 
+### AutoML
+ * pycaret 실습 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_03_Automl_pycaret01.html), [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_03_Automl_pycaret01.pdf)
+
+
 ### 기타 프로젝트
  * sqllite와 pandas 01 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_01_ml_db.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_01_ml_db.pdf)
  * sqllite와 pandas 02 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_02_ml_db.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_02_ml_db.pdf)

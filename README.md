@@ -20,9 +20,9 @@
 
 ### SourceCode
 ### 기본 라이브러리 실습 - IRIS 데이터 셋
- * Pandas 01 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_2_LIB_01_Pandas_Basic01_IRIS.html), [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_2_LIB_01_Pandas_Basic01_IRIS.pdf)
- * Pandas 02 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_2_LIB_01_Pandas_Basic02_IRIS.html), [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_2_LIB_01_Pandas_Basic02_IRIS.pdf)
- * Pandas 03 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_2_LIB_01_Pandas_Basic03_IRIS.html), [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_2_LIB_01_Pandas_Basic03_IRIS.pdf)
+ * Pandas 01 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_2_LIB_Pandas_Basic01_IRIS.html), [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_2_LIB_Pandas_Basic01_IRIS.pdf)
+ * Pandas 02 - unique(), value_counts() etc [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_2_LIB_Pandas_Basic02_IRIS.html), [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_2_LIB_Pandas_Basic02_IRIS.pdf)
+ * Pandas 03 - map(), apply() etc  [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_2_LIB_Pandas_Basic03_IRIS.html), [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_2_LIB_Pandas_Basic03_IRIS.pdf)
  * Matplotlib [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_2_LIB_02_Matplotlib_Basic01_IRIS.html), [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_2_LIB_02_Matplotlib_Basic01_IRIS.pdf)
  * Scikit-learn [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_2_LIB_03_sklearn_Basic01_IRIS.html), [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_2_LIB_03_sklearn_Basic01_IRIS.pdf)
 

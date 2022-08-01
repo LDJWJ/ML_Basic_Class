@@ -55,14 +55,14 @@
   * 머신러닝 - 데이터 전처리[html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_01_01_데이터전처리.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_01_01_데이터전처리.pdf)
   * 머신러닝 - 원핫인코딩
     * 이론 및 실습(1) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_01_01_FE_OneHotEncoding_01.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_01_01_FE_OneHotEncoding_01.pdf)
-    * 이론 및 실습(2) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_01_02_FE_OneHotEncoding_02.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_01_02_FE_OneHotEncoding_02.pdf)
+    * 이론 및 실습(2) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_01_02_FE_OneHotEncoding_02_2208.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_01_02_FE_OneHotEncoding_02_2208.pdf)
     * 이론 및 실습(3) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_01_03_FE_OneHotEncoding_03.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_01_03_FE_OneHotEncoding_03.pdf)
 
   * 머신러닝 - 구간분할, 일변량 비선형 변환
     * 구간분할 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_05_01_FE_binned_202010.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_05_01_FE_binned_202010.pdf)
     * 비선형 변환(log 등)[html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_06_01_FE_log_202010.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_06_01_FE_log_202010.pdf)
-    * 특성자동 선택(1) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_07_01_FeatureEngineering_특성자동선택.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_07_01_FeatureEngineering_특성자동선택.pdf)
-    * 특성자동 선택(2) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_07_02_FeatureEngineering_특성자동선택_회귀.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_07_02_FeatureEngineering_특성자동선택_회귀.pdf)
+    * 특성자동 선택(1) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_07_01_FeatureEngineering_특성자동선택_2208.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_07_01_FeatureEngineering_특성자동선택_2208.pdf)
+    * 특성자동 선택(2) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_07_02_FeatureEngineering_특성자동선택_회귀_2208.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_07_02_FeatureEngineering_특성자동선택_회귀_2208.pdf)
 
 ### 비지도학습
   * PCA 차원 축소[html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_04_01_차원축소(1)_PCA_2205.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_04_01_차원축소(1)_PCA_2205.pdf)

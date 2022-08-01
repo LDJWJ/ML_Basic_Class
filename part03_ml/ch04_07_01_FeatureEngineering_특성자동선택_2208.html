@@ -3,16 +3,16 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ch04_07_02_FeatureEngineering_특성자동선택_회귀</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>ch04_07_01_FeatureEngineering_특성자동선택</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
 
 <style type="text/css">
-    pre { line-height: 125%; }
-td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
-span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
-td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+    pre { line-height: 125%; margin: 0; }
+td.linenos pre { color: #000000; background-color: #f0f0f0; padding-left: 5px; padding-right: 5px; }
+span.linenos { color: #000000; background-color: #f0f0f0; padding-left: 5px; padding-right: 5px; }
+td.linenos pre.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
 span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
 .highlight .hll { background-color: var(--jp-cell-editor-active-background) }
 .highlight { background: var(--jp-cell-editor-background); color: var(--jp-mirror-editor-variable-color) }
@@ -14259,40 +14259,58 @@ a.anchor-link {
 
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#51473;&#50836;&#54620;-&#53945;&#51669;(feature)&#47484;-&#49440;&#53469;&#54616;&#45716;-&#48169;&#48277;">&#51473;&#50836;&#54620; &#53945;&#51669;(feature)&#47484; &#49440;&#53469;&#54616;&#45716; &#48169;&#48277;<a class="anchor-link" href="#&#51473;&#50836;&#54620;-&#53945;&#51669;(feature)&#47484;-&#49440;&#53469;&#54616;&#45716;-&#48169;&#48277;">&#182;</a></h2><ul>
-<li>통계가 좋은 특징 - 일변량 통계(univariate statistics)</li>
-<li>모델을 통해 선택 - 모델 기반 선택(model-based selection)</li>
-<li>모델을 통해 선택 - 반복적 선택(iterative selection)</li>
-</ul>
-
+<h2 id="&#49352;&#47196;&#50868;-&#53945;&#49457;(feature)&#47484;-&#49440;&#53469;&#54616;&#45716;-&#48169;&#48277;">&#49352;&#47196;&#50868; &#53945;&#49457;(feature)&#47484; &#49440;&#53469;&#54616;&#45716; &#48169;&#48277;<a class="anchor-link" href="#&#49352;&#47196;&#50868;-&#53945;&#49457;(feature)&#47484;-&#49440;&#53469;&#54616;&#45716;-&#48169;&#48277;">&#182;</a></h2>
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="1-1-1-&#51068;&#48320;&#47049;-&#53685;&#44228;">1-1-1 &#51068;&#48320;&#47049; &#53685;&#44228;<a class="anchor-link" href="#1-1-1-&#51068;&#48320;&#47049;-&#53685;&#44228;">&#182;</a></h3><ul>
-<li>개개의 특성과 타깃(목표변수) 사이에 중요한 통계적 관계가 있는지 계산</li>
-<li>분류에서는 분산분석(ANOVA)라고 한다.</li>
-<li>각 특성(feature)이 독립적으로 평가.</li>
-<li>계산이 매우 빠르고 평가를 위한 모델을 만들 필요가 없음.</li>
-<li>SelectPercentile에서 특성을 선택하는 기준은 <strong>F-값</strong><ul>
-<li>값이 클수록 클래스 평균의 분산이 비교적 크다.</li>
-</ul>
-</li>
-</ul>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="&#54217;&#44032;-&#51648;&#54364;">&#54217;&#44032; &#51648;&#54364;<a class="anchor-link" href="#&#54217;&#44032;-&#51648;&#54364;">&#182;</a></h3><ul>
-<li>분류는 f_classif를 사용하고 회귀는 f_regression를 사용한다.</li>
+<h3 id="&#54617;&#49845;-&#45236;&#50857;">&#54617;&#49845; &#45236;&#50857;<a class="anchor-link" href="#&#54617;&#49845;-&#45236;&#50857;">&#182;</a></h3><ul>
+<li>01 일변량 통계(univariate statistics)</li>
+<li>02 모델 기반 선택(model-based selection)</li>
+<li>03 반복적 선택(iterative selection)</li>
 </ul>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">&lt;</span><span class="n">h3</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;color:DodgerBlue&#39;</span><span class="o">&gt;&lt;</span><span class="n">a</span> <span class="nb">id</span><span class="o">=</span><span class="s1">&#39;99&#39;</span><span class="o">&gt;</span> <span class="n">목차</span> <span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;&lt;/</span><span class="n">h3</span><span class="o">&gt;</span>
+
+<span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;#1&quot;</span><span class="o">&gt;</span> <span class="mi">1</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="mi">1</span> <span class="n">일변량</span> <span class="n">통계</span>  <span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;&lt;</span><span class="n">br</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;#2&quot;</span><span class="o">&gt;</span> <span class="mf">02.</span> <span class="n">adult</span><span class="o">.</span><span class="n">data</span> <span class="n">셋을</span> <span class="n">활용한</span> <span class="n">onehot</span> <span class="n">encoding</span> <span class="n">실습</span>  <span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;&lt;</span><span class="n">br</span><span class="o">&gt;</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><a id='1'></a></p>
+<h3 style='color:DodgerBlue'> 1-1-1 일변량 통계 </h3><p><a href="#99"> 목차로 이동하기 </a><br></p>
+<ul>
+<li>개개의 특성과 타깃(목표변수) 사이에 중요한 통계적 관계가 있는지 계산</li>
+<li>분류에서는 분산분석(ANOVA)라고 한다.</li>
+<li>각 특성(feature)이 독립적으로 평가.</li>
+<li>계산이 매우 빠르고 평가를 위한 모델을 만들 필요가 없음.</li>
+<li>SelectPercentile에서 특성을 선택하는 기준은 F-값. 값이 클수록 클래스 평균의 분산이 비교적 크다.</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="&#48516;&#47448;---f_classif,-&#54924;&#44480;----f_regression">&#48516;&#47448; - f_classif, &#54924;&#44480;  - f_regression<a class="anchor-link" href="#&#48516;&#47448;---f_classif,-&#54924;&#44480;----f_regression">&#182;</a></h3>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">warnings</span>
@@ -14308,20 +14326,14 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.feature_selection</span> <span class="kn">import</span> <span class="n">SelectPercentile</span>
-<span class="kn">from</span> <span class="nn">sklearn.feature_selection</span> <span class="kn">import</span> <span class="n">f_regression</span><span class="p">,</span> <span class="n">f_classif</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.feature_selection</span> <span class="kn">import</span> <span class="n">SelectPercentile</span><span class="p">,</span> <span class="n">f_classif</span>
 
+<span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">load_breast_cancer</span>
 <span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
-
-<span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">load_boston</span>
-<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">MinMaxScaler</span><span class="p">,</span> <span class="n">PolynomialFeatures</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-
-<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
 </pre></div>
 
      </div>
@@ -14332,175 +14344,11 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">boston</span> <span class="o">=</span> <span class="n">load_boston</span><span class="p">()</span>
-
-<span class="n">df_boston</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">boston</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">boston</span><span class="o">.</span><span class="n">feature_names</span><span class="p">)</span>
-<span class="n">df_boston</span><span class="p">[</span><span class="s1">&#39;target&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">boston</span><span class="o">.</span><span class="n">target</span><span class="p">)</span>
-<span class="n">df_boston</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>CRIM</th>
-      <th>ZN</th>
-      <th>INDUS</th>
-      <th>CHAS</th>
-      <th>NOX</th>
-      <th>RM</th>
-      <th>AGE</th>
-      <th>DIS</th>
-      <th>RAD</th>
-      <th>TAX</th>
-      <th>PTRATIO</th>
-      <th>B</th>
-      <th>LSTAT</th>
-      <th>target</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>0.00632</td>
-      <td>18.0</td>
-      <td>2.31</td>
-      <td>0.0</td>
-      <td>0.538</td>
-      <td>6.575</td>
-      <td>65.2</td>
-      <td>4.0900</td>
-      <td>1.0</td>
-      <td>296.0</td>
-      <td>15.3</td>
-      <td>396.90</td>
-      <td>4.98</td>
-      <td>24.0</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>0.02731</td>
-      <td>0.0</td>
-      <td>7.07</td>
-      <td>0.0</td>
-      <td>0.469</td>
-      <td>6.421</td>
-      <td>78.9</td>
-      <td>4.9671</td>
-      <td>2.0</td>
-      <td>242.0</td>
-      <td>17.8</td>
-      <td>396.90</td>
-      <td>9.14</td>
-      <td>21.6</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>0.02729</td>
-      <td>0.0</td>
-      <td>7.07</td>
-      <td>0.0</td>
-      <td>0.469</td>
-      <td>7.185</td>
-      <td>61.1</td>
-      <td>4.9671</td>
-      <td>2.0</td>
-      <td>242.0</td>
-      <td>17.8</td>
-      <td>392.83</td>
-      <td>4.03</td>
-      <td>34.7</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>0.03237</td>
-      <td>0.0</td>
-      <td>2.18</td>
-      <td>0.0</td>
-      <td>0.458</td>
-      <td>6.998</td>
-      <td>45.8</td>
-      <td>6.0622</td>
-      <td>3.0</td>
-      <td>222.0</td>
-      <td>18.7</td>
-      <td>394.63</td>
-      <td>2.94</td>
-      <td>33.4</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>0.06905</td>
-      <td>0.0</td>
-      <td>2.18</td>
-      <td>0.0</td>
-      <td>0.458</td>
-      <td>7.147</td>
-      <td>54.2</td>
-      <td>6.0622</td>
-      <td>3.0</td>
-      <td>222.0</td>
-      <td>18.7</td>
-      <td>396.90</td>
-      <td>5.33</td>
-      <td>36.2</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[68]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 입력 데이터와 출력데이터를 지정해준다.</span>
-<span class="n">X</span> <span class="o">=</span> <span class="n">df_boston</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span> <span class="p">:</span> <span class="p">,</span> <span class="s1">&#39;CRIM&#39;</span><span class="p">:</span><span class="s1">&#39;LSTAT&#39;</span><span class="p">]</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">boston</span><span class="o">.</span><span class="n">target</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;정규화, 확장 전 데이터 셋 : &quot;</span><span class="p">,</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">y</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cancer</span> <span class="o">=</span> <span class="n">load_breast_cancer</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cancer</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14520,7 +14368,7 @@ a.anchor-link {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>정규화, 확장 전 데이터 셋 :  (506, 13) (506,)
+<pre>(569, 30)
 </pre>
 </div>
 </div>
@@ -14532,12 +14380,13 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[69]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## 값을 전체적으로 0~1로 사이로 만들기 </span>
-<span class="n">nor_X</span> <span class="o">=</span> <span class="n">MinMaxScaler</span><span class="p">()</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
-<span class="n">nor_X</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">nor_X</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 고정된 난수를 발생</span>
+<span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">RandomState</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">noise</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">cancer</span><span class="o">.</span><span class="n">data</span><span class="p">),</span> <span class="mi">40</span><span class="p">))</span>
+<span class="n">noise</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
 
      </div>
@@ -14553,13 +14402,13 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[69]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[25]:</div>
 
 
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>(0.0, 1.0)</pre>
+<pre>(569, 40)</pre>
 </div>
 
 </div>
@@ -14571,11 +14420,13 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[70]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ex_X</span> <span class="o">=</span> <span class="n">PolynomialFeatures</span><span class="p">(</span><span class="n">degree</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">include_bias</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">nor_X</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span> <span class="n">ex_X</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">ex_X</span><span class="p">)</span> <span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 데이터 노이즈 특성 추가</span>
+<span class="c1"># 30개는 원본 특성, 다음 40개는 노이즈</span>
+<span class="n">X_w_noise</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">([</span><span class="n">cancer</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">noise</span><span class="p">])</span>
+<span class="n">X_w_noise</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
 
      </div>
@@ -14591,40 +14442,33 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[26]:</div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>(506, 104) &lt;class &#39;numpy.ndarray&#39;&gt;
-</pre>
-</div>
-</div>
 
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>(569, 70)</pre>
 </div>
 
 </div>
 
 </div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="&#51221;&#44508;&#54868;&#50752;-&#53945;&#51669;-&#49373;&#49457;-&#54980;,-&#45936;&#51060;&#53552;-&#45208;&#45572;&#44592;">&#51221;&#44508;&#54868;&#50752; &#53945;&#51669; &#49373;&#49457; &#54980;, &#45936;&#51060;&#53552; &#45208;&#45572;&#44592;<a class="anchor-link" href="#&#51221;&#44508;&#54868;&#50752;-&#53945;&#51669;-&#49373;&#49457;-&#54980;,-&#45936;&#51060;&#53552;-&#45208;&#45572;&#44592;">&#182;</a></h3>
+
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[71]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[55]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">ex_X</span>          <span class="c1"># 입력</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">boston</span><span class="o">.</span><span class="n">target</span> <span class="c1"># 출력</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">X_w_noise</span>  <span class="c1"># 입력</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">cancer</span><span class="o">.</span><span class="n">target</span> <span class="c1"># 출력</span>
 
 <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> 
                                                     <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
-                                                    <span class="n">test_size</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
-
-<span class="c1"># 50%를 뽑는 것을 학습</span>
-<span class="n">select</span> <span class="o">=</span> <span class="n">SelectPercentile</span><span class="p">(</span><span class="n">score_func</span><span class="o">=</span><span class="n">f_regression</span><span class="p">,</span> <span class="n">percentile</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
-<span class="n">select</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+                                                    <span class="n">test_size</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14632,41 +14476,21 @@ a.anchor-link {
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[71]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>SelectPercentile(percentile=50,
-                 score_func=&lt;function f_regression at 0x0000014B6ED81940&gt;)</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[72]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[56]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## 학습 세트에 적용</span>
-<span class="n">X_tr_selected</span> <span class="o">=</span> <span class="n">select</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 50%를 뽑는 것을 학습</span>
+<span class="n">select</span> <span class="o">=</span> <span class="n">SelectPercentile</span><span class="p">(</span><span class="n">score_func</span><span class="o">=</span><span class="n">f_classif</span><span class="p">,</span> <span class="n">percentile</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">select</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+<span class="c1">## 학습 세트에 적용</span>
+<span class="n">X_train_selected</span> <span class="o">=</span> <span class="n">select</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span> <span class="s2">&quot;X_train.shape:&quot;</span><span class="p">,</span> <span class="n">X_train</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span> <span class="s2">&quot;X_train_selected.shape&quot;</span><span class="p">,</span> <span class="n">X_tr_selected</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span> <span class="s2">&quot;X_train_selected.shape&quot;</span><span class="p">,</span> <span class="n">X_train_selected</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14686,8 +14510,8 @@ a.anchor-link {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>X_train.shape: (253, 104)
-X_train_selected.shape (253, 52)
+<pre>X_train.shape: (398, 70)
+X_train_selected.shape (398, 35)
 </pre>
 </div>
 </div>
@@ -14700,19 +14524,14 @@ X_train_selected.shape (253, 52)
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>결과를 통해 우리는 특징 개수가 104개에서 52개로 줄어든 것을 확인할 수 있음.</li>
+<li>결과를 통해 우리는 특징 개수가 70개에서 35개로 줄어든 것을 확인할 수 있음.</li>
 </ul>
 
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="&#50612;&#46500;-&#53945;&#51669;&#51060;-&#49440;&#53469;-&#46104;&#50632;&#45716;&#51648;-&#49884;&#44033;&#54868;&#47484;-&#53685;&#54644;-&#54869;&#51064;">&#50612;&#46500; &#53945;&#51669;&#51060; &#49440;&#53469; &#46104;&#50632;&#45716;&#51648; &#49884;&#44033;&#54868;&#47484; &#53685;&#54644; &#54869;&#51064;<a class="anchor-link" href="#&#50612;&#46500;-&#53945;&#51669;&#51060;-&#49440;&#53469;-&#46104;&#50632;&#45716;&#51648;-&#49884;&#44033;&#54868;&#47484;-&#53685;&#54644;-&#54869;&#51064;">&#182;</a></h3>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[73]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[57]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -14726,7 +14545,7 @@ X_train_selected.shape (253, 52)
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[74]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[61]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### 어떤 특성이 선택되었는지 확인</span>
@@ -14752,15 +14571,12 @@ X_train_selected.shape (253, 52)
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[ True  True  True False  True  True False False False  True  True False
-  True False False  True False  True False  True  True False  True  True
- False  True False False False  True  True  True False False False False
-  True False  True False  True False  True False  True  True  True False
-  True False False False False False False False False False False  True
- False  True False  True  True  True False  True  True False  True False
- False False  True  True  True False  True  True  True False  True False
- False False False False False  True  True  True False  True  True  True
- False  True  True False  True False  True  True]
+<pre>[ True  True  True  True  True  True  True  True  True False  True False
+  True  True  True  True  True  True False False  True  True  True  True
+  True  True  True  True  True  True False False False False False False
+ False  True  True False False False False False  True False False False
+ False False False  True  True False False False False  True False False
+ False False False False  True False False False  True  True]
 </pre>
 </div>
 </div>
@@ -14768,13 +14584,13 @@ X_train_selected.shape (253, 52)
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[74]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[61]:</div>
 
 
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;matplotlib.image.AxesImage at 0x14b7385ed90&gt;</pre>
+<pre>&lt;matplotlib.image.AxesImage at 0x2722c538220&gt;</pre>
 </div>
 
 </div>
@@ -14788,7 +14604,7 @@ X_train_selected.shape (253, 52)
 
 
 <div class="jp-RenderedImage jp-OutputArea-output ">
-<img src="data:image/png;base64,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
+<img src="data:image/png;base64,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
 "
 >
 </div>
@@ -14802,17 +14618,25 @@ X_train_selected.shape (253, 52)
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="30&#44060;&#51032;-&#50896;&#48376;-&#53945;&#49457;&#47564;-&#45224;&#44256;,-&#45208;&#47672;&#51648;-&#53945;&#49457;&#46308;&#51008;-&#44144;&#51032;-&#51228;&#44144;&#46120;.">30&#44060;&#51032; &#50896;&#48376; &#53945;&#49457;&#47564; &#45224;&#44256;, &#45208;&#47672;&#51648; &#53945;&#49457;&#46308;&#51008; &#44144;&#51032; &#51228;&#44144;&#46120;.<a class="anchor-link" href="#30&#44060;&#51032;-&#50896;&#48376;-&#53945;&#49457;&#47564;-&#45224;&#44256;,-&#45208;&#47672;&#51648;-&#53945;&#49457;&#46308;&#51008;-&#44144;&#51032;-&#51228;&#44144;&#46120;.">&#182;</a></h3>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="&#51204;&#52404;-&#53945;&#49457;&#51012;-&#49324;&#50857;&#54620;-&#51216;&#49688;,-&#49440;&#53469;&#46108;-&#53945;&#49457;&#51012;-&#49324;&#50857;&#54620;-&#51216;&#49688;">&#51204;&#52404; &#53945;&#49457;&#51012; &#49324;&#50857;&#54620; &#51216;&#49688;, &#49440;&#53469;&#46108; &#53945;&#49457;&#51012; &#49324;&#50857;&#54620; &#51216;&#49688;<a class="anchor-link" href="#&#51204;&#52404;-&#53945;&#49457;&#51012;-&#49324;&#50857;&#54620;-&#51216;&#49688;,-&#49440;&#53469;&#46108;-&#53945;&#49457;&#51012;-&#49324;&#50857;&#54620;-&#51216;&#49688;">&#182;</a></h3>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[75]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[62]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lr</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LogisticRegression</span>
+
+<span class="n">lr</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">()</span>
 <span class="n">lr</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;전체 특성 사용 : </span><span class="si">{:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">lr</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;전체 특성 사용(학습) : </span><span class="si">{:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">lr</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;전체 특성 사용(테스트) : </span><span class="si">{:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">lr</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)))</span>
 </pre></div>
 
      </div>
@@ -14832,7 +14656,8 @@ X_train_selected.shape (253, 52)
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>전체 특성 사용 : 0.664
+<pre>전체 특성 사용(학습) : 0.975
+전체 특성 사용(테스트) : 0.936
 </pre>
 </div>
 </div>
@@ -14844,15 +14669,16 @@ X_train_selected.shape (253, 52)
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[76]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[63]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 테스트 데이터 변환 </span>
-<span class="n">X_test_selected</span> <span class="o">=</span> <span class="n">select</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="n">X_test_selected</span> <span class="o">=</span> <span class="n">X_test</span><span class="p">[:,</span> <span class="n">mask</span><span class="p">]</span>
 
-<span class="n">lr1</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
-<span class="n">lr1</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_tr_selected</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;선택된 일부 특성 사용 : </span><span class="si">{:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">lr1</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test_selected</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">X_test_selected</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="n">lr</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train_selected</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;일부 특성 사용(학습) : </span><span class="si">{:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">lr</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_train_selected</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;일부 특성 사용(테스트): </span><span class="si">{:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">lr</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test_selected</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)))</span>
 </pre></div>
 
      </div>
@@ -14872,7 +14698,9 @@ X_train_selected.shape (253, 52)
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>선택된 일부 특성 사용 : 0.758
+<pre>(171, 35)
+일부 특성 사용(학습) : 0.952
+일부 특성 사용(테스트): 0.930
 </pre>
 </div>
 </div>
@@ -14884,18 +14712,12 @@ X_train_selected.shape (253, 52)
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><a id='2'></a></p>
+<h3 style='color:DodgerBlue'> 1-1-2 모델 기반 특성 선택 </h3><p><a href="#99"> 목차로 이동하기 </a><br></p>
 <ul>
-<li>0.664에서 선택된 일부 특성(50%)를 선택 후, 성능이 0.758로 향상되었습니다.</li>
-</ul>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="1-1-2-&#47784;&#45944;-&#44592;&#48152;-&#53945;&#49457;-&#49440;&#53469;">1-1-2 &#47784;&#45944; &#44592;&#48152; &#53945;&#49457; &#49440;&#53469;<a class="anchor-link" href="#1-1-2-&#47784;&#45944;-&#44592;&#48152;-&#53945;&#49457;-&#49440;&#53469;">&#182;</a></h3><ul>
-<li>지도 학습 머신러닝 모델을 사용하여 <strong>특성의 중요도를 평가해서 가장 중요한 특성</strong>들만 선택</li>
+<li>지도 학습 머신러닝 모델을 사용하여 <strong>특성의 중요도를 평가</strong>해서 가장 중요한 특성들만 선택</li>
 <li>특성 선택에 사용하는 지도 학습 모델은 최종적으로 사용할 지도학습 모델과 같을 필요는 없음.</li>
-<li>결정 트리와 유사한 모델은 feature<em>importance</em> 속성을 제공함.</li>
+<li>결정트리와 유사한 모델은 feature<em>importance</em> 속성을 제공함.</li>
 <li>선형 모델의 절대값으로 특성의 중요도를 재는데 사용</li>
 <li>모델 기반의 특성 선택은 SelectFromModel에 구현되어 있음.</li>
 </ul>
@@ -14904,27 +14726,14 @@ X_train_selected.shape (253, 52)
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[77]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[68]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.feature_selection</span> <span class="kn">import</span> <span class="n">SelectFromModel</span>
-<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestRegressor</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[78]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">select</span> <span class="o">=</span> <span class="n">SelectFromModel</span><span class="p">(</span><span class="n">RandomForestRegressor</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> 
+<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestClassifier</span>
+<span class="n">select</span> <span class="o">=</span> <span class="n">SelectFromModel</span><span class="p">(</span><span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> 
                                                <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">),</span>
-                                               <span class="n">threshold</span><span class="o">=</span><span class="s2">&quot;median&quot;</span><span class="p">)</span>  <span class="c1"># 1.25*mean, 0.75*mean </span>
+                                               <span class="n">threshold</span><span class="o">=</span><span class="s2">&quot;median&quot;</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14936,9 +14745,8 @@ X_train_selected.shape (253, 52)
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>SelectFromModel은 지도학습 모델(랜덤포레스트)로 계산된 중요도가 기준</li>
-<li>임계치보다 큰 모든 특성을 선택</li>
-<li>절반 가량의 특성이 선택될 수 있도록 중간값(threshold='median')을 임계치로 사용.</li>
+<li>SelectFromModel은 지도학습 모델로 계산된 중요도가 임계치보다 큰 모든 특성을 선택</li>
+<li>절반 가량의 특성이 선택될 수 있도록 중간값을 임계치로 사용.</li>
 <li>트리 100개로 만든 랜덤 포레스트 분류기를 사용.</li>
 </ul>
 
@@ -14946,7 +14754,7 @@ X_train_selected.shape (253, 52)
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[79]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[69]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">select</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
@@ -14972,8 +14780,8 @@ X_train_selected.shape (253, 52)
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>X_train.shape : (253, 104)
-X_train_l1.shape : (253, 52)
+<pre>X_train.shape : (398, 70)
+X_train_l1.shape : (398, 35)
 </pre>
 </div>
 </div>
@@ -14985,7 +14793,7 @@ X_train_l1.shape : (253, 52)
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[80]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[70]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### 어떤 특성이 선택되었는지 확인</span>
@@ -15012,15 +14820,12 @@ X_train_l1.shape : (253, 52)
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[False False False False False  True False False False False False  True
-  True False  True  True False  True  True  True False False  True  True
- False  True False  True False False False False False False False False
- False False False False  True False  True  True  True False  True  True
-  True False False False False False False False False False False False
- False False  True False  True  True False  True  True  True  True  True
-  True  True  True  True False  True  True  True  True  True  True False
-  True  True  True  True  True False False  True  True  True False  True
-  True  True False  True  True False  True  True]
+<pre>[ True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True False False False False False False
+ False False False False False False False False False  True False False
+ False False False  True  True False False False False False False False
+ False False  True False False False False False  True False]
 </pre>
 </div>
 </div>
@@ -15028,7 +14833,7 @@ X_train_l1.shape : (253, 52)
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[80]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[70]:</div>
 
 
 
@@ -15048,7 +14853,7 @@ X_train_l1.shape : (253, 52)
 
 
 <div class="jp-RenderedImage jp-OutputArea-output ">
-<img src="data:image/png;base64,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
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA6oAAAA6CAYAAAC58qTAAAAAOXRFWHRTb2Z0d2FyZQBNYXRwbG90bGliIHZlcnNpb24zLjMuMiwgaHR0cHM6Ly9tYXRwbG90bGliLm9yZy8vihELAAAACXBIWXMAAAsTAAALEwEAmpwYAAAJNElEQVR4nO3da4xcZR3H8e+PFoIXtCj1RlE0wQtBAakERfGGyk0hMRowGtEoIcEIRmJAX4gajS+MotFoGkQ03kXEhiAKqPEWL60g91tI1UqlBQQUL4j8fXFOYbLMtrSzuzOzz/eTbGbOM2fOeTq/Pd3973mec1JVSJIkSZI0KXYYdwckSZIkSRpkoSpJkiRJmigWqpIkSZKkiWKhKkmSJEmaKBaqkiRJkqSJYqEqSZIkSZooU1WoJjksyfVJbkpy2rj7o/mV5OwkG5NcNdD2uCQXJ7mxf9x1nH3U/EiyR5KfJLk2ydVJTu7bzb8BSXZO8tskf+jz/1Dfbv6NSLIkyWVJLuiXzb4RSdYluTLJ5UnW9G3m34gky5Kcm+S6/neAF5p/u6amUE2yBPgccDiwN3Bckr3H2yvNs3OAw2a0nQZcWlV7AZf2y1p87gPeW1XPAQ4CTuqPd/Nvw3+AV1TVvsB+wGFJDsL8W3IycO3Astm35eVVtV9VreyXzb8dnwYuqqpnA/vS/T9g/o2amkIVOBC4qapurqp7gW8CR4+5T5pHVfUz4I4ZzUcDX+6ffxk4ZiH7pIVRVRuq6vf987/T/aDaHfNvQnX+0S/u2H8V5t+EJCuAI4GzBprNvm3m34AkjwEOAb4IUFX3VtWdmH+zpqlQ3R3488Dy+r5NbXliVW2ArpgBnjDm/mieJdkT2B/4DebfjH7o5+XARuDiqjL/dpwJvA+4f6DN7NtRwI+SrE1yQt9m/m14BrAJ+FI/9P+sJI/C/Js1TYVqhrTVgvdC0oJJ8mjgu8ApVXX3uPujhVNV/6uq/YAVwIFJ9hlzl7QAkhwFbKyqtePui8bm4Kp6Pt1Ur5OSHDLuDmnBLAWeD3y+qvYH7sFhvk2bpkJ1PbDHwPIK4JYx9UXjc2uSJwP0jxvH3B/NkyQ70hWpX6uq8/pm829MP+zrp3Tz1c1/8TsYeF2SdXRTfF6R5KuYfTOq6pb+cSPwPbqpX+bfhvXA+n4EDcC5dIWr+TdqmgrV3wF7JXl6kp2AY4HVY+6TFt5q4K3987cC3x9jXzRPkoRujsq1VfXJgZfMvwFJlidZ1j9/BHAocB3mv+hV1elVtaKq9qT7Of/jqnozZt+EJI9Kssvm58Crgasw/yZU1V+BPyd5Vt/0SuAazL9ZqZqe0bNJjqCbu7IEOLuqPjreHmk+JfkG8DJgN+BW4IPA+cC3gacCfwLeUFUzL7ikKZfkxcDPgSt5cJ7a++nmqZr/IpfkeXQXzFhC9wfVb1fVh5M8HvNvRpKXAadW1VFm34Ykz6A7iwrdMNCvV9VHzb8dSfaju5DaTsDNwNvofw5g/s2ZqkJVkiRJkrT4TdPQX0mSJElSAyxUJUmSJEkTxUJVkiRJkjRRLFQlSZIkSRPFQlWSJEmSNFFGKlSTPC7JxUlu7B933cK6S5JcluSCUfbZb+uEUbeh6WT2bTP/tpl/u8y+bebfLrNv26hnVE8DLq2qvYBL++XZnAxcO+L+NvObtl1m3zbzb5v5t8vs22b+7TL7ho1aqB5Nd1N2+sdjhq2UZAVwJN0NfCVJkiRJmlWqavvfnNwF/BbYE1gHvKCqls1YZw9gLXBP33RPVe3zMLe//Z2TJE2lAw44YGj7pk2bWL58+QL3RpOglezXrl27ze+Z7XhZTLaU//Z8Ztuqhc94Us31se8xtm0W4vNat24dt912W4a9ttVCNcklwJOGvPQB4FvAGVX18SSn9c93nvH+twCvrao3Jjkc+A5wYFVdM8v+TuDB0/ztfmdIUqNG+QOqNM2Sob+rbVHrx8v2fGbbqvXPeDHxGNs2C/F5rVy5kjVr1gzd0dKHsbNDZ3styQ7AD/rFHwAfHrLa3sCLkqwDdu6/PgMM3W5VrQJW9dtv9ztDkiRJkho16hzV+4HDkxwGXAIs7c+sPqCqTgf2AFYP7PNDI+5XkiRJkrRIbbVQTXJJkquGfB0N/Ad4FV0RegNwN3BckpcmuXBgM4cDzwbuAq4HPrGF/Z2QZE2SNSP8uyRJkiRJU2rUob9/BT4FPBZ4IvBIYAPwoqo6YmDVU4EXAn+ju+jSU5I8uao2DNmfQ38lSZIkqWGjDv1dDRwHPBM4j27u6d7AA1f1TTcLdx/goqp6CvARYFdg92Eb9IyqJEmSJLVtq2dUt+LjdLeneQTdFXrfADwVeFaSC/uzqgcDy4HnJrkcWNKvP/RsqWdUJUmSJKltIxWqVXV7ki8C7wFW0BWt/6S7V+oR/Tq/SLIK+ClwE/Ab4F/ALaPsW5IkSZK0OI16RhXgZuDxwOuBtXTzUH84Y53VwLvo5rH+G7h12PxUeMh9VCVJkiRJjRl1jirALsDfgbOAK+gulrRjkhOTnNivcyFdkbov8F/gC7NtrKpWVdXKqlo5B32TJEmSJE2ZuTijehcQ4DXAX+iG995RVYPF6ErgOcBLgXfQnYWVJEmSJOkh5qJQLeBXdMN9l9DNQb1989nUvmD9Ft2Z1M/SXWzpJcC5wzbm0F9JkiRJattcFKrrgVTVMwGSnA4PFKibBbgDWAbsBOyS5JiqOn/mxmZc9XcT8Mch+9wNuG0O+q7pY/ZtM/8GdHc1G8r822X2s9jC8bKYjDX/Rj7jSTX2Y9/8t812fF5Pm3VbVaPdASbJUuAG4JV0Q39/B7ypqq6eZf1zgAuqaugZ1Ye5zzXOYW2T2bfN/Ntm/u0y+7aZf7vMvm0jn1GtqvuSvIsHh/6eXVVXzxj6K0mSJEnSwzIXQ3+pqgvpruw72Da0QK2q4+din5IkSZKkxWkubk8zDqvG3QGNjdm3zfzbZv7tMvu2mX+7zL5hI89RlSRJkiRpLs3J0F9JkvSgJGcABwH39U1LgV/3zx/SXlVnDLz3eODtwN0Dm9wA/HJYe1W9c257L0nS+FmoSpI0P46tqjsBkiwDTtlK+6B3V9XlmxeSnLmVdkmSFpVpnaMqSZIkSVqkLFQlSZIkSRPFQlWSJEmSNFEsVCVJkiRJE8VCVZIkSZI0USxUJUmSJEkTxdvTSJI09zYCX0lyf7+8A3BR/3y29s3+Bnwsyb0DbVdsoV2SpEUnVTXuPkiSJEmS9ACH/kqSJEmSJoqFqiRJkiRpolioSpIkSZImioWqJEmSJGmiWKhKkiRJkibK/wHVVitBtaj37gAAAABJRU5ErkJggg==
 "
 >
 </div>
@@ -15062,16 +14867,111 @@ X_train_l1.shape : (253, 52)
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[82]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[72]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 학습용, 테스트 데이터 변환 </span>
-<span class="n">X_train_l1</span> <span class="o">=</span> <span class="n">select</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">select</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
 <span class="n">X_test_l1</span> <span class="o">=</span> <span class="n">select</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
 
-<span class="n">lr1</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
-<span class="n">lr1</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train_l1</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;전체 특성 사용 : </span><span class="si">{:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">lr1</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test_l1</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)))</span>
+<span class="n">mask</span> <span class="o">=</span> <span class="n">select</span><span class="o">.</span><span class="n">get_support</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">matshow</span><span class="p">(</span><span class="n">mask</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gray_r&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;특성 번호&quot;</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[72]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>Text(0.5, 0, &#39;특성 번호&#39;)</pre>
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedImage jp-OutputArea-output ">
+<img src="data:image/png;base64,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
+"
+>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>train과 test를 했을 때의 데이터가 다름. 하나로 기준을 정해서 진행.</li>
+</ul>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[73]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">select</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="n">X_train_l1</span> <span class="o">=</span> <span class="n">select</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+<span class="n">mask</span> <span class="o">=</span> <span class="n">select</span><span class="o">.</span><span class="n">get_support</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[74]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_test_l1</span> <span class="o">=</span> <span class="n">X_test</span><span class="p">[:,</span> <span class="n">mask</span><span class="p">]</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[75]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lr</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">()</span>
+<span class="n">lr</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train_l1</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;전체 특성 사용(학습) : </span><span class="si">{:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">lr</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_train_l1</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;전체 특성 사용(테스트) : </span><span class="si">{:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">lr</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test_l1</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)))</span>
+
+<span class="c1"># score = LogisticRegression().fit(X_train, y_train).score(X_test_l1, y_test)</span>
 </pre></div>
 
      </div>
@@ -15091,7 +14991,8 @@ X_train_l1.shape : (253, 52)
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>전체 특성 사용 : 0.770
+<pre>전체 특성 사용(학습) : 0.962
+전체 특성 사용(테스트) : 0.947
 </pre>
 </div>
 </div>
@@ -15103,23 +15004,17 @@ X_train_l1.shape : (253, 52)
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><a id='3'></a></p>
+<h3 style='color:DodgerBlue'> 1-1-3 반복적 특성 선택 </h3><p><a href="#99"> 목차로 이동하기 </a><br></p>
 <ul>
-<li>위의 결과와 비교해 보면 SelectPercentile으로 선택한 것보다 성능이 좋음.</li>
-</ul>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="1-1-3-&#48152;&#48373;&#51201;-&#53945;&#49457;-&#49440;&#53469;">1-1-3 &#48152;&#48373;&#51201; &#53945;&#49457; &#49440;&#53469;<a class="anchor-link" href="#1-1-3-&#48152;&#48373;&#51201;-&#53945;&#49457;-&#49440;&#53469;">&#182;</a></h3><ul>
-<li>A. 일변량 모델은 모델을 사용하지 않음.(F값)</li>
-<li>B. 모델 기반 선택은 <strong>하나의 모델</strong>을 사용</li>
-<li>C. 반복적 특성 선택(iterative Feature Selection)에서는 특성 선택 시, 각각 다른 모델을 사용.<ul>
+<li>일변량 모델은 통계를 이용. 모델을 사용하지 않음.(F값)</li>
+<li>모델 기반 선택은 <strong>하나의 모델</strong>을 사용</li>
+<li>반복적 특성 선택(iterative Feature Selection)에서는 특성의 수가 각기 다른 일련의 모델이 만들어짐.<ul>
 <li>하나, 특성을 하나도 선택하지 않은 상태로 시작해서 어떤 종료 조건까지 하나씩 추가</li>
 <li>둘, 모든 특성을 가지고 시작하여 어떤 종료 조건이 될때까지 특성을 하나씩 제거.</li>
 </ul>
 </li>
-<li>D. 많은 모델 사용하므로 앞서 소개한 방법들보다 계산 비용이 훨씬 많이 든다.</li>
+<li>이 모델들은 앞서 소개한 방법들보다 계산 비용이 훨씬 많이 든다.</li>
 </ul>
 
 </div>
@@ -15131,31 +15026,15 @@ X_train_l1.shape : (253, 52)
 </ul>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[83]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.feature_selection</span> <span class="kn">import</span> <span class="n">RFE</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[89]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[76]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%time</span>
-
-<span class="c1"># RFE 반복적인 변수의 제거를 통해 좋은 피처만 남긴다.</span>
-<span class="n">select</span> <span class="o">=</span> <span class="n">RFE</span><span class="p">(</span><span class="n">RandomForestRegressor</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">),</span>
-            <span class="n">n_features_to_select</span><span class="o">=</span><span class="mi">52</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.feature_selection</span> <span class="kn">import</span> <span class="n">RFE</span>
+<span class="n">select</span> <span class="o">=</span> <span class="n">RFE</span><span class="p">(</span><span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">),</span>
+            <span class="n">n_features_to_select</span><span class="o">=</span><span class="mi">35</span><span class="p">)</span>
 
 <span class="n">select</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
 
@@ -15178,19 +15057,7 @@ X_train_l1.shape : (253, 52)
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Wall time: 34.5 s
-</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[89]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[76]:</div>
 
 
 
@@ -15210,7 +15077,7 @@ X_train_l1.shape : (253, 52)
 
 
 <div class="jp-RenderedImage jp-OutputArea-output ">
-<img src="data:image/png;base64,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
+<img src="data:image/png;base64,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
 "
 >
 </div>
@@ -15226,34 +15093,27 @@ X_train_l1.shape : (253, 52)
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
 <li>일변량 분석이나 모델 기반 특성보다 특성 선택이 나아짐.</li>
-<li>랜덤 포레스트 모델은 특성이 누락될때마다 다시 학습하므로 52번 실행.</li>
+<li>랜덤 포레스트 모델은 특성이 누락될때마다 다시 학습하므로 35번 실행.</li>
 <li>이 코드를 실행하면 모델 기반 선택보다 훨씬 오래 걸림.</li>
 </ul>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[91]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_tr_rfe</span> <span class="o">=</span> <span class="n">select</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
-<span class="n">X_test_rfe</span> <span class="o">=</span> <span class="n">select</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[92]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[81]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">score</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_tr_rfe</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test_rfe</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;테스트 점수 : </span><span class="si">{:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">score</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_train_rfe</span> <span class="o">=</span> <span class="n">select</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+<span class="n">mask</span> <span class="o">=</span> <span class="n">select</span><span class="o">.</span><span class="n">get_support</span><span class="p">()</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train_rfe</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="n">score</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_train_rfe</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;학습용 평가 점수 : </span><span class="si">{:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">score</span><span class="p">))</span>
+
+<span class="n">X_test_rfe</span> <span class="o">=</span> <span class="n">X_test</span><span class="p">[:,</span> <span class="n">mask</span><span class="p">]</span>
+<span class="n">score</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test_rfe</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;테스트용 평가 점수 : </span><span class="si">{:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">score</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -15273,55 +15133,8 @@ X_train_l1.shape : (253, 52)
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>테스트 점수 : 0.799
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="&#52572;&#51333;-&#54869;&#51064;-&#44208;&#44284;">&#52572;&#51333; &#54869;&#51064; &#44208;&#44284;<a class="anchor-link" href="#&#52572;&#51333;-&#54869;&#51064;-&#44208;&#44284;">&#182;</a></h3><ul>
-<li>F통계량, 랜덤포레스트 특성 중요도 이용, RFE 이용하여 확인한 결과<ul>
-<li>RFE &gt; RandomForestRegressor 특성 이용 &gt; 통계량 이용 순으로 성능이 차이가 있었다.</li>
-</ul>
-</li>
-</ul>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[93]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### RFE에서 사용된 모델로 예측</span>
-<span class="n">model</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_tr_rfe</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;최종 모델 테스트 점수 : </span><span class="si">{:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test_rfe</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)))</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>최종 모델 테스트 점수 : 0.799
+<pre>학습용 평가 점수 : 0.947
+테스트용 평가 점수 : 0.953
 </pre>
 </div>
 </div>

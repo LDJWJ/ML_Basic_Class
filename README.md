@@ -61,7 +61,7 @@
   * 머신러닝 - 구간분할, 일변량 비선형 변환
     * 구간분할 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_05_01_FE_binned_202010.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_05_01_FE_binned_202010.pdf)
     * 비선형 변환(log 등)[html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_06_01_FE_log_202010.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_06_01_FE_log_202010.pdf)
-    * 특성자동 선택(1) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_07_01_FeatureEngineering_특성자동선택_2208.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_07_01_FeatureEngineering_특성자동선택_2208.pdf)
+    * 특성자동 선택(1) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_07_01_FeatureEngineering_특성자동선택_220802.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_07_01_FeatureEngineering_특성자동선택_220802.pdf)
     * 특성자동 선택(2) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_07_02_FeatureEngineering_특성자동선택_회귀_2208.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_07_02_FeatureEngineering_특성자동선택_회귀_2208.pdf)
 
 ### 비지도학습

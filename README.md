@@ -131,7 +131,10 @@
  * 머신러닝 - Bike Sharing Demand(4) - 모델 평가 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_Bike04_ModelValidation_v10.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_Bike04_ModelValidation_v10.pdf)
 
  * 성인 인구조사 소득 예측 대회(1) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/kaggle_contest_4th_01_2206.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/kaggle_contest_4th_01_2206.pdf)
- * 성인 인구조사 소득 예측 대회(2) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/kaggle_contest_4th_02_2206.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/kaggle_contest_4th_02_2206.pdf)
+ * 성인 인구조사 소득 예측 대회(2) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/kaggle_contest_4th_02_2208.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/kaggle_contest_4th_02_2208.pdf)
+ 
+ * 성인 인구조사 소득 예측 대회(2) - 평가지표(f1-score) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/kaggle_contest_4th_02_validation_2208.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/kaggle_contest_4th_02_validation_2208.pdf)
+ 
  * 성인 인구조사 소득 예측 대회(3) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/kaggle_contest_4th_03_2206.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/kaggle_contest_4th_03_2206.pdf)
  * 성인 인구조사 소득 예측 대회(4)-2nd Solution [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/kaggle_contest_4th_04_2nd.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/kaggle_contest_4th_04_2nd.pdf)
  * 성인 인구조사 소득 예측 대회(5)-1st Solution [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/kaggle_contest_4th_05_1st_review.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/kaggle_contest_4th_05_1st_review.pdf)

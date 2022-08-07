@@ -14,7 +14,7 @@
  [pdf 02](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch02_03_ensemble/ch02_Ensemble02_202205_lightgbm_v11.pdf)
  * 데이터 전처리 및 피처엔지니어링 [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch03_01_datapre/ch03_04_DataProcessing_202012_v11.pdf)
  * 평가지표 [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch05_validation/ch05_평가지표_v04_202108.pdf)
- * 비지도학습 [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch03_02_pca/ch03_pca_v01_202110.pdf)
+ * 비지도학습 01 기본 [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch03_02_pca/ch03_비지도학습01_Basic_v01_202208.pdf), 02 - PCA [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch03_02_pca/ch03_비지도학습02_pca_v01_202110.pdf)
  * 머신러닝 더 알아보기 [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch06_upgrade/ch06_upgrade_v01_202108.pdf)
  
 

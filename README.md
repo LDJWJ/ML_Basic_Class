@@ -65,11 +65,11 @@
     * 특성자동 선택(2) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_07_02_FeatureEngineering_특성자동선택_회귀_2208.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_07_02_FeatureEngineering_특성자동선택_회귀_2208.pdf)
 
 ### 비지도학습
-  * PCA 차원 축소[html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_04_01_차원축소(1)_PCA_2205.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_04_01_차원축소(1)_PCA_2205.pdf)
+  * PCA 차원 축소[html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_04_01_차원축소(1)_PCA_2208.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_04_01_차원축소(1)_PCA_2208.pdf)
   * PCA 얼굴 예제 실습[html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_04_02_차원축소(2)_PCA_얼굴예제.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_04_02_차원축소(2)_PCA_얼굴예제.pdf)
-  * PCA 차원 축소-tsne[html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_04_03_차원축소(3)_tsne.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_04_03_차원축소(3)_tsne.pdf)
+  * PCA 차원 축소-tsne[html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_04_03_차원축소(3)_tsne_2208.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_04_03_차원축소(3)_tsne_2208.pdf)
 
-  * 군집(Clustering)[html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_02_01_군집(clustering)(1)_Kmeans_2208.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_02_01_군집(clustering)(1)_Kmeans_2208.pdf)
+  * 군집(Clustering)[html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_02_01_군집(clustering)_Kmeans_2208.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_02_01_군집(clustering)_Kmeans_2208.pdf)
   * 병합 군집(Clustering)[html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_05_01_병합군집.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_05_01_병합군집_Clustering.pdf)
   * DBSCAN(Clustering) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_05_02_DBSCAN_2207.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_05_02_DBSCAN_2207.pdf)
   * 얼굴 데이터 셋 분석 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_05_03_unsup_face_analysis_colab_2207.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_05_03_unsup_face_analysis_colab_2207.pdf)

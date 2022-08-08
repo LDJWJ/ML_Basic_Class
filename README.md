@@ -148,6 +148,10 @@
 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/dacon_07_feature_engineering_01.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/dacon_07_feature_engineering_01.pdf)
 [github](https://github.com/LDJWJ/parking_demand_competion)
  
+ * American Express - Default Prediction
+   * 대회 URL :  https://www.kaggle.com/competitions/amex-default-prediction/overview
+   * 분석 노트북 01 (XGB) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/amex_01_basemodel_xgbm_2208.html)
+   
  ### 수업 관련 링크
  * 캐글 코리아 1차 대회 
     * 타이타닉 생존자를 예측하라[Link](https://www.kaggle.com/c/2019-1st-ml-month-with-kakr)

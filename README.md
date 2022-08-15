@@ -152,6 +152,9 @@
    * 대회 URL :  https://www.kaggle.com/competitions/amex-default-prediction/overview
    * 분석 노트북 01 (XGB) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/amex_01_basemodel_xgbm_2208.html)
    * 분석 노트북 02 (LightGBM) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/amex-02-basic-lightgbm_2208.html)
+   * 분석 노트북 03 (catboost) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/amex-03-catboost-md10-gpu_2208.html)
+
+   
    
    
  ### 수업 관련 링크

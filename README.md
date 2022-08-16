@@ -78,7 +78,7 @@
 ### 평가
   * 교차 검증1 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_01_01_CrossValidation_v01_2208.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_01_01_CrossValidation_v01_2208.pdf)
   * 교차 검증2 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_01_02_CrossValidation_v02_2208.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_01_02_CrossValidation_v02_2208.pdf)
-  * Grid Search(1) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_02_01_성능개선_GridSearch1.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_02_01_성능개선_GridSearch1.pdf)
+  * Grid Search(1) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_02_03_GridSearch_tree_SVC_2208.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_02_03_GridSearch_tree_SVC_2208.pdf)
   * Grid Search(2) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_02_02_성능개선_GridSearch2.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_02_02_성능개선_GridSearch2.pdf)
   * 모델 평가 (1) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_03_01_model_validation(1)_2207.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_03_01_model_validation(1)_2207.pdf)
   * 모델 평가 (2) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_03_02_validation(2)_threshold_2207.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_03_02_validation(2)_threshold_2207.pdf)

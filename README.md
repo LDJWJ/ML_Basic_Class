@@ -32,7 +32,7 @@
     * knn [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_01A_knn_code_v11_2205.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_01A_knn_code_v11_2205.pdf) 
     * knn_pratice [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_01B_knn_code_pratice_2205.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_01B_knn_code_pratice_2205.pdf)
  * 머신러닝 - 선형회귀 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_02_linear_code_v10_2205.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_02_linear_code_v10_2205.pdf)
- * 머신러닝 - 회귀(평가지표) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_02B_linear_boston_evaluation_v11.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_02B_linear_boston_evaluation_v11.pdf)
+ * 머신러닝 - 회귀(평가지표) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_02B_linear_boston_evaluation_v12.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_02B_linear_boston_evaluation_v12.pdf)
 
  * 머신러닝 알고리즘 회귀(Ridge, Lasso) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_03_ridge_lasso.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_03_ridge_lasso.pdf)
  

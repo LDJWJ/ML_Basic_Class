@@ -42,6 +42,9 @@
  * 머신러닝 - 의사결정트리 01 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_01_decisionTree_colab.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_01_decisionTree_colab.pdf)
  * 머신러닝 - 의사결정트리 02 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_02_decisionTree_diabetes_colab.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_02_decisionTree_diabetes_colab.pdf)
  * 머신러닝 - 의사결정트리 03 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_02_decisiontree_local.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_02_decisiontree_local.pdf)
+ 
+ * 머신러닝 - 다양한 데이터 셋 - 의사결정트리 시각화 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_02_dtreeviz_modelVis_v10_2209.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_02_dtreeviz_modelVis_v10_2209.pdf)
+ 
  * 머신러닝 - 타이타닉 데이터셋 모델 구축 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_02B_titanic_modelmain_analysis.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_02B_titanic_modelmain_analysis.pdf)
  * 머신러닝 - 앙상블_랜덤포레스트(1)-tips 01 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_03_RandomForest_01_Tips_01.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_03_RandomForest_01_Tips_01.pdf)
  

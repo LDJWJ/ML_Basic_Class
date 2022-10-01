@@ -119,6 +119,10 @@
  * 위스콘신 암 이진 분류 - 앙상블(보팅,배깅) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_03A_cancer_basic_model.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_03A_cancer_basic_model.pdf)
  * 위스콘신 암 모델 - GridSearchCV를 활용한 하이퍼 파리미터 튜닝 
    - [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_03B_cancer_GridSearch_model.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_03B_cancer_GridSearch_model.pdf)
+ * 위스콘신 암 모델 - 자동화 시스템 구축하기
+   - [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_03D_cancer_automl.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_03D_cancer_automl.pdf)
+
+
 
 ### [캐글 실습] Santander Customer Satisfaction 
  * 고객 데이터 분석 - 만족, 불만족 [캐글 Link](https://www.kaggle.com/c/santander-customer-satisfaction)

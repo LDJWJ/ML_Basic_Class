@@ -108,6 +108,10 @@
  * sqllite와 pandas 01 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_01_ml_db.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_01_ml_db.pdf)
  * sqllite와 pandas 02 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_02_ml_db.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_02_ml_db.pdf)
 
+### Flask를 활용한 웹 서비스 구축 
+ * IRIS 웹 머신러닝 [html](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/Flask(플라스크)_머신러닝_웹서비스구축.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/Flask(플라스크)_머신러닝_웹서비스구축.pdf)
+
+
 ### [실습] 항구 근처 기뢰 확인(sonar.all-data) 실습
  * 데이터 불러오기 및 시각화 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_04_sonar_analysis01.html)
  * 기본 머신러닝 모델 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_04_sonar_analysis02.html)

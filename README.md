@@ -67,7 +67,7 @@
   * 머신러닝 - 구간분할, 일변량 비선형 변환
     * 구간분할 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_05_01_FE_binned_202010.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_05_01_FE_binned_202010.pdf)
     * 비선형 변환(log 등)[html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_06_01_FE_log_202010.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_06_01_FE_log_202010.pdf)
-    * 특성자동 선택(1) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_07_01_FeatureEngineering_특성자동선택_220802.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_07_01_FeatureEngineering_특성자동선택_220802.pdf)
+    * 특성자동 선택(1) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_07_01_FeatureEngineering_특성자동선택_2210.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_07_01_FeatureEngineering_특성자동선택_2210.pdf)
     * 특성자동 선택(2) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_07_02_FeatureEngineering_특성자동선택_회귀_2208.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_07_02_FeatureEngineering_특성자동선택_회귀_2208.pdf)
 
 ### 비지도학습
@@ -80,6 +80,9 @@
   * DBSCAN(Clustering) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_05_02_DBSCAN_2207.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_05_02_DBSCAN_2207.pdf)
   * 얼굴 데이터 셋 분석 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_05_03_unsup_face_analysis_colab_2207.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_05_03_unsup_face_analysis_colab_2207.pdf)
   * 군집 알고리즘 평가 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_05_04_군집알고리즘평가.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_05_04_군집알고리즘평가.pdf)
+
+  * 실습 
+    * PCA 차원 축소-titanic [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_04_01_pca_titanic_2210.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_04_01_pca_titanic_2210.pdf)
 
 ### 평가
   * 교차 검증1 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_01_01_CrossValidation_v01_2208.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_01_01_CrossValidation_v01_2208.pdf)
@@ -170,9 +173,6 @@
    * 분석 노트북 01 (XGB) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/amex_01_basemodel_xgbm_2208.html)
    * 분석 노트북 02 (LightGBM) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/amex-02-basic-lightgbm_2208.html)
    * 분석 노트북 03 (catboost) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/amex-03-catboost-md10-gpu_2208.html)
-
-   
-   
    
  ### 수업 관련 링크
  * 캐글 코리아 1차 대회 

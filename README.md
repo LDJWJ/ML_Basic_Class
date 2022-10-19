@@ -61,7 +61,7 @@
   * 머신러닝 - 데이터 전처리[html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_01_01_데이터전처리_2208.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_01_01_데이터전처리_2208.pdf)
   * 머신러닝 - 원핫인코딩
     * 이론 및 실습(1) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_01_01_FE_OneHotEncoding_01.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_01_01_FE_OneHotEncoding_01.pdf)
-    * 이론 및 실습(2) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_01_02_FE_OneHot_02_2210.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_01_02_FE_OneHot_02_2210.pdf)
+    * 실습(2)- 캐글코리아4차대회(성인 인구조사 소득 데이터 셋) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_01_02_FE_OneHot_02_2210.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_01_02_FE_OneHot_02_2210.pdf)
     * 이론 및 실습(3) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_01_03_FE_OneHotEncoding_03.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_01_03_FE_OneHotEncoding_03.pdf)
 
   * 머신러닝 - 구간분할, 일변량 비선형 변환

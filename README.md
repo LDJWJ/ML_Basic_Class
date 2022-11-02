@@ -144,25 +144,27 @@
  * 머신러닝 - 타이타닉 모델 Cabin [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_titanic/ch02_03_02B_titanic_01_Cabin(0_67703).html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_titanic/ch02_03_02B_titanic_01_Cabin(0_67703).pdf)
  * 머신러닝 - 타이타닉 모델 Ticket [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_titanic/ch02_03_02B_titanic_02_Ticket_gender.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_titanic/ch02_03_02B_titanic_02_Ticket_gender.pdf)
  
- 
- * 머신러닝 - Bike Sharing Demand(1) - EDA [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/01_06_Bike_EDA_02_2107.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/01_06_Bike_EDA_02_2107.pdf)
- * 머신러닝 - Bike Sharing Demand(1) - EDA code [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/01_06_Bike_EDA_03_2107.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/01_06_Bike_EDA_03_2107.pdf)
+### 캐글 대회 Bike Sharing Demand 실습
+ * Bike Sharing Demand(1) - EDA [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/01_06_Bike_EDA_02_2107.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/01_06_Bike_EDA_02_2107.pdf)
+ * Bike Sharing Demand(1) - EDA code [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/01_06_Bike_EDA_03_2107.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/01_06_Bike_EDA_03_2107.pdf)
 
- * 머신러닝 - Bike Sharing Demand(1) - Start [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_Bike01_FirstModel_v10_2205.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_Bike01_FirstModel_v10_2205.pdf)
- * 머신러닝 - Bike Sharing Demand(2) - Ridig, Lasso [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_Bike02_Ridge_Lasso_v13_2210.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_Bike02_Ridge_Lasso_v13_2210.pdf)
- * 머신러닝 - Bike Sharing Demand(3) - 여러가지 모델 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_Bike03_MultiModel_v12.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_Bike03_MultiModel_v12.pdf)
- * 머신러닝 - Bike Sharing Demand(4) - 모델 평가 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_Bike04_ModelValidation_v10.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_Bike04_ModelValidation_v10.pdf)
+ * Bike Sharing Demand(1) - Start [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_Bike01_FirstModel_v10_2205.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_Bike01_FirstModel_v10_2205.pdf)
+ * Bike Sharing Demand(2) - Ridig, Lasso [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_Bike02_Ridge_Lasso_v13_2210.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_Bike02_Ridge_Lasso_v13_2210.pdf)
+ * Bike Sharing Demand(3) - 여러가지 모델 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_Bike03_MultiModel_v12.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_Bike03_MultiModel_v12.pdf)
+ * Bike Sharing Demand(4) - 모델 평가 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_Bike04_ModelValidation_v10.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_Bike04_ModelValidation_v10.pdf)
 
- * 성인 인구조사 소득 예측 대회(1) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/kaggle_contest_4th_01_2206.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/kaggle_contest_4th_01_2206.pdf)
- * 성인 인구조사 소득 예측 대회(2) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/kaggle_contest_4th_02_2208.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/kaggle_contest_4th_02_2208.pdf)
- 
- * 성인 인구조사 소득 예측 대회(2) - 평가지표(f1-score) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/kaggle_contest_4th_02_validation_2208.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/kaggle_contest_4th_02_validation_2208.pdf)
- 
- * 성인 인구조사 소득 예측 대회(3) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/kaggle_contest_4th_03_2206.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/kaggle_contest_4th_03_2206.pdf)
- * 성인 인구조사 소득 예측 대회(4)-2nd Solution [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/kaggle_contest_4th_04_2nd.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/kaggle_contest_4th_04_2nd.pdf)
- * 성인 인구조사 소득 예측 대회(5)-1st Solution [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/kaggle_contest_4th_05_1st_review.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/kaggle_contest_4th_05_1st_review.pdf)
 
+### 캐글 대회 Bike Sharing Demand 실습
+ * 성인 인구 소득 예측 대회(1) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/kaggle_contest_4th_01_2206.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/kaggle_contest_4th_01_2206.pdf)
+ * 성인 인구 소득 예측 대회(2) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/kaggle_contest_4th_02_2208.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/kaggle_contest_4th_02_2208.pdf)
  
+ * 성인 인구 소득 예측 대회(2) - 평가지표(f1-score) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/kaggle_contest_4th_02_validation_2208.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/kaggle_contest_4th_02_validation_2208.pdf)
+ 
+ * 성인 인구 소득 예측 대회(3) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/kaggle_contest_4th_03_2206.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/kaggle_contest_4th_03_2206.pdf)
+ * 성인 인구 소득 예측 대회(4)-2nd Solution [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/kaggle_contest_4th_04_2nd.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/kaggle_contest_4th_04_2nd.pdf)
+ * 성인 인구 소득 예측 대회(5)-1st Solution [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/kaggle_contest_4th_05_1st_review.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/kaggle_contest_4th_05_1st_review.pdf)
+
+### 캐글 predict-future-sales 대회 실습
  * 머신러닝 - 매출의 미래 예측 (1) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/predict-future-sales-eda_01.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/predict-future-sales-eda_01.pdf)
  
  * 머신러닝 - 매출의 미래 예측 (2) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/predict_future_sales-kaggle_02.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/predict_future_sales-kaggle_02.pdf)

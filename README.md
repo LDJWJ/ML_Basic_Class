@@ -104,7 +104,7 @@
  * 기본 실습 03 - 아이템 기반 협업 필터링 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch07_03_item_based_02_2208.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch07_03_item_based_02_2208.pdf)
 
 ### AutoML
- * pycaret 실습 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_03_Automl_pycaret01.html), [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_03_Automl_pycaret01.pdf)
+ * pycaret 실습 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_03_Automl_pycaret01_2211.html), [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_03_Automl_pycaret01_2211.pdf)
  * [실전 데이터 실습] 어떤 승객이 다른 차원으로 이동될지 예측 - [Spaceship Titanic] [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_03_Automl_spaceship_titanic_2207.html), [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_03_Automl_spaceship_titanic_2207.pdf)
 
 ### 기타 프로젝트

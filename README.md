@@ -95,7 +95,7 @@
   * 모델 평가 (4) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_03_04_validation(4)_2207.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_03_04_validation(4)_2207.pdf)
   
 ### Pipeline 실습
-  * SpaceTitanic - Pipelien 실습 01 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_08_01_Pipeline_Code_2209.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_08_01_Pipeline_Code_2209.pdf)
+  * SpaceTitanic - Pipelien 실습 01 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_08_01_Pipeline_Code_2210.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_08_01_Pipeline_Code_2210.pdf)
 
 ### 추천 시스템 알아보기(기타)
  * 기본 개요 01 [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch07_01_추천시스템_v02_202208.pdf)

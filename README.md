@@ -138,9 +138,12 @@
   - 모델 개선 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_02_santander_lightgbm_2208.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_02_santander_lightgbm_2208.pdf)
 
 ### 캐글 데이터 타이타닉 실습
- * 머신러닝 - 타이타닉 시작하기[html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_02A_titanic_firstsub_2205.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_02A_titanic_firstsub_2205.pdf)
- * 머신러닝 - 타이타닉 데이터 탐색 및 모델 선택[html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_02B_titanic.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_02B_titanic.pdf)
- * 머신러닝 - 타이타닉 모델 업그레이드[html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_02C_titanic.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_02C_titanic.pdf)
+ * 머신러닝 - 타이타닉 시작하기[html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_titanic/ch02_03_02A_titanic_firstsub_2205.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_titanic/ch02_03_02A_titanic_firstsub_2205.pdf)
+ * 머신러닝 - 타이타닉 데이터 탐색 및 모델 선택[html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_titanic/ch02_03_02B_titanic.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_titanic/ch02_03_02B_titanic.pdf)
+ * 머신러닝 - 타이타닉 모델 업그레이드[html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_titanic/ch02_03_02C_titanic.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_titanic/ch02_03_02C_titanic.pdf)
+ * 머신러닝 - 타이타닉 모델 Cabin [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_titanic/ch02_03_02B_titanic_01_Cabin(0_67703).html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_titanic/ch02_03_02B_titanic_01_Cabin(0_67703).pdf)
+ * 머신러닝 - 타이타닉 모델 Ticket [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_titanic/ch02_03_02B_titanic_02_Ticket_gender.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_titanic/ch02_03_02B_titanic_02_Ticket_gender.pdf)
+ 
  
  * 머신러닝 - Bike Sharing Demand(1) - EDA [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/01_06_Bike_EDA_02_2107.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/01_06_Bike_EDA_02_2107.pdf)
  * 머신러닝 - Bike Sharing Demand(1) - EDA code [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/01_06_Bike_EDA_03_2107.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/01_06_Bike_EDA_03_2107.pdf)

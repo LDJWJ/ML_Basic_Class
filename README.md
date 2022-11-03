@@ -21,7 +21,7 @@
 ### SourceCode
 ### 기본 라이브러리 실습 - IRIS 데이터 셋
  * Pandas 01 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_2_LIB_Pandas_Basic01_IRIS.html), [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_2_LIB_Pandas_Basic01_IRIS.pdf)
- * Pandas 02 - unique(), value_counts() etc [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_2_LIB_Pandas_Basic02_IRIS.html), [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_2_LIB_Pandas_Basic02_IRIS.pdf)
+ * Pandas 02 - unique(), value_counts() etc [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_2_LIB_Pandas_Basic02_IRIS_2211.html), [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_2_LIB_Pandas_Basic02_IRIS_2211.pdf)
  * Pandas 03 - map(), apply() etc  [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_2_LIB_Pandas_Basic03_IRIS.html), [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_2_LIB_Pandas_Basic03_IRIS.pdf)
  * Matplotlib [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_2_LIB_02_Matplotlib_Basic01_IRIS.html), [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_2_LIB_02_Matplotlib_Basic01_IRIS.pdf)
  * Scikit-learn [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_2_LIB_03_sklearn_Basic01_IRIS.html), [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_2_LIB_03_sklearn_Basic01_IRIS.pdf)
@@ -32,8 +32,9 @@
     * knn [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_01A_knn_code_v11_2205.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_01A_knn_code_v11_2205.pdf) 
     * knn_pratice [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_01B_knn_code_pratice_2205.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_01B_knn_code_pratice_2205.pdf)
  * 머신러닝 - 선형회귀 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_02_linear_code_v10_2205.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_02_linear_code_v10_2205.pdf)
- * 머신러닝 - 회귀(평가지표) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_02B_linear_boston_evaluation_v12.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_02B_linear_boston_evaluation_v12.pdf)
-
+ * 머신러닝 - 회귀(평가지표_기본) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_02A_linear_code_v11_2211.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_02A_linear_code_v11_2211.pdf)
+ * 머신러닝 - 회귀(평가지표_상세) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_02B_linear_boston_evaluation_v12_2211.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_02B_linear_boston_evaluation_v12_2211.pdf)
+ 
  * 머신러닝 알고리즘 회귀(Ridge, Lasso) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_03_ridge_lasso.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_03_ridge_lasso.pdf)
  
  * 머신러닝 알고리즘 분류용 선형모델(Logistic, SVM) 

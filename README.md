@@ -94,7 +94,8 @@
   * 모델 평가 (2) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_03_02_validation(2)_threshold_2207.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_03_02_validation(2)_threshold_2207.pdf)
   * 모델 평가 (3) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_03_03_validation(3)-ROCAUC_2207.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_03_03_validation(3)-ROCAUC_2207.pdf)
   * 모델 평가 (4) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_03_04_validation(4)_2207.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_03_04_validation(4)_2207.pdf)
-  
+  * 모델 평가 실습 - 타이타닉 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_03_05_validation_titanic_2211.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch05_03_05_validation_titanic_2211.pdf)
+   
 ### Pipeline 실습
   * SpaceTitanic - Pipelien 실습 01 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_08_01_Pipeline_Code_2210.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_08_01_Pipeline_Code_2210.pdf)
 

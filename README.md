@@ -131,13 +131,17 @@
  * 위스콘신 암 모델 - 자동화 시스템 구축하기
    - [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_03D_cancer_automl.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_03D_cancer_automl.pdf)
 
-
-
 ### [캐글 실습] Santander Customer Satisfaction 
  * 고객 데이터 분석 - 만족, 불만족 [캐글 Link](https://www.kaggle.com/c/santander-customer-satisfaction)
   - 기본 모델 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_01_santander_roc_auc_2208.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_01_santander_roc_auc_2208.pdf)
   
   - 모델 개선 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_02_santander_lightgbm_2208.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_02_santander_lightgbm_2208.pdf)
+
+
+### [캐글 대회] PUBG Finish Placement Prediction
+ * 승자 예측 대회 [캐글 대회 Link](https://www.kaggle.com/competitions/pubg-finish-placement-prediction/)
+  - 기본 모델(선형회귀) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/pubg_01_simplesub_wk_2211.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class//part03_pro_kaggle/pubg_01_simplesub_wk_2211.pdf)
+
 
 ### 캐글 데이터 타이타닉 실습
  * 머신러닝 - 타이타닉 시작하기[html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_titanic/ch02_03_02A_titanic_firstsub_2205.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_titanic/ch02_03_02A_titanic_firstsub_2205.pdf)

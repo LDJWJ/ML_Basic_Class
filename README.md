@@ -140,7 +140,7 @@
 
 ### [캐글 대회] PUBG Finish Placement Prediction
  * 승자 예측 대회 [캐글 대회 Link](https://www.kaggle.com/competitions/pubg-finish-placement-prediction/)
-  - 기본 모델(선형회귀) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/pubg_01_simplesub_wk_2211.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class//part03_pro_kaggle/pubg_01_simplesub_wk_2211.pdf)
+  - (1) 기본 모델(선형회귀) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/pubg_01_simplesub_wk_2211.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class//part03_pro_kaggle/pubg_01_simplesub_wk_2211.pdf)
 
 
 ### 캐글 데이터 타이타닉 실습

@@ -100,9 +100,9 @@
   * SpaceTitanic - Pipelien 실습 01 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_08_01_Pipeline_Code_2210.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_08_01_Pipeline_Code_2210.pdf)
 
 ### 추천 시스템 알아보기(기타)
- * 기본 개요 01 [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch07_01_추천시스템_v02_202208.pdf)
- * 기본 실습 01 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch07_02_start_basic_2211.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch07_02_start_basic_2211.pdf)
- * 기본 실습 02 - 아이템 기반 협업 필터링 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch07_item_based_01.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch07_item_based_01.pdf)
+ * 기본 개요 01 [pdf](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch07_추천시스템_v02_202211.pdf)
+ * 기본 실습 01 [html](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch07_02_start_basic_2211.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch07_02_start_basic_2211.pdf)
+ * 기본 실습 02 - 유사 영화 추천하기 [html](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch07_03_협업필터링_movie_01_2211.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch07_03_협업필터링_movie_01_2211.pdf)
  * 기본 실습 03 - 아이템 기반 협업 필터링 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch07_03_item_based_02_2208.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch07_03_item_based_02_2208.pdf)
 
 ### AutoML

@@ -99,13 +99,14 @@
   * SpaceTitanic - Pipelien 실습 01 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_08_01_Pipeline_Code_2210.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_08_01_Pipeline_Code_2210.pdf)
 
 ### [실습] 위스콘신 암 데이터 실습
- * 위스콘신 암 이진 분류 - 앙상블(보팅,배깅) [html](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch08_03A_cancer_basic_model_2212.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch08_03A_cancer_basic_model_2212.pdf)
+ * 위스콘신 암 이진 분류 - 앙상블(보팅,배깅) 
+   * [html](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch08_03A_cancer_basic_model_2212.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch08_03A_cancer_basic_model_2212.pdf)
  * 위스콘신 암 모델 - GridSearchCV를 활용한 하이퍼 파리미터 튜닝 
-   - [html](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch08_03B_cancer_GridSearch_model_2212.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch08_03B_cancer_GridSearch_model_2212.pdf)
- * 위스콘신 암 모델 - LightGBM 모델 학습 및 평가
-   - [html](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch08_03C_cancer_lightGBM_model_2212.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch08_03C_cancer_lightGBM_model_2212.pdf)
- * 위스콘신 암 모델 - 자동화 시스템(Automl) 구축하기
-   - [html](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch08_03D_cancer_automl_2212.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch08_03D_cancer_automl_2212.pdf)
+   * [html](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch08_03B_cancer_GridSearch_model_2212.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch08_03B_cancer_GridSearch_model_2212.pdf)
+ * 위스콘신 암 모델 - LightGBM 모델 학습 및 평가 
+  * [html](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch08_03C_cancer_lightGBM_model_2212.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch08_03C_cancer_lightGBM_model_2212.pdf)
+ * 위스콘신 암 모델 - 자동화 시스템(Automl) 구축하기 
+   * [html](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch08_03D_cancer_automl_2212.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch08_03D_cancer_automl_2212.pdf)
 
 ### 추천 시스템 알아보기(기타)
  * 기본 개요 01 [pdf](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch07_추천시스템_v02_202211.pdf)

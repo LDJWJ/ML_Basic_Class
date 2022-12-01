@@ -16,7 +16,6 @@
  * 평가지표 [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch05_validation/ch05_평가지표_v04_202108.pdf)
  * 비지도학습 01 기본 [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch03_02_pca/ch03_비지도학습01_Basic_v01_202208.pdf), 02 - PCA [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch03_02_pca/ch03_비지도학습02_pca_v01_202110.pdf)
  * 머신러닝 더 알아보기 [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch06_upgrade/ch06_upgrade_v01_202108.pdf)
- 
 
 ### SourceCode
 ### 기본 라이브러리 실습 - IRIS 데이터 셋
@@ -99,6 +98,15 @@
 ### Pipeline 실습
   * SpaceTitanic - Pipelien 실습 01 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_08_01_Pipeline_Code_2210.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_08_01_Pipeline_Code_2210.pdf)
 
+### [실습] 위스콘신 암 데이터 실습
+ * 위스콘신 암 이진 분류 - 앙상블(보팅,배깅) [html](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch08_03A_cancer_basic_model_2212.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch08_03A_cancer_basic_model_2212.pdf)
+ * 위스콘신 암 모델 - GridSearchCV를 활용한 하이퍼 파리미터 튜닝 
+   - [html](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch08_03B_cancer_GridSearch_model_2212.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch08_03B_cancer_GridSearch_model_2212.pdf)
+ * 위스콘신 암 모델 - LightGBM 모델 학습 및 평가
+   - [html](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch08_03C_cancer_lightGBM_model_2212.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch08_03C_cancer_lightGBM_model_2212.pdf)
+ * 위스콘신 암 모델 - 자동화 시스템(Automl) 구축하기
+   - [html](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch08_03D_cancer_automl_2212.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch08_03D_cancer_automl_2212.pdf)
+
 ### 추천 시스템 알아보기(기타)
  * 기본 개요 01 [pdf](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch07_추천시스템_v02_202211.pdf)
  * 기본 실습 01 [html](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch07_02_start_basic_2211.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch07_02_start_basic_2211.pdf)
@@ -124,12 +132,6 @@
 ### [실습] pima 데이터 실습
  * 머신러닝
 
-### [실습] 위스콘신 암 데이터 실습
- * 위스콘신 암 이진 분류 - 앙상블(보팅,배깅) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_03A_cancer_basic_model.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_03A_cancer_basic_model.pdf)
- * 위스콘신 암 모델 - GridSearchCV를 활용한 하이퍼 파리미터 튜닝 
-   - [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_03B_cancer_GridSearch_model.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_03B_cancer_GridSearch_model.pdf)
- * 위스콘신 암 모델 - 자동화 시스템 구축하기
-   - [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_03D_cancer_automl.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_03D_cancer_automl.pdf)
 
 ### [캐글 실습] Santander Customer Satisfaction 
  * 고객 데이터 분석 - 만족, 불만족 [캐글 Link](https://www.kaggle.com/c/santander-customer-satisfaction)

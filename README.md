@@ -120,7 +120,7 @@
 
 ### 기타 프로젝트
  * sqllite와 pandas 01 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_01_ml_db.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_01_ml_db.pdf)
- * sqllite와 pandas 02 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_02_ml_db.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_02_ml_db.pdf)
+ * sqllite와 pandas 02 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_ml_db_02.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_ml_db_02.pdf)
 
 ### Flask를 활용한 웹 서비스 구축 
  * IRIS 웹 머신러닝 [html](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/Flask(플라스크)_머신러닝_웹서비스구축.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/Flask_Web01_IRIS.pdf)

@@ -173,7 +173,7 @@
  * Bike Sharing Demand(4) - 모델 평가 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_Bike04_ModelValidation_v10.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_Bike04_ModelValidation_v10.pdf)
 
 
-### 캐글 대회 Bike Sharing Demand 실습
+### 캐글 대회 - 성인 인구 소득 예측 대회 실습
  * 성인 인구 소득 예측 대회(1) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/kaggle_contest_4th_01_2206.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/kaggle_contest_4th_01_2206.pdf)
  * 성인 인구 소득 예측 대회(2) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/kaggle_contest_4th_02_2208.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/kaggle_contest_4th_02_2208.pdf)
  

@@ -105,8 +105,17 @@
    * [html](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch08_03B_cancer_GridSearch_model_2212.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch08_03B_cancer_GridSearch_model_2212.pdf)
  * 위스콘신 암 모델 - LightGBM 모델 학습 및 평가 
   * [html](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch08_03C_cancer_lightGBM_model_2212.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch08_03C_cancer_lightGBM_model_2212.pdf)
+
+ * 위스콘신 암 모델 - 앙상블 Stacking 모델 실습
+   * [html](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch08_05A_cancer_stacking.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch08_05A_cancer_stacking.pdf)
+
+ * 위스콘신 암 모델 - 머신러닝 단순화 및 자동화 PyCaret 오픈소스 라이브러리 활용 
+   * [html](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch08_05A_cancer_pycaret01.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch08_05A_cancer_pycaret01.pdf)
+  
  * 위스콘신 암 모델 - 자동화 시스템(Automl) 구축하기 
    * [html](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch08_03D_cancer_automl_2212.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch08_03D_cancer_automl_2212.pdf)
+
+
 
 ### 추천 시스템 알아보기(기타)
  * 기본 개요 01 [pdf](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch07_추천시스템_v02_202211.pdf)

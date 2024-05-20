@@ -138,7 +138,7 @@
  * 악성종양(암) 예측 [html](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/Flask_ML_Web서비스(3)_Cancer.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/Flask_Web03_Cancer.pdf)
 
 ### [실습] 항구 근처 기뢰 확인(sonar.all-data) 실습
- * 데이터 불러오기 및 시각화 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_04_sonar_analysis01.html)
+ * 데이터 불러오기 및 시각화 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_04_sonar_analysis01_V11.html)
  * 기본 머신러닝 모델 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_04_sonar_analysis02.html)
 
 ### [실습] pima 데이터 실습

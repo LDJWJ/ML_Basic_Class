@@ -5,7 +5,7 @@
 
 ### 머신러닝 기본 및 실습
 #### PDF
- * 머신러닝 입문 [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch01_01_ml/ch01_01_ML입문_v13_202404.pdf) 
+ * 머신러닝 용어 이해, 구분, 데이터 분석 절차 [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch01_01_ml/ch01_01_ML입문_v13_202404.pdf) 
  * 머신러닝 Book - 머신러닝 시작 [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch01_01_ml/ch01_02_ML기본_v12_202205.pdf)
  * 머신러닝 알고리즘 knn_회귀 [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch02_01_knn_linear_ppt/ch02_knn_회귀_v115_202205.pdf)
  * 머신러닝 알고리즘 로지스틱 회귀[pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch02_01_knn_linear_ppt/ch02_logistic_v02_202205.pdf)

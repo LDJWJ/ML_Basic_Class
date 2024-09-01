@@ -1,11 +1,13 @@
 # 인공지능 머신러닝 기본
+
+** 많이 많이 환영합니다. 혹시 아래 내용이 도움이 되신다면 그냥 가지 마시고 오른쪽 상단 'Star 버튼' 꾹 많이 많이 환영합니다.^^
  
 ##  데이터 알아가기 첫걸음
  * 웹 페이지 주소 : https://ldjwj.github.io/ML_Basic_Class
 
 ### 머신러닝 기본 및 실습
 #### PDF
- * 머신러닝 입문 [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch01_01_ml/ch01_01_ML입문_v13_202404.pdf) 
+ * 머신러닝 용어 이해, 구분, 데이터 분석 절차 [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch01_01_ml/ch01_01_ML입문_v13_202404.pdf) 
  * 머신러닝 Book - 머신러닝 시작 [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch01_01_ml/ch01_02_ML기본_v12_202205.pdf)
  * 머신러닝 알고리즘 knn_회귀 [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch02_01_knn_linear_ppt/ch02_knn_회귀_v115_202205.pdf)
  * 머신러닝 알고리즘 로지스틱 회귀[pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch02_01_knn_linear_ppt/ch02_logistic_v02_202205.pdf)
@@ -27,7 +29,7 @@
 
 ### 기본 라이브러리 실습 - numpy, konlpy
  * numpy [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_1_numpy라이브러리_V11.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_1_numpy라이브러리_V11.pdf)
- * konlpy [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_2_LIB_KONLPY_V10.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_2_LIB_KONLPY_V10.pdf)
+ * konlpy(with colab) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_2_LIB_KONLPY_V10.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_2_LIB_KONLPY_V10.pdf)
  * 유튜브 댓글 분석 및 시각화(워드클라우드) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_2_LIB_KONLPY_Youtube03_V10.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_2_LIB_KONLPY_Youtube03_V10.pdf)
 
 ### 지도학습

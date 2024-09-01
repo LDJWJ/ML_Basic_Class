@@ -190,9 +190,9 @@
  * 성인 인구 소득 예측 대회(5)-1st Solution [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/kaggle_contest_4th_05_1st_review.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/kaggle_contest_4th_05_1st_review.pdf)
 
 ### 캐글 predict-future-sales 대회 실습
- * 머신러닝 - 매출의 미래 예측 (1) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/predict-future-sales-eda_01.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/predict-future-sales-eda_01.pdf)
+ * 머신러닝 - 매출의 미래 예측 (1) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/01_predict_future_sales_v10.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/01_predict_future_sales_v10.pdf)
  
- * 머신러닝 - 매출의 미래 예측 (2) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/predict_future_sales-kaggle_02.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/predict_future_sales-kaggle_02.pdf)
+ * 머신러닝 - 매출의 미래 예측 (2) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/02_predict_future_sales_v10.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/02_predict_future_sales_v10.pdf)
  
  * Dacon - 주차 수요 예측 Baseline 
 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/dacon_07_feature_engineering_01.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/dacon_07_feature_engineering_01.pdf)

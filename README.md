@@ -35,7 +35,7 @@
 ### 지도학습
  * 첫번째 머신러닝 모델 만들어보기  [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch01_01_ML_start_v12_2205.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch01_01_ML_start_v12_2205.pdf)
  * 머신러닝 알고리즘 
-    * knn [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_01A_knn_code_v11_2205.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_01A_knn_code_v11_2205.pdf) 
+    * knn [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_01A_knn_code_v12_504.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_01A_knn_code_v12_504.pdf) 
     * knn_pratice [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_01B_knn_code_pratice_2205.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_01B_knn_code_pratice_2205.pdf)
  * 머신러닝 - 선형회귀 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_02_linear_code_v11_2205.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_02_linear_code_v11_2205.pdf)
  * 머신러닝 - 회귀(평가지표_기본) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_02A_linear_code_v12.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_02A_linear_code_v12.pdf)

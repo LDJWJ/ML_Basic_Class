@@ -9,7 +9,7 @@
 #### PDF
  * 머신러닝 용어 이해, 구분, 데이터 분석 절차 [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch01_01_ml/ch01_01_ML입문_v13_202404.pdf) 
  * 머신러닝 Book - 머신러닝 시작 [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch01_01_ml/ch01_02_ML기본_v12_202205.pdf)
- * 머신러닝 알고리즘 knn_회귀 [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch02_01_knn_linear_ppt/ch02_knn_회귀_v116_504.pdf)
+ * 머신러닝 알고리즘 knn_회귀 [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch02_01_knn_linear_ppt/ch02_knn_회귀_v117_504.pdf)
  * 머신러닝 알고리즘 로지스틱 회귀[pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch02_01_knn_linear_ppt/ch02_logistic_v02_202205.pdf)
  * 머신러닝 알고리즘 의사결정트리 [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch02_02_decisiontree/ch02_03_01_decisiontree_v11_2205.pdf)
  * 머신러닝 알고리즘 앙상블 [pdf 01](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch02_03_ensemble/ch02_Ensemble01_202205_v11.pdf)

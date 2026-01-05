@@ -41,7 +41,7 @@
 
 지도학습
 
-* 첫번째 머신러닝 모델 만들어보기  [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch01_01_ML_start_v13_2601.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch01_01_ML_start_v13_2601.pdf)
+* 첫번째 머신러닝 모델 만들어보기  [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch01_01_ML_start_v13_2601.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/)
 * 머신러닝 알고리즘
 
   * knn [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_01A_knn_code_v12_504.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_01A_knn_code_v12_504.pdf)
@@ -49,9 +49,7 @@
 
 * 머신러닝 - 선형회귀 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_02_linear_code_v11_2205.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_02_linear_code_v11_2205.pdf)
 * 머신러닝 - 회귀(평가지표\_기본) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_02A_linear_code_v12.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_02A_linear_code_v12.pdf)
-* 머신러닝 - 회귀(평가지표\_상세) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_02B_linear_boston_evaluation_v13.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_02B_linear_boston_evaluation_v13.pdf)
-
-  * (회귀(평가지표\_기본), 회귀(평가지표\_기본)은 scikit-learn 1.0.2버전에서 동작 가능)
+* 머신러닝 - 회귀(평가지표\_상세) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_02B_diabete_evaluation_v13_2601.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_02B_diabete_evaluation_v13_2601.pdf)
 
 * 머신러닝 알고리즘 회귀(Ridge, Lasso) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_03_ridge_lasso.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_03_ridge_lasso.pdf)
 * 머신러닝 알고리즘 분류용 선형모델(Logistic, SVM)

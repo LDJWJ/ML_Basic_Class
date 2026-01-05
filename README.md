@@ -35,14 +35,13 @@
 
 ### 기본 라이브러리 실습 - numpy, konlpy
 
-* numpy [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_1_numpy라이브러리_V11.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_1_numpy라이브러리_V11.pdf)
-* konlpy(with colab) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_2_LIB_KONLPY_V10.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_2_LIB_KONLPY_V10.pdf)
-* 유튜브 댓글 분석 및 시각화(워드클라우드) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_2_LIB_KONLPY_Youtube03_V10.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_2_LIB_KONLPY_Youtube03_V10.pdf)
+ * numpy [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_1_numpy라이브러리_V11.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_1_numpy라이브러리_V11.pdf)
+ * konlpy(with colab) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_2_LIB_KONLPY_V10.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_2_LIB_KONLPY_V10.pdf)
+ * 유튜브 댓글 분석 및 시각화(워드클라우드) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_2_LIB_KONLPY_Youtube03_V10.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_2_LIB_KONLPY_Youtube03_V10.pdf)
 
 지도학습
-
-* 첫번째 머신러닝 모델 만들어보기  [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch01_01_ML_start_v13_2601.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/)
-* 머신러닝 알고리즘
+ * 첫번째 머신러닝 모델 만들어보기  [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch01_01_ML_start_v13_2601.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/)
+ * 머신러닝 알고리즘
 
   * knn [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_01A_knn_code_v12_504.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_01A_knn_code_v12_504.pdf)
   * knn\_pratice [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_01B_knn_code_pratice_2205.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_01B_knn_code_pratice_2205.pdf)
@@ -118,11 +117,9 @@
 ### \[실습] 위스콘신 암 데이터 실습
 
 * 위스콘신 암 이진 분류 - 앙상블(보팅,배깅)
-
-  * [html](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch08_03A_cancer_basic_model_2212.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch08_03A_cancer_basic_model_2212.pdf)
+  * [html](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch08_03A_cancer_basic_model_V11.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch08_03A_cancer_basic_model_V11.pdf)
 
 * 위스콘신 암 모델 - GridSearchCV를 활용한 하이퍼 파리미터 튜닝
-
   * [html](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch08_03B_cancer_GridSearch_model_2212.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch08_03B_cancer_GridSearch_model_2212.pdf)
 
 * 위스콘신 암 모델 - LightGBM 모델 학습 및 평가

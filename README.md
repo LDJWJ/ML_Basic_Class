@@ -120,7 +120,7 @@
   * [html](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch08_03A_cancer_basic_model_V11.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch08_03A_cancer_basic_model_V11.pdf)
 
 * 위스콘신 암 모델 - GridSearchCV를 활용한 하이퍼 파리미터 튜닝
-  * [html](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch08_03B_cancer_GridSearch_model_2212.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch08_03B_cancer_GridSearch_model_2212.pdf)
+  * [html](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch08_03B_cancer_GridSearch_model_V11_2601.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch08_03B_cancer_GridSearch_model_V11_2601.pdf)
 
 * 위스콘신 암 모델 - LightGBM 모델 학습 및 평가
 * [html](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch08_03C_cancer_lightGBM_model_2212.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch08_03C_cancer_lightGBM_model_2212.pdf)

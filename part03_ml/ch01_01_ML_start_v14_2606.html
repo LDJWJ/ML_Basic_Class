@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ch01 머신러닝 시작하기 | ML Workshop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0369a1;
+      --primary-light: #38bdf8;
+      --secondary: #f59e0b;
+      --accent: #10b981;
+      --danger: #ef4444;
+      --dark: #1e293b;
+      --gray: #64748b;
+      --light-gray: #f1f5f9;
+
+      --primary-dark: #075985;
+      --primary-bg: #e0f2fe;
+      --accent-bg: #d1fae5;
+      --warning-bg: #fef3c7;
+      --danger-bg: #fee2e2;
+      --tip-bg: #f3e8ff;
+      --tip-color: #7c3aed;
+
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,.10);
+      --shadow-md: 0 4px 16px rgba(0,0,0,.10);
+      --shadow-lg: 0 8px 32px rgba(0,0,0,.14);
+    }
+
+    * { margin:0; padding:0; box-sizing:border-box; }
+
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      background: #f8fafc;
+      color: var(--dark);
+      line-height: 1.7;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(135deg, #0c4a6e 0%, #0369a1 45%, #0ea5e9 80%, #38bdf8 100%);
+      color: #fff;
+      padding: 60px 40px 48px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .hero-inner { position: relative; max-width: 900px; margin: 0 auto; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(255,255,255,.15);
+      border: 1px solid rgba(255,255,255,.25);
+      border-radius: 20px;
+      padding: 4px 14px;
+      font-size: 13px; font-weight: 500;
+      margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-size: 2.6rem; font-weight: 900;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+    .hero h1 span { color: #7dd3fc; }
+    .hero-subtitle {
+      font-size: 1.05rem; font-weight: 400;
+      color: rgba(255,255,255,.85);
+      margin-bottom: 32px;
+      max-width: 620px;
+    }
+    .hero-meta {
+      display: flex; gap: 24px; flex-wrap: wrap;
+    }
+    .hero-meta-item {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 14px; color: rgba(255,255,255,.9);
+    }
+    .hero-meta-item .icon {
+      width: 28px; height: 28px;
+      background: rgba(255,255,255,.18);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px;
+    }
+
+    /* ── TIMELINE NAV ── */
+    .timeline-nav {
+      background: #fff;
+      border-bottom: 2px solid var(--light-gray);
+      padding: 0 40px;
+      position: sticky; top: 0; z-index: 100;
+      box-shadow: var(--shadow-sm);
+    }
+    .timeline-nav-inner {
+      max-width: 900px; margin: 0 auto;
+      display: flex; overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .timeline-nav-inner::-webkit-scrollbar { display: none; }
+    .timeline-item {
+      display: flex; align-items: center; gap: 8px;
+      padding: 14px 18px;
+      white-space: nowrap;
+      font-size: 13px; font-weight: 500;
+      color: var(--gray);
+      border-bottom: 2px solid transparent;
+      margin-bottom: -2px;
+      text-decoration: none;
+      transition: all .2s;
+      cursor: pointer;
+    }
+    .timeline-item:hover, .timeline-item.active {
+      color: var(--primary);
+      border-bottom-color: var(--primary);
+    }
+    .timeline-num {
+      width: 22px; height: 22px;
+      background: var(--light-gray);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 11px; font-weight: 700;
+      transition: all .2s;
+    }
+    .timeline-item.active .timeline-num {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    /* ── LAYOUT ── */
+    .container { max-width: 900px; margin: 0 auto; padding: 0 40px; }
+    .content { padding: 48px 0; }
+
+    /* ── SECTION ── */
+    .section { margin-bottom: 56px; }
+    .section-header {
+      display: flex; align-items: center; gap: 14px;
+      margin-bottom: 28px;
+      padding-bottom: 16px;
+      border-bottom: 2px solid var(--light-gray);
+    }
+    .section-num {
+      width: 40px; height: 40px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      border-radius: var(--radius-md);
+      display: flex; align-items: center; justify-content: center;
+      color: #fff; font-size: 16px; font-weight: 700;
+      flex-shrink: 0;
+    }
+    .section-title {
+      font-size: 1.4rem; font-weight: 700;
+      color: var(--dark);
+    }
+    .section-title small {
+      display: block;
+      font-size: 13px; font-weight: 400;
+      color: var(--gray); margin-top: 2px;
+    }
+
+    /* ── BOX ── */
+    .box {
+      border-radius: var(--radius-md);
+      padding: 20px 24px;
+      margin-bottom: 16px;
+      border-left: 4px solid transparent;
+    }
+    .box-concept {
+      background: var(--primary-bg);
+      border-color: var(--primary);
+    }
+    .box-action {
+      background: var(--accent-bg);
+      border-color: var(--accent);
+    }
+    .box-warning {
+      background: var(--danger-bg);
+      border-color: var(--danger);
+    }
+    .box-tip {
+      background: var(--tip-bg);
+      border-color: var(--tip-color);
+    }
+    .box-note {
+      background: var(--warning-bg);
+      border-color: var(--secondary);
+    }
+    .box-label {
+      font-size: 11px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: .08em;
+      margin-bottom: 8px;
+    }
+    .box-concept .box-label { color: var(--primary-dark); }
+    .box-action .box-label { color: #065f46; }
+    .box-warning .box-label { color: #991b1b; }
+    .box-tip .box-label { color: var(--tip-color); }
+    .box-note .box-label { color: #92400e; }
+    .box h4 { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
+    .box p, .box li { font-size: 14px; line-height: 1.75; }
+    .box ul { padding-left: 18px; }
+    .box li { margin-bottom: 4px; }
+
+    /* ── PROMPT BOX ── */
+    .prompt-box {
+      background: #1e293b;
+      border-radius: var(--radius-md);
+      margin-bottom: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+    }
+    .prompt-header {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 10px 16px;
+      background: #0f172a;
+      border-bottom: 1px solid #334155;
+    }
+    .prompt-lang {
+      font-size: 12px; font-weight: 600;
+      color: #94a3b8;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .copy-btn {
+      background: #334155;
+      border: none; border-radius: 4px;
+      color: #94a3b8;
+      font-size: 12px; font-weight: 500;
+      padding: 4px 10px;
+      cursor: pointer;
+      transition: all .2s;
+      font-family: 'Noto Sans KR', sans-serif;
+    }
+    .copy-btn:hover { background: #475569; color: #e2e8f0; }
+    .copy-btn.copied { background: var(--accent); color: #fff; }
+    .prompt-code {
+      padding: 20px 20px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13.5px;
+      line-height: 1.8;
+      color: #e2e8f0;
+      overflow-x: auto;
+      white-space: pre;
+    }
+    .code-comment { color: #64748b; }
+    .code-keyword { color: #7dd3fc; }
+    .code-string { color: #86efac; }
+    .code-func { color: #fde68a; }
+    .code-output { color: #94a3b8; font-style: italic; }
+
+    /* ── CHECKLIST ── */
+    .checklist {
+      list-style: none;
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: var(--radius-md);
+      padding: 20px 24px;
+      margin-bottom: 16px;
+    }
+    .checklist li {
+      display: flex; align-items: flex-start; gap: 10px;
+      padding: 8px 0;
+      font-size: 14px;
+      border-bottom: 1px solid var(--light-gray);
+    }
+    .checklist li:last-child { border-bottom: none; }
+    .checklist input[type="checkbox"] {
+      width: 18px; height: 18px; flex-shrink: 0;
+      accent-color: var(--primary);
+      margin-top: 2px; cursor: pointer;
+    }
+    .checklist .check-label { flex: 1; line-height: 1.6; }
+    .checklist .check-label strong { color: var(--primary); }
+
+    /* ── INFO TABLE ── */
+    .info-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 16px;
+      background: #fff;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      font-size: 14px;
+    }
+    .info-table thead th {
+      background: var(--dark);
+      color: #fff;
+      padding: 13px 16px;
+      text-align: left;
+      font-weight: 600;
+      font-size: 13px;
+    }
+    .info-table tbody td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--light-gray);
+      vertical-align: top;
+      line-height: 1.65;
+    }
+    .info-table tbody tr:hover { background: var(--light-gray); }
+    .info-table tbody tr:last-child td { border-bottom: none; }
+    .info-table .tag {
+      display: inline-block;
+      background: var(--primary-bg);
+      color: var(--primary-dark);
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 12px; font-weight: 600;
+      margin-right: 4px;
+    }
+    .info-table .tag-new {
+      background: #d1fae5; color: #065f46;
+    }
+    .info-table a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .info-table a:hover { text-decoration: underline; }
+
+    /* ── STEP CARD ── */
+    .step-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+    .step-card {
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: var(--radius-md);
+      padding: 20px;
+      box-shadow: var(--shadow-sm);
+      transition: box-shadow .2s, transform .2s;
+    }
+    .step-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .step-card-num {
+      width: 34px; height: 34px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: #fff; font-weight: 700; font-size: 14px;
+      margin-bottom: 12px;
+    }
+    .step-card h4 { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
+    .step-card p { font-size: 13px; color: var(--gray); line-height: 1.65; }
+
+    /* ── FLOW BOX ── */
+    .flow-box {
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: var(--radius-lg);
+      padding: 28px 24px;
+      margin-bottom: 16px;
+      box-shadow: var(--shadow-sm);
+    }
+    .flow-title {
+      font-size: 14px; font-weight: 700;
+      color: var(--gray); text-align: center;
+      margin-bottom: 20px; text-transform: uppercase; letter-spacing: .05em;
+    }
+    .flow-row {
+      display: flex; align-items: center;
+      flex-wrap: wrap; gap: 6px;
+      justify-content: center;
+    }
+    .flow-node {
+      background: var(--primary-bg);
+      border: 2px solid var(--primary-light);
+      border-radius: var(--radius-sm);
+      padding: 10px 18px;
+      font-size: 13px; font-weight: 600;
+      color: var(--primary-dark);
+      text-align: center;
+      min-width: 90px;
+    }
+    .flow-node.accent {
+      background: var(--accent-bg);
+      border-color: var(--accent);
+      color: #065f46;
+    }
+    .flow-node.secondary {
+      background: var(--warning-bg);
+      border-color: var(--secondary);
+      color: #92400e;
+    }
+    .flow-node.dark {
+      background: var(--dark);
+      border-color: var(--dark);
+      color: #fff;
+    }
+    .flow-arrow {
+      font-size: 18px; color: var(--gray);
+    }
+
+    /* ── LIBRARY GRID ── */
+    .lib-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+    .lib-card {
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: var(--radius-md);
+      padding: 18px;
+      box-shadow: var(--shadow-sm);
+      transition: box-shadow .2s, transform .2s;
+    }
+    .lib-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .lib-card-icon {
+      font-size: 28px; margin-bottom: 10px;
+    }
+    .lib-card-name {
+      font-size: 15px; font-weight: 700;
+      color: var(--dark); margin-bottom: 4px;
+    }
+    .lib-card-badge {
+      display: inline-block;
+      font-size: 10px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: .05em;
+      border-radius: 3px; padding: 2px 6px;
+      margin-bottom: 8px;
+    }
+    .badge-core { background: var(--primary-bg); color: var(--primary-dark); }
+    .badge-dl { background: var(--warning-bg); color: #92400e; }
+    .badge-viz { background: var(--accent-bg); color: #065f46; }
+    .badge-new { background: #f3e8ff; color: #6d28d9; }
+    .lib-card p { font-size: 12px; color: var(--gray); line-height: 1.6; }
+    .lib-card-url {
+      display: inline-block; margin-top: 8px;
+      font-size: 11px; color: var(--primary);
+      text-decoration: none; font-weight: 500;
+    }
+
+    /* ── MLOPS FLOW ── */
+    .mlops-steps {
+      counter-reset: mlops;
+      list-style: none;
+      margin-bottom: 16px;
+    }
+    .mlops-steps li {
+      counter-increment: mlops;
+      display: flex; align-items: flex-start; gap: 14px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--light-gray);
+    }
+    .mlops-steps li:last-child { border-bottom: none; }
+    .mlops-steps li::before {
+      content: counter(mlops);
+      width: 30px; height: 30px; flex-shrink: 0;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      border-radius: 50%;
+      color: #fff; font-weight: 700; font-size: 13px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .mlops-steps li h5 { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+    .mlops-steps li p { font-size: 13px; color: var(--gray); }
+
+    /* ── IRIS DATA ── */
+    .iris-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+    @media (max-width: 600px) {
+      .iris-grid { grid-template-columns: 1fr; }
+      .step-cards { grid-template-columns: 1fr; }
+      .lib-grid { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 1.8rem; }
+      .container { padding: 0 20px; }
+    }
+
+    /* ── FOOTER ── */
+    .footer {
+      background: var(--dark);
+      color: rgba(255,255,255,.7);
+      padding: 36px 40px;
+      margin-top: 40px;
+    }
+    .footer-inner {
+      max-width: 900px; margin: 0 auto;
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 16px;
+    }
+    .footer-left h4 { color: #fff; font-size: 15px; margin-bottom: 6px; }
+    .footer-left p { font-size: 13px; }
+    .footer-badges { display: flex; gap: 8px; flex-wrap: wrap; }
+    .footer-badge {
+      background: rgba(255,255,255,.1);
+      border-radius: 20px; padding: 4px 12px;
+      font-size: 12px; color: rgba(255,255,255,.8);
+    }
+
+    /* ── UTILS ── */
+    .two-col {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+    }
+    @media (max-width: 600px) { .two-col { grid-template-columns: 1fr; } }
+    .highlight { color: var(--primary); font-weight: 700; }
+    .text-gray { color: var(--gray); }
+    .mt-16 { margin-top: 16px; }
+    .mb-8 { margin-bottom: 8px; }
+    .mb-16 { margin-bottom: 16px; }
+
+    /* ── VERSION BADGE ── */
+    .version-row {
+      display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px;
+    }
+    .vbadge {
+      display: flex; align-items: center; gap: 6px;
+      background: #fff; border: 1px solid #e2e8f0;
+      border-radius: 6px; padding: 6px 12px;
+      font-size: 13px; font-weight: 500; box-shadow: var(--shadow-sm);
+    }
+    .vbadge-name { color: var(--gray); }
+    .vbadge-ver { color: var(--primary); font-weight: 700; font-family: 'JetBrains Mono', monospace; }
+  </style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">🤖 Machine Learning with scikit-learn</div>
+    <h1>Ch01 <span>머신러닝</span> 시작하기</h1>
+    <p class="hero-subtitle">
+      기본 개념부터 핵심 라이브러리, 그리고 첫 번째 모델 구축까지 —
+      현대 머신러닝 파이프라인을 단계별로 학습합니다.
+    </p>
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <div class="icon">⏱</div>
+        <span>90분</span>
+      </div>
+      <div class="hero-meta-item">
+        <div class="icon">📚</div>
+        <span>기초 ~ 중급</span>
+      </div>
+      <div class="hero-meta-item">
+        <div class="icon">🐍</div>
+        <span>Python 3.12+</span>
+      </div>
+      <div class="hero-meta-item">
+        <div class="icon">📅</div>
+        <span>2026년 1월 업데이트</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TIMELINE NAV -->
+<nav class="timeline-nav">
+  <div class="timeline-nav-inner">
+    <a class="timeline-item active" href="#s01">
+      <span class="timeline-num">1</span> 기본 개념
+    </a>
+    <a class="timeline-item" href="#s02">
+      <span class="timeline-num">2</span> 핵심 라이브러리
+    </a>
+    <a class="timeline-item" href="#s03">
+      <span class="timeline-num">3</span> 버전 확인
+    </a>
+    <a class="timeline-item" href="#s04">
+      <span class="timeline-num">4</span> 붓꽃 데이터셋
+    </a>
+    <a class="timeline-item" href="#s05">
+      <span class="timeline-num">5</span> 첫 모델 만들기
+    </a>
+    <a class="timeline-item" href="#s06">
+      <span class="timeline-num">6</span> MLOps 워크플로우
+    </a>
+    <a class="timeline-item" href="#s07">
+      <span class="timeline-num">7</span> 실습 과제
+    </a>
+  </div>
+</nav>
+
+<div class="container">
+<div class="content">
+
+  <!-- SECTION 01 -->
+  <section class="section" id="s01">
+    <div class="section-header">
+      <div class="section-num">1</div>
+      <div class="section-title">
+        기본 개념 이해하기
+        <small>데이터, 샘플, 특성 — 머신러닝의 언어</small>
+      </div>
+    </div>
+
+    <div class="box box-concept">
+      <div class="box-label">📖 핵심 용어</div>
+      <h4>데이터의 두 축: 행(Row)과 열(Column)</h4>
+      <ul>
+        <li><strong>샘플(Sample) / 데이터 포인트(Data Point)</strong> — 하나의 개체 또는 관측치. 테이블의 <em>행(row)</em>에 해당합니다. 예: 붓꽃 한 송이의 측정값</li>
+        <li><strong>특성(Feature) / 속성(Attribute)</strong> — 샘플의 개별 속성. 테이블의 <em>열(column)</em>에 해당합니다. 예: 꽃잎 길이, 꽃받침 너비</li>
+        <li><strong>레이블(Label) / 타깃(Target)</strong> — 예측하고자 하는 값. 지도 학습에서 정답 역할을 합니다. 예: 붓꽃의 종류(setosa / versicolor / virginica)</li>
+      </ul>
+    </div>
+
+    <div class="box box-tip">
+      <div class="box-label">💡 기억 방법</div>
+      <p>엑셀 스프레드시트를 떠올리세요. <strong>가로 한 줄 = 샘플</strong>, <strong>세로 한 열 = 특성</strong>. 머신러닝은 이 표에서 패턴을 찾는 작업입니다.</p>
+    </div>
+
+    <table class="info-table mt-16">
+      <thead>
+        <tr>
+          <th>용어 (한국어)</th>
+          <th>용어 (영어)</th>
+          <th>엑셀 비유</th>
+          <th>붓꽃 예시</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>샘플 / 관측치</td>
+          <td>Sample / Data point</td>
+          <td>행(Row)</td>
+          <td>붓꽃 1송이 측정 결과</td>
+        </tr>
+        <tr>
+          <td>특성 / 속성</td>
+          <td>Feature / Attribute</td>
+          <td>열(Column)</td>
+          <td>꽃잎 길이, 꽃받침 너비 등</td>
+        </tr>
+        <tr>
+          <td>타깃 / 레이블</td>
+          <td>Target / Label</td>
+          <td>정답 열</td>
+          <td>품종(setosa, versicolor…)</td>
+        </tr>
+        <tr>
+          <td>특성 행렬</td>
+          <td>Feature Matrix (X)</td>
+          <td>정답 열 제외 전체</td>
+          <td>shape = (150, 4)</td>
+        </tr>
+        <tr>
+          <td>타깃 벡터</td>
+          <td>Target Vector (y)</td>
+          <td>정답 열만</td>
+          <td>shape = (150,)</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- SECTION 02 -->
+  <section class="section" id="s02">
+    <div class="section-header">
+      <div class="section-num">2</div>
+      <div class="section-title">
+        핵심 라이브러리 이해하기
+        <small>파이썬 머신러닝 생태계</small>
+      </div>
+    </div>
+
+    <div class="box box-note">
+      <div class="box-label">📌 학습 포인트</div>
+      <p>각 라이브러리가 <strong>어떤 역할</strong>을 담당하는지, 그리고 서로 어떻게 협력하는지를 중심으로 파악하세요. 모든 함수를 외울 필요는 없습니다.</p>
+    </div>
+
+    <div class="lib-grid">
+
+      <div class="lib-card">
+        <div class="lib-card-icon">🔬</div>
+        <div class="lib-card-name">scikit-learn</div>
+        <div class="lib-card-badge badge-core">Core ML</div>
+        <p>파이썬 머신러닝의 표준 라이브러리. 분류·회귀·군집화·전처리·모델 평가를 일관된 API로 제공.</p>
+        <a class="lib-card-url" href="https://scikit-learn.org" target="_blank">scikit-learn.org →</a>
+      </div>
+
+      <div class="lib-card">
+        <div class="lib-card-icon">🔢</div>
+        <div class="lib-card-name">NumPy</div>
+        <div class="lib-card-badge badge-core">수치 계산</div>
+        <p>다차원 배열·선형대수·고속 수치 연산. 딥러닝 프레임워크의 기본 자료형 역할. JAX, CuPy와 호환으로 GPU 가속 지원.</p>
+        <a class="lib-card-url" href="https://numpy.org" target="_blank">numpy.org →</a>
+      </div>
+
+      <div class="lib-card">
+        <div class="lib-card-icon">🐼</div>
+        <div class="lib-card-name">Pandas</div>
+        <div class="lib-card-badge badge-core">데이터 처리</div>
+        <p>DataFrame 기반 데이터 분석·조작. CSV·Excel·SQL 입출력, 결측값 처리, 집계, 조인 등 다양한 기능 제공.</p>
+        <a class="lib-card-url" href="https://pandas.pydata.org" target="_blank">pandas.pydata.org →</a>
+      </div>
+
+      <div class="lib-card">
+        <div class="lib-card-icon">📊</div>
+        <div class="lib-card-name">Matplotlib</div>
+        <div class="lib-card-badge badge-viz">시각화</div>
+        <p>파이썬 대표 과학 계산용 그래프 라이브러리. 선 그래프, 산점도, 히스토그램 등 거의 모든 차트 유형 지원.</p>
+        <a class="lib-card-url" href="https://matplotlib.org" target="_blank">matplotlib.org →</a>
+      </div>
+
+      <div class="lib-card">
+        <div class="lib-card-icon">🔥</div>
+        <div class="lib-card-name">PyTorch</div>
+        <div class="lib-card-badge badge-dl">딥러닝</div>
+        <p>연구·산업 모두에서 주도권 확보 중인 딥러닝 프레임워크. 동적 계산 그래프와 Pythonic API가 강점.</p>
+        <a class="lib-card-url" href="https://pytorch.org" target="_blank">pytorch.org →</a>
+      </div>
+
+      <div class="lib-card">
+        <div class="lib-card-icon">🦤</div>
+        <div class="lib-card-name">TensorFlow / Keras</div>
+        <div class="lib-card-badge badge-dl">딥러닝</div>
+        <p>Google이 주도하는 딥러닝 프레임워크. 프로덕션 배포(TFServing, TFLite)와 Keras 고수준 API가 강점.</p>
+        <a class="lib-card-url" href="https://tensorflow.org" target="_blank">tensorflow.org →</a>
+      </div>
+
+      <div class="lib-card">
+        <div class="lib-card-icon">🤗</div>
+        <div class="lib-card-name">Hugging Face</div>
+        <div class="lib-card-badge badge-new">LLM / NLP</div>
+        <p>Transformer 기반 사전학습 모델과 데이터셋 허브. BERT, GPT 계열 및 LLaMA 등 수천 개의 모델 공개.</p>
+        <a class="lib-card-url" href="https://huggingface.co" target="_blank">huggingface.co →</a>
+      </div>
+
+      <div class="lib-card">
+        <div class="lib-card-icon">🔭</div>
+        <div class="lib-card-name">SciPy</div>
+        <div class="lib-card-badge badge-core">과학 계산</div>
+        <p>고성능 선형대수, 최적화, 신호처리, 통계 분포, 희소 행렬 등 과학 계산에 필요한 고급 함수 모음.</p>
+        <a class="lib-card-url" href="https://scipy.org" target="_blank">scipy.org →</a>
+      </div>
+
+    </div>
+
+    <!-- 새로운 흐름 -->
+    <div class="box box-tip">
+      <div class="box-label">🆕 새로운 흐름 (2024~2026)</div>
+      <ul>
+        <li><strong>벡터 데이터베이스</strong> (Pinecone, Milvus, Chroma) — 임베딩 저장·유사도 검색, RAG 시스템의 핵심</li>
+        <li><strong>LLM 오케스트레이션</strong> (LangChain, LlamaIndex) — LLM 기반 애플리케이션 개발 프레임워크</li>
+        <li><strong>GPU 가속 데이터 처리</strong> (RAPIDS cuDF, JAX) — 수십 배 빠른 DataFrame·배열 처리</li>
+        <li><strong>MLflow / Weights&amp;Biases</strong> — 실험 관리(Experiment Tracking), 모델 레지스트리</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- SECTION 03 -->
+  <section class="section" id="s03">
+    <div class="section-header">
+      <div class="section-num">3</div>
+      <div class="section-title">
+        라이브러리 버전 확인하기
+        <small>환경 점검 — 모든 프로젝트의 첫 번째 단계</small>
+      </div>
+    </div>
+
+    <div class="box box-action">
+      <div class="box-label">✅ 왜 버전 확인이 중요한가?</div>
+      <p>API가 버전마다 다를 수 있으며, 팀 협업·재현성(reproducibility) 확보를 위해 환경을 명시해야 합니다. 오류 발생 시 버전 정보는 디버깅의 첫 단서가 됩니다.</p>
+    </div>
+
+    <div class="prompt-box">
+      <div class="prompt-header">
+        <span class="prompt-lang">Python — 버전 확인 코드</span>
+        <button class="copy-btn" onclick="copyCode(this)">복사</button>
+      </div>
+      <div class="prompt-code"><span class="code-keyword">import</span> sys
+<span class="code-keyword">import</span> numpy <span class="code-keyword">as</span> np
+<span class="code-keyword">import</span> pandas <span class="code-keyword">as</span> pd
+<span class="code-keyword">import</span> sklearn
+<span class="code-keyword">import</span> matplotlib
+<span class="code-keyword">import</span> scipy <span class="code-keyword">as</span> sp
+
+<span class="code-func">print</span>(<span class="code-string">f"Python   : {sys.version.split()[0]}"</span>)
+<span class="code-func">print</span>(<span class="code-string">f"NumPy    : {np.__version__}"</span>)
+<span class="code-func">print</span>(<span class="code-string">f"Pandas   : {pd.__version__}"</span>)
+<span class="code-func">print</span>(<span class="code-string">f"sklearn  : {sklearn.__version__}"</span>)
+<span class="code-func">print</span>(<span class="code-string">f"Matplotlib: {matplotlib.__version__}"</span>)
+<span class="code-func">print</span>(<span class="code-string">f"SciPy    : {sp.__version__}"</span>)</div>
+    </div>
+
+    <!-- 버전 정보 -->
+    <p class="text-gray mb-8" style="font-size:13px;">📌 2026년 1월 기준 권장 버전</p>
+    <div class="version-row">
+      <div class="vbadge"><span class="vbadge-name">Python</span><span class="vbadge-ver">3.12 / 3.13</span></div>
+      <div class="vbadge"><span class="vbadge-name">scikit-learn</span><span class="vbadge-ver">1.6.x</span></div>
+      <div class="vbadge"><span class="vbadge-name">NumPy</span><span class="vbadge-ver">2.0.x</span></div>
+      <div class="vbadge"><span class="vbadge-name">Pandas</span><span class="vbadge-ver">2.2.x</span></div>
+      <div class="vbadge"><span class="vbadge-name">Matplotlib</span><span class="vbadge-ver">3.9.x</span></div>
+      <div class="vbadge"><span class="vbadge-name">SciPy</span><span class="vbadge-ver">1.14.x</span></div>
+    </div>
+
+    <div class="box box-warning mt-16">
+      <div class="box-label">⚠️ NumPy 2.0 주의사항</div>
+      <p>NumPy 2.0은 일부 API가 변경되었습니다. <code>np.bool</code>, <code>np.int</code> 등 Python 내장 타입 별칭이 완전히 제거되었으니, 기존 코드가 있다면 <code>bool</code>, <code>int</code>로 교체하세요.</p>
+    </div>
+
+    <!-- 직접 해보기 -->
+    <div class="box box-action">
+      <div class="box-label">🔧 직접 해보기 1</div>
+      <h4>환경 점검 미션</h4>
+      <ul>
+        <li>위 코드를 실행하여 각 라이브러리의 버전을 확인해 보세요.</li>
+        <li>추가로 <code>seaborn</code>의 버전도 확인해 보세요.</li>
+        <li>라이브러리가 없다면 아래 명령으로 설치하세요:</li>
+      </ul>
+    </div>
+
+    <div class="prompt-box">
+      <div class="prompt-header">
+        <span class="prompt-lang">Terminal — 라이브러리 설치</span>
+        <button class="copy-btn" onclick="copyCode(this)">복사</button>
+      </div>
+      <div class="prompt-code"><span class="code-comment"># 개별 설치</span>
+pip install scikit-learn numpy pandas matplotlib scipy seaborn
+
+<span class="code-comment"># 또는 한 번에 설치 (requirements.txt 방식)</span>
+pip install -r requirements.txt</div>
+    </div>
+  </section>
+
+  <!-- SECTION 04 -->
+  <section class="section" id="s04">
+    <div class="section-header">
+      <div class="section-num">4</div>
+      <div class="section-title">
+        붓꽃(Iris) 데이터셋 이해하기
+        <small>머신러닝 입문의 고전 데이터셋</small>
+      </div>
+    </div>
+
+    <div class="box box-concept">
+      <div class="box-label">🌸 데이터 소개</div>
+      <h4>붓꽃(Iris) 데이터셋</h4>
+      <p>1936년 Ronald Fisher가 소개한 다변량 데이터셋. 세 종류의 붓꽃 각 50개씩 총 <strong>150개 샘플</strong>과 <strong>4개 특성</strong>으로 구성됩니다. 분류 알고리즘 학습의 표준 예제입니다.</p>
+    </div>
+
+    <div class="iris-grid">
+      <table class="info-table">
+        <thead>
+          <tr><th colspan="2">📐 특성(Feature) 4개</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>sepal length (cm)</td><td>꽃받침 길이</td></tr>
+          <tr><td>sepal width (cm)</td><td>꽃받침 너비</td></tr>
+          <tr><td>petal length (cm)</td><td>꽃잎 길이</td></tr>
+          <tr><td>petal width (cm)</td><td>꽃잎 너비</td></tr>
+        </tbody>
+      </table>
+      <table class="info-table">
+        <thead>
+          <tr><th colspan="2">🏷️ 타깃(Target) 3종</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>0</td><td>Iris setosa (부채붓꽃)</td></tr>
+          <tr><td>1</td><td>Iris versicolor (버시컬러)</td></tr>
+          <tr><td>2</td><td>Iris virginica (버지니카)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="prompt-box">
+      <div class="prompt-header">
+        <span class="prompt-lang">Python — 붓꽃 데이터 로드 및 탐색</span>
+        <button class="copy-btn" onclick="copyCode(this)">복사</button>
+      </div>
+      <div class="prompt-code"><span class="code-keyword">from</span> sklearn.datasets <span class="code-keyword">import</span> load_iris
+<span class="code-keyword">import</span> pandas <span class="code-keyword">as</span> pd
+
+<span class="code-comment"># 데이터 로드</span>
+iris = load_iris()
+
+<span class="code-comment"># 기본 정보 확인</span>
+<span class="code-func">print</span>(<span class="code-string">"특성 이름 :"</span>, iris.feature_names)
+<span class="code-func">print</span>(<span class="code-string">"타깃 이름 :"</span>, iris.target_names)
+<span class="code-func">print</span>(<span class="code-string">"X 형태   :"</span>, iris.data.shape)   <span class="code-comment"># (150, 4)</span>
+<span class="code-func">print</span>(<span class="code-string">"y 형태   :"</span>, iris.target.shape) <span class="code-comment"># (150,)</span>
+
+<span class="code-comment"># DataFrame으로 변환하여 확인</span>
+df = pd.DataFrame(iris.data, columns=iris.feature_names)
+df[<span class="code-string">'target'</span>] = iris.target
+<span class="code-func">print</span>(df.head())
+<span class="code-func">print</span>(df.describe())</div>
+    </div>
+
+    <div class="box box-tip">
+      <div class="box-label">💡 탐색적 데이터 분석 (EDA) 팁</div>
+      <ul>
+        <li><code>df.info()</code> — 데이터 타입 및 결측값 여부 확인</li>
+        <li><code>df.describe()</code> — 통계 요약 (평균, 표준편차, 최솟값, 최댓값)</li>
+        <li><code>df.isnull().sum()</code> — 결측값 개수 확인</li>
+        <li><code>df['target'].value_counts()</code> — 클래스 분포 확인</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- SECTION 05 -->
+  <section class="section" id="s05">
+    <div class="section-header">
+      <div class="section-num">5</div>
+      <div class="section-title">
+        첫 번째 ML 모델 만들기
+        <small>k-최근접 이웃(KNN) 분류기로 붓꽃 분류</small>
+      </div>
+    </div>
+
+    <div class="flow-box">
+      <div class="flow-title">scikit-learn 모델 개발 4단계</div>
+      <div class="flow-row">
+        <div class="flow-node">① 데이터 준비<br><small style="font-size:11px;font-weight:400">X, y 분리</small></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-node secondary">② 데이터 분할<br><small style="font-size:11px;font-weight:400">train / test</small></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-node accent">③ 모델 학습<br><small style="font-size:11px;font-weight:400">.fit()</small></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-node dark">④ 예측·평가<br><small style="font-size:11px;font-weight:400">.predict() / score()</small></div>
+      </div>
+    </div>
+
+    <div class="prompt-box">
+      <div class="prompt-header">
+        <span class="prompt-lang">Python — KNN 분류 모델 전체 코드</span>
+        <button class="copy-btn" onclick="copyCode(this)">복사</button>
+      </div>
+      <div class="prompt-code"><span class="code-keyword">from</span> sklearn.datasets <span class="code-keyword">import</span> load_iris
+<span class="code-keyword">from</span> sklearn.model_selection <span class="code-keyword">import</span> train_test_split
+<span class="code-keyword">from</span> sklearn.neighbors <span class="code-keyword">import</span> KNeighborsClassifier
+<span class="code-keyword">from</span> sklearn.metrics <span class="code-keyword">import</span> accuracy_score, classification_report
+
+<span class="code-comment"># ① 데이터 준비</span>
+iris = load_iris()
+X, y = iris.data, iris.target
+
+<span class="code-comment"># ② 학습/테스트 데이터 분할 (75% / 25%)</span>
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=<span class="code-string">0.25</span>, random_state=<span class="code-string">42</span>
+)
+<span class="code-func">print</span>(<span class="code-string">f"학습 데이터: {X_train.shape}, 테스트 데이터: {X_test.shape}"</span>)
+
+<span class="code-comment"># ③ 모델 생성 및 학습</span>
+model = KNeighborsClassifier(n_neighbors=<span class="code-string">3</span>)
+model.fit(X_train, y_train)
+
+<span class="code-comment"># ④ 예측 및 평가</span>
+y_pred = model.predict(X_test)
+accuracy = accuracy_score(y_test, y_pred)
+<span class="code-func">print</span>(<span class="code-string">f"정확도 (Accuracy): {accuracy:.4f}"</span>)
+<span class="code-func">print</span>(<span class="code-string">"\n분류 리포트:"</span>)
+<span class="code-func">print</span>(classification_report(y_test, y_pred, target_names=iris.target_names))
+
+<span class="code-output"># 출력 예시
+# 학습 데이터: (112, 4), 테스트 데이터: (38, 4)
+# 정확도 (Accuracy): 1.0000</span></div>
+    </div>
+
+    <div class="two-col">
+      <div class="box box-concept">
+        <div class="box-label">📝 코드 해설</div>
+        <ul>
+          <li><code>train_test_split</code> — 데이터를 학습용/테스트용으로 분리. <code>random_state</code>로 재현성 확보</li>
+          <li><code>KNeighborsClassifier</code> — k개의 가장 가까운 이웃을 보고 다수결로 분류</li>
+          <li><code>.fit()</code> — 모델 학습 (학습 데이터로만)</li>
+          <li><code>.predict()</code> — 새 데이터 예측 (테스트 데이터)</li>
+          <li><code>accuracy_score</code> — 정확도 계산 = 맞힌 수 / 전체 수</li>
+        </ul>
+      </div>
+      <div class="box box-warning">
+        <div class="box-label">⚠️ 흔한 실수</div>
+        <ul>
+          <li>테스트 데이터로 학습하는 <strong>데이터 누수(Data Leakage)</strong></li>
+          <li><code>random_state</code>를 설정하지 않아 실행마다 결과가 달라지는 경우</li>
+          <li>정확도(Accuracy)만 보고 클래스 불균형을 간과하는 경우</li>
+          <li><code>X_test</code>로 <code>fit()</code>을 호출하는 실수</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 06 -->
+  <section class="section" id="s06">
+    <div class="section-header">
+      <div class="section-num">6</div>
+      <div class="section-title">
+        현대적 MLOps 워크플로우
+        <small>알고리즘 적용을 넘어 파이프라인 전체를 바라보기</small>
+      </div>
+    </div>
+
+    <div class="box box-note">
+      <div class="box-label">📌 MLOps란?</div>
+      <p>ML(머신러닝) + Ops(운영)의 합성어. 머신러닝 모델을 프로덕션 환경에서 안정적으로 <strong>개발·배포·모니터링</strong>하기 위한 실천 원칙과 도구 체계입니다.</p>
+    </div>
+
+    <ol class="mlops-steps">
+      <li>
+        <div>
+          <h5>문제 정의 및 데이터 수집</h5>
+          <p>해결할 비즈니스 문제를 ML 문제로 변환. 필요한 데이터의 종류·규모·출처를 정의하고 수집합니다.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h5>탐색적 데이터 분석(EDA)과 특성 엔지니어링</h5>
+          <p>데이터 분포 파악, 이상치·결측값 처리, 새로운 특성 생성. 모델 품질의 80%는 데이터 전처리에서 결정됩니다.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h5>모델 개발 및 실험 관리</h5>
+          <p>여러 알고리즘 비교, 하이퍼파라미터 튜닝, 교차 검증. MLflow나 Weights&amp;Biases로 실험 이력을 기록합니다.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h5>모델 평가 및 해석</h5>
+          <p>정확도·정밀도·재현율·F1·AUC 등 다양한 지표로 평가. SHAP·LIME으로 모델 예측 근거를 설명합니다.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h5>모델 배포 및 서빙</h5>
+          <p>REST API(Flask, FastAPI), Docker 컨테이너화, 클라우드 배포(AWS SageMaker, GCP Vertex AI 등).</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h5>지속적 모니터링 및 재학습</h5>
+          <p>데이터 드리프트(Data Drift)·개념 드리프트(Concept Drift) 감지. 성능 저하 시 자동 재학습 파이프라인 구동.</p>
+        </div>
+      </li>
+    </ol>
+
+    <div class="box box-tip">
+      <div class="box-label">💡 지금 단계에서는</div>
+      <p>지금은 <strong>1~4단계</strong>에 집중합니다. 배포와 모니터링은 모델을 충분히 이해한 후 학습합니다. 단, 처음부터 실험 관리를 습관화하면 나중에 큰 자산이 됩니다.</p>
+    </div>
+  </section>
+
+  <!-- SECTION 07 -->
+  <section class="section" id="s07">
+    <div class="section-header">
+      <div class="section-num">7</div>
+      <div class="section-title">
+        실습 과제
+        <small>직접 해보기 — 완료 체크리스트</small>
+      </div>
+    </div>
+
+    <ul class="checklist">
+      <li>
+        <input type="checkbox" id="c1">
+        <label class="check-label" for="c1">
+          <strong>버전 확인</strong> — Python, NumPy, Pandas, scikit-learn, Matplotlib의 버전을 출력해 보세요.
+          <code>seaborn</code>도 추가로 확인해 보세요.
+        </label>
+      </li>
+      <li>
+        <input type="checkbox" id="c2">
+        <label class="check-label" for="c2">
+          <strong>데이터 탐색</strong> — Iris 데이터셋을 DataFrame으로 변환하고 <code>.describe()</code>로 통계 요약을 확인하세요.
+        </label>
+      </li>
+      <li>
+        <input type="checkbox" id="c3">
+        <label class="check-label" for="c3">
+          <strong>첫 모델 실행</strong> — KNN 모델을 학습하고 테스트 정확도를 출력해 보세요. (목표: 90% 이상)
+        </label>
+      </li>
+      <li>
+        <input type="checkbox" id="c4">
+        <label class="check-label" for="c4">
+          <strong>파라미터 실험</strong> — <code>n_neighbors</code>를 1, 3, 5, 7로 바꿔보며 정확도 변화를 비교하세요.
+        </label>
+      </li>
+      <li>
+        <input type="checkbox" id="c5">
+        <label class="check-label" for="c5">
+          <strong>시각화 도전</strong> — sepal length vs. petal length를 산점도로 그리고 품종별 색상을 다르게 표시해 보세요.
+        </label>
+      </li>
+      <li>
+        <input type="checkbox" id="c6">
+        <label class="check-label" for="c6">
+          <strong>심화 (선택)</strong> — Wine 또는 Breast Cancer 데이터셋에도 같은 파이프라인을 적용해 보세요. <code>sklearn.datasets.load_wine()</code>
+        </label>
+      </li>
+    </ul>
+
+    <!-- 도전 코드 -->
+    <div class="prompt-box">
+      <div class="prompt-header">
+        <span class="prompt-lang">Python — n_neighbors 파라미터 실험 (과제 4)</span>
+        <button class="copy-btn" onclick="copyCode(this)">복사</button>
+      </div>
+      <div class="prompt-code"><span class="code-keyword">from</span> sklearn.datasets <span class="code-keyword">import</span> load_iris
+<span class="code-keyword">from</span> sklearn.model_selection <span class="code-keyword">import</span> train_test_split
+<span class="code-keyword">from</span> sklearn.neighbors <span class="code-keyword">import</span> KNeighborsClassifier
+
+iris = load_iris()
+X_train, X_test, y_train, y_test = train_test_split(
+    iris.data, iris.target, test_size=<span class="code-string">0.25</span>, random_state=<span class="code-string">42</span>
+)
+
+<span class="code-func">print</span>(<span class="code-string">"k값  | 정확도"</span>)
+<span class="code-func">print</span>(<span class="code-string">"-" * 20</span>)
+<span class="code-keyword">for</span> k <span class="code-keyword">in</span> [<span class="code-string">1</span>, <span class="code-string">3</span>, <span class="code-string">5</span>, <span class="code-string">7</span>, <span class="code-string">9</span>, <span class="code-string">11</span>]:
+    model = KNeighborsClassifier(n_neighbors=k)
+    model.fit(X_train, y_train)
+    score = model.score(X_test, y_test)
+    <span class="code-func">print</span>(<span class="code-string">f" k={k:2d}  | {score:.4f}"</span>)</div>
+    </div>
+
+    <!-- 단계 카드 -->
+    <div class="step-cards mt-16">
+      <div class="step-card">
+        <div class="step-card-num">📌</div>
+        <h4>핵심 개념 정리</h4>
+        <p>샘플·특성·타깃의 차이를 설명할 수 있어야 합니다. 지도 학습과 비지도 학습의 차이도 정리해 보세요.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-card-num">🔧</div>
+        <h4>환경 구성</h4>
+        <p>가상 환경(venv/conda)을 만들고 requirements.txt에 버전을 기록하는 습관을 지금부터 시작하세요.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-card-num">📊</div>
+        <h4>EDA 습관화</h4>
+        <p>모델을 만들기 전 항상 데이터를 먼저 탐색하세요. 클래스 분포, 이상치, 결측값을 확인하는 루틴을 만드세요.</p>
+      </div>
+    </div>
+  </section>
+
+</div><!-- /content -->
+</div><!-- /container -->
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-left">
+      <h4>🤖 Machine Learning with scikit-learn</h4>
+      <p>Ch01 — 머신러닝 시작하기 | 2026년 1월 업데이트</p>
+      <p style="margin-top:4px;">강의자: DJ,Lim &nbsp;|&nbsp; 수정·편집: Workshop Edition</p>
+    </div>
+    <div class="footer-badges">
+      <div class="footer-badge">Python 3.12+</div>
+      <div class="footer-badge">scikit-learn 1.6</div>
+      <div class="footer-badge">NumPy 2.0</div>
+      <div class="footer-badge">Pandas 2.2</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  /* 복사 버튼 */
+  function copyCode(btn) {
+    const pre = btn.closest('.prompt-box').querySelector('.prompt-code');
+    const text = pre.innerText;
+    navigator.clipboard.writeText(text).then(() => {
+      btn.textContent = '✅ 복사됨!';
+      btn.classList.add('copied');
+      setTimeout(() => {
+        btn.textContent = '복사';
+        btn.classList.remove('copied');
+      }, 2000);
+    });
+  }
+
+  /* 타임라인 네비게이션 활성 상태 */
+  const sections = document.querySelectorAll('.section');
+  const navItems = document.querySelectorAll('.timeline-item');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.id;
+        navItems.forEach(item => {
+          item.classList.remove('active');
+          if (item.getAttribute('href') === '#' + id) {
+            item.classList.add('active');
+          }
+        });
+      }
+    });
+  }, { threshold: 0.35 });
+
+  sections.forEach(s => observer.observe(s));
+
+  /* 네비게이션 클릭 스크롤 */
+  navItems.forEach(item => {
+    item.addEventListener('click', (e) => {
+      e.preventDefault();
+      const targetId = item.getAttribute('href').slice(1);
+      const target = document.getElementById(targetId);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+</script>
+</body>
+</html>

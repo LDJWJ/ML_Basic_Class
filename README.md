@@ -42,7 +42,7 @@
  * 유튜브 댓글 분석 및 시각화(워드클라우드) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_2_LIB_KONLPY_Youtube03_V10.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_2_LIB_KONLPY_Youtube03_V10.pdf)
 
 지도학습
- * 첫번째 머신러닝 모델 만들어보기  [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch01_01_ML_start_v13_2601.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/)
+ * 첫번째 머신러닝 모델 만들어보기  [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch01_01_ML_start_v14_2606.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/)
  * 머신러닝 알고리즘
 
   * knn [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_01A_knn_code_v12_504.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_01A_knn_code_v12_504.pdf)

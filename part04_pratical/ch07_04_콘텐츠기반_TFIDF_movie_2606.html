@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>콘텐츠 기반 영화 추천 시스템 | ML 실습 교안</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #0369a1;
+      --primary-light: #38bdf8;
+      --secondary: #f59e0b;
+      --accent: #10b981;
+      --danger: #ef4444;
+      --dark: #1e293b;
+      --gray: #64748b;
+      --light-gray: #f1f5f9;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      background: #f8fafc;
+      color: var(--dark);
+      line-height: 1.7;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(135deg, #0c1a2e 0%, #0369a1 55%, #0ea5e9 100%);
+      color: #fff;
+      padding: 64px 40px 56px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 80% 20%, rgba(56,189,248,.18) 0%, transparent 60%),
+                  radial-gradient(ellipse at 10% 80%, rgba(245,158,11,.10) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    .hero-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.25);
+      border-radius: 20px;
+      padding: 4px 14px;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: .06em;
+      color: #bae6fd;
+      margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-size: clamp(26px, 4vw, 40px);
+      font-weight: 900;
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
+    .hero h1 em {
+      font-style: normal;
+      color: #38bdf8;
+    }
+    .hero-sub {
+      font-size: 15px;
+      color: #bae6fd;
+      margin-bottom: 32px;
+      max-width: 600px;
+    }
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .hero-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: rgba(255,255,255,.8);
+    }
+    .hero-meta-item .icon {
+      width: 28px; height: 28px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.14);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px;
+    }
+
+    /* ── TIMELINE NAV ── */
+    .timeline-nav {
+      background: #fff;
+      border-bottom: 1px solid #e2e8f0;
+      padding: 0 40px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 1px 8px rgba(0,0,0,.06);
+    }
+    .timeline-nav-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      gap: 0;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .timeline-nav-inner::-webkit-scrollbar { display: none; }
+    .tn-step {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 18px;
+      white-space: nowrap;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--gray);
+      cursor: pointer;
+      border-bottom: 3px solid transparent;
+      text-decoration: none;
+      transition: color .2s, border-color .2s;
+    }
+    .tn-step:hover { color: var(--primary); }
+    .tn-step.active { color: var(--primary); border-color: var(--primary); }
+    .tn-dot {
+      width: 22px; height: 22px;
+      border-radius: 50%;
+      background: var(--light-gray);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--gray);
+      flex-shrink: 0;
+    }
+    .tn-step.active .tn-dot { background: var(--primary); color: #fff; }
+    .tn-time {
+      font-size: 11px;
+      color: var(--secondary);
+      font-weight: 600;
+    }
+
+    /* ── LAYOUT ── */
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+
+    /* ── SECTION ── */
+    .section { margin-top: 56px; }
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 28px;
+      padding-bottom: 14px;
+      border-bottom: 2px solid var(--light-gray);
+    }
+    .section-num {
+      width: 36px; height: 36px;
+      border-radius: 10px;
+      background: var(--primary);
+      color: #fff;
+      font-weight: 900;
+      font-size: 15px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .section-header h2 {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--dark);
+    }
+    .section-header .sec-time {
+      margin-left: auto;
+      background: var(--light-gray);
+      border-radius: 20px;
+      padding: 3px 12px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--gray);
+      white-space: nowrap;
+    }
+
+    /* ── BOX ── */
+    .box {
+      border-radius: 12px;
+      padding: 20px 22px;
+      margin-bottom: 18px;
+      border-left: 4px solid;
+    }
+    .box-concept {
+      background: #eff6ff;
+      border-color: var(--primary);
+    }
+    .box-action {
+      background: #ecfdf5;
+      border-color: var(--accent);
+    }
+    .box-warning {
+      background: #fff7ed;
+      border-color: var(--secondary);
+    }
+    .box-tip {
+      background: #f0fdf4;
+      border-color: #22c55e;
+    }
+    .box-label {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .box-concept .box-label { color: var(--primary); }
+    .box-action .box-label { color: var(--accent); }
+    .box-warning .box-label { color: var(--secondary); }
+    .box-tip .box-label { color: #16a34a; }
+    .box p { font-size: 14px; line-height: 1.8; color: #334155; }
+    .box ul { padding-left: 18px; font-size: 14px; color: #334155; }
+    .box ul li { margin-bottom: 6px; }
+
+    /* ── PROMPT BOX ── */
+    .prompt-box {
+      background: #0f172a;
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+    .prompt-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 18px;
+      background: #1e293b;
+      border-bottom: 1px solid #334155;
+    }
+    .prompt-lang {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .06em;
+      color: #38bdf8;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .prompt-label-text {
+      font-size: 11px;
+      color: #64748b;
+    }
+    .copy-btn {
+      background: #334155;
+      color: #94a3b8;
+      border: none;
+      border-radius: 6px;
+      padding: 4px 12px;
+      font-size: 11px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background .2s, color .2s;
+      font-family: 'Noto Sans KR', sans-serif;
+    }
+    .copy-btn:hover { background: var(--primary); color: #fff; }
+    .copy-btn.copied { background: var(--accent); color: #fff; }
+    .prompt-body {
+      padding: 20px 22px;
+      overflow-x: auto;
+    }
+    .prompt-body pre {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      line-height: 1.75;
+      color: #e2e8f0;
+      white-space: pre;
+    }
+    /* 신택스 컬러링 */
+    .c-comment { color: #64748b; }
+    .c-keyword { color: #f472b6; }
+    .c-string { color: #86efac; }
+    .c-func { color: #60a5fa; }
+    .c-num { color: #fbbf24; }
+    .c-var { color: #e2e8f0; }
+    .c-import { color: #a78bfa; }
+
+    /* ── CHECKLIST ── */
+    .checklist {
+      list-style: none;
+      padding: 0;
+    }
+    .checklist li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 10px 0;
+      border-bottom: 1px solid #f1f5f9;
+      font-size: 14px;
+      color: #334155;
+    }
+    .checklist li:last-child { border-bottom: none; }
+    .checklist input[type="checkbox"] {
+      width: 17px; height: 17px;
+      accent-color: var(--primary);
+      flex-shrink: 0;
+      margin-top: 2px;
+      cursor: pointer;
+    }
+
+    /* ── INFO TABLE ── */
+    .info-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+    .info-table thead tr {
+      background: var(--primary);
+      color: #fff;
+    }
+    .info-table th {
+      padding: 11px 16px;
+      text-align: left;
+      font-weight: 700;
+    }
+    .info-table td {
+      padding: 10px 16px;
+      border-bottom: 1px solid #e2e8f0;
+      color: #334155;
+      vertical-align: top;
+    }
+    .info-table tbody tr:nth-child(even) { background: #f8fafc; }
+    .info-table code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      background: #e0f2fe;
+      color: var(--primary);
+      border-radius: 4px;
+      padding: 1px 6px;
+    }
+
+    /* ── STEP CARD ── */
+    .step-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+    .step-card {
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 20px;
+      position: relative;
+      transition: box-shadow .2s;
+    }
+    .step-card:hover { box-shadow: 0 4px 20px rgba(3,105,161,.12); }
+    .step-card-num {
+      position: absolute;
+      top: 16px; right: 16px;
+      width: 28px; height: 28px;
+      border-radius: 50%;
+      background: var(--light-gray);
+      color: var(--gray);
+      font-weight: 900;
+      font-size: 12px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .step-card h4 {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 8px;
+      padding-right: 36px;
+    }
+    .step-card p {
+      font-size: 13px;
+      color: var(--gray);
+      line-height: 1.7;
+    }
+    .step-card .step-tag {
+      display: inline-block;
+      margin-top: 12px;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--accent);
+      background: #ecfdf5;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* ── FLOW BOX ── */
+    .flow-box {
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 14px;
+      padding: 28px 24px;
+      margin-bottom: 20px;
+    }
+    .flow-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--gray);
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .flow-steps {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      flex-wrap: wrap;
+      row-gap: 12px;
+    }
+    .flow-node {
+      flex: 1;
+      min-width: 120px;
+      text-align: center;
+    }
+    .flow-node-inner {
+      background: var(--light-gray);
+      border: 2px solid #cbd5e1;
+      border-radius: 10px;
+      padding: 12px 8px;
+    }
+    .flow-node.highlight .flow-node-inner {
+      background: #eff6ff;
+      border-color: var(--primary);
+    }
+    .flow-node-icon { font-size: 22px; margin-bottom: 4px; }
+    .flow-node-label {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--dark);
+      line-height: 1.3;
+    }
+    .flow-node-sub {
+      font-size: 10px;
+      color: var(--gray);
+      margin-top: 3px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .flow-arrow {
+      font-size: 20px;
+      color: #cbd5e1;
+      padding: 0 6px;
+      flex-shrink: 0;
+    }
+
+    /* ── FOOTER ── */
+    .footer {
+      background: var(--dark);
+      color: #94a3b8;
+      padding: 40px;
+      margin-top: 64px;
+      text-align: center;
+    }
+    .footer h3 {
+      color: #e2e8f0;
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+    .footer p { font-size: 13px; line-height: 1.8; }
+    .footer .footer-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .footer .tag {
+      background: #334155;
+      color: #94a3b8;
+      border-radius: 20px;
+      padding: 4px 14px;
+      font-size: 12px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* ── MISC ── */
+    .inline-code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      background: #e0f2fe;
+      color: #0369a1;
+      border-radius: 4px;
+      padding: 1px 6px;
+    }
+    .highlight-row td:first-child {
+      border-left: 3px solid var(--primary);
+    }
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+    @media (max-width: 600px) {
+      .hero { padding: 40px 20px; }
+      .container { padding: 0 16px 60px; }
+      .two-col { grid-template-columns: 1fr; }
+      .flow-steps { flex-direction: column; }
+      .flow-arrow { transform: rotate(90deg); }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── HERO ── -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">🎬 ML 실습 교안 · 콘텐츠 기반 필터링</div>
+    <h1>TF-IDF로 만드는<br /><em>영화 추천 시스템</em></h1>
+    <p class="hero-sub">텍스트를 숫자로 바꾸고, 유사도를 계산해 추천을 만드는 과정을 단계별로 체험합니다.</p>
+    <div class="hero-meta">
+      <div class="hero-meta-item"><div class="icon">⏱</div> 실습 시간 약 60~90분</div>
+      <div class="hero-meta-item"><div class="icon">🐍</div> Python · scikit-learn · pandas</div>
+      <div class="hero-meta-item"><div class="icon">🎯</div> 입문~초급 수준</div>
+    </div>
+  </div>
+</div>
+
+<!-- ── TIMELINE NAV ── -->
+<nav class="timeline-nav">
+  <div class="timeline-nav-inner">
+    <a class="tn-step active" href="#sec0">
+      <div class="tn-dot">0</div>준비 <span class="tn-time">5분</span>
+    </a>
+    <a class="tn-step" href="#sec1">
+      <div class="tn-dot">1</div>개념 <span class="tn-time">15분</span>
+    </a>
+    <a class="tn-step" href="#sec2">
+      <div class="tn-dot">2</div>데이터 <span class="tn-time">10분</span>
+    </a>
+    <a class="tn-step" href="#sec3">
+      <div class="tn-dot">3</div>벡터화 <span class="tn-time">15분</span>
+    </a>
+    <a class="tn-step" href="#sec4">
+      <div class="tn-dot">4</div>유사도 <span class="tn-time">10분</span>
+    </a>
+    <a class="tn-step" href="#sec5">
+      <div class="tn-dot">5</div>추천 함수 <span class="tn-time">15분</span>
+    </a>
+    <a class="tn-step" href="#sec6">
+      <div class="tn-dot">★</div>확장 실습
+    </a>
+  </div>
+</nav>
+
+<!-- ── MAIN CONTENT ── -->
+<div class="container">
+
+  <!-- SECTION 0: 준비 -->
+  <div class="section" id="sec0">
+    <div class="section-header">
+      <div class="section-num">0</div>
+      <h2>실습 준비</h2>
+      <span class="sec-time">⏱ 5분</span>
+    </div>
+
+    <div class="box box-action">
+      <div class="box-label">🛠 환경 확인</div>
+      <p>아래 명령어로 필요한 라이브러리를 설치하세요. Google Colab이나 로컬 Jupyter 환경 모두 동일합니다.</p>
+    </div>
+
+    <div class="prompt-box">
+      <div class="prompt-header">
+        <span class="prompt-lang">bash</span>
+        <span class="prompt-label-text">터미널 / Colab 셀</span>
+        <button class="copy-btn" onclick="copyCode(this)">복사</button>
+      </div>
+      <div class="prompt-body">
+        <pre>pip install pandas scikit-learn</pre>
+      </div>
+    </div>
+
+    <div class="box box-warning">
+      <div class="box-label">⚠ 버전 참고</div>
+      <ul>
+        <li>Python 3.9 이상 권장 (3.10 / 3.11 최적)</li>
+        <li>scikit-learn 1.4+ / pandas 2.x+ 권장</li>
+        <li>Google Colab은 별도 설치 불필요 (이미 내장)</li>
+      </ul>
+    </div>
+
+    <div class="box box-tip">
+      <div class="box-label">💡 이 실습에서 만드는 것</div>
+      <p>영화 제목과 키워드 설명을 입력하면, "<strong>어벤져스를 좋아하면 인터스텔라도 좋아할 것"</strong> 같은 추천 결과를 출력하는 함수를 처음부터 직접 만듭니다.</p>
+    </div>
+  </div>
+
+  <!-- SECTION 1: 개념 -->
+  <div class="section" id="sec1">
+    <div class="section-header">
+      <div class="section-num">1</div>
+      <h2>핵심 개념 이해</h2>
+      <span class="sec-time">⏱ 15분</span>
+    </div>
+
+    <div class="box box-concept">
+      <div class="box-label">📖 콘텐츠 기반 필터링이란?</div>
+      <p>사용자의 과거 취향이나 협업 데이터 없이, <strong>아이템 자체의 내용(content)</strong>을 분석해 비슷한 아이템을 추천하는 방식입니다.</p>
+      <br/>
+      <ul>
+        <li>✅ 새 사용자·새 아이템에도 바로 적용 가능 (Cold Start 문제 완화)</li>
+        <li>✅ 추천 이유를 설명하기 쉬움</li>
+        <li>❌ 아이템 설명이 부실하면 품질이 떨어짐</li>
+      </ul>
+    </div>
+
+    <!-- 아키텍처 플로우 -->
+    <div class="flow-box">
+      <div class="flow-title">📐 전체 파이프라인</div>
+      <div class="flow-steps">
+        <div class="flow-node">
+          <div class="flow-node-inner">
+            <div class="flow-node-icon">📄</div>
+            <div class="flow-node-label">텍스트 데이터</div>
+            <div class="flow-node-sub">description</div>
+          </div>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-node highlight">
+          <div class="flow-node-inner">
+            <div class="flow-node-icon">🔢</div>
+            <div class="flow-node-label">TF-IDF<br/>벡터화</div>
+            <div class="flow-node-sub">TfidfVectorizer</div>
+          </div>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-node highlight">
+          <div class="flow-node-inner">
+            <div class="flow-node-icon">📐</div>
+            <div class="flow-node-label">코사인<br/>유사도</div>
+            <div class="flow-node-sub">cosine_similarity</div>
+          </div>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-node">
+          <div class="flow-node-inner">
+            <div class="flow-node-icon">🎬</div>
+            <div class="flow-node-label">추천 결과</div>
+            <div class="flow-node-sub">Top-N 출력</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <table class="info-table">
+      <thead>
+        <tr>
+          <th>개념</th>
+          <th>한 줄 설명</th>
+          <th>예시</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>TF</strong> (Term Frequency)</td>
+          <td>한 문서에서 단어가 얼마나 자주 나오는가</td>
+          <td>"액션"이 3번 → TF 높음</td>
+        </tr>
+        <tr>
+          <td><strong>IDF</strong> (Inverse Document Frequency)</td>
+          <td>전체 문서에서 희귀할수록 정보량이 큼</td>
+          <td>"마블"은 일부 영화에만 → IDF 높음</td>
+        </tr>
+        <tr class="highlight-row">
+          <td><strong>TF-IDF</strong></td>
+          <td>두 값의 곱. 중요한 단어에 높은 가중치</td>
+          <td>TF × IDF = 벡터값</td>
+        </tr>
+        <tr>
+          <td><strong>코사인 유사도</strong></td>
+          <td>두 벡터가 이루는 각도의 코사인 값 (0~1)</td>
+          <td>1에 가까울수록 유사한 영화</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="box box-tip">
+      <div class="box-label">💡 직관적 이해</div>
+      <p>"어벤져스"와 "아이언맨"은 둘 다 <strong>슈퍼히어로, 마블, 액션</strong> 키워드를 공유합니다. TF-IDF는 이 단어들에 높은 점수를 주고, 코사인 유사도는 두 벡터가 비슷한 방향을 가리킨다는 것을 수치로 확인해줍니다.</p>
+    </div>
+  </div>
+
+  <!-- SECTION 2: 데이터 -->
+  <div class="section" id="sec2">
+    <div class="section-header">
+      <div class="section-num">2</div>
+      <h2>데이터 준비</h2>
+      <span class="sec-time">⏱ 10분</span>
+    </div>
+
+    <div class="box box-concept">
+      <div class="box-label">📖 왜 키워드 형식인가?</div>
+      <p>TF-IDF는 <strong>단어 빈도</strong>를 기반으로 합니다. 문장보다는 <strong>명사/형용사 키워드</strong>를 공백으로 구분한 형태가 유사도 계산에 더 효과적입니다. 자연어 문장은 조사·접속사 등 노이즈가 많아 결과가 부정확해질 수 있습니다.</p>
+    </div>
+
+    <div class="prompt-box">
+      <div class="prompt-header">
+        <span class="prompt-lang">python</span>
+        <span class="prompt-label-text">Step 1 — 예제 데이터 만들기</span>
+        <button class="copy-btn" onclick="copyCode(this)">복사</button>
+      </div>
+      <div class="prompt-body">
+        <pre><span class="c-import">import pandas as pd</span>
+
+<span class="c-comment"># 영화 데이터: 제목 + 키워드 설명</span>
+movies = pd.<span class="c-func">DataFrame</span>({
+    <span class="c-string">"title"</span>: [
+        <span class="c-string">"어벤져스"</span>, <span class="c-string">"아이언맨"</span>, <span class="c-string">"노트북"</span>, <span class="c-string">"라라랜드"</span>,
+        <span class="c-string">"인셉션"</span>, <span class="c-string">"인터스텔라"</span>, <span class="c-string">"겨울왕국"</span>, <span class="c-string">"토이스토리"</span>
+    ],
+    <span class="c-string">"description"</span>: [
+        <span class="c-string">"슈퍼히어로 액션 전투 마블"</span>,
+        <span class="c-string">"슈퍼히어로 과학 기술 액션 마블"</span>,
+        <span class="c-string">"로맨스 사랑 감동 드라마"</span>,
+        <span class="c-string">"음악 로맨스 꿈 사랑"</span>,
+        <span class="c-string">"꿈 현실 SF 액션 스릴러"</span>,
+        <span class="c-string">"우주 시간 SF 감동 과학"</span>,
+        <span class="c-string">"애니메이션 음악 가족 마법"</span>,
+        <span class="c-string">"애니메이션 장난감 가족 모험"</span>
+    ]
+})
+
+<span class="c-func">print</span>(movies)</pre>
+      </div>
+    </div>
+
+    <div class="box box-action">
+      <div class="box-label">✅ 확인 포인트</div>
+      <ul>
+        <li><span class="inline-code">movies.shape</span> → (8, 2) 출력 확인</li>
+        <li><span class="inline-code">movies.head()</span> → 데이터프레임 미리보기</li>
+        <li>키워드가 공백으로 구분된 문자열 형식인지 확인</li>
+      </ul>
+    </div>
+
+    <div class="box box-warning">
+      <div class="box-label">⚠ 실습 확장 아이디어</div>
+      <p>데이터를 직접 늘려보세요! 자신이 좋아하는 영화 3~5개를 추가하고, 결과가 어떻게 달라지는지 확인해 보세요.</p>
+    </div>
+  </div>
+
+  <!-- SECTION 3: 벡터화 -->
+  <div class="section" id="sec3">
+    <div class="section-header">
+      <div class="section-num">3</div>
+      <h2>TF-IDF 벡터화</h2>
+      <span class="sec-time">⏱ 15분</span>
+    </div>
+
+    <div class="box box-concept">
+      <div class="box-label">📖 fit_transform이 하는 일</div>
+      <ul>
+        <li><strong>fit</strong>: 전체 문서에서 단어 사전(vocabulary) 구축 + IDF 계산</li>
+        <li><strong>transform</strong>: 각 문서를 TF-IDF 가중치 벡터로 변환</li>
+        <li>결과는 영화 수 × 전체 단어 수 크기의 희소 행렬(sparse matrix)</li>
+      </ul>
+    </div>
+
+    <div class="prompt-box">
+      <div class="prompt-header">
+        <span class="prompt-lang">python</span>
+        <span class="prompt-label-text">Step 2 — 텍스트를 TF-IDF 벡터로 변환</span>
+        <button class="copy-btn" onclick="copyCode(this)">복사</button>
+      </div>
+      <div class="prompt-body">
+        <pre><span class="c-import">from sklearn.feature_extraction.text import TfidfVectorizer</span>
+
+<span class="c-comment"># 벡터라이저 생성 및 학습+변환</span>
+vectorizer = <span class="c-func">TfidfVectorizer</span>()
+tfidf_matrix = vectorizer.<span class="c-func">fit_transform</span>(movies[<span class="c-string">"description"</span>])
+
+<span class="c-comment"># 행렬 크기 확인: (영화 수, 고유 단어 수)</span>
+<span class="c-func">print</span>(<span class="c-string">f"행렬 크기: {tfidf_matrix.shape}"</span>)
+
+<span class="c-comment"># 단어 목록 확인</span>
+<span class="c-func">print</span>(<span class="c-string">"단어 사전:"</span>, vectorizer.<span class="c-func">get_feature_names_out</span>())
+
+<span class="c-comment"># 밀집 행렬로 변환해서 직접 확인 (학습용)</span>
+<span class="c-import">import pandas as pd</span>
+tfidf_df = pd.<span class="c-func">DataFrame</span>(
+    tfidf_matrix.<span class="c-func">toarray</span>(),
+    index=movies[<span class="c-string">"title"</span>],
+    columns=vectorizer.<span class="c-func">get_feature_names_out</span>()
+)
+<span class="c-func">print</span>(tfidf_df.<span class="c-func">round</span>(<span class="c-num">2</span>))</pre>
+      </div>
+    </div>
+
+    <div class="box box-action">
+      <div class="box-label">🔍 출력 해석 실습</div>
+      <ul>
+        <li>"마블" 열을 보면 어벤져스·아이언맨만 값이 있고 나머지는 0</li>
+        <li>"음악" 열을 보면 라라랜드·겨울왕국에만 값이 있음</li>
+        <li>같은 키워드를 공유할수록 벡터가 비슷한 방향을 가리킴</li>
+      </ul>
+    </div>
+
+    <div class="step-cards">
+      <div class="step-card">
+        <div class="step-card-num">A</div>
+        <h4>희소 행렬 확인</h4>
+        <p>대부분의 값이 0인 것을 확인. 이를 희소(sparse) 행렬이라 하며, 메모리 효율적으로 저장됩니다.</p>
+        <span class="step-tag">tfidf_matrix.nnz</span>
+      </div>
+      <div class="step-card">
+        <div class="step-card-num">B</div>
+        <h4>단어 가중치 비교</h4>
+        <p>"마블"처럼 일부 영화에만 나오는 단어 vs "가족"처럼 여러 곳에 나오는 단어의 IDF 값을 비교해 보세요.</p>
+        <span class="step-tag">vectorizer.idf_</span>
+      </div>
+      <div class="step-card">
+        <div class="step-card-num">C</div>
+        <h4>영화 벡터 시각화</h4>
+        <p>어벤져스와 아이언맨의 행을 뽑아 비교해 보세요. 공유 키워드 위치에서 값이 동시에 높게 나옵니다.</p>
+        <span class="step-tag">tfidf_df.loc["어벤져스"]</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 4: 유사도 -->
+  <div class="section" id="sec4">
+    <div class="section-header">
+      <div class="section-num">4</div>
+      <h2>코사인 유사도 계산</h2>
+      <span class="sec-time">⏱ 10분</span>
+    </div>
+
+    <div class="box box-concept">
+      <div class="box-label">📖 코사인 유사도란?</div>
+      <p>두 벡터 간의 <strong>각도의 코사인 값</strong>으로 유사도를 측정합니다. 벡터의 크기(길이)가 달라도 방향이 같으면 1에 가까운 값을 얻습니다. 텍스트 길이가 다른 문서 비교에 적합합니다.</p>
+      <br/>
+      <p>• 값 = 1.0 → 완전히 동일한 방향 (같은 영화)</p>
+      <p>• 값 = 0.5~0.9 → 유사한 영화</p>
+      <p>• 값 ≈ 0.0 → 완전히 다른 장르</p>
+    </div>
+
+    <div class="prompt-box">
+      <div class="prompt-header">
+        <span class="prompt-lang">python</span>
+        <span class="prompt-label-text">Step 3 — 영화 간 코사인 유사도 행렬 생성</span>
+        <button class="copy-btn" onclick="copyCode(this)">복사</button>
+      </div>
+      <div class="prompt-body">
+        <pre><span class="c-import">from sklearn.metrics.pairwise import cosine_similarity</span>
+
+<span class="c-comment"># (8 x 8) 유사도 행렬 — 모든 영화 쌍의 유사도</span>
+similarity = <span class="c-func">cosine_similarity</span>(tfidf_matrix, tfidf_matrix)
+
+<span class="c-comment"># 데이터프레임으로 보기 좋게 출력</span>
+sim_df = pd.<span class="c-func">DataFrame</span>(
+    similarity,
+    index=movies[<span class="c-string">"title"</span>],
+    columns=movies[<span class="c-string">"title"</span>]
+)
+<span class="c-func">print</span>(sim_df.<span class="c-func">round</span>(<span class="c-num">2</span>))</pre>
+      </div>
+    </div>
+
+    <div class="box box-action">
+      <div class="box-label">🔍 유사도 행렬 읽는 법</div>
+      <ul>
+        <li>대각선(자기 자신과의 유사도)은 항상 <strong>1.0</strong></li>
+        <li>어벤져스-아이언맨 셀 값이 가장 높을 것으로 예상 → 확인해 보세요</li>
+        <li>어벤져스-노트북 셀은 거의 0에 가까울 것 → 왜 그럴까요?</li>
+      </ul>
+    </div>
+
+    <div class="box box-warning">
+      <div class="box-label">⚠ 주의: 대칭 행렬</div>
+      <p>유사도 행렬은 항상 대칭입니다. A→B 유사도와 B→A 유사도는 동일합니다. 따라서 실제 서비스에서는 절반만 계산해 메모리를 아끼는 최적화를 사용합니다.</p>
+    </div>
+  </div>
+
+  <!-- SECTION 5: 추천 함수 -->
+  <div class="section" id="sec5">
+    <div class="section-header">
+      <div class="section-num">5</div>
+      <h2>추천 함수 구현 및 실행</h2>
+      <span class="sec-time">⏱ 15분</span>
+    </div>
+
+    <div class="prompt-box">
+      <div class="prompt-header">
+        <span class="prompt-lang">python</span>
+        <span class="prompt-label-text">Step 4 — 추천 함수 정의</span>
+        <button class="copy-btn" onclick="copyCode(this)">복사</button>
+      </div>
+      <div class="prompt-body">
+        <pre><span class="c-keyword">def</span> <span class="c-func">recommend_movie</span>(movie_title, top_n=<span class="c-num">3</span>):
+    <span class="c-string">"""
+    특정 영화와 가장 유사한 영화를 top_n개 추천
+    """</span>
+    <span class="c-comment"># ① 입력 영화의 인덱스 찾기</span>
+    movie_index = movies[movies[<span class="c-string">"title"</span>] == movie_title].index[<span class="c-num">0</span>]
+
+    <span class="c-comment"># ② 해당 영화와 모든 영화의 유사도 가져오기</span>
+    scores = <span class="c-func">list</span>(<span class="c-func">enumerate</span>(similarity[movie_index]))
+
+    <span class="c-comment"># ③ 자기 자신 제외, 유사도 높은 순 정렬</span>
+    scores = <span class="c-func">sorted</span>(scores, key=<span class="c-keyword">lambda</span> x: x[<span class="c-num">1</span>], reverse=<span class="c-keyword">True</span>)
+    scores = scores[<span class="c-num">1</span>:top_n + <span class="c-num">1</span>]  <span class="c-comment"># 0번째(자기 자신) 제외</span>
+
+    <span class="c-comment"># ④ 결과 출력</span>
+    <span class="c-func">print</span>(<span class="c-string">f"\n🎬 '{movie_title}'를 좋아한다면:"</span>)
+    <span class="c-keyword">for</span> rank, (idx, score) <span class="c-keyword">in</span> <span class="c-func">enumerate</span>(scores, <span class="c-num">1</span>):
+        <span class="c-func">print</span>(<span class="c-string">f"  {rank}위. {movies.iloc[idx]['title']}  (유사도: {score:.2f})"</span>)
+
+<span class="c-comment"># ── 실행 ──</span>
+<span class="c-func">recommend_movie</span>(<span class="c-string">"어벤져스"</span>, top_n=<span class="c-num">3</span>)
+<span class="c-func">recommend_movie</span>(<span class="c-string">"라라랜드"</span>, top_n=<span class="c-num">3</span>)
+<span class="c-func">recommend_movie</span>(<span class="c-string">"인터스텔라"</span>, top_n=<span class="c-num">3</span>)</pre>
+      </div>
+    </div>
+
+    <div class="box box-concept">
+      <div class="box-label">📖 코드 흐름 분해</div>
+      <ul>
+        <li><strong>①</strong> <span class="inline-code">movies["title"] == movie_title</span> → 불리언 마스크로 인덱스 추출</li>
+        <li><strong>②</strong> <span class="inline-code">enumerate(similarity[movie_index])</span> → (인덱스, 유사도) 쌍의 리스트</li>
+        <li><strong>③</strong> <span class="inline-code">sorted(..., reverse=True)</span> → 내림차순 정렬 후 자기 자신 제외</li>
+        <li><strong>④</strong> <span class="inline-code">movies.iloc[idx]</span> → 인덱스로 영화 정보 조회</li>
+      </ul>
+    </div>
+
+    <div class="box box-action">
+      <div class="box-label">✅ 예상 출력 확인 체크리스트</div>
+      <ul class="checklist">
+        <li><input type="checkbox" /> "어벤져스" → 아이언맨(마블/액션 공유)이 1위로 나오는가?</li>
+        <li><input type="checkbox" /> "라라랜드" → 노트북 또는 겨울왕국(음악/사랑)이 상위에 나오는가?</li>
+        <li><input type="checkbox" /> "인터스텔라" → 인셉션(SF 공유)이 상위에 나오는가?</li>
+        <li><input type="checkbox" /> 유사도 점수가 0.0~1.0 범위에 있는가?</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- SECTION 6: 전체 코드 -->
+  <div class="section" id="sec5b">
+    <div class="section-header">
+      <div class="section-num">+</div>
+      <h2>전체 코드 (한 번에 실행)</h2>
+    </div>
+
+    <div class="prompt-box">
+      <div class="prompt-header">
+        <span class="prompt-lang">python</span>
+        <span class="prompt-label-text">완성 코드 — 복사해서 바로 실행 가능</span>
+        <button class="copy-btn" onclick="copyCode(this)">복사</button>
+      </div>
+      <div class="prompt-body">
+        <pre><span class="c-import">import pandas as pd
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity</span>
+
+<span class="c-comment"># 1. 예제 영화 데이터 만들기</span>
+movies = pd.<span class="c-func">DataFrame</span>({
+    <span class="c-string">"title"</span>: [
+        <span class="c-string">"어벤져스"</span>, <span class="c-string">"아이언맨"</span>, <span class="c-string">"노트북"</span>, <span class="c-string">"라라랜드"</span>,
+        <span class="c-string">"인셉션"</span>, <span class="c-string">"인터스텔라"</span>, <span class="c-string">"겨울왕국"</span>, <span class="c-string">"토이스토리"</span>
+    ],
+    <span class="c-string">"description"</span>: [
+        <span class="c-string">"슈퍼히어로 액션 전투 마블"</span>,
+        <span class="c-string">"슈퍼히어로 과학 기술 액션 마블"</span>,
+        <span class="c-string">"로맨스 사랑 감동 드라마"</span>,
+        <span class="c-string">"음악 로맨스 꿈 사랑"</span>,
+        <span class="c-string">"꿈 현실 SF 액션 스릴러"</span>,
+        <span class="c-string">"우주 시간 SF 감동 과학"</span>,
+        <span class="c-string">"애니메이션 음악 가족 마법"</span>,
+        <span class="c-string">"애니메이션 장난감 가족 모험"</span>
+    ]
+})
+
+<span class="c-comment"># 2. 영화 설명을 숫자 벡터로 변환</span>
+vectorizer = <span class="c-func">TfidfVectorizer</span>()
+tfidf_matrix = vectorizer.<span class="c-func">fit_transform</span>(movies[<span class="c-string">"description"</span>])
+
+<span class="c-comment"># 3. 영화끼리 유사도 계산</span>
+similarity = <span class="c-func">cosine_similarity</span>(tfidf_matrix, tfidf_matrix)
+
+<span class="c-comment"># 4. 추천 함수 만들기</span>
+<span class="c-keyword">def</span> <span class="c-func">recommend_movie</span>(movie_title, top_n=<span class="c-num">3</span>):
+    movie_index = movies[movies[<span class="c-string">"title"</span>] == movie_title].index[<span class="c-num">0</span>]
+    scores = <span class="c-func">list</span>(<span class="c-func">enumerate</span>(similarity[movie_index]))
+    scores = <span class="c-func">sorted</span>(scores, key=<span class="c-keyword">lambda</span> x: x[<span class="c-num">1</span>], reverse=<span class="c-keyword">True</span>)
+    scores = scores[<span class="c-num">1</span>:top_n + <span class="c-num">1</span>]
+    <span class="c-func">print</span>(<span class="c-string">f"\n🎬 '{movie_title}'를 좋아한다면:"</span>)
+    <span class="c-keyword">for</span> rank, (idx, score) <span class="c-keyword">in</span> <span class="c-func">enumerate</span>(scores, <span class="c-num">1</span>):
+        <span class="c-func">print</span>(<span class="c-string">f"  {rank}위. {movies.iloc[idx]['title']}  (유사도: {score:.2f})"</span>)
+
+<span class="c-comment"># 5. 실행</span>
+<span class="c-func">recommend_movie</span>(<span class="c-string">"어벤져스"</span>, top_n=<span class="c-num">3</span>)
+<span class="c-func">recommend_movie</span>(<span class="c-string">"라라랜드"</span>, top_n=<span class="c-num">3</span>)
+<span class="c-func">recommend_movie</span>(<span class="c-string">"인터스텔라"</span>, top_n=<span class="c-num">3</span>)</pre>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION ★: 확장 실습 -->
+  <div class="section" id="sec6">
+    <div class="section-header">
+      <div class="section-num">★</div>
+      <h2>심화 / 확장 실습</h2>
+    </div>
+
+    <div class="step-cards">
+      <div class="step-card">
+        <div class="step-card-num">1</div>
+        <h4>데이터 확장</h4>
+        <p>영화를 20~30개로 늘리거나, 영화 대신 책·음악·유튜브 채널로 바꿔서 실습해 보세요. 도메인이 달라져도 동일한 코드가 작동합니다.</p>
+        <span class="step-tag">+ 데이터만 교체</span>
+      </div>
+      <div class="step-card">
+        <div class="step-card-num">2</div>
+        <h4>파라미터 실험</h4>
+        <p><span class="inline-code">TfidfVectorizer(max_features=10)</span>처럼 단어 수를 제한하거나, <span class="inline-code">ngram_range=(1,2)</span>로 2-gram을 추가해 결과 변화를 관찰하세요.</p>
+        <span class="step-tag">ngram / max_features</span>
+      </div>
+      <div class="step-card">
+        <div class="step-card-num">3</div>
+        <h4>시각화</h4>
+        <p>유사도 행렬을 히트맵으로 표현하면 장르 클러스터가 시각적으로 드러납니다. seaborn.heatmap을 사용해 보세요.</p>
+        <span class="step-tag">seaborn.heatmap</span>
+      </div>
+      <div class="step-card">
+        <div class="step-card-num">4</div>
+        <h4>한계 분석</h4>
+        <p>인셉션은 액션도 있고 SF도 있어 두 클러스터에 걸칩니다. 유사도가 분산되는 현상을 확인하고, 더 나은 특성 설계 방법을 토론해 보세요.</p>
+        <span class="step-tag">feature engineering</span>
+      </div>
+    </div>
+
+    <div class="box box-tip">
+      <div class="box-label">🔗 다음 단계: 협업 필터링과의 비교</div>
+      <ul>
+        <li><strong>콘텐츠 기반(오늘)</strong>: 아이템 설명 → TF-IDF 벡터 → 코사인 유사도</li>
+        <li><strong>협업 필터링(다음)</strong>: 사용자 평점 행렬 → 행렬 분해(SVD) → 잠재 요인</li>
+        <li><strong>하이브리드(실제 서비스)</strong>: Netflix, 유튜브, Spotify 등은 두 방식을 결합</li>
+      </ul>
+    </div>
+
+    <table class="info-table">
+      <thead>
+        <tr>
+          <th>방식</th>
+          <th>핵심 원리</th>
+          <th>장점</th>
+          <th>단점</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>콘텐츠 기반</strong> (오늘)</td>
+          <td>아이템 속성 유사도</td>
+          <td>Cold Start 강함</td>
+          <td>과도한 협소화 위험</td>
+        </tr>
+        <tr>
+          <td><strong>협업 필터링</strong></td>
+          <td>유사 사용자 패턴</td>
+          <td>뜻밖의 발견 가능</td>
+          <td>신규 사용자 취약</td>
+        </tr>
+        <tr>
+          <td><strong>하이브리드</strong></td>
+          <td>두 방식 결합</td>
+          <td>실제 서비스 수준</td>
+          <td>구현 복잡도 높음</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div><!-- /.container -->
+
+<!-- ── FOOTER ── -->
+<div class="footer">
+  <h3>🎬 오늘 배운 것 정리</h3>
+  <p>텍스트 → TF-IDF 벡터 → 코사인 유사도 → Top-N 추천</p>
+  <p>이 단순한 파이프라인이 실제 추천 시스템의 출발점입니다.</p>
+  <div class="footer-tags">
+    <span class="tag">TF-IDF</span>
+    <span class="tag">cosine_similarity</span>
+    <span class="tag">TfidfVectorizer</span>
+    <span class="tag">pandas</span>
+    <span class="tag">scikit-learn</span>
+    <span class="tag">content-based filtering</span>
+  </div>
+</div>
+
+<script>
+  // ── 복사 버튼 ──
+  function copyCode(btn) {
+    const pre = btn.closest('.prompt-box').querySelector('pre');
+    const text = pre.innerText;
+    navigator.clipboard.writeText(text).then(() => {
+      btn.textContent = '✓ 복사됨';
+      btn.classList.add('copied');
+      setTimeout(() => {
+        btn.textContent = '복사';
+        btn.classList.remove('copied');
+      }, 1800);
+    });
+  }
+
+  // ── 타임라인 활성화 ──
+  const sections = document.querySelectorAll('.section');
+  const navLinks = document.querySelectorAll('.tn-step');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.id;
+        navLinks.forEach(link => {
+          link.classList.toggle('active', link.getAttribute('href') === '#' + id);
+        });
+      }
+    });
+  }, { threshold: 0.3, rootMargin: '-60px 0px -60% 0px' });
+
+  sections.forEach(s => observer.observe(s));
+</script>
+</body>
+</html>

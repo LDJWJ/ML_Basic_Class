@@ -31,7 +31,6 @@
 
 * Pandas 01 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_2_LIB_Pandas_Basic01_IRIS_V11.html), [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_2_LIB_Pandas_Basic01_IRIS_V11.pdf)
 * Pandas 02 - unique(), value\_counts() etc [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_2_LIB_Pandas_Basic02_IRIS_V11.html), [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_2_LIB_Pandas_Basic02_IRIS_V11.pdf)
-* Pandas 03 - map(), apply() etc  [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_2_LIB_Pandas_Basic03_IRIS.html), [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_2_LIB_Pandas_Basic03_IRIS.pdf)
 * Matplotlib [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_2_LIB_Matplotlib_Basic01_IRIS_V11.html), [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_2_LIB_Matplotlib_Basic01_IRIS_V11.pdf)
 * Scikit-learn [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_2_LIB_sklearn_Basic01_IRIS_V02.html), [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_2_LIB_sklearn_Basic01_IRIS_V02.pdf)
 
@@ -42,13 +41,13 @@
  * 유튜브 댓글 분석 및 시각화(워드클라우드) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_2_LIB_KONLPY_Youtube03_V10.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/1_2_LIB_KONLPY_Youtube03_V10.pdf)
 
 지도학습
- * 첫번째 머신러닝 모델 만들어보기  [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch01_01_ML_start_v14_2606.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/)
+ * 첫번째 머신러닝 모델 만들어보기  [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch01_01_ML_start_v14_2606.html)
  * 머신러닝 알고리즘
 
   * knn [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_01A_knn_code_v12_504.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_01A_knn_code_v12_504.pdf)
   * knn\_pratice [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_01B_knn_code_pratice_2205.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_01B_knn_code_pratice_2205.pdf)
 
-* 머신러닝 - 선형회귀 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_02_linear_code_v11_2205.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_02_linear_code_v11_2205.pdf)
+* 머신러닝 - 선형회귀 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_02A_linear_code_v12.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_02A_linear_code_v12.pdf)
 * 머신러닝 - 회귀(평가지표\_상세) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_02B_diabete_evaluation_v13_2601.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_02B_diabete_evaluation_v13_2601.pdf)
 
 * 머신러닝 알고리즘 회귀(Ridge, Lasso) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_03_ridge_lasso.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_03_ridge_lasso.pdf)
@@ -61,7 +60,7 @@
 * 머신러닝 - 의사결정트리 02 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_02_decisionTree_diabetes_colab.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_02_decisionTree_diabetes_colab.pdf)
 * 머신러닝 - 의사결정트리 03 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_02_decisiontree_local.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_02_decisiontree_local.pdf)
 * 머신러닝 - 다양한 데이터 셋 - 의사결정트리 시각화 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_02_dtreeviz_modelVis_v10_2209.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_02_dtreeviz_modelVis_v10_2209.pdf)
-* 머신러닝 - 타이타닉 데이터셋 모델 구축 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_02B_titanic_modelmain_analysis.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_02B_titanic_modelmain_analysis.pdf)
+* 머신러닝 - 타이타닉 데이터셋 모델 구축 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_titanic/ch02_03_02B_titanic_modelmain_analysis.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_titanic/ch02_03_02B_titanic_modelmain_analysis.pdf)
 * 머신러닝 - 앙상블\_랜덤포레스트(1)-tips 01 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_03_RandomForest_01_Tips_01.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_03_RandomForest_01_Tips_01.pdf)
 * 머신러닝 - 앙상블\_랜덤포레스트(1)-tips 02 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_03_RandomForest_01_Tips_02.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_03_RandomForest_01_Tips_02.pdf)
 * 머신러닝 - 앙상블\_랜덤포레스트(2)-cancer [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_03_RandomForest_02_cancer.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_03_RandomForest_02_cancer.pdf)
@@ -119,35 +118,35 @@
 ### \[실습] 위스콘신 암 데이터 실습
 
 * 위스콘신 암 이진 분류 - 앙상블(보팅,배깅)
-  * [html](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch08_03A_cancer_basic_model_V11.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch08_03A_cancer_basic_model_V11.pdf)
+  * [html](https://ldjwj.github.io/ML_Basic_Class/part04_practical/ch08_03A_cancer_basic_model_2212.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part04_practical/ch08_03A_cancer_basic_model_2212.pdf)
 
 * 위스콘신 암 모델 - GridSearchCV를 활용한 하이퍼 파리미터 튜닝
-  * [html](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch08_03B_cancer_GridSearch_model_V11_2601.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch08_03B_cancer_GridSearch_model_V11_2601.pdf)
+  * [html](https://ldjwj.github.io/ML_Basic_Class/part04_practical/ch08_03B_cancer_GridSearch_model_2212.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part04_practical/ch08_03B_cancer_GridSearch_model_2212.pdf)
 
 * 위스콘신 암 모델 - LightGBM 모델 학습 및 평가
-* [html](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch08_03C_cancer_lightGBM_model_2212.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch08_03C_cancer_lightGBM_model_2212.pdf)
+* [html](https://ldjwj.github.io/ML_Basic_Class/part04_practical/ch08_03C_cancer_lightGBM_model_2212.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part04_practical/ch08_03C_cancer_lightGBM_model_2212.pdf)
 * 위스콘신 암 모델 - 앙상블 Stacking 모델 실습
 
-  * [html](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch08_05A_cancer_stacking.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch08_05A_cancer_stacking.pdf)
+  * [html](https://ldjwj.github.io/ML_Basic_Class/part04_practical/ch08_05A_cancer_stacking.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part04_practical/ch08_05A_cancer_stacking.pdf)
 
 * 위스콘신 암 모델 - 머신러닝 단순화 및 자동화 PyCaret 오픈소스 라이브러리 활용
 
-  * [html](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch08_05A_cancer_pycaret01.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch08_05A_cancer_pycaret01.pdf)
+  * [html](https://ldjwj.github.io/ML_Basic_Class/part04_practical/ch08_05A_cancer_pycaret01.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part04_practical/ch08_05A_cancer_pycaret01.pdf)
 
 * 위스콘신 암 모델 - 자동화 시스템(Automl) 구축하기
 
-  * [html](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch08_03D_cancer_automl_2212.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch08_03D_cancer_automl_2212.pdf)
+  * [html](https://ldjwj.github.io/ML_Basic_Class/part04_practical/ch08_03D_cancer_automl_2212.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part04_practical/ch08_03D_cancer_automl_2212.pdf)
 
 
 
 ### 추천 시스템 알아보기(기타)
 
-* 기본 개요 01 [pdf](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch07_추천시스템_v02_202211.pdf)
-* 기본 실습 01 [html](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch07_02_start_basic_2211.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch07_02_start_basic_2211.pdf)
-* 기본 실습 02 - 유사 영화 추천하기 [html](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch07_03_협업필터링_movie_01_2211.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch07_03_협업필터링_movie_01_2211.pdf)
+* 기본 개요 01 [pdf](https://ldjwj.github.io/ML_Basic_Class/part04_practical/ch07_추천시스템_v02_202211.pdf)
+* 기본 실습 01 [html](https://ldjwj.github.io/ML_Basic_Class/part04_practical/ch07_02_start_basic_2211.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part04_practical/ch07_02_start_basic_2211.pdf)
+* 기본 실습 02 - 유사 영화 추천하기 [html](https://ldjwj.github.io/ML_Basic_Class/part04_practical/ch07_03_협업필터링_movie_01_2211.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part04_practical/ch07_03_협업필터링_movie_01_2211.pdf)
 * 기본 실습 03 - 아이템 기반 협업 필터링 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch07_03_item_based_02_2208.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch07_03_item_based_02_2208.pdf)
-* 기본 실습 04 - 콘텐츠 기반(TF-IDF) 영화 추천 시스템 [html](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch07_04_콘텐츠기반_TFIDF_movie_2606.html)
-* 기본 실습 04 (인터랙티브 데모) - 영화 선택 후 추천 받기(순수 JS TF-IDF 구현) [html](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch07_04_콘텐츠기반_TFIDF_movie_interactive_2606.html)
+* 기본 실습 04 - 콘텐츠 기반(TF-IDF) 영화 추천 시스템 [html](https://ldjwj.github.io/ML_Basic_Class/part04_practical/ch07_04_콘텐츠기반_TFIDF_movie_2606.html)
+* 기본 실습 04 (인터랙티브 데모) - 영화 선택 후 추천 받기(순수 JS TF-IDF 구현) [html](https://ldjwj.github.io/ML_Basic_Class/part04_practical/ch07_04_콘텐츠기반_TFIDF_movie_interactive_2606.html)
 
 ### AutoML
 
@@ -157,13 +156,13 @@
 ### 기타 프로젝트
 
 * sqllite와 pandas 01 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_01_ml_db.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_01_ml_db.pdf)
-* sqllite와 pandas 02 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_ml_db_02.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_ml_db_02.pdf)
+* sqllite와 pandas 02 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_ml_db_02.html)
 
 ### Flask를 활용한 웹 서비스 구축
 
-* IRIS 웹 머신러닝 [html](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/Flask(플라스크)_머신러닝_웹서비스구축.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/Flask_Web01_IRIS.pdf)
-* 집값 예측 [html](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/Flask(플라스크)_활용한_머신러닝_웹서비스구축(2).html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/Flask_Web02_House.pdf)
-* 악성종양(암) 예측 [html](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/Flask_ML_Web서비스(3)_Cancer.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/Flask_Web03_Cancer.pdf)
+* IRIS 웹 머신러닝 [html](https://ldjwj.github.io/ML_Basic_Class/part04_practical/Flask(플라스크)_머신러닝_웹서비스구축.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part04_practical/Flask_Web01_IRIS.pdf)
+* 집값 예측 [html](https://ldjwj.github.io/ML_Basic_Class/part04_practical/Flask(플라스크)_활용한_머신러닝_웹서비스구축(2).html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part04_practical/Flask_Web02_House.pdf)
+* 악성종양(암) 예측 [html](https://ldjwj.github.io/ML_Basic_Class/part04_practical/Flask_ML_Web서비스(3)_Cancer.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part04_practical/Flask_Web03_Cancer.pdf)
 
 ### \[실습] 항구 근처 기뢰 확인(sonar.all-data) 실습
 
@@ -187,7 +186,7 @@
 ### \[캐글 대회] PUBG Finish Placement Prediction
 
 * 승자 예측 대회 [캐글 대회 Link](https://www.kaggle.com/competitions/pubg-finish-placement-prediction/)
-* (1) 기본 모델(선형회귀) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/pubg_01_simplesub_wk_2211.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class//part03_pro_kaggle/pubg_01_simplesub_wk_2211.pdf)
+* (1) 기본 모델(선형회귀) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/pubg_01_simplesub_wk_2211.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/pubg_01_simplesub_wk_2211.pdf)
 
 
 
@@ -255,4 +254,4 @@
 
 * 내용은 파이썬 라이브러리를 활용한 머신러닝을 참고하여 작성했습니다.
 * 저작권에 침해되는 부분이 있으면 frontier1020@naver.com 메일 주세요.
-* 내용의 배포 및 사용은 저작권자에게 문의해 주세요.
+* 본 저장소의 자료는 [CC BY-NC 4.0](LICENSE) 라이선스를 따릅니다. 출처를 표시하면 비영리 목적으로 자유롭게 활용하실 수 있습니다.

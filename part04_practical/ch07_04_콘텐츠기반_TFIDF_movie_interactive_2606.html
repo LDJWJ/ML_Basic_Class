@@ -3,162 +3,611 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>영화 추천 시스템 예제</title>
+  <title>영화 추천 시스템 (TF-IDF 기반)</title>
   <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      margin: 40px;
-      line-height: 1.6;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans KR', sans-serif;
+      background: #f5f7fb; color: #1a1a2e; line-height: 1.7;
+      padding: 20px;
     }
-    h1 {
-      color: #333;
+    .container { max-width: 960px; margin: 0 auto; }
+
+    header {
+      text-align: center; padding: 32px 20px 24px;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      border-radius: 16px; color: #fff; margin-bottom: 24px;
     }
-    select, button {
-      padding: 8px 12px;
-      margin-right: 8px;
-      font-size: 1rem;
+    header h1 { font-size: 1.8rem; letter-spacing: -0.5px; }
+    header p { opacity: 0.9; font-size: 0.95rem; margin-top: 6px; }
+
+    .selector {
+      background: #fff; border-radius: 12px; padding: 20px 24px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 24px;
+      display: flex; flex-wrap: wrap; align-items: center; gap: 12px;
     }
-    #result {
-      margin-top: 20px;
-      font-size: 1.1rem;
+    .selector label { font-weight: 600; font-size: 0.95rem; }
+    .selector select {
+      flex: 1; min-width: 180px; padding: 10px 14px; border: 2px solid #e0e0e0;
+      border-radius: 10px; font-size: 1rem; background: #fff; cursor: pointer;
+      transition: border-color 0.2s;
     }
-    .movie-list {
-      margin-top: 10px;
+    .selector select:focus { border-color: #667eea; outline: none; }
+    .selector button {
+      padding: 10px 28px; border: none; border-radius: 10px;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: #fff; font-size: 1rem; font-weight: 600; cursor: pointer;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .selector button:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(102,126,234,0.4); }
+    .selector button:active { transform: translateY(0); }
+    .selected-info {
+      width: 100; font-size: 0.9rem; color: #666; padding-top: 4px;
+    }
+    .selected-info code { background: #f0f0f5; padding: 2px 8px; border-radius: 4px; font-size: 0.85rem; }
+
+    .results { margin-bottom: 24px; }
+    .results .empty-state {
+      background: #fff; border-radius: 12px; padding: 40px; text-align: center;
+      color: #999; box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .results .empty-state strong { color: #667eea; }
+
+    .result-header {
+      background: #fff; border-radius: 12px 12px 0 0; padding: 16px 24px;
+      font-weight: 600; font-size: 1.05rem; box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .result-header span { color: #667eea; }
+
+    .result-cards {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 16px; padding: 20px; background: #fff; border-radius: 0 0 12px 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-top: 2px;
+    }
+    .result-card {
+      border: 2px solid #f0f0f5; border-radius: 12px; padding: 16px;
+      transition: border-color 0.2s;
+    }
+    .result-card:hover { border-color: #667eea; }
+    .result-card .rank {
+      display: inline-block; background: #667eea; color: #fff;
+      border-radius: 50%; width: 28px; height: 28px; line-height: 28px;
+      text-align: center; font-size: 0.8rem; font-weight: 700; margin-bottom: 10px;
+    }
+    .result-card h3 { font-size: 1rem; margin-bottom: 4px; }
+    .result-card .desc { font-size: 0.85rem; color: #666; margin-bottom: 8px; }
+    .result-card .score {
+      font-size: 0.9rem; font-weight: 700; color: #667eea; margin-bottom: 8px;
+    }
+    .result-card .score .zero-msg { color: #999; font-weight: 400; font-size: 0.8rem; }
+    .tags { display: flex; flex-wrap: wrap; gap: 4px; }
+    .tag {
+      font-size: 0.7rem; padding: 2px 8px; border-radius: 20px; font-weight: 500;
+    }
+    .tag-0 { background: #e3f2fd; color: #1565c0; }
+    .tag-1 { background: #fce4ec; color: #c62828; }
+    .tag-2 { background: #e8f5e9; color: #2e7d32; }
+    .tag-3 { background: #fff3e0; color: #e65100; }
+    .tag-4 { background: #f3e5f5; color: #6a1b9a; }
+    .tag-5 { background: #e0f7fa; color: #00695c; }
+
+    .code-section {
+      background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      overflow: hidden; margin-bottom: 24px;
+    }
+    .code-section .cs-header {
+      padding: 16px 24px; font-weight: 700; font-size: 1.05rem;
+      border-bottom: 1px solid #f0f0f5; cursor: pointer; display: flex;
+      justify-content: space-between; align-items: center;
+      background: linear-gradient(135deg, #fafbff, #f5f3ff);
+    }
+    .cs-header .toggle { font-size: 1.2rem; color: #667eea; transition: transform 0.2s; }
+    .cs-header .toggle.open { transform: rotate(180deg); }
+    .cs-body { display: none; }
+    .cs-body.open { display: block; }
+
+    .step {
+      border-bottom: 1px solid #f0f0f5; transition: background 0.2s;
+    }
+    .step:last-child { border-bottom: none; }
+    .step-header {
+      padding: 14px 24px; display: flex; align-items: center; gap: 10px;
+      cursor: pointer; user-select: none;
+    }
+    .step-header:hover { background: #fafbff; }
+    .step-indicator {
+      width: 28px; height: 28px; border-radius: 50%; display: flex;
+      align-items: center; justify-content: center; font-size: 0.8rem;
+      font-weight: 700; flex-shrink: 0;
+      background: #e0e0e0; color: #999;
+    }
+    .step-indicator.active { background: #667eea; color: #fff; }
+    .step-indicator.done { background: #4caf50; color: #fff; }
+    .step-title { font-size: 0.92rem; font-weight: 600; flex: 1; }
+    .step-arrow { color: #ccc; font-size: 0.8rem; transition: transform 0.2s; }
+    .step-arrow.open { transform: rotate(90deg); }
+
+    .step-body { display: none; padding: 0 24px 20px; }
+    .step-body.open { display: block; }
+    .step-body .explain { font-size: 0.88rem; color: #555; margin-bottom: 12px; }
+
+    .code-block {
+      background: #1a1a2e; border-radius: 10px; padding: 16px;
+      font-family: 'JetBrains Mono', 'Fira Code', 'D2Coding', monospace;
+      font-size: 0.82rem; line-height: 1.6; overflow-x: auto;
+      color: #e8e8e8; margin-bottom: 12px;
+    }
+    .code-block .kw { color: #c792ea; }
+    .code-block .fn { color: #82aaff; }
+    .code-block .str { color: #c3e88d; }
+    .code-block .num { color: #f78c6c; }
+    .code-block .cm { color: #546e7a; font-style: italic; }
+    .code-block .hl { background: rgba(255,255,255,0.08); display: inline-block; border-radius: 3px; padding: 0 4px; }
+    .code-block .val { color: #ffcb6b; }
+    .code-block .op { color: #89ddff; }
+
+    .live-value {
+      background: #e8f5e9; border: 1px solid #c8e6c9; border-radius: 8px;
+      padding: 10px 14px; font-size: 0.85rem; margin-bottom: 12px;
+    }
+    .live-value strong { color: #2e7d32; }
+    .live-value .null-val { color: #999; font-style: italic; }
+
+    @media (max-width: 640px) {
+      body { padding: 12px; }
+      header h1 { font-size: 1.3rem; }
+      .selector { flex-direction: column; align-items: stretch; }
+      .selector select { min-width: 0; }
+      .result-cards { grid-template-columns: 1fr; }
+      .code-block { font-size: 0.72rem; padding: 12px; }
+      .step-header { padding: 12px 16px; }
+      .step-body { padding: 0 16px 16px; }
     }
   </style>
 </head>
 <body>
-  <h1>영화 추천 시스템 (TF‑IDF 기반)</h1>
-  <p>아래에서 영화를 선택하고 <strong>추천 받기</strong> 버튼을 누르면, 선택한 영화와 내용이 비슷한 영화를 추천해 줍니다.</p>
-  <div>
-    <label for="movieSelect">영화 선택:</label>
+<div class="container">
+  <header>
+    <h1>영화 추천 시스템</h1>
+    <p>TF-IDF 기반 콘텐츠 유사도 추천 &amp; 코드로 이해하기</p>
+  </header>
+
+  <div class="selector">
+    <label for="movieSelect">영화 선택</label>
     <select id="movieSelect"></select>
-    <button id="recommendButton">추천 받기</button>
+    <button id="recommendBtn">추천 받기</button>
+    <div class="selected-info" id="selectedInfo">
+      영화를 선택하고 <strong>추천 받기</strong>를 눌러보세요
+    </div>
   </div>
-  <div id="result"></div>
 
-  <script>
-    // 영화 데이터 정의
-    const movies = [
-      { title: '어벤져스', description: '슈퍼히어로 액션 전투 마블' },
-      { title: '아이언맨', description: '슈퍼히어로 과학 기술 액션 마블' },
-      { title: '노트북', description: '로맨스 사랑 감동 드라마' },
-      { title: '라라랜드', description: '음악 로맨스 꿈 사랑' },
-      { title: '인셉션', description: '꿈 현실 SF 액션 스릴러' },
-      { title: '인터스텔라', description: '우주 시간 SF 감동 과학' },
-      { title: '겨울왕국', description: '애니메이션 음악 가족 마법' },
-      { title: '토이스토리', description: '애니메이션 장난감 가족 모험' }
-    ];
+  <div class="results" id="results">
+    <div class="empty-state">
+      <p>👇 영화를 선택하고 <strong>추천 받기</strong> 버튼을 누르면<br>TF-IDF 유사도 기반 추천 결과가 표시됩니다</p>
+    </div>
+  </div>
 
-    // 페이지 로드 후 영화 목록을 셀렉트 박스에 채워 넣습니다.
-    const selectEl = document.getElementById('movieSelect');
-    movies.forEach((movie, idx) => {
-      const option = document.createElement('option');
-      option.value = idx;
-      option.textContent = movie.title;
-      selectEl.appendChild(option);
+  <div class="code-section" id="codeSection">
+    <div class="cs-header" id="codeToggle">
+      <span>코드로 알고리즘 이해하기</span>
+      <span class="toggle open" id="codeToggleIcon">▼</span>
+    </div>
+    <div class="cs-body open" id="codeBody">
+
+      <div class="step">
+        <div class="step-header" data-step="1">
+          <span class="step-indicator active">1</span>
+          <span class="step-title">영화 데이터 준비</span>
+          <span class="step-arrow">▶</span>
+        </div>
+        <div class="step-body open" id="step1Body">
+          <div class="explain">
+            21편의 영화 데이터를 준비합니다. 각 영화는 <strong>제목</strong>, <strong>설명</strong>, <strong>장르</strong> 정보를 가지고 있습니다.
+            아래에서 선택한 영화가 코드에서 어떻게 표현되는지 확인하세요.
+          </div>
+          <div class="code-block">
+<span class="kw">const</span> movies <span class="op">=</span> [
+  <span class="cm">// ... 20개 영화 생략 ...</span>
+  {
+    title: <span class="str" id="codeTitle">'어벤져스: 엔드게임'</span>,
+    description: <span class="str" id="codeDesc">'히어로들이 타임슬립으로 전투를 벌이는 마블 액션'</span>,
+    genres: [<span class="str" id="codeGenres">'슈퍼히어로', '액션'</span>]
+  }
+  <span class="cm">// ... 20개 영화 생략 ...</span>
+];
+          </div>
+          <div class="live-value" id="liveData1">
+            <strong>선택한 영화:</strong> <span id="dataTitle">없음</span> &nbsp;|&nbsp;
+            <strong>설명:</strong> <span id="dataDesc">-</span> &nbsp;|&nbsp;
+            <strong>장르:</strong> <span id="dataGenre">-</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-header" data-step="2">
+          <span class="step-indicator">2</span>
+          <span class="step-title">텍스트 토큰화 &amp; 어휘집 구축</span>
+          <span class="step-arrow">▶</span>
+        </div>
+        <div class="step-body" id="step2Body">
+          <div class="explain">
+            영화 설명을 공백으로 나누어 <strong>토큰</strong>(단어)으로 분리합니다.
+            전체 영화에서 등장하는 모든 고유 단어로 <strong>어휘집(vocabulary)</strong>을 만듭니다.
+          </div>
+          <div class="code-block">
+<span class="kw">function</span> <span class="fn">tokenize</span>(text) {
+  <span class="kw">return</span> text.trim().split(<span class="str">/\s+/</span>).map(t <span class="op">=></span> t.toLowerCase());
+}
+
+<span class="cm">// 선택한 영화 설명 → 토큰 결과</span>
+<span class="cm" id="codeTokenDisplay">// 영화를 선택하면 토큰 결과가 표시됩니다</span>
+          </div>
+          <div class="live-value" id="liveData2">
+            <strong>토큰 결과:</strong> <span id="dataTokens">-</span><br>
+            <strong>전체 어휘집 크기:</strong> <span id="dataVocabSize">-</span>개 단어
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-header" data-step="3">
+          <span class="step-indicator">3</span>
+          <span class="step-title">TF-IDF 벡터 계산</span>
+          <span class="step-arrow">▶</span>
+        </div>
+        <div class="step-body" id="step3Body">
+          <div class="explain">
+            <strong>TF</strong>: 각 토큰이 문서 내에서 등장한 빈도 (정규화)<br>
+            <strong>IDF</strong>: log(전체 문서 수 / 해당 토큰이 등장한 문서 수)<br>
+            <strong>TF-IDF</strong> = TF × IDF — 자주 나오지만 모든 문서에 등장하는 단어의 가중치를 낮춥니다.
+          </div>
+          <div class="code-block">
+<span class="kw">const</span> tfidfVectors <span class="op">=</span> docsTokens.map(tokens <span class="op">=></span> {
+  <span class="kw">const</span> tf <span class="op">=</span> <span class="kw">new</span> Array(vocabList.length).fill(<span class="num">0</span>);
+  tokens.forEach(token <span class="op">=></span> {
+    <span class="kw">const</span> idx <span class="op">=</span> vocabIndex[token];
+    tf[idx] <span class="op">+=</span> <span class="num">1</span>;   <span class="cm">// 단어 빈도 증가</span>
+  });
+  <span class="kw">const</span> tokenCount <span class="op">=</span> tokens.length;
+  <span class="kw">const</span> tfidf <span class="op">=</span> tf.map((count, idx) <span class="op">=></span> {
+    <span class="kw">const</span> tfVal <span class="op">=</span> tokenCount <span class="op">?</span> count / tokenCount <span class="op">:</span> <span class="num">0</span>;
+    <span class="kw">return</span> tfVal <span class="op">*</span> idf[idx];  <span class="cm">// TF × IDF</span>
+  });
+  <span class="kw">return</span> tfidf;
+});
+          </div>
+          <div class="live-value" id="liveData3">
+            <strong>선택 영화 TF-IDF 벡터:</strong><br><span id="dataTfidf" style="word-break: break-all; font-family: monospace; font-size: 0.85rem;">-</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-header" data-step="4">
+          <span class="step-indicator">4</span>
+          <span class="step-title">코사인 유사도 계산</span>
+          <span class="step-arrow">▶</span>
+        </div>
+        <div class="step-body" id="step4Body">
+          <div class="explain">
+            두 벡터 사이의 <strong>코사인 유사도</strong>를 계산합니다. <br>
+            <code>cos(θ) = (A · B) / (||A|| × ||B||)</code> — 값이 1에 가까울수록 유사한 문서입니다.
+          </div>
+          <div class="code-block">
+<span class="kw">function</span> <span class="fn">cosineSimilarity</span>(vecA, vecB) {
+  <span class="kw">let</span> dot <span class="op">=</span> <span class="num">0</span>, normA <span class="op">=</span> <span class="num">0</span>, normB <span class="op">=</span> <span class="num">0</span>;
+  <span class="kw">for</span> (<span class="kw">let</span> i <span class="op">=</span> <span class="num">0</span>; i <span class="op">&lt;</span> vecA.length; i<span class="op">++</span>) {
+    dot <span class="op">+=</span> vecA[i] <span class="op">*</span> vecB[i];           <span class="cm">// 내적</span>
+    normA <span class="op">+=</span> vecA[i] <span class="op">*</span> vecA[i];          <span class="cm">// A의 제곱합</span>
+    normB <span class="op">+=</span> vecB[i] <span class="op">*</span> vecB[i];          <span class="cm">// B의 제곱합</span>
+  }
+  <span class="kw">if</span> (normA <span class="op">===</span> <span class="num">0</span> <span class="op">||</span> normB <span class="op">===</span> <span class="num">0</span>) <span class="kw">return</span> <span class="num">0</span>;
+  <span class="kw">return</span> dot / (Math.sqrt(normA) <span class="op">*</span> Math.sqrt(normB));
+}
+          </div>
+          <div class="live-value" id="liveData4">
+            <strong>모든 영화와의 유사도:</strong><br><span id="dataSimilarity" style="font-size: 0.85rem;">-</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-header" data-step="5">
+          <span class="step-indicator">5</span>
+          <span class="step-title">추천 결과 정렬</span>
+          <span class="step-arrow">▶</span>
+        </div>
+        <div class="step-body" id="step5Body">
+          <div class="explain">
+            자기 자신을 제외하고, 유사도 점수가 높은 순서대로 정렬하여 <strong>상위 3개</strong>를 추천 결과로 반환합니다.
+          </div>
+          <div class="code-block">
+<span class="kw">function</span> <span class="fn">recommend</span>(movieIndex, topN <span class="op">=</span> <span class="num">3</span>) {
+  <span class="kw">const</span> baseVector <span class="op">=</span> tfidfVectors[movieIndex];
+  <span class="kw">const</span> scores <span class="op">=</span> tfidfVectors.map((vec, idx) <span class="op">=></span> ({
+    index: idx, score: <span class="fn">cosineSimilarity</span>(baseVector, vec)
+  }));
+  <span class="kw">return</span> scores
+    .filter(item <span class="op">=></span> item.index <span class="op">!==</span> movieIndex)  <span class="cm">// 자기 자신 제외</span>
+    .sort((a, b) <span class="op">=></span> b.score <span class="op">-</span> a.score)             <span class="cm">// 유사도 내림차순</span>
+    .slice(<span class="num">0</span>, topN);                               <span class="cm">// 상위 3개</span>
+}
+          </div>
+          <div class="live-value" id="liveData5">
+            <strong>추천 결과:</strong><br><span id="dataRecommend">-</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+  const movies = [
+    { title: '어벤져스: 엔드게임', description: '지구를 구하기 위해 히어로들이 모여 타임슬립으로 최종 전투를 벌이는 마블 액션 대작', genres: ['슈퍼히어로', '액션', 'SF'] },
+    { title: '아이언맨', description: '천재 과학자가 직접 만든 슈퍼히어로 슈트로 악당과 싸우는 마블 액션 영화', genres: ['슈퍼히어로', '액션', 'SF'] },
+    { title: '다크나이트', description: '배트맨이 조커라는 광기 어린 악당과 맞서며 도시의 운명을 건 범죄 액션 스릴러', genres: ['슈퍼히어로', '액션', '스릴러'] },
+    { title: '노트북', description: '운명적인 사랑을 평생 포기하지 않는 두 남녀의 애틋한 감동 로맨스 드라마', genres: ['로맨스', '드라마', '감동'] },
+    { title: '라라랜드', description: '재즈 피아니스트와 배우 지망생이 꿈과 사랑을 쫓는 아름다운 음악 로맨스 영화', genres: ['로맨스', '음악', '드라마'] },
+    { title: '타이타닉', description: '침몰하는 거대한 여객선에서 피어난 운명적인 사랑과 생존을 위한 투쟁 로맨스 재난', genres: ['로맨스', '드라마', '재난'] },
+    { title: '인셉션', description: '꿈속에서 또 다른 꿈으로 들어가 생각을 조작하는 SF 액션 스릴러 시간 여행', genres: ['SF', '액션', '스릴러'] },
+    { title: '인터스텔라', description: '인류의 생존을 위해 우주로 떠난 탐험가들이 시간과 중력의 비밀을 마주하는 감동 SF', genres: ['SF', '드라마', '우주'] },
+    { title: '매트릭스', description: '가상현실 세계의 진실을 깨달은 네오가 인류를 구원하기 위해 싸우는 SF 액션 철학', genres: ['SF', '액션', '철학'] },
+    { title: '스타워즈', description: '제다이 기사와 반군 연합이 제국의 압제에 맞서 은하계를 구원하는 SF 액션 모험', genres: ['SF', '액션', '모험'] },
+    { title: '그래비티', description: '우주 정거장 사고로 고립된 비행사가 필사적으로 지구 귀환을 시도하는 생존 SF 스릴러', genres: ['SF', '스릴러', '생존'] },
+    { title: '겨울왕국', description: '얼음 마법을 가진 자매가 진정한 사랑의 힘으로 왕국을 구하는 애니메이션 가족 모험', genres: ['애니메이션', '가족', '모험'] },
+    { title: '토이스토리', description: '장난감들의 비밀스러운 모험을 통해 우정과 성장을 그린 애니메이션 가족 영화', genres: ['애니메이션', '가족', '모험'] },
+    { title: '기생충', description: '반지하 가족이 부잣집에 기생하며 벌어지는 예측 불가 블랙코미디 드라마 스릴러', genres: ['드라마', '스릴러', '코미디'] },
+    { title: '포레스트 검프', description: '순수한 마음으로 미국 현대사의 격변을 살아가는 한 남자의 감동 인생 드라마', genres: ['드라마', '감동', '인생'] },
+    { title: '쇼생크 탈출', description: '억울하게 감옥에 갇힌 남자가 희망과 우정으로 20년을 견디며 탈출을 준비하는 감동 드라마', genres: ['드라마', '감동', '범죄'] },
+    { title: '미나리', description: '미국으로 이민 온 한국 가족이 농장을 일구며 서로를 이해하고 치유해가는 감동 가족 드라마', genres: ['드라마', '가족', '감동'] },
+    { title: '반지의 제왕', description: '절대 반지를 파괴하기 위한 호빗과 동료들의 위대하고 장대한 판타지 모험 액션 대작', genres: ['판타지', '모험', '액션'] },
+    { title: '해리포터와 마법사의 돌', description: '마법 학교에 입학한 소년이 친구들과 함께 비밀과 모험을 경험하는 판타지 성장 이야기', genres: ['판타지', '모험', '가족'] },
+    { title: '부산행', description: '서울에서 부산으로 가는 기차 안에서 좀비 바이러스가 퍼지며 벌어지는 생존 액션 스릴러', genres: ['액션', '스릴러', '재난'] },
+    { title: '명량', description: '거북선과 함께 왜군의 수군에 맞서 싸우는 이순신 장군의 액션 전투 역사 드라마', genres: ['액션', '드라마', '역사'] }
+  ];
+
+  const TAG_CLASSES = ['tag-0', 'tag-1', 'tag-2', 'tag-3', 'tag-4', 'tag-5'];
+
+  function tokenize(text) {
+    return text.trim().split(/\s+/).map(t => t.toLowerCase());
+  }
+
+  const docsTokens = [];
+  const vocab = new Set();
+  movies.forEach(movie => {
+    const tokens = tokenize(movie.description);
+    docsTokens.push(tokens);
+    tokens.forEach(t => vocab.add(t));
+  });
+  const vocabList = Array.from(vocab);
+  const vocabIndex = {};
+  vocabList.forEach((term, i) => { vocabIndex[term] = i; });
+
+  const df = new Array(vocabList.length).fill(0);
+  docsTokens.forEach(tokens => {
+    const seen = new Set();
+    tokens.forEach(token => {
+      if (!seen.has(token)) { df[vocabIndex[token]] += 1; seen.add(token); }
     });
+  });
 
-    // 데이터 전처리: TF‑IDF 벡터 계산을 위한 준비
-    const vocab = new Set();
-    const docsTokens = [];
+  const N = movies.length;
+  const idf = df.map(v => Math.log(N / (v || 1)));
 
-    // 토큰화 함수: 공백으로 나누고 소문자 변환
-    function tokenize(text) {
-      return text
-        .trim()
-        .split(/\s+/)
-        .map(token => token.toLowerCase());
+  const tfidfVectors = docsTokens.map(tokens => {
+    const tf = new Array(vocabList.length).fill(0);
+    tokens.forEach(token => { tf[vocabIndex[token]] += 1; });
+    const tokenCount = tokens.length;
+    return tf.map((count, i) => {
+      const tfVal = tokenCount ? count / tokenCount : 0;
+      return tfVal * idf[i];
+    });
+  });
+
+  function cosineSimilarity(vecA, vecB) {
+    let dot = 0, normA = 0, normB = 0;
+    for (let i = 0; i < vecA.length; i++) {
+      dot += vecA[i] * vecB[i];
+      normA += vecA[i] * vecA[i];
+      normB += vecB[i] * vecB[i];
+    }
+    if (normA === 0 || normB === 0) return 0;
+    return dot / (Math.sqrt(normA) * Math.sqrt(normB));
+  }
+
+  function recommend(movieIndex, topN = 3) {
+    const baseVector = tfidfVectors[movieIndex];
+    const scores = tfidfVectors.map((vec, idx) => ({ index: idx, score: cosineSimilarity(baseVector, vec) }));
+    return scores.filter(item => item.index !== movieIndex).sort((a, b) => b.score - a.score).slice(0, topN);
+  }
+
+  function getAllSimilarities(movieIndex) {
+    const baseVector = tfidfVectors[movieIndex];
+    return tfidfVectors.map((vec, idx) => ({ index: idx, score: cosineSimilarity(baseVector, vec) }));
+  }
+
+  // ---- DOM refs ----
+  const selectEl = document.getElementById('movieSelect');
+  const recommendBtn = document.getElementById('recommendBtn');
+  const resultsDiv = document.getElementById('results');
+  const selectedInfo = document.getElementById('selectedInfo');
+
+  // code panel elements
+  const codeTitle = document.getElementById('codeTitle');
+  const codeDesc = document.getElementById('codeDesc');
+  const codeGenres = document.getElementById('codeGenres');
+  const dataTitle = document.getElementById('dataTitle');
+  const dataDesc = document.getElementById('dataDesc');
+  const dataGenre = document.getElementById('dataGenre');
+  const codeTokenDisplay = document.getElementById('codeTokenDisplay');
+  const dataTokens = document.getElementById('dataTokens');
+  const dataVocabSize = document.getElementById('dataVocabSize');
+  const dataTfidf = document.getElementById('dataTfidf');
+  const dataSimilarity = document.getElementById('dataSimilarity');
+  const dataRecommend = document.getElementById('dataRecommend');
+
+  // Populate select
+  movies.forEach((movie, idx) => {
+    const opt = document.createElement('option');
+    opt.value = idx;
+    opt.textContent = `${movie.title} (${movie.genres.join(', ')})`;
+    selectEl.appendChild(opt);
+  });
+  dataVocabSize.textContent = vocabList.length;
+
+  // Step toggles
+  document.querySelectorAll('.step-header').forEach(header => {
+    header.addEventListener('click', () => {
+      const body = header.nextElementSibling;
+      const arrow = header.querySelector('.step-arrow');
+      body.classList.toggle('open');
+      arrow.classList.toggle('open');
+    });
+  });
+
+  // Code section toggle
+  document.getElementById('codeToggle').addEventListener('click', () => {
+    const body = document.getElementById('codeBody');
+    const icon = document.getElementById('codeToggleIcon');
+    body.classList.toggle('open');
+    icon.classList.toggle('open');
+  });
+
+  function updateSteps() {
+    const selectedIdx = parseInt(selectEl.value, 10);
+    const movie = movies[selectedIdx];
+    const tokens = docsTokens[selectedIdx];
+
+    codeTitle.textContent = movie.title;
+    codeDesc.textContent = movie.description;
+    codeGenres.textContent = movie.genres.map(g => `'${g}'`).join(', ');
+    dataTitle.textContent = movie.title;
+    dataDesc.textContent = movie.description;
+    const genreTagStr = movie.genres.map((g, i) =>
+      `<span class="tag ${TAG_CLASSES[i % TAG_CLASSES.length]}">${g}</span>`
+    ).join(' ');
+    dataGenre.innerHTML = genreTagStr;
+
+    const tokenStr = `[${tokens.map(t => `'${t}'`).join(', ')}]`;
+    codeTokenDisplay.textContent = `// → ${tokenStr}`;
+    dataTokens.textContent = tokenStr;
+
+    const vec = tfidfVectors[selectedIdx];
+    const nonZero = vec.map((v, i) => ({ word: vocabList[i], val: v })).filter(v => v.val > 0);
+    const vecStr = nonZero.map(v => `${v.word}=${v.val.toFixed(4)}`).join(', ') || '(모든 값이 0)';
+    dataTfidf.textContent = `{ ${vecStr} }`;
+
+    if (dataSimilarity.dataset.updated === 'true') {
+      recalcSimilarity(selectedIdx);
     }
 
-    // 각 영화 설명을 토큰화하고 어휘집을 구축합니다.
-    movies.forEach(movie => {
-      const tokens = tokenize(movie.description);
-      docsTokens.push(tokens);
-      tokens.forEach(tok => vocab.add(tok));
-    });
+    const lastResult = resultsDiv.dataset.lastIdx;
+    if (lastResult && parseInt(lastResult) === selectedIdx) {
+      doRecommend(selectedIdx);
+    }
+    selectedInfo.innerHTML = `선택: <code>movies[${selectedIdx}]</code> — <strong>${movie.title}</strong> (${movie.genres.join(', ')})`;
+  }
 
-    const vocabList = Array.from(vocab);
-    const vocabIndex = {};
-    vocabList.forEach((term, idx) => {
-      vocabIndex[term] = idx;
+  function recalcSimilarity(selectedIdx) {
+    const sims = getAllSimilarities(selectedIdx);
+    const lines = sims.map((s, i) => {
+      if (i === selectedIdx) return `<strong style="color:#999;">${movies[i].title}</strong>: <span style="color:#999;">1.0000 (자기 자신)</span>`;
+      const color = s.score > 0 ? '#667eea' : '#999';
+      return `<strong>${movies[i].title}</strong>: <span style="color:${color};">${s.score.toFixed(4)}</span>`;
     });
+    dataSimilarity.innerHTML = lines.join('<br>');
+    dataSimilarity.dataset.updated = 'true';
+  }
 
-    // 문서 빈도 (DF) 계산
-    const df = new Array(vocabList.length).fill(0);
-    docsTokens.forEach(tokens => {
-      const seen = new Set();
-      tokens.forEach(token => {
-        if (!seen.has(token)) {
-          const idx = vocabIndex[token];
-          df[idx] += 1;
-          seen.add(token);
-        }
+  function doRecommend(selectedIdx) {
+    const recommended = recommend(selectedIdx, 3);
+
+    resultsDiv.dataset.lastIdx = selectedIdx;
+
+    const hasMeaningful = recommended.some(r => r.score > 0);
+
+    let cardsHtml = '';
+    if (!hasMeaningful && recommended.every(r => r.score === 0)) {
+      cardsHtml = `
+        <div style="grid-column: 1 / -1; text-align: center; padding: 20px; color: #999;">
+          <p style="font-size: 1.1rem; margin-bottom: 8px;">😅 충분히 유사한 영화를 찾지 못했습니다</p>
+          <p style="font-size: 0.85rem;">모든 유사도가 <strong>0.00</strong>입니다. 다른 영화를 선택해보세요.</p>
+        </div>
+        <div class="result-card" style="border-color: #e0e0e0; opacity: 0.6;">
+          <div class="rank">-</div>
+          <h3>유사한 영화 없음</h3>
+          <div class="score">유사도: 0.00 <span class="zero-msg">(일치하는 단어 없음)</span></div>
+          <div class="desc">선택한 영화와 공유하는 단어가 없는 영화는 유사도가 0으로 계산됩니다.</div>
+        </div>
+      `;
+    } else {
+      recommended.forEach((item, rank) => {
+        const m = movies[item.index];
+        const scoreDisplay = item.score > 0
+          ? `유사도: ${(item.score * 100).toFixed(1)}%`
+          : `유사도: 0.00 <span class="zero-msg">(일치하는 단어 없음)</span>`;
+        const tagsHtml = m.genres.map((g, i) =>
+          `<span class="tag ${TAG_CLASSES[i % TAG_CLASSES.length]}">${g}</span>`
+        ).join(' ');
+        cardsHtml += `
+          <div class="result-card">
+            <div class="rank">${rank + 1}</div>
+            <h3>${m.title}</h3>
+            <div class="desc">${m.description}</div>
+            <div class="score">${scoreDisplay}</div>
+            <div class="tags">${tagsHtml}</div>
+          </div>`;
       });
-    });
-
-    // IDF 계산: log(N / DF)
-    const N = movies.length;
-    const idf = df.map(dfVal => Math.log(N / (dfVal || 1)));
-
-    // 각 문서의 TF‑IDF 벡터 생성
-    const tfidfVectors = docsTokens.map(tokens => {
-      const tf = new Array(vocabList.length).fill(0);
-      tokens.forEach(token => {
-        const idx = vocabIndex[token];
-        tf[idx] += 1;
-      });
-      // TF ‑ term frequency (정규화)
-      const tokenCount = tokens.length;
-      const tfidf = tf.map((count, idx) => {
-        const tfVal = tokenCount ? count / tokenCount : 0;
-        return tfVal * idf[idx];
-      });
-      return tfidf;
-    });
-
-    // 코사인 유사도 계산 함수
-    function cosineSimilarity(vecA, vecB) {
-      let dot = 0;
-      let normA = 0;
-      let normB = 0;
-      for (let i = 0; i < vecA.length; i++) {
-        dot += vecA[i] * vecB[i];
-        normA += vecA[i] * vecA[i];
-        normB += vecB[i] * vecB[i];
-      }
-      if (normA === 0 || normB === 0) return 0;
-      return dot / (Math.sqrt(normA) * Math.sqrt(normB));
     }
 
-    // 추천 함수
-    function recommend(movieIndex, topN = 3) {
-      const baseVector = tfidfVectors[movieIndex];
-      const scores = tfidfVectors.map((vec, idx) => {
-        return { index: idx, score: cosineSimilarity(baseVector, vec) };
-      });
-      // 자기 자신 제외 후 점수 내림차순 정렬
-      const results = scores
-        .filter(item => item.index !== movieIndex)
-        .sort((a, b) => b.score - a.score)
-        .slice(0, topN);
-      return results;
-    }
+    resultsDiv.innerHTML = `
+      <div class="result-header">
+        🎯 <strong>${movies[selectedIdx].title}</strong>와 비슷한 영화 <span>TOP ${recommended.length}</span>
+      </div>
+      <div class="result-cards">${cardsHtml}</div>`;
 
-    // 클릭 이벤트 처리
-    document.getElementById('recommendButton').addEventListener('click', () => {
-      const selectedIndex = parseInt(selectEl.value, 10);
-      const recommended = recommend(selectedIndex, 3);
-      const resultDiv = document.getElementById('result');
-      let html = `<p><strong>'${movies[selectedIndex].title}'</strong>를 좋아한다면 추천하는 영화:</p><ul>`;
-      recommended.forEach(item => {
-        const movieTitle = movies[item.index].title;
-        const score = item.score.toFixed(2);
-        html += `<li>${movieTitle} (유사도: ${score})</li>`;
-      });
-      html += '</ul>';
-      resultDiv.innerHTML = html;
+    const sims = getAllSimilarities(selectedIdx);
+    const lines = sims.map((s, i) => {
+      if (i === selectedIdx) return `<strong style="color:#999;">${movies[i].title}</strong>: <span style="color:#999;">1.0000 (자기 자신)</span>`;
+      const color = s.score > 0 ? '#667eea' : '#999';
+      return `<strong>${movies[i].title}</strong>: <span style="color:${color};">${s.score.toFixed(4)}</span>`;
     });
-  </script>
+    dataSimilarity.innerHTML = lines.join('<br>');
+    dataSimilarity.dataset.updated = 'true';
+
+    const recStr = recommended.map(r =>
+      `${movies[r.index].title} (${(r.score * 100).toFixed(1)}%)`
+    ).join('<br>');
+    dataRecommend.innerHTML = recStr || '추천 결과 없음';
+
+    const indicators = document.querySelectorAll('.step-indicator');
+    indicators.forEach((ind, i) => {
+      ind.classList.remove('active', 'done');
+      if (i === 0) ind.classList.add('done');
+      if (i === 1) ind.classList.add('done');
+      if (i === 2) ind.classList.add('done');
+      if (i === 3) ind.classList.add('done');
+      if (i === 4) ind.classList.add('active');
+    });
+
+    document.querySelectorAll('.step-body').forEach(body => body.classList.add('open'));
+    document.querySelectorAll('.step-arrow').forEach(arr => arr.classList.add('open'));
+  }
+
+  selectEl.addEventListener('change', () => {
+    updateSteps();
+    dataRecommend.textContent = '추천 받기 버튼을 눌러주세요';
+  });
+
+  recommendBtn.addEventListener('click', () => {
+    const selectedIdx = parseInt(selectEl.value, 10);
+    doRecommend(selectedIdx);
+  });
+
+  updateSteps();
+</script>
 </body>
 </html>

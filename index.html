@@ -79,9 +79,56 @@
       .section-title { padding: 12px 16px; font-size: 0.92rem; }
       .section-body { padding: 10px 16px 16px; }
     }
+
+    /* 상단 sticky 카테고리 네비게이션 */
+    .cat-nav {
+      position: sticky; top: 0; z-index: 100;
+      background: #fff; border-bottom: 1px solid #ececf5;
+      box-shadow: 0 1px 8px rgba(0,0,0,0.05);
+    }
+    .cat-nav-inner {
+      max-width: 960px; margin: 0 auto; padding: 0 20px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .cat-nav-scroll {
+      display: flex; gap: 6px; overflow-x: auto; flex: 1;
+      padding: 10px 0; scrollbar-width: none;
+    }
+    .cat-nav-scroll::-webkit-scrollbar { display: none; }
+    .cat-chip {
+      white-space: nowrap; font-size: 0.82rem; font-weight: 600;
+      color: #555; background: #f5f5fa; border-radius: 16px;
+      padding: 6px 14px; cursor: pointer; text-decoration: none;
+      border: 1px solid transparent; transition: background 0.15s, color 0.15s;
+    }
+    .cat-chip:hover { background: #eee9ff; color: #667eea; }
+    .cat-chip.active { background: #667eea; color: #fff; }
+    .expand-all-btn {
+      flex-shrink: 0; font-size: 0.78rem; font-weight: 600;
+      color: #667eea; background: #fff; border: 1px solid #d8d4f5;
+      border-radius: 14px; padding: 5px 12px; cursor: pointer;
+    }
+    .expand-all-btn:hover { background: #f5f3ff; }
+    @media (max-width: 640px) {
+      .cat-nav-inner { padding: 0 12px; }
+      .expand-all-btn { font-size: 0.72rem; padding: 5px 10px; }
+    }
   </style>
 </head>
 <body>
+<nav class="cat-nav">
+  <div class="cat-nav-inner">
+    <div class="cat-nav-scroll">
+      <a class="cat-chip" data-group="A" data-target="sec1">기초 다지기</a>
+      <a class="cat-chip" data-group="B" data-target="sec4">지도학습</a>
+      <a class="cat-chip" data-group="C" data-target="sec5">데이터·비지도학습</a>
+      <a class="cat-chip" data-group="D" data-target="sec7">평가·파이프라인</a>
+      <a class="cat-chip" data-group="E" data-target="sec9">실전 프로젝트</a>
+      <a class="cat-chip" data-group="F" data-target="sec14">캐글 실습</a>
+    </div>
+    <button class="expand-all-btn" id="expandAllBtn" type="button">전체 펼치기</button>
+  </div>
+</nav>
 <div class="container">
   <header>
     <h1>인공지능 머신러닝 기본</h1>
@@ -89,7 +136,7 @@
     <div class="star">⭐ 이 저장소가 도움이 되었다면 <a href="https://github.com/LDJWJ/ML_Basic_Class" target="_blank">GitHub에서 Star</a>를 눌러주세요!</div>
   </header>
 
-  <div class="section">
+  <div class="section" id="sec1" data-group="A">
     <div class="section-title">
       <span>머신러닝 기본 및 실습 — PDF 자료</span>
       <span class="toggle open">▼</span>
@@ -114,7 +161,7 @@
     </div>
   </div>
 
-  <div class="section">
+  <div class="section" id="sec2" data-group="A">
     <div class="section-title">
       <span>기본 라이브러리 실습 — IRIS 데이터셋</span>
       <span class="toggle open">▼</span>
@@ -129,7 +176,7 @@
     </div>
   </div>
 
-  <div class="section">
+  <div class="section" id="sec3" data-group="A">
     <div class="section-title">
       <span>기본 라이브러리 실습 — numpy, konlpy</span>
       <span class="toggle open">▼</span>
@@ -143,7 +190,7 @@
     </div>
   </div>
 
-  <div class="section">
+  <div class="section" id="sec4" data-group="B">
     <div class="section-title">
       <span>지도학습</span>
       <span class="toggle open">▼</span>
@@ -186,7 +233,7 @@
     </div>
   </div>
 
-  <div class="section">
+  <div class="section" id="sec5" data-group="C">
     <div class="section-title">
       <span>데이터 전처리</span>
       <span class="toggle open">▼</span>
@@ -211,7 +258,7 @@
     </div>
   </div>
 
-  <div class="section">
+  <div class="section" id="sec6" data-group="C">
     <div class="section-title">
       <span>비지도학습</span>
       <span class="toggle open">▼</span>
@@ -231,7 +278,7 @@
     </div>
   </div>
 
-  <div class="section">
+  <div class="section" id="sec7" data-group="D">
     <div class="section-title">
       <span>평가</span>
       <span class="toggle open">▼</span>
@@ -251,7 +298,7 @@
     </div>
   </div>
 
-  <div class="section">
+  <div class="section" id="sec8" data-group="D">
     <div class="section-title">
       <span>Pipeline 실습</span>
       <span class="toggle open">▼</span>
@@ -263,7 +310,7 @@
     </div>
   </div>
 
-  <div class="section">
+  <div class="section" id="sec9" data-group="E">
     <div class="section-title">
       <span>위스콘신 암 데이터 실습</span>
       <span class="toggle open">▼</span>
@@ -280,7 +327,7 @@
     </div>
   </div>
 
-  <div class="section">
+  <div class="section" id="sec10" data-group="E">
     <div class="section-title">
       <span>추천 시스템</span>
       <span class="toggle open">▼</span>
@@ -297,7 +344,7 @@
     </div>
   </div>
 
-  <div class="section">
+  <div class="section" id="sec11" data-group="E">
     <div class="section-title">
       <span>AutoML</span>
       <span class="toggle open">▼</span>
@@ -310,7 +357,7 @@
     </div>
   </div>
 
-  <div class="section">
+  <div class="section" id="sec12" data-group="E">
     <div class="section-title">
       <span>Flask 웹 서비스 구축</span>
       <span class="toggle open">▼</span>
@@ -324,7 +371,7 @@
     </div>
   </div>
 
-  <div class="section">
+  <div class="section" id="sec13" data-group="E">
     <div class="section-title">
       <span>기타 실습</span>
       <span class="toggle open">▼</span>
@@ -339,7 +386,7 @@
     </div>
   </div>
 
-  <div class="section">
+  <div class="section" id="sec14" data-group="F">
     <div class="section-title">
       <span>캐글 실습</span>
       <span class="toggle open">▼</span>
@@ -402,6 +449,13 @@
 </div>
 
 <script>
+  const sectionBodies = document.querySelectorAll('.section-body');
+  const toggles = document.querySelectorAll('.toggle');
+
+  // 기본 상태: 전체 접힘 (첫 화면이 100여개 링크로 압도되지 않도록)
+  sectionBodies.forEach(body => body.classList.add('closed'));
+  toggles.forEach(t => t.classList.remove('open'));
+
   document.querySelectorAll('.section-title').forEach(title => {
     title.addEventListener('click', () => {
       const body = title.nextElementSibling;
@@ -410,6 +464,67 @@
       toggle.classList.toggle('open');
     });
   });
+
+  // 카테고리 칩 클릭 → 해당 그룹 섹션 펼치고 스크롤
+  const catNav = document.querySelector('.cat-nav');
+  const chips = document.querySelectorAll('.cat-chip');
+
+  function openGroup(group) {
+    document.querySelectorAll('.section[data-group="' + group + '"]').forEach(sec => {
+      sec.querySelector('.section-body').classList.remove('closed');
+      sec.querySelector('.toggle').classList.add('open');
+    });
+  }
+
+  chips.forEach(chip => {
+    chip.addEventListener('click', (e) => {
+      e.preventDefault();
+      openGroup(chip.dataset.group);
+      const target = document.getElementById(chip.dataset.target);
+      if (target) {
+        const navHeight = catNav.offsetHeight;
+        const top = target.getBoundingClientRect().top + window.scrollY - navHeight - 12;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
+    });
+  });
+
+  // 전체 펼치기 / 접기 토글
+  const expandAllBtn = document.getElementById('expandAllBtn');
+  let allExpanded = false;
+  expandAllBtn.addEventListener('click', () => {
+    allExpanded = !allExpanded;
+    sectionBodies.forEach(body => body.classList.toggle('closed', !allExpanded));
+    toggles.forEach(t => t.classList.toggle('open', allExpanded));
+    expandAllBtn.textContent = allExpanded ? '전체 접기' : '전체 펼치기';
+  });
+
+  // 스크롤 연동 — 현재 보고 있는 섹션의 카테고리 칩 강조
+  // (IntersectionObserver는 큰 점프 스크롤을 놓칠 수 있어, 매 스크롤마다
+  //  기준선을 통과하는 섹션을 직접 계산하는 방식으로 처리)
+  const allSections = Array.from(document.querySelectorAll('.section[data-group]'));
+  const chipByGroup = {};
+  chips.forEach(chip => { chipByGroup[chip.dataset.group] = chip; });
+
+  function updateActiveChip() {
+    const refLine = catNav.offsetHeight + 16;
+    let current = null;
+    for (const sec of allSections) {
+      const rect = sec.getBoundingClientRect();
+      if (rect.top <= refLine) current = sec; // 기준선보다 위에서 시작한 마지막 섹션
+    }
+    if (!current) current = allSections[0];
+    chips.forEach(c => c.classList.toggle('active', c.dataset.group === current.dataset.group));
+  }
+
+  let scrollScheduled = false;
+  window.addEventListener('scroll', () => {
+    if (scrollScheduled) return;
+    scrollScheduled = true;
+    requestAnimationFrame(() => { updateActiveChip(); scrollScheduled = false; });
+  }, { passive: true });
+
+  updateActiveChip();
 </script>
 </body>
 </html>

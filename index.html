@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI 머신러닝 기본</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans KR', sans-serif;
+      background: #f5f7fb; color: #1a1a2e; line-height: 1.7;
+    }
+    .container { max-width: 960px; margin: 0 auto; padding: 20px; }
+
+    header {
+      text-align: center; padding: 40px 20px 32px;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      border-radius: 16px; color: #fff; margin-bottom: 28px;
+    }
+    header h1 { font-size: 2rem; letter-spacing: -0.5px; }
+    header p { opacity: 0.9; font-size: 1rem; margin-top: 8px; }
+    header .star {
+      display: inline-block; margin-top: 12px; padding: 8px 20px;
+      background: rgba(255,255,255,0.15); border-radius: 20px;
+      font-size: 0.85rem; backdrop-filter: blur(4px);
+    }
+    header .star a { color: #fff; text-decoration: none; font-weight: 600; }
+
+    .section {
+      background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      margin-bottom: 20px; overflow: hidden;
+    }
+    .section-title {
+      padding: 14px 24px; font-weight: 700; font-size: 1rem;
+      background: linear-gradient(135deg, #fafbff, #f5f3ff);
+      border-bottom: 1px solid #f0f0f5; cursor: pointer;
+      display: flex; justify-content: space-between; align-items: center;
+      user-select: none;
+    }
+    .section-title:hover { background: #f0eeff; }
+    .section-title .toggle { font-size: 0.85rem; color: #667eea; transition: transform 0.2s; }
+    .section-title .toggle.open { transform: rotate(180deg); }
+    .section-body { padding: 12px 24px 20px; }
+    .section-body.closed { display: none; }
+
+    .link-list { list-style: none; }
+    .link-list li {
+      padding: 6px 0; border-bottom: 1px solid #f8f8fc; font-size: 0.9rem;
+    }
+    .link-list li:last-child { border-bottom: none; }
+    .link-list a {
+      color: #667eea; text-decoration: none; font-weight: 500;
+    }
+    .link-list a:hover { text-decoration: underline; }
+    .link-list .meta { color: #999; font-size: 0.8rem; margin-left: 6px; font-weight: 400; }
+    .link-list .tag {
+      display: inline-block; font-size: 0.7rem; padding: 1px 8px; border-radius: 10px;
+      margin-left: 6px; font-weight: 500;
+    }
+    .tag-html { background: #e3f2fd; color: #1565c0; }
+    .tag-pdf { background: #fce4ec; color: #c62828; }
+    .tag-ext { background: #e8f5e9; color: #2e7d32; }
+    .tag-hot { background: #fff3e0; color: #e65100; }
+
+    .sub-title {
+      font-weight: 600; font-size: 0.9rem; color: #555; margin: 12px 0 6px;
+    }
+    .indent { padding-left: 20px; }
+
+    footer {
+      text-align: center; font-size: 0.8rem; color: #999; padding: 24px 0;
+    }
+    footer a { color: #667eea; text-decoration: none; }
+
+    @media (max-width: 640px) {
+      .container { padding: 12px; }
+      header h1 { font-size: 1.4rem; }
+      header { padding: 28px 16px 24px; }
+      .section-title { padding: 12px 16px; font-size: 0.92rem; }
+      .section-body { padding: 10px 16px 16px; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>인공지능 머신러닝 기본</h1>
+    <p>파이썬 라이브러리를 활용한 머신러닝 학습 자료</p>
+    <div class="star">⭐ 이 저장소가 도움이 되었다면 <a href="https://github.com/LDJWJ/ML_Basic_Class" target="_blank">GitHub에서 Star</a>를 눌러주세요!</div>
+  </header>
+
+  <div class="section">
+    <div class="section-title">
+      <span>머신러닝 기본 및 실습 — PDF 자료</span>
+      <span class="toggle open">▼</span>
+    </div>
+    <div class="section-body">
+      <ul class="link-list">
+        <li><a href="part03_ml/part03_ch01_01_ml/ch01_01_ML입문_Detail_v14_202507.pdf">머신러닝 용어 이해, 구분, 데이터 분석 절차</a> <span class="tag tag-pdf">PDF</span></li>
+        <li><a href="part03_ml/part03_ch01_01_ml/ch01_01_ML입문_v21_202510.pdf">머신러닝 기본 이해 (25년도 버전)</a> <span class="tag tag-pdf">PDF</span></li>
+        <li><a href="part03_ml/part03_ch01_01_ml/ch01_02_ML기본_v12_202205.pdf">머신러닝 Book - 머신러닝 시작</a> <span class="tag tag-pdf">PDF</span></li>
+        <li><a href="part03_ml/ch02_01_ML_KNN_회귀_V118_606.pdf">머신러닝 알고리즘 knn, 회귀 — 기본</a> <span class="tag tag-pdf">PDF</span></li>
+        <li><a href="part03_ml/part03_ch02_01_knn_linear_ppt/ch02_AI_KNN_회귀_HighSc_V10.pdf">머신러닝 알고리즘 knn, 회귀 — 초보자용</a> <span class="tag tag-pdf">PDF</span></li>
+        <li><a href="part03_ml/part03_ch02_01_knn_linear_ppt/ch02_logistic_v02_202205.pdf">머신러닝 알고리즘 로지스틱 회귀</a> <span class="tag tag-pdf">PDF</span></li>
+        <li><a href="part03_ml/part03_ch02_02_decisiontree/ch02_03_01_decisiontree_v11_2205.pdf">머신러닝 알고리즘 의사결정트리</a> <span class="tag tag-pdf">PDF</span></li>
+        <li><a href="part03_ml/part03_ch02_03_ensemble/ch02_Ensemble01_202205_v11.pdf">머신러닝 알고리즘 앙상블 01</a> <span class="tag tag-pdf">PDF</span></li>
+        <li><a href="part03_ml/part03_ch02_03_ensemble/ch02_Ensemble02_202205_lightgbm_v11.pdf">머신러닝 알고리즘 앙상블 02 (LightGBM)</a> <span class="tag tag-pdf">PDF</span></li>
+        <li><a href="part03_ml/part03_ch03_01_datapre/ch03_04_DataProcessing_202012_v11.pdf">데이터 전처리 및 피처엔지니어링</a> <span class="tag tag-pdf">PDF</span></li>
+        <li><a href="part03_ml/part03_ch05_validation/ch05_평가지표_v04_202108.pdf">평가지표</a> <span class="tag tag-pdf">PDF</span></li>
+        <li><a href="part03_ml/part03_ch03_02_pca/ch03_비지도학습01_Basic_v01_202208.pdf">비지도학습 01 — 기본</a> <span class="tag tag-pdf">PDF</span></li>
+        <li><a href="part03_ml/part03_ch03_02_pca/ch03_비지도학습02_pca_v01_202110.pdf">비지도학습 02 — PCA</a> <span class="tag tag-pdf">PDF</span></li>
+        <li><a href="part03_ml/part03_ch06_upgrade/ch06_upgrade_v01_202108.pdf">머신러닝 더 알아보기</a> <span class="tag tag-pdf">PDF</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">
+      <span>기본 라이브러리 실습 — IRIS 데이터셋</span>
+      <span class="toggle open">▼</span>
+    </div>
+    <div class="section-body">
+      <ul class="link-list">
+        <li><a href="part03_ml/1_2_LIB_Pandas_Basic01_IRIS_V11.html">Pandas 01</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/1_2_LIB_Pandas_Basic01_IRIS_V11.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+        <li><a href="part03_ml/1_2_LIB_Pandas_Basic02_IRIS_V11.html">Pandas 02 — unique(), value_counts() 등</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/1_2_LIB_Pandas_Basic02_IRIS_V11.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+        <li><a href="part03_ml/1_2_LIB_Matplotlib_Basic01_IRIS_V11.html">Matplotlib</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/1_2_LIB_Matplotlib_Basic01_IRIS_V11.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+        <li><a href="part03_ml/1_2_LIB_sklearn_Basic01_IRIS_V02.html">Scikit-learn</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/1_2_LIB_sklearn_Basic01_IRIS_V02.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">
+      <span>기본 라이브러리 실습 — numpy, konlpy</span>
+      <span class="toggle open">▼</span>
+    </div>
+    <div class="section-body">
+      <ul class="link-list">
+        <li><a href="part03_ml/1_1_numpy라이브러리_V11.html">numpy</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/1_1_numpy라이브러리_V11.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+        <li><a href="part03_ml/1_2_LIB_KONLPY_V10.html">konlpy (with colab)</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/1_2_LIB_KONLPY_V10.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+        <li><a href="part03_ml/1_2_LIB_KONLPY_Youtube03_V10.html">유튜브 댓글 분석 및 시각화 (워드클라우드)</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/1_2_LIB_KONLPY_Youtube03_V10.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">
+      <span>지도학습</span>
+      <span class="toggle open">▼</span>
+    </div>
+    <div class="section-body">
+      <ul class="link-list">
+        <li><a href="part03_ml/ch01_01_ML_start_v14_2606.html">첫번째 머신러닝 모델 만들어보기</a> <span class="tag tag-html">HTML</span></li>
+      </ul>
+      <div class="sub-title">머신러닝 알고리즘</div>
+      <ul class="link-list indent">
+        <li><a href="part03_ml/ch02_01_01A_knn_code_v12_504.html">knn</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/ch02_01_01A_knn_code_v12_504.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+        <li><a href="part03_ml/ch02_01_01B_knn_code_pratice_2205.html">knn practice</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/ch02_01_01B_knn_code_pratice_2205.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+      </ul>
+      <ul class="link-list">
+        <li><a href="part03_ml/ch02_01_02A_linear_code_v12.html">머신러닝 — 선형회귀</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/ch02_01_02A_linear_code_v12.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+        <li><a href="part03_ml/ch02_01_02B_diabete_evaluation_v13_2601.html">머신러닝 — 회귀 (평가지표 상세)</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/ch02_01_02B_diabete_evaluation_v13_2601.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+        <li><a href="part03_ml/ch02_01_03_ridge_lasso.html">머신러닝 알고리즘 회귀 (Ridge, Lasso)</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/ch02_01_03_ridge_lasso.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+      </ul>
+      <div class="sub-title">분류용 선형모델 (Logistic, SVM)</div>
+      <ul class="link-list indent">
+        <li><a href="part03_ml/ch02_01_04_binary_classification.html">이진분류</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/ch02_01_04_binary_classification.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+        <li><a href="part03_ml/ch02_01_05_multiclass_classification_v10.html">멀티클래스 분류</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/ch02_01_05_multiclass_classification_v10.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+      </ul>
+      <ul class="link-list">
+        <li><a href="part03_ml/ch02_03_01_decisionTree_colab.html">의사결정트리 01</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/ch02_03_01_decisionTree_colab.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+        <li><a href="part03_ml/ch02_03_02_decisionTree_diabetes_colab.html">의사결정트리 02</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/ch02_03_02_decisionTree_diabetes_colab.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+        <li><a href="part03_ml/ch02_03_02_decisiontree_local.html">의사결정트리 03</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/ch02_03_02_decisiontree_local.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+        <li><a href="part03_ml/ch02_03_02_dtreeviz_modelVis_v10_2209.html">다양한 데이터셋 — 의사결정트리 시각화</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/ch02_03_02_dtreeviz_modelVis_v10_2209.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+        <li><a href="part03_ml/part03_pro_titanic/ch02_03_02B_titanic_modelmain_analysis.html">타이타닉 데이터셋 모델 구축</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/part03_pro_titanic/ch02_03_02B_titanic_modelmain_analysis.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+      </ul>
+      <div class="sub-title">앙상블</div>
+      <ul class="link-list indent">
+        <li><a href="part03_ml/ch02_03_03_RandomForest_01_Tips_01.html">랜덤포레스트 (1) - tips 01</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/ch02_03_03_RandomForest_01_Tips_01.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+        <li><a href="part03_ml/ch02_03_03_RandomForest_01_Tips_02.html">랜덤포레스트 (1) - tips 02</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/ch02_03_03_RandomForest_01_Tips_02.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+        <li><a href="part03_ml/ch02_03_03_RandomForest_02_cancer.html">랜덤포레스트 (2) - cancer</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/ch02_03_03_RandomForest_02_cancer.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+        <li><a href="part03_ml/ch02_03_03_RandomForest_03_house_2205.html">랜덤포레스트 (3) - house</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/ch02_03_03_RandomForest_03_house_2205.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+        <li><a href="part03_ml/ch02_03_04_dtreeviz_modelVis.html">의사결정트리, 랜덤포레스트 시각화</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/ch02_03_04_dtreeviz_modelVis.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+        <li><a href="part03_ml/ch02_03_05_gradient_boosting_class_v11.html">그래디언트부스팅결정트리</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/ch02_03_05_gradient_boosting_class_v11.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">
+      <span>데이터 전처리</span>
+      <span class="toggle open">▼</span>
+    </div>
+    <div class="section-body">
+      <ul class="link-list">
+        <li><a href="part03_ml/ch03_01_01_데이터전처리_2208.html">머신러닝 - 데이터 전처리</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/ch03_01_01_데이터전처리_2208.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+      </ul>
+      <div class="sub-title">원핫인코딩</div>
+      <ul class="link-list indent">
+        <li><a href="part03_ml/ch04_01_01_FE_OneHotEncoding_01.html">이론 및 실습 (1)</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/ch04_01_01_FE_OneHotEncoding_01.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+        <li><a href="part03_ml/ch04_01_02_FE_OneHot_02_2210.html">실습 (2) - 캐글 코리아 4차 대회</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/ch04_01_02_FE_OneHot_02_2210.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+        <li><a href="part03_ml/ch04_01_03_FE_OneHotEncoding_03.html">이론 및 실습 (3)</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/ch04_01_03_FE_OneHotEncoding_03.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+      </ul>
+      <div class="sub-title">구간분할, 일변량 비선형 변환</div>
+      <ul class="link-list indent">
+        <li><a href="part03_ml/ch04_05_01_FE_binned_202010.html">구간분할</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/ch04_05_01_FE_binned_202010.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+        <li><a href="part03_ml/ch04_06_01_FE_log_202010.html">비선형 변환 (log 등)</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/ch04_06_01_FE_log_202010.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+        <li><a href="part03_ml/ch04_07_01_FeatureEngineering_특성자동선택_2210.html">특성자동 선택 (1)</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/ch04_07_01_FeatureEngineering_특성자동선택_2210.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+        <li><a href="part03_ml/ch04_07_02_FeatureEngineering_특성자동선택_회귀_2208.html">특성자동 선택 (2)</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/ch04_07_02_FeatureEngineering_특성자동선택_회귀_2208.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">
+      <span>비지도학습</span>
+      <span class="toggle open">▼</span>
+    </div>
+    <div class="section-body">
+      <ul class="link-list">
+        <li><a href="part03_ml/ch03_04_01_차원축소(1)_PCA_2208.html">PCA 차원 축소</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/ch03_04_01_차원축소(1)_PCA_2208.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+        <li><a href="part03_ml/ch03_04_02_차원축소(2)_PCA_얼굴예제.html">PCA 얼굴 예제 실습</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/ch03_04_02_차원축소(2)_PCA_얼굴예제.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+        <li><a href="part03_ml/ch03_04_03_차원축소(3)_tsne_2208.html">PCA 차원 축소 — t-SNE</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/ch03_04_03_차원축소(3)_tsne_2208.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+        <li><a href="part03_ml/ch03_02_01_군집(clustering)_Kmeans_2208.html">군집 (Clustering) K-means</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/ch03_02_01_군집(clustering)_Kmeans_2208.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+        <li><a href="part03_ml/ch03_05_01_병합군집.html">병합 군집</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/ch03_05_01_병합군집_Clustering.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+        <li><a href="part03_ml/ch03_05_02_DBSCAN_2207.html">DBSCAN</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/ch03_05_02_DBSCAN_2207.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+        <li><a href="part03_ml/ch03_05_03_unsup_face_analysis_colab_2207.html">얼굴 데이터셋 분석</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/ch03_05_03_unsup_face_analysis_colab_2207.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+        <li><a href="part03_ml/ch03_05_04_군집알고리즘평가.html">군집 알고리즘 평가</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/ch03_05_04_군집알고리즘평가.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+        <li><a href="part03_ml/ch03_04_01_pca_titanic_2210.html">[실습] PCA 차원 축소 — titanic</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/ch03_04_01_pca_titanic_2210.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">
+      <span>평가</span>
+      <span class="toggle open">▼</span>
+    </div>
+    <div class="section-body">
+      <ul class="link-list">
+        <li><a href="part03_ml/ch05_01_01_CrossValidation_v01_2208.html">교차 검증 1</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/ch05_01_01_CrossValidation_v01_2208.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+        <li><a href="part03_ml/ch05_01_02_CrossValidation_v02_2208.html">교차 검증 2</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/ch05_01_02_CrossValidation_v02_2208.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+        <li><a href="part03_ml/ch05_02_03_GridSearch_tree_SVC_2208.html">Grid Search (1)</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/ch05_02_03_GridSearch_tree_SVC_2208.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+        <li><a href="part03_ml/ch05_02_02_성능개선_GridSearch2.html">Grid Search (2)</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/ch05_02_02_성능개선_GridSearch2.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+        <li><a href="part03_ml/ch05_03_01_model_validation(1)_2207.html">모델 평가 (1)</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/ch05_03_01_model_validation(1)_2207.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+        <li><a href="part03_ml/ch05_03_02_validation(2)_threshold_2207.html">모델 평가 (2) — threshold</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/ch05_03_02_validation(2)_threshold_2207.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+        <li><a href="part03_ml/ch05_03_03_validation(3)-ROCAUC_2207.html">모델 평가 (3) — ROC AUC</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/ch05_03_03_validation(3)-ROCAUC_2207.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+        <li><a href="part03_ml/ch05_03_04_validation(4)_2207.html">모델 평가 (4)</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/ch05_03_04_validation(4)_2207.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+        <li><a href="part03_ml/ch05_03_05_validation_titanic_2211.html">모델 평가 실습 — 타이타닉</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/ch05_03_05_validation_titanic_2211.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">
+      <span>Pipeline 실습</span>
+      <span class="toggle open">▼</span>
+    </div>
+    <div class="section-body">
+      <ul class="link-list">
+        <li><a href="part03_ml/ch04_08_01_Pipeline_Code_2210.html">Spaceship Titanic — Pipeline 실습</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/ch04_08_01_Pipeline_Code_2210.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">
+      <span>위스콘신 암 데이터 실습</span>
+      <span class="toggle open">▼</span>
+    </div>
+    <div class="section-body">
+      <ul class="link-list">
+        <li><a href="part04_practical/ch08_03A_cancer_basic_model_2212.html">앙상블 (보팅, 배깅)</a> <span class="tag tag-html">HTML</span> <a href="part04_practical/ch08_03A_cancer_basic_model_2212.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+        <li><a href="part04_practical/ch08_03B_cancer_GridSearch_model_2212.html">GridSearchCV 하이퍼 파라미터 튜닝</a> <span class="tag tag-html">HTML</span> <a href="part04_practical/ch08_03B_cancer_GridSearch_model_2212.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+        <li><a href="part04_practical/ch08_03C_cancer_lightGBM_model_2212.html">LightGBM 모델 학습 및 평가</a> <span class="tag tag-html">HTML</span> <a href="part04_practical/ch08_03C_cancer_lightGBM_model_2212.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+        <li><a href="part04_practical/ch08_05A_cancer_stacking.html">앙상블 Stacking 모델</a> <span class="tag tag-html">HTML</span> <a href="part04_practical/ch08_05A_cancer_stacking.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+        <li><a href="part04_practical/ch08_05A_cancer_pycaret01.html">PyCaret 오픈소스 라이브러리</a> <span class="tag tag-html">HTML</span> <a href="part04_practical/ch08_05A_cancer_pycaret01.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+        <li><a href="part04_practical/ch08_03D_cancer_automl_2212.html">AutoML 구축하기</a> <span class="tag tag-html">HTML</span> <a href="part04_practical/ch08_03D_cancer_automl_2212.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">
+      <span>추천 시스템</span>
+      <span class="toggle open">▼</span>
+    </div>
+    <div class="section-body">
+      <ul class="link-list">
+        <li><a href="part04_practical/ch07_추천시스템_v02_202211.pdf">기본 개요 01</a> <span class="tag tag-pdf">PDF</span></li>
+        <li><a href="part04_practical/ch07_02_start_basic_2211.html">기본 실습 01</a> <span class="tag tag-html">HTML</span> <a href="part04_practical/ch07_02_start_basic_2211.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+        <li><a href="part04_practical/ch07_03_협업필터링_movie_01_2211.html">기본 실습 02 — 유사 영화 추천하기</a> <span class="tag tag-html">HTML</span> <a href="part04_practical/ch07_03_협업필터링_movie_01_2211.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+        <li><a href="part03_ml/ch07_03_item_based_02_2208.html">기본 실습 03 — 아이템 기반 협업 필터링</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/ch07_03_item_based_02_2208.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+        <li><a href="part04_practical/ch07_04_콘텐츠기반_TFIDF_movie_2606.html">기본 실습 04 — 콘텐츠 기반 (TF-IDF) 영화 추천</a> <span class="tag tag-html">HTML</span></li>
+        <li><a href="part04_practical/ch07_04_콘텐츠기반_TFIDF_movie_interactive_2606.html">🎯 기본 실습 04 (인터랙티브 데모) — 순수 JS TF-IDF 구현</a> <span class="tag tag-hot">NEW</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">
+      <span>AutoML</span>
+      <span class="toggle open">▼</span>
+    </div>
+    <div class="section-body">
+      <ul class="link-list">
+        <li><a href="part03_ml/ch08_03_Automl_pycaret01_2211.html">pycaret 실습</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/ch08_03_Automl_pycaret01_2211.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+        <li><a href="part03_ml/ch08_03_Automl_spaceship_titanic_2207.html">Spaceship Titanic 예측</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/ch08_03_Automl_spaceship_titanic_2207.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">
+      <span>Flask 웹 서비스 구축</span>
+      <span class="toggle open">▼</span>
+    </div>
+    <div class="section-body">
+      <ul class="link-list">
+        <li><a href="part04_practical/Flask(플라스크)_머신러닝_웹서비스구축.html">IRIS 웹 머신러닝</a> <span class="tag tag-html">HTML</span> <a href="part04_practical/Flask_Web01_IRIS.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+        <li><a href="part04_practical/Flask(플라스크)_활용한_머신러닝_웹서비스구축(2).html">집값 예측</a> <span class="tag tag-html">HTML</span> <a href="part04_practical/Flask_Web02_House.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+        <li><a href="part04_practical/Flask_ML_Web서비스(3)_Cancer.html">악성종양 (암) 예측</a> <span class="tag tag-html">HTML</span> <a href="part04_practical/Flask_Web03_Cancer.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">
+      <span>기타 실습</span>
+      <span class="toggle open">▼</span>
+    </div>
+    <div class="section-body">
+      <ul class="link-list">
+        <li><a href="part03_ml/ch08_01_ml_db.html">sqllite와 pandas 01</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/ch08_01_ml_db.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+        <li><a href="part03_ml/ch08_ml_db_02.html">sqllite와 pandas 02</a> <span class="tag tag-html">HTML</span></li>
+        <li><a href="part03_ml/ch08_04_sonar_analysis01_V11.html">[실습] 항구 근처 기뢰 확인 — 데이터 불러오기 및 시각화</a> <span class="tag tag-html">HTML</span></li>
+        <li><a href="part03_ml/ch08_04_sonar_analysis02.html">[실습] 항구 근처 기뢰 확인 — 기본 ML 모델</a> <span class="tag tag-html">HTML</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">
+      <span>캐글 실습</span>
+      <span class="toggle open">▼</span>
+    </div>
+    <div class="section-body">
+      <div class="sub-title">Santander Customer Satisfaction</div>
+      <ul class="link-list indent">
+        <li><a href="part03_ml/ch08_01_santander_roc_auc_2208.html">기본 모델</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/ch08_01_santander_roc_auc_2208.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+        <li><a href="part03_ml/ch08_02_santander_lightgbm_2208.html">모델 개선 (LightGBM)</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/ch08_02_santander_lightgbm_2208.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+      </ul>
+      <div class="sub-title">PUBG Finish Placement Prediction</div>
+      <ul class="link-list indent">
+        <li><a href="part03_ml/part03_pro_kaggle/pubg_01_simplesub_wk_2211.html">기본 모델 (선형회귀)</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/part03_pro_kaggle/pubg_01_simplesub_wk_2211.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+      </ul>
+      <div class="sub-title">타이타닉</div>
+      <ul class="link-list indent">
+        <li><a href="part03_ml/part03_pro_titanic/ch02_03_02A_titanic_firstsub_2205.html">타이타닉 시작하기</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/part03_pro_titanic/ch02_03_02A_titanic_firstsub_2205.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+        <li><a href="part03_ml/part03_pro_titanic/ch02_03_02B_titanic.html">데이터 탐색 및 모델 선택</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/part03_pro_titanic/ch02_03_02B_titanic.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+        <li><a href="part03_ml/part03_pro_titanic/ch02_03_02C_titanic.html">모델 업그레이드</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/part03_pro_titanic/ch02_03_02C_titanic.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+        <li><a href="part03_ml/part03_pro_titanic/ch02_03_02B_titanic_01_Cabin(0_67703).html">모델 — Cabin</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/part03_pro_titanic/ch02_03_02B_titanic_01_Cabin(0_67703).pdf"><span class="tag tag-pdf">PDF</span></a></li>
+        <li><a href="part03_ml/part03_pro_titanic/ch02_03_02B_titanic_02_Ticket_gender.html">모델 — Ticket</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/part03_pro_titanic/ch02_03_02B_titanic_02_Ticket_gender.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+      </ul>
+      <div class="sub-title">Bike Sharing Demand</div>
+      <ul class="link-list indent">
+        <li><a href="part03_ml/01_06_Bike_EDA_02_2107.html">EDA</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/01_06_Bike_EDA_02_2107.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+        <li><a href="part03_ml/01_06_Bike_EDA_03_2107.html">EDA code</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/01_06_Bike_EDA_03_2107.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+        <li><a href="part03_ml/ch02_Bike01_FirstModel_v10_2205.html">첫번째 모델</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/ch02_Bike01_FirstModel_v10_2205.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+        <li><a href="part03_ml/ch02_Bike02_Ridge_Lasso_v13_2210.html">Ridge, Lasso</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/ch02_Bike02_Ridge_Lasso_v13_2210.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+        <li><a href="part03_ml/ch02_Bike03_MultiModel_v12.html">여러가지 모델</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/ch02_Bike03_MultiModel_v12.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+        <li><a href="part03_ml/ch02_Bike04_ModelValidation_v10.html">모델 평가</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/ch02_Bike04_ModelValidation_v10.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+      </ul>
+      <div class="sub-title">성인 인구 소득 예측 대회</div>
+      <ul class="link-list indent">
+        <li><a href="part03_ml/kaggle_contest_4th_01_2206.html">대회 (1)</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/kaggle_contest_4th_01_2206.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+        <li><a href="part03_ml/kaggle_contest_4th_02_2208.html">대회 (2)</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/kaggle_contest_4th_02_2208.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+        <li><a href="part03_ml/kaggle_contest_4th_02_validation_2208.html">대회 (2) — f1-score</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/kaggle_contest_4th_02_validation_2208.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+        <li><a href="part03_ml/kaggle_contest_4th_03_2206.html">대회 (3)</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/kaggle_contest_4th_03_2206.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+        <li><a href="part03_ml/kaggle_contest_4th_04_2nd.html">대회 (4) — 2nd Solution</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/kaggle_contest_4th_04_2nd.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+        <li><a href="part03_ml/kaggle_contest_4th_05_1st_review.html">대회 (5) — 1st Solution</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/kaggle_contest_4th_05_1st_review.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+      </ul>
+      <div class="sub-title">Predict Future Sales</div>
+      <ul class="link-list indent">
+        <li><a href="part03_ml/part03_pro_kaggle/01_predict_future_sales_v10.html">매출 예측 (1)</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/part03_pro_kaggle/01_predict_future_sales_v10.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+        <li><a href="part03_ml/part03_pro_kaggle/02_predict_future_sales_v10.html">매출 예측 (2)</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/part03_pro_kaggle/02_predict_future_sales_v10.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+        <li><a href="part03_ml/part03_pro_kaggle/dacon_07_feature_engineering_01.html">Dacon — 주차 수요 예측 Baseline</a> <span class="tag tag-html">HTML</span> <a href="part03_ml/part03_pro_kaggle/dacon_07_feature_engineering_01.pdf"><span class="tag tag-pdf">PDF</span></a></li>
+      </ul>
+      <div class="sub-title">American Express Default Prediction</div>
+      <ul class="link-list indent">
+        <li><a href="part03_ml/part03_pro_kaggle/amex_01_basemodel_xgbm_2210.html">XGBoost</a> <span class="tag tag-html">HTML</span></li>
+        <li><a href="part03_ml/part03_pro_kaggle/amex-02-basic-lightgbm_2208.html">LightGBM</a> <span class="tag tag-html">HTML</span></li>
+        <li><a href="part03_ml/part03_pro_kaggle/amex-03-catboost-md10-gpu_2208.html">CatBoost</a> <span class="tag tag-html">HTML</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+    <p>본 저장소의 자료는 <a href="LICENSE">CC BY-NC 4.0</a> 라이선스를 따릅니다.</p>
+    <p>저작권 관련 문의: frontier1020@naver.com</p>
+  </footer>
+</div>
+
+<script>
+  document.querySelectorAll('.section-title').forEach(title => {
+    title.addEventListener('click', () => {
+      const body = title.nextElementSibling;
+      const toggle = title.querySelector('.toggle');
+      body.classList.toggle('closed');
+      toggle.classList.toggle('open');
+    });
+  });
+</script>
+</body>
+</html>

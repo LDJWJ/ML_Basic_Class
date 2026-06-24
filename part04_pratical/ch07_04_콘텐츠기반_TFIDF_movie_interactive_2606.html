@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>영화 추천 시스템 예제</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 40px;
+      line-height: 1.6;
+    }
+    h1 {
+      color: #333;
+    }
+    select, button {
+      padding: 8px 12px;
+      margin-right: 8px;
+      font-size: 1rem;
+    }
+    #result {
+      margin-top: 20px;
+      font-size: 1.1rem;
+    }
+    .movie-list {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>영화 추천 시스템 (TF‑IDF 기반)</h1>
+  <p>아래에서 영화를 선택하고 <strong>추천 받기</strong> 버튼을 누르면, 선택한 영화와 내용이 비슷한 영화를 추천해 줍니다.</p>
+  <div>
+    <label for="movieSelect">영화 선택:</label>
+    <select id="movieSelect"></select>
+    <button id="recommendButton">추천 받기</button>
+  </div>
+  <div id="result"></div>
+
+  <script>
+    // 영화 데이터 정의
+    const movies = [
+      { title: '어벤져스', description: '슈퍼히어로 액션 전투 마블' },
+      { title: '아이언맨', description: '슈퍼히어로 과학 기술 액션 마블' },
+      { title: '노트북', description: '로맨스 사랑 감동 드라마' },
+      { title: '라라랜드', description: '음악 로맨스 꿈 사랑' },
+      { title: '인셉션', description: '꿈 현실 SF 액션 스릴러' },
+      { title: '인터스텔라', description: '우주 시간 SF 감동 과학' },
+      { title: '겨울왕국', description: '애니메이션 음악 가족 마법' },
+      { title: '토이스토리', description: '애니메이션 장난감 가족 모험' }
+    ];
+
+    // 페이지 로드 후 영화 목록을 셀렉트 박스에 채워 넣습니다.
+    const selectEl = document.getElementById('movieSelect');
+    movies.forEach((movie, idx) => {
+      const option = document.createElement('option');
+      option.value = idx;
+      option.textContent = movie.title;
+      selectEl.appendChild(option);
+    });
+
+    // 데이터 전처리: TF‑IDF 벡터 계산을 위한 준비
+    const vocab = new Set();
+    const docsTokens = [];
+
+    // 토큰화 함수: 공백으로 나누고 소문자 변환
+    function tokenize(text) {
+      return text
+        .trim()
+        .split(/\s+/)
+        .map(token => token.toLowerCase());
+    }
+
+    // 각 영화 설명을 토큰화하고 어휘집을 구축합니다.
+    movies.forEach(movie => {
+      const tokens = tokenize(movie.description);
+      docsTokens.push(tokens);
+      tokens.forEach(tok => vocab.add(tok));
+    });
+
+    const vocabList = Array.from(vocab);
+    const vocabIndex = {};
+    vocabList.forEach((term, idx) => {
+      vocabIndex[term] = idx;
+    });
+
+    // 문서 빈도 (DF) 계산
+    const df = new Array(vocabList.length).fill(0);
+    docsTokens.forEach(tokens => {
+      const seen = new Set();
+      tokens.forEach(token => {
+        if (!seen.has(token)) {
+          const idx = vocabIndex[token];
+          df[idx] += 1;
+          seen.add(token);
+        }
+      });
+    });
+
+    // IDF 계산: log(N / DF)
+    const N = movies.length;
+    const idf = df.map(dfVal => Math.log(N / (dfVal || 1)));
+
+    // 각 문서의 TF‑IDF 벡터 생성
+    const tfidfVectors = docsTokens.map(tokens => {
+      const tf = new Array(vocabList.length).fill(0);
+      tokens.forEach(token => {
+        const idx = vocabIndex[token];
+        tf[idx] += 1;
+      });
+      // TF ‑ term frequency (정규화)
+      const tokenCount = tokens.length;
+      const tfidf = tf.map((count, idx) => {
+        const tfVal = tokenCount ? count / tokenCount : 0;
+        return tfVal * idf[idx];
+      });
+      return tfidf;
+    });
+
+    // 코사인 유사도 계산 함수
+    function cosineSimilarity(vecA, vecB) {
+      let dot = 0;
+      let normA = 0;
+      let normB = 0;
+      for (let i = 0; i < vecA.length; i++) {
+        dot += vecA[i] * vecB[i];
+        normA += vecA[i] * vecA[i];
+        normB += vecB[i] * vecB[i];
+      }
+      if (normA === 0 || normB === 0) return 0;
+      return dot / (Math.sqrt(normA) * Math.sqrt(normB));
+    }
+
+    // 추천 함수
+    function recommend(movieIndex, topN = 3) {
+      const baseVector = tfidfVectors[movieIndex];
+      const scores = tfidfVectors.map((vec, idx) => {
+        return { index: idx, score: cosineSimilarity(baseVector, vec) };
+      });
+      // 자기 자신 제외 후 점수 내림차순 정렬
+      const results = scores
+        .filter(item => item.index !== movieIndex)
+        .sort((a, b) => b.score - a.score)
+        .slice(0, topN);
+      return results;
+    }
+
+    // 클릭 이벤트 처리
+    document.getElementById('recommendButton').addEventListener('click', () => {
+      const selectedIndex = parseInt(selectEl.value, 10);
+      const recommended = recommend(selectedIndex, 3);
+      const resultDiv = document.getElementById('result');
+      let html = `<p><strong>'${movies[selectedIndex].title}'</strong>를 좋아한다면 추천하는 영화:</p><ul>`;
+      recommended.forEach(item => {
+        const movieTitle = movies[item.index].title;
+        const score = item.score.toFixed(2);
+        html += `<li>${movieTitle} (유사도: ${score})</li>`;
+      });
+      html += '</ul>';
+      resultDiv.innerHTML = html;
+    });
+  </script>
+</body>
+</html>

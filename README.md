@@ -147,6 +147,7 @@
 * 기본 실습 02 - 유사 영화 추천하기 [html](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch07_03_협업필터링_movie_01_2211.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch07_03_협업필터링_movie_01_2211.pdf)
 * 기본 실습 03 - 아이템 기반 협업 필터링 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch07_03_item_based_02_2208.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch07_03_item_based_02_2208.pdf)
 * 기본 실습 04 - 콘텐츠 기반(TF-IDF) 영화 추천 시스템 [html](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch07_04_콘텐츠기반_TFIDF_movie_2606.html)
+* 기본 실습 04 (인터랙티브 데모) - 영화 선택 후 추천 받기(순수 JS TF-IDF 구현) [html](https://ldjwj.github.io/ML_Basic_Class/part04_pratical/ch07_04_콘텐츠기반_TFIDF_movie_interactive_2606.html)
 
 ### AutoML
 

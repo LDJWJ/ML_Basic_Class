@@ -1,6 +1,6 @@
 # 인공지능 머신러닝 기본
 
-\*\* 많이 많이 환영합니다. 혹시 아래 내용이 도움이 되신다면 그냥 가지 마시고 오른쪽 상단 'Star 버튼' 꾹 많이 많이 환영합니다.^^
+** 많이 많이 환영합니다. 혹시 아래 내용이 도움이 되신다면 그냥 가지 마시고 오른쪽 상단 'Star 버튼' 꾹 많이 많이 환영합니다.^^
 
 ## 데이터 알아가기 첫걸음
 
@@ -45,7 +45,7 @@
  * 머신러닝 알고리즘
 
   * knn [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_01A_knn_code_v12_504.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_01A_knn_code_v12_504.pdf)
-  * knn\_pratice [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_01B_knn_code_pratice_2205.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_01B_knn_code_pratice_2205.pdf)
+  * knn_pratice [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_01B_knn_code_pratice_2205.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_01B_knn_code_pratice_2205.pdf)
 
 * 머신러닝 - 선형회귀 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_02A_linear_code_v12.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_02A_linear_code_v12.pdf)
 * 머신러닝 - 회귀(평가지표\_상세) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_02B_diabete_evaluation_v13_2601.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_02B_diabete_evaluation_v13_2601.pdf)
@@ -53,7 +53,7 @@
 * 머신러닝 알고리즘 회귀(Ridge, Lasso) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_03_ridge_lasso.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_03_ridge_lasso.pdf)
 * 머신러닝 알고리즘 분류용 선형모델(Logistic, SVM)
 
-  * 이진분류 \[html]  [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_04_binary_classification.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_04_binary_classification.pdf)
+  * 이진분류 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_04_binary_classification.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_04_binary_classification.pdf)
   * 멀티클래스 분류 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_05_multiclass_classification_v10.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_05_multiclass_classification_v10.pdf)
 
 * 머신러닝 - 의사결정트리 01 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_01_decisionTree_colab.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_01_decisionTree_colab.pdf)
@@ -67,11 +67,11 @@
 * 머신러닝 - 앙상블\_랜덤포레스트(3)-house [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_03_RandomForest_03_house_2205.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_03_RandomForest_03_house_2205.pdf)
 * 머신러닝 - 의사결정트리, 랜덤포레스트-시각화
   [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_04_dtreeviz_modelVis.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_04_dtreeviz_modelVis.pdf)
-* 머신러닝 - 앙상블\_그래디언트부스팅결정트리[html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_05_gradient_boosting_class_v11.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_05_gradient_boosting_class_v11.pdf)
+* 머신러닝 - 앙상블\_그래디언트부스팅결정트리 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_05_gradient_boosting_class_v11.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_03_05_gradient_boosting_class_v11.pdf)
 
 ### 데이터 전처리
 
-* 머신러닝 - 데이터 전처리[html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_01_01_데이터전처리_2208.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_01_01_데이터전처리_2208.pdf)
+* 머신러닝 - 데이터 전처리 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_01_01_데이터전처리_2208.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_01_01_데이터전처리_2208.pdf)
 * 머신러닝 - 원핫인코딩
 
   * 이론 및 실습(1) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_01_01_FE_OneHotEncoding_01.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_01_01_FE_OneHotEncoding_01.pdf)
@@ -81,7 +81,7 @@
 * 머신러닝 - 구간분할, 일변량 비선형 변환
 
   * 구간분할 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_05_01_FE_binned_202010.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_05_01_FE_binned_202010.pdf)
-  * 비선형 변환(log 등)[html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_06_01_FE_log_202010.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_06_01_FE_log_202010.pdf)
+  * 비선형 변환(log 등) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_06_01_FE_log_202010.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_06_01_FE_log_202010.pdf)
   * 특성자동 선택(1) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_07_01_FeatureEngineering_특성자동선택_2210.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_07_01_FeatureEngineering_특성자동선택_2210.pdf)
   * 특성자동 선택(2) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_07_02_FeatureEngineering_특성자동선택_회귀_2208.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_07_02_FeatureEngineering_특성자동선택_회귀_2208.pdf)
 
@@ -115,7 +115,7 @@
 
 * SpaceTitanic - Pipelien 실습 01 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_08_01_Pipeline_Code_2210.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_08_01_Pipeline_Code_2210.pdf)
 
-### \[실습] 위스콘신 암 데이터 실습
+### [실습] 위스콘신 암 데이터 실습
 
 * 위스콘신 암 이진 분류 - 앙상블(보팅,배깅)
   * [html](https://ldjwj.github.io/ML_Basic_Class/part04_practical/ch08_03A_cancer_basic_model_2212.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part04_practical/ch08_03A_cancer_basic_model_2212.pdf)
@@ -124,7 +124,7 @@
   * [html](https://ldjwj.github.io/ML_Basic_Class/part04_practical/ch08_03B_cancer_GridSearch_model_2212.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part04_practical/ch08_03B_cancer_GridSearch_model_2212.pdf)
 
 * 위스콘신 암 모델 - LightGBM 모델 학습 및 평가
-* [html](https://ldjwj.github.io/ML_Basic_Class/part04_practical/ch08_03C_cancer_lightGBM_model_2212.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part04_practical/ch08_03C_cancer_lightGBM_model_2212.pdf)
+  * [html](https://ldjwj.github.io/ML_Basic_Class/part04_practical/ch08_03C_cancer_lightGBM_model_2212.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part04_practical/ch08_03C_cancer_lightGBM_model_2212.pdf)
 * 위스콘신 암 모델 - 앙상블 Stacking 모델 실습
 
   * [html](https://ldjwj.github.io/ML_Basic_Class/part04_practical/ch08_05A_cancer_stacking.html) [pdf](https://ldjwj.github.io/ML_Basic_Class/part04_practical/ch08_05A_cancer_stacking.pdf)
@@ -151,7 +151,7 @@
 ### AutoML
 
 * pycaret 실습 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_03_Automl_pycaret01_2211.html), [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_03_Automl_pycaret01_2211.pdf)
-* \[실전 데이터 실습] 어떤 승객이 다른 차원으로 이동될지 예측 - \[Spaceship Titanic] [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_03_Automl_spaceship_titanic_2207.html), [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_03_Automl_spaceship_titanic_2207.pdf)
+* [실전 데이터 실습] 어떤 승객이 다른 차원으로 이동될지 예측 - [Spaceship Titanic] [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_03_Automl_spaceship_titanic_2207.html), [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_03_Automl_spaceship_titanic_2207.pdf)
 
 ### 기타 프로젝트
 
@@ -164,18 +164,18 @@
 * 집값 예측 [html](https://ldjwj.github.io/ML_Basic_Class/part04_practical/Flask(플라스크)_활용한_머신러닝_웹서비스구축(2).html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part04_practical/Flask_Web02_House.pdf)
 * 악성종양(암) 예측 [html](https://ldjwj.github.io/ML_Basic_Class/part04_practical/Flask_ML_Web서비스(3)_Cancer.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part04_practical/Flask_Web03_Cancer.pdf)
 
-### \[실습] 항구 근처 기뢰 확인(sonar.all-data) 실습
+### [실습] 항구 근처 기뢰 확인(sonar.all-data) 실습
 
 * 데이터 불러오기 및 시각화 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_04_sonar_analysis01_V11.html)
 * 기본 머신러닝 모델 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_04_sonar_analysis02.html)
 
-### \[실습] pima 데이터 실습
+### [실습] pima 데이터 실습
 
 * 머신러닝
 
 
 
-### \[캐글 실습] Santander Customer Satisfaction
+### [캐글 실습] Santander Customer Satisfaction
 
 * 고객 데이터 분석 - 만족, 불만족 [캐글 Link](https://www.kaggle.com/c/santander-customer-satisfaction)
 * 기본 모델 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_01_santander_roc_auc_2208.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch08_01_santander_roc_auc_2208.pdf)
@@ -183,7 +183,7 @@
 
 
 
-### \[캐글 대회] PUBG Finish Placement Prediction
+### [캐글 대회] PUBG Finish Placement Prediction
 
 * 승자 예측 대회 [캐글 대회 Link](https://www.kaggle.com/competitions/pubg-finish-placement-prediction/)
 * (1) 기본 모델(선형회귀) [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/pubg_01_simplesub_wk_2211.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_kaggle/pubg_01_simplesub_wk_2211.pdf)
@@ -192,8 +192,8 @@
 
 ### 캐글 데이터 타이타닉 실습
 
-* 머신러닝 - 타이타닉 시작하기[html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_titanic/ch02_03_02A_titanic_firstsub_2205.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_titanic/ch02_03_02A_titanic_firstsub_2205.pdf)
-* 머신러닝 - 타이타닉 데이터 탐색 및 모델 선택[html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_titanic/ch02_03_02B_titanic.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_titanic/ch02_03_02B_titanic.pdf)
+* 머신러닝 - 타이타닉 시작하기 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_titanic/ch02_03_02A_titanic_firstsub_2205.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_titanic/ch02_03_02A_titanic_firstsub_2205.pdf)
+* 머신러닝 - 타이타닉 데이터 탐색 및 모델 선택 [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_titanic/ch02_03_02B_titanic.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_titanic/ch02_03_02B_titanic.pdf)
 * 머신러닝 - 타이타닉 모델 업그레이드[html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_titanic/ch02_03_02C_titanic.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_titanic/ch02_03_02C_titanic.pdf)
 * 머신러닝 - 타이타닉 모델 Cabin [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_titanic/ch02_03_02B_titanic_01_Cabin(0_67703).html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_titanic/ch02_03_02B_titanic_01_Cabin(0_67703).pdf)
 * 머신러닝 - 타이타닉 모델 Ticket [html](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_titanic/ch02_03_02B_titanic_02_Ticket_gender.html)  [pdf](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_pro_titanic/ch02_03_02B_titanic_02_Ticket_gender.pdf)
@@ -237,7 +237,7 @@
 
 * 캐글 코리아 1차 대회
 
-  * 타이타닉 생존자를 예측하라[Link](https://www.kaggle.com/c/2019-1st-ml-month-with-kakr)
+  * 타이타닉 생존자를 예측하라 [Link](https://www.kaggle.com/c/2019-1st-ml-month-with-kakr)
 
 * 캐글 코리아 2차 대회
 

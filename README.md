@@ -72,7 +72,7 @@ flowchart TD
 | **지도학습 (회귀/분류)** | KNN & 선형회귀 (최신 V119 개정판, with opencode) | [📄 PDF](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_ML_KNN_회귀_V119_2610.pdf) |
 | | KNN & 선형회귀 (초보자용 입문) | [📄 PDF](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch02_01_knn_linear_ppt/ch02_AI_KNN_회귀_HighSc_V10.pdf) |
 | | 로지스틱 회귀 (Logistic Regression) | [📄 PDF](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch02_01_knn_linear_ppt/ch02_logistic_v03_202610.pdf) |
-| | 의사결정트리 (Decision Tree) | [📄 PDF](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch02_02_decisiontree/ch02_03_01_decisiontree_v11_2205.pdf) |
+| | 의사결정트리 (Decision Tree, 최신 v13) | [📄 PDF](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch02_02_decisiontree/ch02_03_01_decisiontree_v13_202610.pdf) |
 | | 앙상블 기법 - 배깅·랜덤포레스트·부스팅·LightGBM (01·02 통합) | [📄 PDF](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch02_03_ensemble/ch02_Ensemble_v12_202610.pdf) |
 | **전처리 & 비지도학습** | 데이터 전처리 및 피처 엔지니어링 (최신 v12, 2026.10) | [📄 PDF](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch03_01_datapre/ch03_04_01_DataProcessing_202610_v12.pdf) |
 | | 파이프라인 (Pipeline) 개념 (v11, 2026.10) | [📄 PDF](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch03_01_datapre/ch03_04_02_Pipeline_202610_v11.pdf) |

@@ -67,7 +67,7 @@ flowchart TD
 | 단계 / 주제 | 교재 제목 | 파일 링크 |
 |:---|:---|:---:|
 | **ML 입문 & 개요** | 머신러닝 용어 이해, 구분, 데이터 분석 절차 (최신 v16) | [📄 PDF](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch01_01_ml/ch01_01_ML입문_Detail_v16_202610.pdf) |
-| | 머신러닝 기본 이해 (2025 개정판) | [📄 PDF](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch01_01_ml/ch01_01_ML입문_v21_202510.pdf) |
+| | 머신러닝 기본 이해 (개요판, 최신 v22) | [📄 PDF](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch01_01_ml/ch01_01_ML입문_v22_202610.pdf) |
 | | 머신러닝 기본: 파이썬과 첫 모델 만들기 (최신 v14) | [📄 PDF](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch01_01_ml/ch01_02_ML기본_v14_202610.pdf) |
 | **지도학습 (회귀/분류)** | KNN & 선형회귀 (최신 V119 개정판, with opencode) | [📄 PDF](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_ML_KNN_회귀_V119_2610.pdf) |
 | | KNN & 선형회귀 (초보자용 입문) | [📄 PDF](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch02_01_knn_linear_ppt/ch02_AI_KNN_회귀_HighSc_V10.pdf) |

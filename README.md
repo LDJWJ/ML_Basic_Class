@@ -79,8 +79,8 @@ flowchart TD
 | | 비지도학습 01 기본 개요 | [📄 PDF](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch03_02_pca/ch03_비지도학습01_Basic_v02_202610.pdf) |
 | | 비지도학습 02 PCA 주성분 분석 | [📄 PDF](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch03_02_pca/ch03_pca_v02_202610.pdf) |
 | **평가 & 추천 시스템** | 머신러닝 모델 평가지표 완벽 정리 | [📄 PDF](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch05_validation/ch05_평가지표_v05_202610.pdf) |
-| | 머신러닝 심화 & 모델 업그레이드 전략 | [📄 PDF](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch06_upgrade/ch06_upgrade_v01_202108.pdf) |
-| | 추천 시스템 (Recommendation System) 개요 | [📄 PDF](https://ldjwj.github.io/ML_Basic_Class/part04_practical/ch07_추천시스템_v02_202211.pdf) |
+| | 머신러닝 심화 & 모델 업그레이드 전략 (최신 v02) | [📄 PDF](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch06_upgrade/ch06_upgrade_v02_202610.pdf) |
+| | 추천 시스템 (Recommendation System) 개요 (최신 v03) | [📄 PDF](https://ldjwj.github.io/ML_Basic_Class/part04_practical/ch07_추천시스템_v03_202610.pdf) |
 
 ---
 

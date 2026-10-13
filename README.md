@@ -74,7 +74,8 @@ flowchart TD
 | | 로지스틱 회귀 (Logistic Regression) | [📄 PDF](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch02_01_knn_linear_ppt/ch02_logistic_v03_202610.pdf) |
 | | 의사결정트리 (Decision Tree) | [📄 PDF](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch02_02_decisiontree/ch02_03_01_decisiontree_v11_2205.pdf) |
 | | 앙상블 기법 - 배깅·랜덤포레스트·부스팅·LightGBM (01·02 통합) | [📄 PDF](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch02_03_ensemble/ch02_Ensemble_v12_202610.pdf) |
-| **전처리 & 비지도학습** | 데이터 전처리 및 피처 엔지니어링 | [📄 PDF](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch03_01_datapre/ch03_04_DataProcessing_202012_v11.pdf) |
+| **전처리 & 비지도학습** | 데이터 전처리 및 피처 엔지니어링 (최신 v12, 2026.10) | [📄 PDF](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch03_01_datapre/ch03_04_01_DataProcessing_202610_v12.pdf) |
+| | 파이프라인 (Pipeline) 개념 (v11, 2026.10) | [📄 PDF](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch03_01_datapre/ch03_04_02_Pipeline_202610_v11.pdf) |
 | | 비지도학습 01 기본 개요 | [📄 PDF](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch03_02_pca/ch03_비지도학습01_Basic_v02_202610.pdf) |
 | | 비지도학습 02 PCA 주성분 분석 | [📄 PDF](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch03_02_pca/ch03_pca_v02_202610.pdf) |
 | **평가 & 추천 시스템** | 머신러닝 모델 평가지표 완벽 정리 | [📄 PDF](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch05_validation/ch05_평가지표_v05_202610.pdf) |

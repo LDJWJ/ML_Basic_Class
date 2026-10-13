@@ -71,14 +71,13 @@ flowchart TD
 | | 머신러닝 시작 (도서 기반 핵심) | [📄 PDF](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch01_01_ml/ch01_02_ML기본_v12_202205.pdf) |
 | **지도학습 (회귀/분류)** | KNN & 선형회귀 (최신 V119 개정판) | [📄 PDF](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_01_ML_KNN_회귀_V119_2610.pdf) |
 | | KNN & 선형회귀 (초보자용 입문) | [📄 PDF](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch02_01_knn_linear_ppt/ch02_AI_KNN_회귀_HighSc_V10.pdf) |
-| | 로지스틱 회귀 (Logistic Regression) | [📄 PDF](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch02_01_knn_linear_ppt/ch02_logistic_v02_202205.pdf) |
+| | 로지스틱 회귀 (Logistic Regression) | [📄 PDF](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch02_01_knn_linear_ppt/ch02_logistic_v03_202610.pdf) |
 | | 의사결정트리 (Decision Tree) | [📄 PDF](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch02_02_decisiontree/ch02_03_01_decisiontree_v11_2205.pdf) |
-| | 앙상블 기법 01 - 배깅 & 랜덤포레스트 | [📄 PDF](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch02_03_ensemble/ch02_Ensemble01_202205_v11.pdf) |
-| | 앙상블 기법 02 - 부스팅 & LightGBM | [📄 PDF](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch02_03_ensemble/ch02_Ensemble02_202205_lightgbm_v11.pdf) |
+| | 앙상블 기법 - 배깅·랜덤포레스트·부스팅·LightGBM (01·02 통합) | [📄 PDF](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch02_03_ensemble/ch02_Ensemble_v12_202610.pdf) |
 | **전처리 & 비지도학습** | 데이터 전처리 및 피처 엔지니어링 | [📄 PDF](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch03_01_datapre/ch03_04_DataProcessing_202012_v11.pdf) |
-| | 비지도학습 01 기본 개요 | [📄 PDF](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch03_02_pca/ch03_비지도학습01_Basic_v01_202208.pdf) |
-| | 비지도학습 02 PCA 주성분 분석 | [📄 PDF](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch03_02_pca/ch03_비지도학습02_pca_v01_202110.pdf) |
-| **평가 & 추천 시스템** | 머신러닝 모델 평가지표 완벽 정리 | [📄 PDF](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch05_validation/ch05_평가지표_v04_202108.pdf) |
+| | 비지도학습 01 기본 개요 | [📄 PDF](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch03_02_pca/ch03_비지도학습01_Basic_v02_202610.pdf) |
+| | 비지도학습 02 PCA 주성분 분석 | [📄 PDF](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch03_02_pca/ch03_pca_v02_202610.pdf) |
+| **평가 & 추천 시스템** | 머신러닝 모델 평가지표 완벽 정리 | [📄 PDF](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch05_validation/ch05_평가지표_v05_202610.pdf) |
 | | 머신러닝 심화 & 모델 업그레이드 전략 | [📄 PDF](https://ldjwj.github.io/ML_Basic_Class/part03_ml/part03_ch06_upgrade/ch06_upgrade_v01_202108.pdf) |
 | | 추천 시스템 (Recommendation System) 개요 | [📄 PDF](https://ldjwj.github.io/ML_Basic_Class/part04_practical/ch07_추천시스템_v02_202211.pdf) |
 

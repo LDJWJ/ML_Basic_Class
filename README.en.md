@@ -93,7 +93,7 @@ The slide decks used in class are available to view and download as PDFs.
 Every notebook is available both as an **HTML viewer** you can open right in the browser and as a **PDF** for printing or keeping.
 
 > [!NOTE]
-> **October 2026 run check**: the hands-on notebooks were re-run on current libraries (Python 3.12, scikit-learn 1.9, pandas 3.0) and on Google Colab. The 39 that no longer ran were fixed as new `*_2610` versions, and their HTML and PDF files were rebuilt (verified 2026-10-16).
+> **October 2026 run check**: the hands-on notebooks were re-run on current libraries (Python 3.12, scikit-learn 1.9, pandas 3.0) and on Google Colab. The 40 that no longer ran were fixed as new `*_2610` versions, and their HTML and PDF files were rebuilt (verified 2026-10-16).
 > Links in the tables below now point to the fixed versions where one exists; the full list is in the [“2026.10 run-check fixes” section of the web textbook](https://ldjwj.github.io/ML_Basic_Class/?lang=en#sec15). The older HTML and PDF files are kept as they were.
 
 ### 1. Core Libraries & Exploratory Data Analysis (EDA)
@@ -131,7 +131,7 @@ Every notebook is available both as an **HTML viewer** you can open right in the
 | **Preprocessing** | Handling missing values & scaling | [🌐 HTML](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_01_01_데이터전처리_2208.html) · [📄 PDF](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_01_01_데이터전처리_2208.pdf) |
 | | One-hot encoding categorical data | [🌐 HTML](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_01_01_FE_OneHotEncoding_01.html) · [📄 PDF](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_01_01_FE_OneHotEncoding_01.pdf) |
 | | Binning & log transforms | [🌐 HTML](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_05_01_FE_binned_v11_2610.html) · [📄 PDF](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_06_01_FE_log_v11_2610.pdf) |
-| | ML pipelines (Pipeline code) | [🌐 HTML](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_08_01_Pipeline_Code_2210.html) · [📄 PDF](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_08_01_Pipeline_Code_2210.pdf) |
+| | ML pipelines (Pipeline code) | [🌐 HTML](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_08_01_Pipeline_Code_v11_2610.html) · [📄 PDF](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_08_01_Pipeline_Code_v11_2610.pdf) |
 | **Unsupervised** | PCA dimensionality reduction basics & face image example | [🌐 HTML](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_04_01_차원축소(1)_PCA_v11_2610.html) · [📄 PDF](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_04_02_차원축소(2)_PCA_얼굴예제_v11_2610.pdf) |
 | | Visualizing with t-SNE (nonlinear dimensionality reduction) | [🌐 HTML](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_04_03_차원축소(3)_tsne_2208.html) · [📄 PDF](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_04_03_차원축소(3)_tsne_2208.pdf) |
 | | K-Means clustering & DBSCAN density-based clustering | [🌐 HTML](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_02_01_군집(clustering)_Kmeans_2208.html) · [🌐 HTML](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_05_02_DBSCAN_v11_2610.html) |
@@ -211,4 +211,10 @@ Load a trained model (`.pkl`) into Flask, a lightweight web framework, and serve
 
 * **Reference book**: *Introduction to Machine Learning with Python (O'Reilly)*
 * **Contact**: Copyright inquiries & partnerships: [frontier1020@naver.com](mailto:frontier1020@naver.com)
-* **License**: All materials in this repository are licensed under [CC BY-NC 4.0](LICENSE). You may freely use and share them for non-commercial purposes with attribution.
+* **License**: Materials created by the instructor (slides, PDFs, HTML pages, notebooks) are licensed under [CC BY-NC 4.0](LICENSE). You may freely use and share them for non-commercial purposes with attribution.
+* **Third-party materials**: The following remain under their original authors' rights and licenses and are not covered by CC BY-NC 4.0 (see [LICENSE](LICENSE)):
+  * Code based on examples from *Introduction to Machine Learning with Python* (Andreas C. Müller & Sarah Guido, O'Reilly; Korean edition tr. Haesun Park, Hanbit Media) and the authors' `mglearn` package (BSD)
+  * Kaggle competition data and datasets (Kaggle Korea 2nd/4th, Titanic, Bike Sharing, Santander, AMEX, Spaceship Titanic, etc.) and UCI, GroupLens (MovieLens), and public-data sources — governed by each source's terms and competition rules
+  * Other authors' Kaggle notebooks referenced in some lessons — original links are given in each document
+  * Iris photos: Wikimedia Commons — Radomil (CC BY-SA 3.0), Dlanglois (CC BY-SA 3.0), Frank Mayfield (CC BY-SA 2.0)
+* **Takedown requests**: If any material is used improperly, please email the address above and it will be corrected or removed.

@@ -91,7 +91,7 @@ flowchart TD
 웹 브라우저에서 바로 볼 수 있는 **HTML 뷰어**와 인쇄/소장용 **PDF**를 모두 지원합니다.
 
 > [!NOTE]
-> **2026.10 실행 점검**: 실습 노트북을 최신 라이브러리(Python 3.12 · scikit-learn 1.9 · pandas 3.0)와 Google Colab에서 다시 실행하고, 돌아가지 않던 39개를 고친 수정본(`*_2610`)으로 HTML·PDF를 새로 만들었습니다(2026-10-16 실행 확인).
+> **2026.10 실행 점검**: 실습 노트북을 최신 라이브러리(Python 3.12 · scikit-learn 1.9 · pandas 3.0)와 Google Colab에서 다시 실행하고, 돌아가지 않던 40개를 고친 수정본(`*_2610`)으로 HTML·PDF를 새로 만들었습니다(2026-10-16 실행 확인).
 > 아래 표에서 수정본이 있는 항목은 링크를 수정본으로 바꿨고, 전체 목록은 [웹 교재의 「2026.10 실행 점검 수정본」](https://ldjwj.github.io/ML_Basic_Class/?lang=ko#sec15)에 있습니다. 예전 HTML·PDF 파일도 그대로 남겨 두었습니다.
 
 ### 1. 기본 라이브러리 & 탐색적 데이터 분석 (EDA)
@@ -129,7 +129,7 @@ flowchart TD
 | **전처리** | 결측치 처리 및 데이터 스케일링 | [🌐 HTML](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_01_01_데이터전처리_2208.html) · [📄 PDF](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_01_01_데이터전처리_2208.pdf) |
 | | 범주형 데이터 원-핫 인코딩 (One-Hot) | [🌐 HTML](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_01_01_FE_OneHotEncoding_01.html) · [📄 PDF](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_01_01_FE_OneHotEncoding_01.pdf) |
 | | 구간 분할(Binning) & 로그 변환 | [🌐 HTML](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_05_01_FE_binned_v11_2610.html) · [📄 PDF](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_06_01_FE_log_v11_2610.pdf) |
-| | 머신러닝 파이프라인 (Pipeline Code) | [🌐 HTML](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_08_01_Pipeline_Code_2210.html) · [📄 PDF](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_08_01_Pipeline_Code_2210.pdf) |
+| | 머신러닝 파이프라인 (Pipeline Code) | [🌐 HTML](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_08_01_Pipeline_Code_v11_2610.html) · [📄 PDF](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_08_01_Pipeline_Code_v11_2610.pdf) |
 | **비지도학습** | PCA 차원 축소 기본 및 얼굴 이미지 예제 | [🌐 HTML](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_04_01_차원축소(1)_PCA_v11_2610.html) · [📄 PDF](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_04_02_차원축소(2)_PCA_얼굴예제_v11_2610.pdf) |
 | | t-SNE 비선형 차원 축소 시각화 | [🌐 HTML](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_04_03_차원축소(3)_tsne_2208.html) · [📄 PDF](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_04_03_차원축소(3)_tsne_2208.pdf) |
 | | K-Means 군집화 & DBSCAN 밀도 군집화 | [🌐 HTML](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_02_01_군집(clustering)_Kmeans_2208.html) · [🌐 HTML](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_05_02_DBSCAN_v11_2610.html) |
@@ -207,6 +207,12 @@ flowchart TD
 
 ## 🔗 참고 자료 및 라이선스
 
-* **참고 도서**: *파이썬 라이브러리를 활용한 머신러닝 (O'Reilly)*
+* **참고 도서**: 『파이썬 라이브러리를 활용한 머신러닝』(안드레아스 뮐러·세라 가이도 지음, 박해선 옮김, 한빛미디어 / 원서 O'Reilly)
 * **문의 사항**: 저작권 문의 및 제휴: [frontier1020@naver.com](mailto:frontier1020@naver.com)
-* **라이선스**: 본 저장소의 모든 자료는 [CC BY-NC 4.0](LICENSE) 라이선스를 따릅니다. 출처를 표시하면 비영리 목적으로 자유롭게 활용 및 공유하실 수 있습니다.
+* **라이선스**: 강사가 직접 만든 자료(슬라이드·PDF·HTML·노트북)는 [CC BY-NC 4.0](LICENSE) 라이선스를 따릅니다. 출처를 표시하면 비영리 목적으로 자유롭게 활용 및 공유하실 수 있습니다.
+* **제3자 자료**: 아래 자료는 원저작자의 권리와 라이선스를 따르며, CC BY-NC 4.0이 적용되지 않습니다. (자세한 내용은 [LICENSE](LICENSE) 참고)
+  * 『파이썬 라이브러리를 활용한 머신러닝』(안드레아스 뮐러·세라 가이도 지음, 박해선 옮김, 한빛미디어) 예제를 바탕으로 한 코드와 저자의 `mglearn` 패키지(BSD)
+  * 캐글 대회·데이터셋(캐글 코리아 2·4차, Titanic, Bike Sharing, Santander, AMEX, Spaceship Titanic 등)과 UCI·GroupLens(MovieLens)·공공데이터 — 각 출처의 이용 조건과 대회 규칙을 따릅니다
+  * 일부 실습에서 참고한 다른 사람의 캐글 노트북 — 각 문서에 원본 링크를 적었습니다
+  * 붓꽃 사진: Wikimedia Commons — Radomil (CC BY-SA 3.0), Dlanglois (CC BY-SA 3.0), Frank Mayfield (CC BY-SA 2.0)
+* **권리 침해 신고**: 문제가 되는 자료가 있으면 위 메일로 알려 주세요. 확인 후 고치거나 내리겠습니다.

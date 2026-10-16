@@ -93,7 +93,7 @@ flowchart TD
 ブラウザですぐに見られる **HTMLビューア** と、印刷・保存用の **PDF** の両方を用意しています。
 
 > [!NOTE]
-> **2026年10月の実行点検**：実習ノートブックを最新ライブラリ（Python 3.12・scikit-learn 1.9・pandas 3.0）と Google Colab で再実行し、動かなくなっていた39本を修正版（`*_2610`）として直し、HTML・PDF を作り直しました（2026-10-16 実行確認）。
+> **2026年10月の実行点検**：実習ノートブックを最新ライブラリ（Python 3.12・scikit-learn 1.9・pandas 3.0）と Google Colab で再実行し、動かなくなっていた40本を修正版（`*_2610`）として直し、HTML・PDF を作り直しました（2026-10-16 実行確認）。
 > 下の表で修正版がある項目はリンクを修正版に変更しました。一覧は [Web教材の「2026.10 実行点検 修正版」](https://ldjwj.github.io/ML_Basic_Class/?lang=ja#sec15) にあります。以前の HTML・PDF ファイルもそのまま残しています。
 
 ### 1. 基本ライブラリ & 探索的データ分析（EDA）
@@ -131,7 +131,7 @@ flowchart TD
 | **前処理** | 欠損値の処理とデータのスケーリング | [🌐 HTML](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_01_01_데이터전처리_2208.html) · [📄 PDF](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_01_01_데이터전처리_2208.pdf) |
 | | カテゴリデータのワンホットエンコーディング（One-Hot） | [🌐 HTML](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_01_01_FE_OneHotEncoding_01.html) · [📄 PDF](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_01_01_FE_OneHotEncoding_01.pdf) |
 | | ビニング（Binning）& 対数変換 | [🌐 HTML](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_05_01_FE_binned_v11_2610.html) · [📄 PDF](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_06_01_FE_log_v11_2610.pdf) |
-| | 機械学習パイプライン（Pipeline Code） | [🌐 HTML](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_08_01_Pipeline_Code_2210.html) · [📄 PDF](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_08_01_Pipeline_Code_2210.pdf) |
+| | 機械学習パイプライン（Pipeline Code） | [🌐 HTML](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_08_01_Pipeline_Code_v11_2610.html) · [📄 PDF](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch04_08_01_Pipeline_Code_v11_2610.pdf) |
 | **教師なし学習** | PCA次元削減の基本と顔画像の例 | [🌐 HTML](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_04_01_차원축소(1)_PCA_v11_2610.html) · [📄 PDF](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_04_02_차원축소(2)_PCA_얼굴예제_v11_2610.pdf) |
 | | t-SNEによる非線形次元削減の可視化 | [🌐 HTML](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_04_03_차원축소(3)_tsne_2208.html) · [📄 PDF](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_04_03_차원축소(3)_tsne_2208.pdf) |
 | | K-Meansクラスタリング & DBSCAN密度ベースクラスタリング | [🌐 HTML](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_02_01_군집(clustering)_Kmeans_2208.html) · [🌐 HTML](https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch03_05_02_DBSCAN_v11_2610.html) |
@@ -211,4 +211,10 @@ flowchart TD
 
 * **参考書籍**: *Pythonではじめる機械学習（O'Reilly）*
 * **お問い合わせ**: 著作権・提携に関するお問い合わせ: [frontier1020@naver.com](mailto:frontier1020@naver.com)
-* **ライセンス**: 本リポジトリのすべての資料は [CC BY-NC 4.0](LICENSE) ライセンスに従います。出典を明記すれば、非営利目的で自由に利用・共有できます。
+* **ライセンス**: 講師が作成した資料（スライド・PDF・HTML・ノートブック）は [CC BY-NC 4.0](LICENSE) ライセンスに従います。出典を明記すれば、非営利目的で自由に利用・共有できます。
+* **第三者の資料**: 以下は原著作者の権利とライセンスに従い、CC BY-NC 4.0 は適用されません（詳細は [LICENSE](LICENSE)）。
+  * 『Pythonではじめる機械学習』（Andreas C. Müller・Sarah Guido 著、O'Reilly／韓国語版 パク・ヘソン訳、Hanbit Media）の例題をもとにしたコードと、著者の `mglearn` パッケージ（BSD）
+  * Kaggle のコンペ・データセット（Kaggle Korea 第2・4回、Titanic、Bike Sharing、Santander、AMEX、Spaceship Titanic など）と UCI・GroupLens（MovieLens）・公共データ — 各提供元の利用条件とコンペ規約に従います
+  * 一部の実習で参考にした他の作者の Kaggle ノートブック — 各資料に元のリンクを記載しています
+  * アヤメの写真: Wikimedia Commons — Radomil（CC BY-SA 3.0）、Dlanglois（CC BY-SA 3.0）、Frank Mayfield（CC BY-SA 2.0）
+* **権利侵害の連絡**: 問題のある資料があれば上記のメールでお知らせください。確認のうえ修正または削除します。

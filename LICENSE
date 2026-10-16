@@ -20,3 +20,27 @@ measures that legally restrict others from doing anything the license permits.
 
 Full legal text: https://creativecommons.org/licenses/by-nc/4.0/legalcode
 Human-readable summary: https://creativecommons.org/licenses/by-nc/4.0/
+
+------------------------------------------------------------------------
+Third-party materials (NOT covered by the CC BY-NC 4.0 license above)
+------------------------------------------------------------------------
+Some materials in this repository come from third parties. They remain
+under their original authors' copyright and licenses, and the CC BY-NC 4.0
+license above does not apply to them:
+
+  - Example code based on "Introduction to Machine Learning with Python"
+    (Andreas C. Müller & Sarah Guido, O'Reilly; Korean edition translated
+    by Haesun Park, Hanbit Media) and the authors' mglearn package (BSD).
+  - Datasets from Kaggle competitions and datasets (e.g. Kaggle Korea
+    2nd/4th competitions, Titanic, Bike Sharing Demand, Santander, AMEX,
+    Spaceship Titanic) and other public sources (UCI, GroupLens/MovieLens,
+    public-data portals). Their use is governed by each source's terms
+    and competition rules.
+  - Kaggle notebooks by other authors that some lessons reference or
+    adapt (links are given in each document; public Kaggle notebooks are
+    generally released under the Apache 2.0 license).
+  - Iris photos from Wikimedia Commons: Radomil (CC BY-SA 3.0),
+    Dlanglois (CC BY-SA 3.0), Frank Mayfield (CC BY-SA 2.0).
+
+If you are a rights holder and believe material here is used improperly,
+please contact frontier1020@naver.com and it will be corrected or removed.

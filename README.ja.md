@@ -1,12 +1,10 @@
-<p align="center">
-  🇰🇷 <a href="README.md">한국어</a> | 🇺🇸 <a href="README.en.md">English</a> | 🇯🇵 <b>日本語</b>
-</p>
+🇰🇷 [한국어](https://github.com/LDJWJ/ML_Basic_Class/blob/main/README.md) · 🇺🇸 [English](README.en.md) · 🇯🇵 **日本語**
 
 # 🤖 機械学習の基本 (ML Basic Class)
 
 <p align="center">
   <a href="https://ldjwj.github.io/ML_Basic_Class/?lang=ja">
-    <img src="https://img.shields.io/badge/🌐_Web教材-GitHub_Pages-2563EB?style=for-the-badge&logo=githubpages&logoColor=white" alt="Web Page"/>
+    <img src="https://img.shields.io/badge/🌐_Web教材を開く-GitHub_Pages-2563EB?style=for-the-badge&logo=githubpages&logoColor=white" alt="Web Page"/>
   </a>
   <img src="https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python 3.10+"/>
   <img src="https://img.shields.io/badge/scikit--learn-1.2%2B-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="Scikit-Learn"/>
@@ -16,14 +14,13 @@
 > **ようこそ！** 本リポジトリは、機械学習の核となる概念とアルゴリズムの原理から、実務でのデータ前処理、モデルの評価・最適化、Kaggleコンペの実践、そしてFlaskによるWebサービスのデプロイまでを段階的に学べる **オンラインのオープン講義教材** です。  
 > ⭐️ 役に立ったら、右上の **Star** ボタンを押していただけるとうれしいです！
 
-> [!NOTE]
-> 教材（PDF/HTML）はすべて **韓国語** で書かれています。Pythonコードはそのまま実行できるので、コードとグラフを追いながら学習できます。
+> **補足：** 教材（PDF/HTML）はすべて韓国語です。コード自体は言語に依存せずそのまま動作し、HTMLページはブラウザ（Chromeなど）の自動翻訳で読めます。
 
 <p align="center">
   <a href="#️-学習ロードマップ">🗺️ ロードマップ</a> •
   <a href="#-講義スライド-pdf-一覧">📚 講義スライド（PDF）</a> •
   <a href="#-機械学習アルゴリズム実習コード">💻 アルゴリズム実習</a> •
-  <a href="#-kaggle実戦コンペ">🏆 Kaggle実戦</a> •
+  <a href="#-kaggle実践コンペ">🏆 Kaggle実践</a> •
   <a href="#-応用プロジェクト--webサービング">🚀 応用＆サービング</a>
 </p>
 
@@ -50,8 +47,8 @@ flowchart TD
         F["評価指標 & 交差検証 (CV, GridSearch, ROC-AUC)"]
     end
 
-    subgraph Step4 ["Step 04. Kaggle実戦 & プロダクションでのサービング"]
-        G["Kaggle実戦 (タイタニック, Bike, Santander, AMEX, PUBG)"]
+    subgraph Step4 ["Step 04. Kaggle実践 & プロダクションでのサービング"]
+        G["Kaggle実践 (タイタニック, Bike, Santander, AMEX, PUBG)"]
         H["Flask Webサービング & 推薦システム & AutoML (PyCaret)"]
     end
 
@@ -140,11 +137,11 @@ flowchart TD
 
 ---
 
-## 🏆 Kaggle実戦コンペ
+## 🏆 Kaggle実践コンペ
 
 実際の公開コンペのデータセットを使い、ベースラインモデルの構築から特徴量エンジニアリング、上位解法のチューニングまで扱います。
 
-<details open>
+<details open markdown="1">
 <summary><b>🔥 主なKaggleコンペ別の実習内容（クリックで開閉）</b></summary>
 
 ### 1. タイタニック生存者予測（Titanic）

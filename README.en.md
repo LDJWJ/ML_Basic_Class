@@ -1,6 +1,4 @@
-<p align="center">
-  🇰🇷 <a href="README.md">한국어</a> | 🇺🇸 <b>English</b> | 🇯🇵 <a href="README.ja.md">日本語</a>
-</p>
+🇰🇷 [한국어](https://github.com/LDJWJ/ML_Basic_Class/blob/main/README.md) · 🇺🇸 **English** · 🇯🇵 [日本語](README.ja.md)
 
 # 🤖 Machine Learning Basics (ML Basic Class)
 
@@ -16,8 +14,7 @@
 > **Welcome!** This repository is an **open online course textbook** that takes you step by step from the core concepts and inner workings of machine learning algorithms, through real-world data preprocessing, model evaluation and tuning, and hands-on Kaggle competitions, all the way to deploying a Flask web service.  
 > ⭐️ If you find it helpful, please hit the **Star** button at the top right!
 
-> [!NOTE]
-> All slides and notebooks (PDF/HTML) are written in **Korean**. The Python code runs the same in any language, so you can still follow along with the code and charts.
+> **Note:** All slides and notebooks (PDF/HTML) are in Korean. The code itself is language-independent, and your browser's built-in translation (e.g. Chrome) works on the HTML pages.
 
 <p align="center">
   <a href="#️-learning-roadmap">🗺️ Roadmap</a> •
@@ -144,7 +141,7 @@ Every notebook is available both as an **HTML viewer** you can open right in the
 
 Using datasets from real public competitions, we go from building a baseline model through feature engineering to tuning top-ranked solutions.
 
-<details open>
+<details open markdown="1">
 <summary><b>🔥 Hands-on work by competition (click to collapse/expand)</b></summary>
 
 ### 1. Titanic - Survival Prediction

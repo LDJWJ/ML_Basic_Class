@@ -1,11 +1,9 @@
-<p align="center">
-  🇰🇷 <b>한국어</b> | 🇺🇸 <a href="README.en.md">English</a> | 🇯🇵 <a href="README.ja.md">日本語</a>
-</p>
+🇰🇷 **한국어** · 🇺🇸 [English](README.en.md) · 🇯🇵 [日本語](README.ja.md)
 
 # 🤖 인공지능 머신러닝 기본 (ML Basic Class)
 
 <p align="center">
-  <a href="https://ldjwj.github.io/ML_Basic_Class">
+  <a href="https://ldjwj.github.io/ML_Basic_Class/?lang=ko">
     <img src="https://img.shields.io/badge/🌐_웹_교재_바로가기-GitHub_Pages-2563EB?style=for-the-badge&logo=githubpages&logoColor=white" alt="Web Page"/>
   </a>
   <img src="https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python 3.10+"/>

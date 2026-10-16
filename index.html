@@ -109,9 +109,24 @@
       border-radius: 14px; padding: 5px 12px; cursor: pointer;
     }
     .expand-all-btn:hover { background: #f5f3ff; }
+
+    /* 언어 전환 (KO / EN / JA) */
+    .lang-switch {
+      flex-shrink: 0; display: flex; overflow: hidden;
+      border: 1px solid #d8d4f5; border-radius: 14px;
+    }
+    .lang-switch button {
+      font-size: 0.74rem; font-weight: 600; color: #667eea; background: #fff;
+      border: 0; padding: 5px 9px; cursor: pointer;
+    }
+    .lang-switch button + button { border-left: 1px solid #d8d4f5; }
+    .lang-switch button:hover { background: #f5f3ff; }
+    .lang-switch button.active { background: #667eea; color: #fff; }
+    header .lang-note { font-size: 0.85rem; margin-top: 10px; }
     @media (max-width: 640px) {
       .cat-nav-inner { padding: 0 12px; }
       .expand-all-btn { font-size: 0.72rem; padding: 5px 10px; }
+      .lang-switch button { font-size: 0.68rem; padding: 5px 7px; }
     }
   </style>
 </head>
@@ -127,13 +142,19 @@
       <a class="cat-chip" data-group="F" data-target="sec14">캐글 실습</a>
     </div>
     <button class="expand-all-btn" id="expandAllBtn" type="button">전체 펼치기</button>
+    <div class="lang-switch" role="group" aria-label="Language">
+      <button type="button" data-lang="ko" lang="ko">KO</button>
+      <button type="button" data-lang="en" lang="en">EN</button>
+      <button type="button" data-lang="ja" lang="ja">JA</button>
+    </div>
   </div>
 </nav>
 <div class="container">
   <header>
-    <h1>인공지능 머신러닝 기본</h1>
-    <p>파이썬 라이브러리를 활용한 머신러닝 학습 자료</p>
-    <div class="star">⭐ 이 저장소가 도움이 되었다면 <a href="https://github.com/LDJWJ/ML_Basic_Class" target="_blank">GitHub에서 Star</a>를 눌러주세요!</div>
+    <h1 data-i18n="h1">인공지능 머신러닝 기본</h1>
+    <p data-i18n="subtitle">파이썬 라이브러리를 활용한 머신러닝 학습 자료</p>
+    <p class="lang-note" data-i18n="note" hidden></p>
+    <div class="star" data-i18n="star">⭐ 이 저장소가 도움이 되었다면 <a href="https://github.com/LDJWJ/ML_Basic_Class" target="_blank">GitHub에서 Star</a>를 눌러주세요!</div>
   </header>
 
   <div class="section" id="sec1" data-group="A">
@@ -443,12 +464,215 @@
   </div>
 
   <footer>
-    <p>본 저장소의 자료는 <a href="LICENSE">CC BY-NC 4.0</a> 라이선스를 따릅니다.</p>
-    <p>저작권 관련 문의: frontier1020@naver.com</p>
+    <p data-i18n="license">본 저장소의 자료는 <a href="LICENSE">CC BY-NC 4.0</a> 라이선스를 따릅니다.</p>
+    <p data-i18n="contact">저작권 관련 문의: frontier1020@naver.com</p>
   </footer>
 </div>
 
 <script>
+  // ===== 다국어 (KO / EN / JA) =====
+  // 한국어 원문은 HTML에 그대로 두고, 영어·일본어만 아래 사전에 둔다.
+  // 새 링크를 추가했는데 사전에 없으면 한국어로 그대로 표시된다.
+  const UI = {
+    title:       ['AI 머신러닝 기본', 'AI Machine Learning Basics', 'AI 機械学習の基本'],
+    h1:          ['인공지능 머신러닝 기본', 'Machine Learning Basics', '機械学習の基本'],
+    subtitle:    ['파이썬 라이브러리를 활용한 머신러닝 학습 자료', 'Machine learning course materials using Python libraries', 'Pythonライブラリで学ぶ機械学習の教材'],
+    note:        ['', '📌 All slides and notebooks (PDF/HTML) are written in Korean. The Python code runs the same in any language.', '📌 教材（PDF/HTML）はすべて韓国語で書かれています。Pythonコードはそのまま実行できます。'],
+    star:        [null, '⭐ If this repository helps you, please <a href="https://github.com/LDJWJ/ML_Basic_Class" target="_blank">give it a Star on GitHub</a>!', '⭐ 役に立ったら <a href="https://github.com/LDJWJ/ML_Basic_Class" target="_blank">GitHubでStar</a> をお願いします！'],
+    license:     [null, 'Materials in this repository are licensed under <a href="LICENSE">CC BY-NC 4.0</a>.', '本リポジトリの資料は <a href="LICENSE">CC BY-NC 4.0</a> ライセンスです。'],
+    contact:     [null, 'Copyright inquiries: frontier1020@naver.com', '著作権に関するお問い合わせ：frontier1020@naver.com'],
+    expandAll:   ['전체 펼치기', 'Expand all', 'すべて開く'],
+    collapseAll: ['전체 접기', 'Collapse all', 'すべて閉じる'],
+  };
+
+  // 한국어 텍스트 → [영어, 일본어]
+  const T = {
+    // 카테고리 칩
+    '기초 다지기': ['Foundations', '基礎固め'],
+    '지도학습': ['Supervised Learning', '教師あり学習'],
+    '데이터·비지도학습': ['Data & Unsupervised', 'データ・教師なし学習'],
+    '평가·파이프라인': ['Evaluation & Pipelines', '評価・パイプライン'],
+    '실전 프로젝트': ['Projects', '実践プロジェクト'],
+    '캐글 실습': ['Kaggle Practice', 'Kaggle実習'],
+    // 섹션 제목·소제목
+    '머신러닝 기본 및 실습 — PDF 자료': ['ML Basics & Practice — PDF Slides', '機械学習の基本と実習 — PDF資料'],
+    '기본 라이브러리 실습 — IRIS 데이터셋': ['Core Libraries — IRIS Dataset', '基本ライブラリ実習 — IRISデータセット'],
+    '기본 라이브러리 실습 — numpy, konlpy': ['Core Libraries — numpy, konlpy', '基本ライブラリ実習 — numpy、konlpy'],
+    '데이터 전처리': ['Data Preprocessing', 'データ前処理'],
+    '비지도학습': ['Unsupervised Learning', '教師なし学習'],
+    '평가': ['Evaluation', '評価'],
+    'Pipeline 실습': ['Pipeline Practice', 'Pipeline実習'],
+    '위스콘신 암 데이터 실습': ['Wisconsin Breast Cancer Data Practice', 'ウィスコンシン乳がんデータ実習'],
+    '추천 시스템': ['Recommender Systems', '推薦システム'],
+    'Flask 웹 서비스 구축': ['Building Web Services with Flask', 'FlaskによるWebサービス構築'],
+    '기타 실습': ['Other Practice', 'その他の実習'],
+    '머신러닝 알고리즘': ['ML Algorithms', '機械学習アルゴリズム'],
+    '분류용 선형모델 (Logistic, SVM)': ['Linear Models for Classification (Logistic, SVM)', '分類のための線形モデル（Logistic、SVM）'],
+    '앙상블': ['Ensembles', 'アンサンブル'],
+    '원핫인코딩': ['One-Hot Encoding', 'ワンホットエンコーディング'],
+    '구간분할, 일변량 비선형 변환': ['Binning & Univariate Nonlinear Transforms', 'ビニング・単変量の非線形変換'],
+    '타이타닉': ['Titanic', 'タイタニック'],
+    '성인 인구 소득 예측 대회': ['Adult Income Prediction Competition', '成人所得予測コンペ'],
+    // PDF 자료
+    '머신러닝 용어 이해, 구분, 데이터 분석 절차': ['ML terminology, types, and the data analysis process', '機械学習の用語・分類・データ分析の手順'],
+    '머신러닝 기본 이해 (26년도 버전)': ['Understanding ML basics (2026 edition)', '機械学習の基本理解（2026年版）'],
+    '머신러닝 기본 - 파이썬과 첫 모델 만들기': ['ML basics - Python and your first model', '機械学習の基本 - Pythonで初めてのモデル作り'],
+    '머신러닝 알고리즘 knn, 회귀 — 기본 (with opencode)': ['ML algorithms: KNN & regression — basics (with opencode)', '機械学習アルゴリズム KNN・回帰 — 基本（with opencode）'],
+    '머신러닝 알고리즘 knn, 회귀 — 초보자용': ['ML algorithms: KNN & regression — for beginners', '機械学習アルゴリズム KNN・回帰 — 初心者向け'],
+    '머신러닝 알고리즘 로지스틱 회귀': ['ML algorithms: logistic regression', '機械学習アルゴリズム ロジスティック回帰'],
+    '머신러닝 알고리즘 의사결정트리': ['ML algorithms: decision trees', '機械学習アルゴリズム 決定木'],
+    '머신러닝 알고리즘 앙상블 (랜덤 포레스트·부스팅·LightGBM)': ['ML algorithms: ensembles (random forest, boosting, LightGBM)', '機械学習アルゴリズム アンサンブル（ランダムフォレスト・ブースティング・LightGBM）'],
+    '데이터 전처리 및 피처엔지니어링 (v12)': ['Data preprocessing & feature engineering (v12)', 'データ前処理と特徴量エンジニアリング（v12）'],
+    '파이프라인 (Pipeline) 개념 (v11)': ['Pipeline concepts (v11)', 'パイプライン（Pipeline）の概念（v11）'],
+    '평가지표': ['Evaluation metrics', '評価指標'],
+    '비지도학습 01 — 기본': ['Unsupervised learning 01 — basics', '教師なし学習 01 — 基本'],
+    '비지도학습 02 — PCA': ['Unsupervised learning 02 — PCA', '教師なし学習 02 — PCA'],
+    '머신러닝 더 알아보기': ['Going further with ML', '機械学習をさらに深く'],
+    // 라이브러리
+    'Pandas 02 — unique(), value_counts() 등': ['Pandas 02 — unique(), value_counts(), and more', 'Pandas 02 — unique()、value_counts() など'],
+    '유튜브 댓글 분석 및 시각화 (워드클라우드)': ['YouTube comment analysis & visualization (word cloud)', 'YouTubeコメントの分析と可視化（ワードクラウド）'],
+    // 지도학습
+    '첫번째 머신러닝 모델 만들어보기': ['Build your first ML model', '初めての機械学習モデルを作ってみよう'],
+    '머신러닝 — 선형회귀': ['ML — linear regression', '機械学習 — 線形回帰'],
+    '머신러닝 — 회귀 (평가지표 상세)': ['ML — regression (evaluation metrics in depth)', '機械学習 — 回帰（評価指標の詳細）'],
+    '머신러닝 알고리즘 회귀 (Ridge, Lasso)': ['ML algorithms: regression (Ridge, Lasso)', '機械学習アルゴリズム 回帰（Ridge、Lasso）'],
+    '이진분류': ['Binary classification', '二値分類'],
+    '멀티클래스 분류': ['Multiclass classification', '多クラス分類'],
+    '의사결정트리 01': ['Decision tree 01', '決定木 01'],
+    '의사결정트리 02': ['Decision tree 02', '決定木 02'],
+    '의사결정트리 03': ['Decision tree 03', '決定木 03'],
+    '다양한 데이터셋 — 의사결정트리 시각화': ['Various datasets — decision tree visualization', 'さまざまなデータセット — 決定木の可視化'],
+    '타이타닉 데이터셋 모델 구축': ['Building a model on the Titanic dataset', 'タイタニックデータセットでモデル構築'],
+    '랜덤포레스트 (1) - tips 01': ['Random forest (1) - tips 01', 'ランダムフォレスト (1) - tips 01'],
+    '랜덤포레스트 (1) - tips 02': ['Random forest (1) - tips 02', 'ランダムフォレスト (1) - tips 02'],
+    '랜덤포레스트 (2) - cancer': ['Random forest (2) - cancer', 'ランダムフォレスト (2) - cancer'],
+    '랜덤포레스트 (3) - house': ['Random forest (3) - house', 'ランダムフォレスト (3) - house'],
+    '의사결정트리, 랜덤포레스트 시각화': ['Visualizing decision trees & random forests', '決定木・ランダムフォレストの可視化'],
+    '그래디언트부스팅결정트리': ['Gradient boosting decision trees', '勾配ブースティング決定木'],
+    // 데이터 전처리
+    '머신러닝 - 데이터 전처리': ['ML - data preprocessing', '機械学習 - データ前処理'],
+    '이론 및 실습 (1)': ['Theory & practice (1)', '理論と実習 (1)'],
+    '실습 (2) - 캐글 코리아 4차 대회': ['Practice (2) - Kaggle Korea 4th competition', '実習 (2) - Kaggle Korea 第4回大会'],
+    '이론 및 실습 (3)': ['Theory & practice (3)', '理論と実習 (3)'],
+    '구간분할': ['Binning', 'ビニング（区間分割）'],
+    '비선형 변환 (log 등)': ['Nonlinear transforms (log, etc.)', '非線形変換（logなど）'],
+    '특성자동 선택 (1)': ['Automatic feature selection (1)', '特徴量の自動選択 (1)'],
+    '특성자동 선택 (2)': ['Automatic feature selection (2)', '特徴量の自動選択 (2)'],
+    // 비지도학습
+    'PCA 차원 축소': ['PCA dimensionality reduction', 'PCAによる次元削減'],
+    'PCA 얼굴 예제 실습': ['PCA hands-on: face images', 'PCA 顔画像の実習'],
+    'PCA 차원 축소 — t-SNE': ['Dimensionality reduction — t-SNE', '次元削減 — t-SNE'],
+    '군집 (Clustering) K-means': ['Clustering: K-means', 'クラスタリング K-means'],
+    '병합 군집': ['Agglomerative clustering', '凝集型クラスタリング'],
+    '얼굴 데이터셋 분석': ['Face dataset analysis', '顔データセットの分析'],
+    '군집 알고리즘 평가': ['Evaluating clustering algorithms', 'クラスタリングアルゴリズムの評価'],
+    '[실습] PCA 차원 축소 — titanic': ['[Practice] PCA dimensionality reduction — Titanic', '[実習] PCAによる次元削減 — タイタニック'],
+    // 평가
+    '교차 검증 1': ['Cross-validation 1', '交差検証 1'],
+    '교차 검증 2': ['Cross-validation 2', '交差検証 2'],
+    '모델 평가 (1)': ['Model evaluation (1)', 'モデル評価 (1)'],
+    '모델 평가 (2) — threshold': ['Model evaluation (2) — threshold', 'モデル評価 (2) — threshold'],
+    '모델 평가 (3) — ROC AUC': ['Model evaluation (3) — ROC AUC', 'モデル評価 (3) — ROC AUC'],
+    '모델 평가 (4)': ['Model evaluation (4)', 'モデル評価 (4)'],
+    '모델 평가 실습 — 타이타닉': ['Model evaluation practice — Titanic', 'モデル評価の実習 — タイタニック'],
+    'Spaceship Titanic — Pipeline 실습': ['Spaceship Titanic — pipeline practice', 'Spaceship Titanic — Pipeline実習'],
+    // 실전 프로젝트
+    '앙상블 (보팅, 배깅)': ['Ensembles (voting, bagging)', 'アンサンブル（投票、バギング）'],
+    'GridSearchCV 하이퍼 파라미터 튜닝': ['Hyperparameter tuning with GridSearchCV', 'GridSearchCVによるハイパーパラメータ調整'],
+    'LightGBM 모델 학습 및 평가': ['Training & evaluating a LightGBM model', 'LightGBMモデルの学習と評価'],
+    '앙상블 Stacking 모델': ['Stacking ensemble model', 'スタッキングアンサンブルモデル'],
+    'PyCaret 오픈소스 라이브러리': ['PyCaret open-source library', 'オープンソースライブラリ PyCaret'],
+    'AutoML 구축하기': ['Building AutoML', 'AutoMLを構築する'],
+    '기본 개요 01': ['Overview 01', '基本概要 01'],
+    '기본 실습 01': ['Basic practice 01', '基本実習 01'],
+    '기본 실습 02 — 유사 영화 추천하기': ['Basic practice 02 — recommending similar movies', '基本実習 02 — 似た映画をおすすめする'],
+    '기본 실습 03 — 아이템 기반 협업 필터링': ['Basic practice 03 — item-based collaborative filtering', '基本実習 03 — アイテムベース協調フィルタリング'],
+    '기본 실습 04 — 콘텐츠 기반 (TF-IDF) 영화 추천': ['Basic practice 04 — content-based (TF-IDF) movie recommendations', '基本実習 04 — コンテンツベース（TF-IDF）の映画推薦'],
+    '🎯 기본 실습 04 (인터랙티브 데모) — 순수 JS TF-IDF 구현': ['🎯 Basic practice 04 (interactive demo) — TF-IDF in plain JS', '🎯 基本実習 04（インタラクティブデモ）— 純粋なJSでTF-IDFを実装'],
+    'pycaret 실습': ['PyCaret practice', 'PyCaret実習'],
+    'Spaceship Titanic 예측': ['Spaceship Titanic prediction', 'Spaceship Titanicの予測'],
+    'IRIS 웹 머신러닝': ['IRIS ML web app', 'IRIS 機械学習Webアプリ'],
+    '집값 예측': ['House price prediction', '住宅価格の予測'],
+    '악성종양 (암) 예측': ['Malignant tumor (cancer) prediction', '悪性腫瘍（がん）の予測'],
+    'sqllite와 pandas 01': ['SQLite and pandas 01', 'SQLiteとpandas 01'],
+    'sqllite와 pandas 02': ['SQLite and pandas 02', 'SQLiteとpandas 02'],
+    '[실습] 항구 근처 기뢰 확인 — 데이터 불러오기 및 시각화': ['[Practice] Detecting mines near a harbor — loading & visualizing data', '[実習] 港付近の機雷を判別 — データの読み込みと可視化'],
+    '[실습] 항구 근처 기뢰 확인 — 기본 ML 모델': ['[Practice] Detecting mines near a harbor — baseline ML model', '[実習] 港付近の機雷を判別 — 基本のMLモデル'],
+    // 캐글
+    '기본 모델': ['Baseline model', 'ベースラインモデル'],
+    '모델 개선 (LightGBM)': ['Model improvement (LightGBM)', 'モデル改善（LightGBM）'],
+    '기본 모델 (선형회귀)': ['Baseline model (linear regression)', 'ベースラインモデル（線形回帰）'],
+    '타이타닉 시작하기': ['Getting started with Titanic', 'タイタニックを始めよう'],
+    '데이터 탐색 및 모델 선택': ['Data exploration & model selection', 'データ探索とモデル選択'],
+    '모델 업그레이드': ['Model upgrade', 'モデルのアップグレード'],
+    '모델 — Cabin': ['Model — Cabin', 'モデル — Cabin'],
+    '모델 — Ticket': ['Model — Ticket', 'モデル — Ticket'],
+    '첫번째 모델': ['First model', '最初のモデル'],
+    '여러가지 모델': ['Multiple models', 'さまざまなモデル'],
+    '모델 평가': ['Model evaluation', 'モデル評価'],
+    '대회 (1)': ['Competition (1)', '大会 (1)'],
+    '대회 (2)': ['Competition (2)', '大会 (2)'],
+    '대회 (2) — f1-score': ['Competition (2) — f1-score', '大会 (2) — f1-score'],
+    '대회 (3)': ['Competition (3)', '大会 (3)'],
+    '대회 (4) — 2nd Solution': ['Competition (4) — 2nd Solution', '大会 (4) — 2nd Solution'],
+    '대회 (5) — 1st Solution': ['Competition (5) — 1st Solution', '大会 (5) — 1st Solution'],
+    '매출 예측 (1)': ['Sales forecasting (1)', '売上予測 (1)'],
+    '매출 예측 (2)': ['Sales forecasting (2)', '売上予測 (2)'],
+    'Dacon — 주차 수요 예측 Baseline': ['Dacon — parking demand forecasting baseline', 'Dacon — 駐車需要予測ベースライン'],
+  };
+
+  const LANGS = ['ko', 'en', 'ja'];
+  const LANG_KEY = 'mlbc-lang';
+  let lang = 'ko';
+
+  function t(key) {
+    const v = UI[key][LANGS.indexOf(lang)];
+    return v == null ? UI[key][0] : v;
+  }
+
+  // 번역 대상: 텍스트만 담긴 요소 (원문은 data-ko에 보관)
+  const textEls = document.querySelectorAll(
+    '.cat-chip, .section-title > span:first-child, .sub-title, .link-list li > a:first-child'
+  );
+  const htmlEls = document.querySelectorAll('[data-i18n]');
+  textEls.forEach(el => { el.dataset.ko = el.textContent.trim(); });
+  htmlEls.forEach(el => { el.dataset.ko = el.innerHTML; });
+
+  function applyLang(next) {
+    lang = LANGS.includes(next) ? next : 'ko';
+    const i = LANGS.indexOf(lang);
+    document.documentElement.lang = lang;
+    document.title = t('title');
+    textEls.forEach(el => {
+      const ko = el.dataset.ko;
+      el.textContent = (i > 0 && T[ko]) ? T[ko][i - 1] : ko;
+    });
+    htmlEls.forEach(el => {
+      const v = UI[el.dataset.i18n][i];
+      el.innerHTML = (v == null) ? el.dataset.ko : v;
+    });
+    document.querySelector('.lang-note').hidden = (lang === 'ko');
+    expandAllBtn.textContent = t(allExpanded ? 'collapseAll' : 'expandAll');
+    document.querySelectorAll('.lang-switch button').forEach(b => {
+      b.classList.toggle('active', b.dataset.lang === lang);
+      b.setAttribute('aria-pressed', b.dataset.lang === lang);
+    });
+  }
+
+  function detectLang() {
+    const fromUrl = new URLSearchParams(location.search).get('lang');
+    if (LANGS.includes(fromUrl)) return fromUrl;
+    try {
+      const saved = localStorage.getItem(LANG_KEY);
+      if (LANGS.includes(saved)) return saved;
+    } catch (e) {}
+    for (const l of (navigator.languages || [navigator.language || ''])) {
+      const code = l.slice(0, 2).toLowerCase();
+      if (LANGS.includes(code)) return code;
+    }
+    return 'ko';
+  }
+
   const sectionBodies = document.querySelectorAll('.section-body');
   const toggles = document.querySelectorAll('.toggle');
 
@@ -496,7 +720,7 @@
     allExpanded = !allExpanded;
     sectionBodies.forEach(body => body.classList.toggle('closed', !allExpanded));
     toggles.forEach(t => t.classList.toggle('open', allExpanded));
-    expandAllBtn.textContent = allExpanded ? '전체 접기' : '전체 펼치기';
+    expandAllBtn.textContent = t(allExpanded ? 'collapseAll' : 'expandAll');
   });
 
   // 스크롤 연동 — 현재 보고 있는 섹션의 카테고리 칩 강조
@@ -525,6 +749,18 @@
   }, { passive: true });
 
   updateActiveChip();
+
+  // 언어 버튼 → 적용 + 저장 + 주소(?lang=)에 반영해 공유 가능하게
+  document.querySelectorAll('.lang-switch button').forEach(b => {
+    b.addEventListener('click', () => {
+      applyLang(b.dataset.lang);
+      try { localStorage.setItem(LANG_KEY, lang); } catch (e) {}
+      const url = new URL(location.href);
+      if (lang === 'ko') url.searchParams.delete('lang'); else url.searchParams.set('lang', lang);
+      history.replaceState(null, '', url);
+    });
+  });
+  applyLang(detectLang());
 </script>
 </body>
 </html>

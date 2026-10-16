@@ -1,3 +1,7 @@
+<p align="center">
+  🇰🇷 <b>한국어</b> | 🇺🇸 <a href="README.en.md">English</a> | 🇯🇵 <a href="README.ja.md">日本語</a>
+</p>
+
 # 🤖 인공지능 머신러닝 기본 (ML Basic Class)
 
 <p align="center">
@@ -13,7 +17,7 @@
 > ⭐️ 내용이 도움 되셨다면 우측 상단의 **Star** 버튼을 꾹 눌러주세요!
 
 <p align="center">
-  <a href="#-학습-로드맵">🗺️ 학습 로드맵</a> •
+  <a href="#️-학습-로드맵">🗺️ 학습 로드맵</a> •
   <a href="#-강의-교재-pdf-인덱스">📚 강의 교재(PDF)</a> •
   <a href="#-머신러닝-알고리즘-실습-소스코드">💻 알고리즘 실습</a> •
   <a href="#-캐글kaggle-실전-컴피티션">🏆 캐글 실전</a> •
